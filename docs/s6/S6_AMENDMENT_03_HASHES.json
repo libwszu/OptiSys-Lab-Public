@@ -1,0 +1,100 @@
+{
+  "schema": "optisys.s6.amendment_hashes/3",
+  "run_id": "20261021_024715_S6_P1",
+  "amendment": "S6_AMENDMENT_03",
+  "frozen_at_utc": "2026-10-21T07:34:50+00:00",
+  "formal_holdout_complete": true,
+  "metrics_changed": false,
+  "thresholds_changed": false,
+  "samples_changed": false,
+  "hashes": {
+    "docs/s6/S6_AMENDMENT_03.md": {
+      "bytes": 2765,
+      "sha256": "a9102a17d29733a10a106ed4fdc03c34d6c9d7d73dff52ae39f60ab352da7f52"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_HOLDOUT_FREEZE_02.json": {
+      "bytes": 8878,
+      "sha256": "b3d92cbb549459e472002cf4783092ad829617597cf7b74197a4296127fcad31"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE_02.json": {
+      "bytes": 5236,
+      "sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446"
+    },
+    "runs/20261021_024715_S6_P1/compute_measured_preholdout.json": {
+      "bytes": 1474,
+      "sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics_programmatic.json": {
+      "bytes": 11334,
+      "sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics.json": {
+      "bytes": 11626,
+      "sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/run_status_programmatic.json": {
+      "bytes": 705,
+      "sha256": "f8130e1dddfa74a28382849c67448f97d5a9ceb5e814d3875afd05d2cf938c28"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/run_status.json": {
+      "bytes": 952,
+      "sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/S6_C_FINAL_ADJUDICATION.json": {
+      "bytes": 2531,
+      "sha256": "06e485a992f2d2fed3c9cd5d26c1f98700c7eba4e66ee9b8a26986e3ced8d233"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/S6_ASSEMBLY_SCIENTIFIC_AUDIT_FINAL.md": {
+      "bytes": 4397,
+      "sha256": "62276b9555f9c93a7974fcae0b7eaf263accfef8174791205a05e9cc9964bd71"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_manifest.csv": {
+      "bytes": 937024,
+      "sha256": "dfd2de2939cd34827203ae98222c646143b65666680204cb77ef5407ee32376f"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv": {
+      "bytes": 1636310,
+      "sha256": "d8e7ceb6787e7abce715207e9589a2217552980dc397fcd694ac8f33d4df4d7f"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/paired_assembly_comparison.csv": {
+      "bytes": 300027,
+      "sha256": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_bootstrap_replicates.csv": {
+      "bytes": 917175,
+      "sha256": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/failure_breakdown.csv": {
+      "bytes": 3620,
+      "sha256": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/zero_tolerance_controls.csv": {
+      "bytes": 50387,
+      "sha256": "a39ce5bac643e7444d060d5a5e337cf80e39dfcd79352e8f862e1572e50eb71f"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_robustness_plot_data.csv": {
+      "bytes": 1989,
+      "sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/s6_assembly_robustness.png": {
+      "bytes": 111935,
+      "sha256": "7f7ff58ffae389f8aa529ecf647625b11162ed1e6460d0a6e4afe1809e2908d9"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_figure_metadata.json": {
+      "bytes": 712,
+      "sha256": "e654442ac69046d1cdbc327f39ba32ddb628f9e038e1a6360ef258c830e0fff4"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_assemblies/compute_measured_001.json": {
+      "bytes": 1504,
+      "sha256": "bf3636a932f20b8a2b930d70c69209467df4321dec1cf48f42443ccee6635d13"
+    },
+    "scripts/s6_finalize_claim.py": {
+      "bytes": 12149,
+      "sha256": "15a9c9088309bcdb5066e21dfe2d3b5e1ad84aa5cc6e1b17ea560d7f0266500c"
+    },
+    "scripts/s6_assembly_figures.py": {
+      "bytes": 5960,
+      "sha256": "995b17f65f2f2947f9a63b9084a1c026e84ef74693c0e1d91431dd03f6ff6edd"
+    }
+  }
+}

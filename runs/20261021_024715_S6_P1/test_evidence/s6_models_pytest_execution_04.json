@@ -1,0 +1,9 @@
+{
+  "command": "python -m pytest tests/unit/test_s6_rigid_body.py tests/unit/test_s6_assembly_stats.py -q",
+  "exit_code": 0,
+  "outer_wall_s": 9.26134440000169,
+  "junit": "test_evidence/s6_models_junit_04.xml",
+  "stdout": "test_evidence/s6_models_pytest_04.stdout.txt",
+  "stderr": "test_evidence/s6_models_pytest_04.stderr.txt",
+  "started_at_utc": "2026-10-21T07:24:16+00:00"
+}

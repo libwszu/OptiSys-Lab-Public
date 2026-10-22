@@ -1,0 +1,63 @@
+{
+  "schema": "optisys.s6r.apptest/1",
+  "command": [
+    "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/ui/test_pages_render.py",
+    "--basetemp=<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_8a308d299424439fa699485669b1d6b9",
+    "--junitxml=<PROJECT_ROOT>\\artifacts\\s6r\\ui\\apptest_six_pages.xml"
+  ],
+  "basetemp": "<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_8a308d299424439fa699485669b1d6b9",
+  "started_at_utc": "2026-10-21T08:46:26.910925+00:00",
+  "finished_at_utc": "2026-10-21T08:46:52.207580+00:00",
+  "wall_clock_s": 25.29699999996228,
+  "timeout_s": 120,
+  "timed_out": false,
+  "exit_code": 0,
+  "junit": "artifacts/s6r/ui/apptest_six_pages.xml",
+  "stdout": "artifacts/s6r/ui/apptest_six_pages_stdout.txt",
+  "stderr": "artifacts/s6r/ui/apptest_six_pages_stderr.txt",
+  "totals": {
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "six_page_checks": {
+    "A": {
+      "label": "A · 项目总览与证据状态",
+      "testcase": "test_each_page_renders_without_exception[A]",
+      "status": "PASS"
+    },
+    "B": {
+      "label": "B · 光斑实验台",
+      "testcase": "test_each_page_renders_without_exception[B]",
+      "status": "PASS"
+    },
+    "C": {
+      "label": "C · 优化对照",
+      "testcase": "test_each_page_renders_without_exception[C]",
+      "status": "PASS"
+    },
+    "D": {
+      "label": "D · 运行与证据中心",
+      "testcase": "test_each_page_renders_without_exception[D]",
+      "status": "PASS"
+    },
+    "E": {
+      "label": "E · 说明与边界",
+      "testcase": "test_each_page_renders_without_exception[E]",
+      "status": "PASS"
+    },
+    "F": {
+      "label": "F · 976 nm 泵浦光路",
+      "testcase": "test_each_page_renders_without_exception[F]",
+      "status": "PASS"
+    }
+  },
+  "junit_parse_error": null,
+  "status": "PASS"
+}

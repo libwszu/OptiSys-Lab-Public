@@ -1,0 +1,2407 @@
+{
+  "schema_version": "3.0",
+  "gate": "G2",
+  "report_kind": "G2",
+  "case_id": "triangulation_g2_l1",
+  "model_level": "L1-approximate",
+  "evidence_levels": {
+    "optics": "CROSS-CHECKED (ray trace + independent paraxial reference)",
+    "psf": "MODEL (geometric footprint convolved with an Airy limit)",
+    "imaging": "SIMULATED",
+    "tolerance": "SIMULATED",
+    "optimisation": "SIMULATED",
+    "measured_data": "NOT_RUN"
+  },
+  "timing": {
+    "stage_a_s": 0.7899833000265062,
+    "stage_b_s": 0.4091443999786861,
+    "stage_c_s": 149.07231570000295,
+    "stage_d_s": 1272.3384191000368,
+    "stage_e_s": 4196.244007800007
+  },
+  "environment": {
+    "cpu": "AMD Ryzen 5 4600G with Radeon Graphics (6C/12T)",
+    "memory": "31.41 GB total, 19.77 GB available at start",
+    "gpu": "NVIDIA GeForce GTX 1660 SUPER (6144.0 MB)",
+    "python": "3.14.3",
+    "workers": 4
+  },
+  "results": {
+    "tests_binding": {
+      "summary_path": "artifacts\\g2_pre\\tests_summary.json",
+      "stdout_path": "artifacts\\g2_pre\\pytest_stdout.txt",
+      "junit_path": "artifacts\\g2_pre\\pytest_g2pre.xml",
+      "command": ".venv/Scripts/python.exe -m pytest -q -p no:cacheprovider --basetemp=artifacts/g2_pre/pytest_g3 --junitxml=artifacts/g2_pre/pytest_g2pre.xml",
+      "exit_code": 0,
+      "code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+      "python": "3.14.3",
+      "ingested_at_utc": "2026-10-19T19:11:22+00:00",
+      "junit_sha256": "babad1c7ba8da16926cc5d89b4d0200c15c533b902f1737a22ffa5a9f91e0d3c",
+      "totals": {
+        "passed": 252,
+        "failed": 0,
+        "skipped": 0,
+        "total": 252
+      },
+      "junit_totals": {
+        "tests": 252,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "consistent": true,
+      "inconsistencies": []
+    },
+    "optics": {
+      "backend": {
+        "backend": "optiland",
+        "importable": true,
+        "version": "0.6.3",
+        "version_supported": true,
+        "error": null,
+        "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+      },
+      "backend_executed": true,
+      "trace_rows": 970,
+      "model": {
+        "model": "singlet_equiconvex",
+        "material": "N-BK7",
+        "design_index": 1.5168,
+        "wavelength_nm": 650.0,
+        "focal_length_mm": 8.0,
+        "radius_1_mm": 7.721498904389647,
+        "radius_2_mm": -7.721498904389647,
+        "element_thickness_mm": 3.0,
+        "aperture_stop_mm": 1.2,
+        "rear_clear_aperture_mm": 0.95,
+        "rear_aperture_clearance_mm": 0.35,
+        "focus_distance_mm": 200.0,
+        "sensor_distance_from_rear_vertex_mm": 7.272485696015577,
+        "sensor_offset_mm": 0.0,
+        "efl_mm_from_matrix": 8.0,
+        "bfl_mm_from_matrix": 6.9409808521471525,
+        "rear_principal_offset_mm": -1.0590191478528475,
+        "working_f_number": 6.060404746679648,
+        "pupil_side": 17,
+        "config_hash": "57f7e5e013abe5a2d168b7cbdfd2765bb44c000dd464ab36dc915f63f7b604eb",
+        "provenance": "ASSUMED design; no vendor part number, no measured data"
+      },
+      "distortion": [
+        {
+          "Z_mm": 100.0,
+          "object_height_mm": 20.0,
+          "u_traced_px": 1117.2627330766209,
+          "u_paraxial_px": 1120.4418027078605,
+          "distortion_px": -3.1790696312395994,
+          "distortion_fraction_of_offset": -0.0066169713237311245
+        },
+        {
+          "Z_mm": 150.0,
+          "object_height_mm": 20.0,
+          "u_traced_px": 959.4710070500503,
+          "u_paraxial_px": 960.2945351385736,
+          "distortion_px": -0.8235280885232896,
+          "distortion_fraction_of_offset": -0.002571158724787468
+        },
+        {
+          "Z_mm": 200.0,
+          "object_height_mm": 20.0,
+          "u_traced_px": 879.9459383899674,
+          "u_paraxial_px": 880.2209013539302,
+          "distortion_px": -0.27496296396282105,
+          "distortion_fraction_of_offset": -0.0011446254776877366
+        },
+        {
+          "Z_mm": 250.0,
+          "object_height_mm": 20.0,
+          "u_traced_px": 832.0839981081729,
+          "u_paraxial_px": 832.1767210831442,
+          "distortion_px": -0.09272297497136606,
+          "distortion_fraction_of_offset": -0.00048248806852756095
+        },
+        {
+          "Z_mm": 300.0,
+          "object_height_mm": 20.0,
+          "u_traced_px": 800.1276792012443,
+          "u_paraxial_px": 800.1472675692868,
+          "distortion_px": -0.01958836804249131,
+          "distortion_fraction_of_offset": -0.00012231471906953714
+        }
+      ],
+      "findings": {
+        "l0_vs_l1_chief_ray_max_px": 13.494617134591863,
+        "l0_vs_l1_chief_ray_max_rel_offset": 0.03582592483304898,
+        "note": "The G1 pinhole law and the finite-conjugate singlet differ by a systematic offset of a few percent; recalibration absorbs most of it but leaves a residual curvature. This is finding G2-01, not a bug."
+      },
+      "checks": {
+        "A4_paraxial_small_field": {
+          "value": 0.0006968179184148645,
+          "threshold": 0.01,
+          "pass": true,
+          "what": "traced chief ray vs independent paraxial matrix at 0.5 mm object height"
+        },
+        "A5_pinhole_limit": {
+          "value": 0.2240390293801305,
+          "threshold": 0.3,
+          "pass": true,
+          "what": "EPD=0.15 mm geometric RMS radius in pixels (must collapse to a point)"
+        },
+        "A6_aperture_monotone_spot": {
+          "value": [
+            0.5750642275642631,
+            1.3382460718176568,
+            2.4923426122565737,
+            4.254641911048221,
+            6.852392474889991
+          ],
+          "threshold": "strictly increasing with aperture",
+          "pass": true,
+          "what": "RMS spot radius vs entrance aperture diameter"
+        },
+        "A7_focus_defocus": {
+          "value": {
+            "offset_mm": [
+              -0.4,
+              -0.2,
+              -0.1,
+              -0.05,
+              0.0,
+              0.05,
+              0.1,
+              0.2,
+              0.4
+            ],
+            "rms_radius_um": [
+              16.3234756883409,
+              6.343780068758576,
+              1.9141364956082498,
+              2.122672223751348,
+              4.254641911048221,
+              6.667281289184276,
+              9.140991377474519,
+              14.143237084885056,
+              24.208078773517602
+            ],
+            "minimum_um": 1.9141364956082498,
+            "far_mean_um": 20.265777230929253,
+            "sign_changes": 1
+          },
+          "threshold": "unimodal U-shape and far-offset blur >= 3x the minimum",
+          "pass": true,
+          "what": "detector defocus sweep at Z=200 mm"
+        },
+        "A8_blocked_rays_counted": {
+          "value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "threshold": "< 1.0 blocked and reported",
+          "pass": true,
+          "what": "every launched ray accounted for, blocked rays kept in the denominator"
+        },
+        "A1_backend_importable": {
+          "value": {
+            "backend": "optiland",
+            "importable": true,
+            "version": "0.6.3",
+            "version_supported": true,
+            "error": null,
+            "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+          },
+          "threshold": "importable and version 0.6.3",
+          "pass": true,
+          "what": "Optiland import + version"
+        },
+        "A2_real_refracting_surfaces": {
+          "value": {
+            "radius_1_mm": 7.721498904389647,
+            "radius_2_mm": -7.721498904389647,
+            "thickness_mm": 3.0,
+            "material": "N-BK7"
+          },
+          "threshold": "two non-flat surfaces with a real thickness",
+          "pass": true,
+          "what": "declared refracting geometry"
+        },
+        "A3_trace_executed": {
+          "value": 970,
+          "threshold": "> 0 exported ray rows",
+          "pass": true,
+          "what": "real ray trace output written to raytrace_reference.csv"
+        }
+      }
+    },
+    "imaging": {
+      "energy": [
+        {
+          "Z_mm": 100.0,
+          "electrons_in": 40000.0,
+          "transmitted_fraction": 0.9985626791214566,
+          "placed_fraction": 0.9985626791214567,
+          "capture_fraction": 1.0,
+          "kernel_support": 0.9787187098274008,
+          "sum_electrons": 39942.50716485827,
+          "peak_electrons": 3105.6464407918406,
+          "status": "OK",
+          "kernel_kind": "geometric_footprint_x_airy",
+          "kernel_half_px": 12
+        },
+        {
+          "Z_mm": 150.0,
+          "electrons_in": 40000.0,
+          "transmitted_fraction": 0.9989489751287084,
+          "placed_fraction": 0.9989489751287085,
+          "capture_fraction": 1.0,
+          "kernel_support": 0.9787187098274008,
+          "sum_electrons": 39957.95900514834,
+          "peak_electrons": 9460.11703866569,
+          "status": "OK",
+          "kernel_kind": "geometric_footprint_x_airy",
+          "kernel_half_px": 12
+        },
+        {
+          "Z_mm": 200.0,
+          "electrons_in": 40000.0,
+          "transmitted_fraction": 0.9988288954738684,
+          "placed_fraction": 0.9988288954738682,
+          "capture_fraction": 1.0,
+          "kernel_support": 0.9804189759599601,
+          "sum_electrons": 39953.15581895473,
+          "peak_electrons": 6494.561796237619,
+          "status": "OK",
+          "kernel_kind": "geometric_footprint_x_airy",
+          "kernel_half_px": 13
+        },
+        {
+          "Z_mm": 250.0,
+          "electrons_in": 40000.0,
+          "transmitted_fraction": 0.9985625952792268,
+          "placed_fraction": 0.9985625952792266,
+          "capture_fraction": 1.0,
+          "kernel_support": 0.9804189759599597,
+          "sum_electrons": 39942.50381116907,
+          "peak_electrons": 3201.471108838353,
+          "status": "OK",
+          "kernel_kind": "geometric_footprint_x_airy",
+          "kernel_half_px": 13
+        },
+        {
+          "Z_mm": 300.0,
+          "electrons_in": 40000.0,
+          "transmitted_fraction": 0.9984921131397919,
+          "placed_fraction": 0.9984921131397919,
+          "capture_fraction": 1.0,
+          "kernel_support": 0.9820122712487256,
+          "sum_electrons": 39939.68452559168,
+          "peak_electrons": 2063.3129890552464,
+          "status": "OK",
+          "kernel_kind": "geometric_footprint_x_airy",
+          "kernel_half_px": 14
+        }
+      ],
+      "checks": {
+        "B1_energy_conservation": {
+          "value": 2.220446049250313e-16,
+          "threshold": 0.005,
+          "pass": true,
+          "what": "sum(expected_signal_e) vs transmitted x capture"
+        },
+        "B2_kernel_nonnegative_normalised": {
+          "value": {
+            "non_negative": true,
+            "all_capture_le_1": true
+          },
+          "threshold": "non-negative and capture <= 1",
+          "pass": true,
+          "what": "kernel sanity"
+        },
+        "B4_l0_limit": {
+          "value": 0.0,
+          "threshold": 0.01,
+          "pass": true,
+          "what": "L0 contract reproduced by the shared camera geometry"
+        },
+        "B5_physics_coupling": {
+          "value": {
+            "focus_kernel_peaks": [
+              0.030292249985856716,
+              0.1631068730338939,
+              0.2793559988402538
+            ],
+            "aperture_kernel_peaks": [
+              0.13436566734727923,
+              0.1989709308884594,
+              0.1631068730338939
+            ]
+          },
+          "threshold": "kernel peak changes > 1% across the sweep",
+          "pass": true,
+          "what": "z_focus and D_entrance change the produced kernel, not just a label"
+        },
+        "B7_deterministic_kernel": {
+          "value": true,
+          "threshold": "bitwise identical",
+          "pass": true,
+          "what": "same configuration, cache cleared, same kernel"
+        },
+        "B6_degenerate_statuses": {
+          "value": {
+            "all_rays_blocked_status": "ALL_RAYS_BLOCKED",
+            "n_valid": 0
+          },
+          "threshold": "blocked geometry returns a named non-OK status",
+          "pass": true,
+          "what": "far off-axis point is refused instead of returning a fake distance"
+        }
+      },
+      "l0_limit": [
+        {
+          "Z_mm": 100.0,
+          "u_model_px": 1103.768115942029,
+          "u_expected_px": 1103.768115942029,
+          "abs_error_px": 0.0
+        },
+        {
+          "Z_mm": 200.0,
+          "u_model_px": 871.8840579710145,
+          "u_expected_px": 871.8840579710145,
+          "abs_error_px": 0.0
+        },
+        {
+          "Z_mm": 300.0,
+          "u_model_px": 794.5893719806763,
+          "u_expected_px": 794.5893719806763,
+          "abs_error_px": 0.0
+        }
+      ],
+      "kernel_sensitivity": [
+        {
+          "change": "focus",
+          "value": 150.0,
+          "kernel_half_px": 12,
+          "kernel_peak": 0.030292249985856716,
+          "peak_electrons": 1211.6899994342687,
+          "expected_sum_e": 39909.319647106175
+        },
+        {
+          "change": "focus",
+          "value": 200.0,
+          "kernel_half_px": 10,
+          "kernel_peak": 0.1631068730338939,
+          "peak_electrons": 6524.274921355756,
+          "expected_sum_e": 39942.39631606397
+        },
+        {
+          "change": "focus",
+          "value": 250.0,
+          "kernel_half_px": 8,
+          "kernel_peak": 0.2793559988402538,
+          "peak_electrons": 11174.239953610153,
+          "expected_sum_e": 39948.58916679042
+        },
+        {
+          "change": "aperture",
+          "value": 0.6,
+          "kernel_half_px": 13,
+          "kernel_peak": 0.13436566734727923,
+          "peak_electrons": 5374.626693891169,
+          "expected_sum_e": 39960.62502778589
+        },
+        {
+          "change": "aperture",
+          "value": 0.9,
+          "kernel_half_px": 11,
+          "kernel_peak": 0.1989709308884594,
+          "peak_electrons": 7958.837235538376,
+          "expected_sum_e": 39953.68351699515
+        },
+        {
+          "change": "aperture",
+          "value": 1.2,
+          "kernel_half_px": 10,
+          "kernel_peak": 0.1631068730338939,
+          "peak_electrons": 6524.274921355756,
+          "expected_sum_e": 39942.39631606397
+        }
+      ]
+    },
+    "tolerance": {
+      "oat_rows": 35,
+      "precheck": {
+        "n_assemblies": 200,
+        "n_rows": 3000,
+        "n_distances": 5,
+        "estimator_status_counts": {
+          "OK": 2936,
+          "FIT_NOT_CONVERGED": 64
+        },
+        "optical_failure_rows": 0,
+        "mean_ray_success": 1.0,
+        "mean_capture": 1.0,
+        "mean_kernel_support": 0.9805483876283794,
+        "max_peak_e": 15916.835598958894,
+        "saturation_rows": 195
+      },
+      "sensitivity": [
+        {
+          "variable": "d_baseline_mm",
+          "d_rmse_A_per_sigma_mm": -0.0960171807073954,
+          "rmse_A_max_over_sweep_mm": 1.229625564441923,
+          "d_rmse_B_per_sigma_mm": 0.15554193504005182,
+          "rmse_B_max_over_sweep_mm": 1.7833808174763361,
+          "saturation_any": false
+        },
+        {
+          "variable": "d_cx_px",
+          "d_rmse_A_per_sigma_mm": 0.012564689196185627,
+          "rmse_A_max_over_sweep_mm": 0.2501630987800898,
+          "d_rmse_B_per_sigma_mm": 0.23041708426571342,
+          "rmse_B_max_over_sweep_mm": 1.2528005723521989,
+          "saturation_any": false
+        },
+        {
+          "variable": "d_focal_relative",
+          "d_rmse_A_per_sigma_mm": -0.15572723376980396,
+          "rmse_A_max_over_sweep_mm": 1.134467170025035,
+          "d_rmse_B_per_sigma_mm": 0.09586450038902827,
+          "rmse_B_max_over_sweep_mm": 2.973081524911389,
+          "saturation_any": false
+        },
+        {
+          "variable": "d_focus_mm",
+          "d_rmse_A_per_sigma_mm": 0.23296992198335387,
+          "rmse_A_max_over_sweep_mm": 4.734227855471175,
+          "d_rmse_B_per_sigma_mm": -0.4440743538289872,
+          "rmse_B_max_over_sweep_mm": 2.0745293071793895,
+          "saturation_any": true
+        },
+        {
+          "variable": "d_theta_rad",
+          "d_rmse_A_per_sigma_mm": 0.36433633849227376,
+          "rmse_A_max_over_sweep_mm": 5.25543176947378,
+          "d_rmse_B_per_sigma_mm": -0.18750412598649108,
+          "rmse_B_max_over_sweep_mm": 2.0267189104676397,
+          "saturation_any": false
+        }
+      ],
+      "wall_s": 149.06949540000642
+    },
+    "search": {
+      "nominal": {
+        "best_design": {
+          "baseline_mm": 15.0,
+          "focal_length_mm": 11.1,
+          "theta_deg": 4.0
+        },
+        "best_metrics": {
+          "baseline_mm": 15.0,
+          "focal_length_mm": 11.1,
+          "theta_deg": 4.0,
+          "feasible": true,
+          "reason": "FEASIBLE",
+          "n_attempted": 7,
+          "n_valid": 7,
+          "failure_rate": 0.0,
+          "rmse_mm": 0.01776838853900407,
+          "p95_mm": 0.02884503334889245,
+          "bias_mm": -0.005321324227338664,
+          "mean_assembly_rmse_mm": 0.01776838853900407,
+          "j_value": 0.35536777078008136,
+          "frames": 13,
+          "wall_s": 2.2441613999544643
+        },
+        "n_evaluations": 147,
+        "wall_s": 250.12939620000543,
+        "stopped_by": "budget",
+        "n_infeasible": 47
+      },
+      "robust": {
+        "best_design": {
+          "baseline_mm": 34.4,
+          "focal_length_mm": 7.272384615618831,
+          "theta_deg": 4.0
+        },
+        "best_metrics": {
+          "baseline_mm": 34.4,
+          "focal_length_mm": 7.272384615618831,
+          "theta_deg": 4.0,
+          "feasible": true,
+          "reason": "FEASIBLE",
+          "n_attempted": 48,
+          "n_valid": 42,
+          "failure_rate": 0.125,
+          "rmse_mm": 1.300361611258542,
+          "p95_mm": 2.6073724968634027,
+          "bias_mm": 0.027960392297502374,
+          "mean_assembly_rmse_mm": 1.1733835741907,
+          "j_value": 21.234639480928905,
+          "frames": 54,
+          "wall_s": 11.0983367000008
+        },
+        "n_evaluations": 138,
+        "wall_s": 1019.4067489000154,
+        "stopped_by": "budget",
+        "n_infeasible": 42
+      },
+      "baseline": {
+        "baseline_mm": 20.0,
+        "focal_length_mm": 8.0,
+        "theta_deg": 0.0,
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "n_attempted": 7,
+        "n_valid": 6,
+        "failure_rate": 0.1428571428571429,
+        "rmse_mm": 0.2210294879682323,
+        "p95_mm": 0.4169189643413844,
+        "bias_mm": 0.062274455991567855,
+        "mean_assembly_rmse_mm": 0.2210294879682323,
+        "j_value": 4.4205897593646455,
+        "frames": 13,
+        "wall_s": 2.7472215999732725
+      },
+      "budget": {
+        "nominal": {
+          "best_design": {
+            "baseline_mm": 15.0,
+            "focal_length_mm": 11.1,
+            "theta_deg": 4.0
+          },
+          "best_metrics": {
+            "baseline_mm": 15.0,
+            "focal_length_mm": 11.1,
+            "theta_deg": 4.0,
+            "feasible": true,
+            "reason": "FEASIBLE",
+            "n_attempted": 7,
+            "n_valid": 7,
+            "failure_rate": 0.0,
+            "rmse_mm": 0.01776838853900407,
+            "p95_mm": 0.02884503334889245,
+            "bias_mm": -0.005321324227338664,
+            "mean_assembly_rmse_mm": 0.01776838853900407,
+            "j_value": 0.35536777078008136,
+            "frames": 13,
+            "wall_s": 2.2441613999544643
+          },
+          "n_evaluations": 147,
+          "wall_s": 250.12939620000543,
+          "stopped_by": "budget",
+          "n_infeasible": 47
+        },
+        "robust": {
+          "best_design": {
+            "baseline_mm": 34.4,
+            "focal_length_mm": 7.272384615618831,
+            "theta_deg": 4.0
+          },
+          "best_metrics": {
+            "baseline_mm": 34.4,
+            "focal_length_mm": 7.272384615618831,
+            "theta_deg": 4.0,
+            "feasible": true,
+            "reason": "FEASIBLE",
+            "n_attempted": 48,
+            "n_valid": 42,
+            "failure_rate": 0.125,
+            "rmse_mm": 1.300361611258542,
+            "p95_mm": 2.6073724968634027,
+            "bias_mm": 0.027960392297502374,
+            "mean_assembly_rmse_mm": 1.1733835741907,
+            "j_value": 21.234639480928905,
+            "frames": 54,
+            "wall_s": 11.0983367000008
+          },
+          "n_evaluations": 138,
+          "wall_s": 1019.4067489000154,
+          "stopped_by": "budget",
+          "n_infeasible": 42
+        },
+        "frames": {
+          "nominal": 13,
+          "robust": 54
+        },
+        "objective_weights": {
+          "mean_rmse": 0.5,
+          "p95": 0.35,
+          "failure": 0.15
+        },
+        "reference_scales": {
+          "rmse_mm": 0.05,
+          "p95_mm": 0.1,
+          "failure_rate": 0.05
+        },
+        "search_calibration_distances": [
+          100.0,
+          145.0,
+          180.0,
+          220.0,
+          265.0,
+          300.0
+        ],
+        "search_evaluation_distances": [
+          110.0,
+          140.0,
+          170.0,
+          200.0,
+          230.0,
+          260.0,
+          290.0
+        ],
+        "robust_assemblies": 12,
+        "robust_distances": [
+          110.0,
+          170.0,
+          230.0,
+          290.0
+        ]
+      }
+    },
+    "final": {
+      "n_final_assemblies": 2000,
+      "n_frames_per_candidate": 14000,
+      "test_distances": [
+        105.0,
+        135.0,
+        165.0,
+        195.0,
+        225.0,
+        255.0,
+        285.0
+      ],
+      "subsets": {
+        "strategy_b": 200,
+        "stratified": 200
+      },
+      "candidates": {
+        "baseline": {
+          "n_attempted": 42000,
+          "n_valid": 32693,
+          "failure_rate": 0.22159523809523807,
+          "bias_mm": 0.14105733726746253,
+          "rmse_mm": 3.14812689267054,
+          "p95_abs_mm": 6.643043208436627,
+          "mae_mm": 2.3200327815547364
+        },
+        "nominal": {
+          "n_attempted": 42000,
+          "n_valid": 35337,
+          "failure_rate": 0.1586428571428572,
+          "bias_mm": 0.06377380272149234,
+          "rmse_mm": 3.017621563364543,
+          "p95_abs_mm": 6.566347551557143,
+          "mae_mm": 2.145345163787468
+        },
+        "robust": {
+          "n_attempted": 42000,
+          "n_valid": 31373,
+          "failure_rate": 0.25302380952380954,
+          "bias_mm": -0.17174673883069203,
+          "rmse_mm": 1.903109443210548,
+          "p95_abs_mm": 3.8348805475271317,
+          "mae_mm": 1.4764414433797097
+        }
+      },
+      "engineering": {
+        "baseline": {
+          "baseline_mm": 20.0,
+          "focal_length_mm": 8.0,
+          "theta_deg": 0.0
+        },
+        "nominal": {
+          "baseline_mm": 15.0,
+          "focal_length_mm": 11.1,
+          "theta_deg": 4.0
+        },
+        "robust": {
+          "baseline_mm": 34.4,
+          "focal_length_mm": 7.272384615618831,
+          "theta_deg": 4.0
+        }
+      },
+      "by_distance": {
+        "baseline": [
+          {
+            "distance_mm": 105.0,
+            "n_attempted": 6000,
+            "n_valid": 4690,
+            "failure_rate": 0.21833333333333338,
+            "bias_mm": 0.15442775491242355,
+            "rmse_mm": 1.1860682810855336,
+            "p95_abs_mm": 2.365214373387509,
+            "mae_mm": 0.9382839667462962
+          },
+          {
+            "distance_mm": 135.0,
+            "n_attempted": 6000,
+            "n_valid": 4418,
+            "failure_rate": 0.2636666666666667,
+            "bias_mm": -0.05304344055926823,
+            "rmse_mm": 1.7184041947982864,
+            "p95_abs_mm": 3.3156618744019313,
+            "mae_mm": 1.3846032240871369
+          },
+          {
+            "distance_mm": 165.0,
+            "n_attempted": 6000,
+            "n_valid": 4519,
+            "failure_rate": 0.24683333333333335,
+            "bias_mm": -0.10735642460303985,
+            "rmse_mm": 2.2516369635209887,
+            "p95_abs_mm": 4.392672900209129,
+            "mae_mm": 1.803883371850137
+          },
+          {
+            "distance_mm": 195.0,
+            "n_attempted": 6000,
+            "n_valid": 4498,
+            "failure_rate": 0.2503333333333333,
+            "bias_mm": -0.11514871486342192,
+            "rmse_mm": 2.8012970313531915,
+            "p95_abs_mm": 5.503505611538376,
+            "mae_mm": 2.223367222315956
+          },
+          {
+            "distance_mm": 225.0,
+            "n_attempted": 6000,
+            "n_valid": 4698,
+            "failure_rate": 0.21699999999999997,
+            "bias_mm": 0.016500532444084268,
+            "rmse_mm": 3.3490209003975373,
+            "p95_abs_mm": 6.641460821096168,
+            "mae_mm": 2.6564154262248283
+          },
+          {
+            "distance_mm": 255.0,
+            "n_attempted": 6000,
+            "n_valid": 4869,
+            "failure_rate": 0.1885,
+            "bias_mm": 0.3121070731375332,
+            "rmse_mm": 4.015536382379061,
+            "p95_abs_mm": 7.948854062500212,
+            "mae_mm": 3.190041460776205
+          },
+          {
+            "distance_mm": 285.0,
+            "n_attempted": 6000,
+            "n_valid": 5001,
+            "failure_rate": 0.16649999999999998,
+            "bias_mm": 0.7053751327423685,
+            "rmse_mm": 4.794442290035246,
+            "p95_abs_mm": 9.449045323174346,
+            "mae_mm": 3.8325328156409424
+          }
+        ],
+        "nominal": [
+          {
+            "distance_mm": 105.0,
+            "n_attempted": 6000,
+            "n_valid": 4007,
+            "failure_rate": 0.3321666666666667,
+            "bias_mm": 0.02409148818477377,
+            "rmse_mm": 0.8626417194613014,
+            "p95_abs_mm": 1.6937014093502523,
+            "mae_mm": 0.6886743570236988
+          },
+          {
+            "distance_mm": 135.0,
+            "n_attempted": 6000,
+            "n_valid": 5064,
+            "failure_rate": 0.15600000000000003,
+            "bias_mm": -0.059747525965264385,
+            "rmse_mm": 1.2425639824296897,
+            "p95_abs_mm": 2.48580191543345,
+            "mae_mm": 0.9879660352701501
+          },
+          {
+            "distance_mm": 165.0,
+            "n_attempted": 6000,
+            "n_valid": 5490,
+            "failure_rate": 0.08499999999999996,
+            "bias_mm": 0.027725815683424995,
+            "rmse_mm": 1.7358081402365875,
+            "p95_abs_mm": 3.388343853625773,
+            "mae_mm": 1.3809915019882808
+          },
+          {
+            "distance_mm": 195.0,
+            "n_attempted": 6000,
+            "n_valid": 4850,
+            "failure_rate": 0.19166666666666665,
+            "bias_mm": 0.051782552032185514,
+            "rmse_mm": 2.3609775154467076,
+            "p95_abs_mm": 4.592705389286037,
+            "mae_mm": 1.876921894972737
+          },
+          {
+            "distance_mm": 225.0,
+            "n_attempted": 6000,
+            "n_valid": 4932,
+            "failure_rate": 0.17800000000000005,
+            "bias_mm": 0.10004368767204885,
+            "rmse_mm": 3.1196908073817555,
+            "p95_abs_mm": 6.090585096529492,
+            "mae_mm": 2.480476915465355
+          },
+          {
+            "distance_mm": 255.0,
+            "n_attempted": 6000,
+            "n_valid": 5352,
+            "failure_rate": 0.10799999999999998,
+            "bias_mm": 0.14896698297054525,
+            "rmse_mm": 4.001883919862405,
+            "p95_abs_mm": 7.619960891934341,
+            "mae_mm": 3.1828598924215803
+          },
+          {
+            "distance_mm": 285.0,
+            "n_attempted": 6000,
+            "n_valid": 5642,
+            "failure_rate": 0.059666666666666646,
+            "bias_mm": 0.13568856419462588,
+            "rmse_mm": 4.867801764886427,
+            "p95_abs_mm": 9.435978221050561,
+            "mae_mm": 3.9160565532979255
+          }
+        ],
+        "robust": [
+          {
+            "distance_mm": 105.0,
+            "n_attempted": 6000,
+            "n_valid": 4308,
+            "failure_rate": 0.28200000000000003,
+            "bias_mm": 0.16376610747344122,
+            "rmse_mm": 1.071838491881701,
+            "p95_abs_mm": 2.03094633308822,
+            "mae_mm": 0.875473231290685
+          },
+          {
+            "distance_mm": 135.0,
+            "n_attempted": 6000,
+            "n_valid": 4324,
+            "failure_rate": 0.2793333333333333,
+            "bias_mm": -0.3722496462900811,
+            "rmse_mm": 1.2735211561154551,
+            "p95_abs_mm": 2.4967018253773863,
+            "mae_mm": 1.0283931134950661
+          },
+          {
+            "distance_mm": 165.0,
+            "n_attempted": 6000,
+            "n_valid": 4618,
+            "failure_rate": 0.23033333333333328,
+            "bias_mm": -0.6343661779117314,
+            "rmse_mm": 1.6108768841351335,
+            "p95_abs_mm": 3.03439319261395,
+            "mae_mm": 1.3248422744832704
+          },
+          {
+            "distance_mm": 195.0,
+            "n_attempted": 6000,
+            "n_valid": 4392,
+            "failure_rate": 0.268,
+            "bias_mm": -0.6351784712658038,
+            "rmse_mm": 1.8419262630389683,
+            "p95_abs_mm": 3.5038115231373053,
+            "mae_mm": 1.497493758262686
+          },
+          {
+            "distance_mm": 225.0,
+            "n_attempted": 6000,
+            "n_valid": 4428,
+            "failure_rate": 0.262,
+            "bias_mm": -0.402901533377611,
+            "rmse_mm": 2.0198458906453403,
+            "p95_abs_mm": 3.946256575429108,
+            "mae_mm": 1.6125900858924385
+          },
+          {
+            "distance_mm": 255.0,
+            "n_attempted": 6000,
+            "n_valid": 4587,
+            "failure_rate": 0.23550000000000004,
+            "bias_mm": 0.02535957561094717,
+            "rmse_mm": 2.2511944068487812,
+            "p95_abs_mm": 4.480699817414299,
+            "mae_mm": 1.79214570053514
+          },
+          {
+            "distance_mm": 285.0,
+            "n_attempted": 6000,
+            "n_valid": 4716,
+            "failure_rate": 0.21399999999999997,
+            "bias_mm": 0.6155265297056527,
+            "rmse_mm": 2.6640320105075705,
+            "p95_abs_mm": 5.257743147338829,
+            "mae_mm": 2.130163583854715
+          }
+        ]
+      },
+      "by_estimator": {
+        "baseline": [
+          {
+            "estimator": "centroid",
+            "n_attempted": 14000,
+            "n_valid": 13071,
+            "failure_rate": 0.06635714285714289,
+            "bias_mm": -0.10778551200778604,
+            "rmse_mm": 3.028702308376963,
+            "p95_abs_mm": 6.385674165107602,
+            "mae_mm": 2.2364757379407316
+          },
+          {
+            "estimator": "gaussian_2d",
+            "n_attempted": 14000,
+            "n_valid": 7094,
+            "failure_rate": 0.4932857142857143,
+            "bias_mm": 1.2396937332961697,
+            "rmse_mm": 3.5837045344109626,
+            "p95_abs_mm": 7.572549702870921,
+            "mae_mm": 2.671997275739525
+          },
+          {
+            "estimator": "gaussian_2d_integrated",
+            "n_attempted": 14000,
+            "n_valid": 12528,
+            "failure_rate": 0.1051428571428571,
+            "bias_mm": -0.22141885291060853,
+            "rmse_mm": 3.0033244674154482,
+            "p95_abs_mm": 6.35670387575461,
+            "mae_mm": 2.2079109740301313
+          }
+        ],
+        "nominal": [
+          {
+            "estimator": "centroid",
+            "n_attempted": 14000,
+            "n_valid": 13992,
+            "failure_rate": 0.0005714285714285561,
+            "bias_mm": 0.051387817852517635,
+            "rmse_mm": 2.927771497666455,
+            "p95_abs_mm": 6.306911037618191,
+            "mae_mm": 2.069389410392438
+          },
+          {
+            "estimator": "gaussian_2d",
+            "n_attempted": 14000,
+            "n_valid": 7359,
+            "failure_rate": 0.4743571428571428,
+            "bias_mm": 0.1149520806092699,
+            "rmse_mm": 3.3415358585304165,
+            "p95_abs_mm": 7.2110769638215615,
+            "mae_mm": 2.437487152235744
+          },
+          {
+            "estimator": "gaussian_2d_integrated",
+            "n_attempted": 14000,
+            "n_valid": 13986,
+            "failure_rate": 0.0010000000000000009,
+            "bias_mm": 0.04923667654606975,
+            "rmse_mm": 2.9251749509224747,
+            "p95_abs_mm": 6.31699074913206,
+            "mae_mm": 2.067617436668378
+          }
+        ],
+        "robust": [
+          {
+            "estimator": "centroid",
+            "n_attempted": 14000,
+            "n_valid": 12714,
+            "failure_rate": 0.09185714285714286,
+            "bias_mm": -0.0638934823329922,
+            "rmse_mm": 1.8438049485652157,
+            "p95_abs_mm": 3.7567590785424847,
+            "mae_mm": 1.4150412066062419
+          },
+          {
+            "estimator": "gaussian_2d",
+            "n_attempted": 14000,
+            "n_valid": 6469,
+            "failure_rate": 0.5379285714285714,
+            "bias_mm": -0.5164982728633472,
+            "rmse_mm": 2.046353343440343,
+            "p95_abs_mm": 4.001895512473305,
+            "mae_mm": 1.6427372152519937
+          },
+          {
+            "estimator": "gaussian_2d_integrated",
+            "n_attempted": 14000,
+            "n_valid": 12190,
+            "failure_rate": 0.12928571428571434,
+            "bias_mm": -0.10128313173097998,
+            "rmse_mm": 1.885036014854384,
+            "p95_abs_mm": 3.814907661458135,
+            "mae_mm": 1.4522310465049
+          }
+        ]
+      },
+      "factory_calibration": {
+        "baseline": {
+          "centroid": {
+            "estimator": "centroid",
+            "model": "M1",
+            "params": [
+              47650.59542825031,
+              641.8210111731356
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.28746837601921454,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d": {
+            "estimator": "gaussian_2d",
+            "model": "M1",
+            "params": [
+              47793.433119112575,
+              643.0156905853557
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 8,
+            "residual_rms_px": 4.090747083450906,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d_integrated": {
+            "estimator": "gaussian_2d_integrated",
+            "model": "M1",
+            "params": [
+              47684.61962440156,
+              641.3766152963061
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 8,
+            "residual_rms_px": 0.283507605977434,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          }
+        },
+        "nominal": {
+          "centroid": {
+            "estimator": "centroid",
+            "model": "M1",
+            "params": [
+              50841.94315198733,
+              402.97484001046234
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.07007628236331365,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d": {
+            "estimator": "gaussian_2d",
+            "model": "M1",
+            "params": [
+              50857.80272526959,
+              402.91211595662116
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.03314472060285305,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d_integrated": {
+            "estimator": "gaussian_2d_integrated",
+            "model": "M1",
+            "params": [
+              50857.755812855634,
+              402.9122733646593
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.03327343126709661,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          }
+        },
+        "robust": {
+          "centroid": {
+            "estimator": "centroid",
+            "model": "M1",
+            "params": [
+              73809.83418871542,
+              492.47463416288906
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.9060691885918575,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d": {
+            "estimator": "gaussian_2d",
+            "model": "M1",
+            "params": [
+              73973.21773512248,
+              491.36168872321264
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 0.9279605513723763,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          },
+          "gaussian_2d_integrated": {
+            "estimator": "gaussian_2d_integrated",
+            "model": "M1",
+            "params": [
+              73375.1477168758,
+              494.2676325579746
+            ],
+            "z_range_mm": [
+              100.0,
+              300.0
+            ],
+            "n_points": 9,
+            "residual_rms_px": 1.572593907138275,
+            "status": "OK",
+            "assembly_id": "NOMINAL",
+            "message": "ok"
+          }
+        }
+      },
+      "strategy_b": {
+        "baseline": {
+          "n_attempted": 1400,
+          "n_valid": 1270,
+          "failure_rate": 0.09285714285714286,
+          "bias_mm": 0.018948523292656724,
+          "rmse_mm": 0.22940373340371786,
+          "p95_abs_mm": 0.4737116542993872,
+          "mae_mm": 0.17922514887051977
+        },
+        "nominal": {
+          "n_attempted": 1400,
+          "n_valid": 1399,
+          "failure_rate": 0.0007142857142856673,
+          "bias_mm": 0.0025015113607843283,
+          "rmse_mm": 0.038523470276889044,
+          "p95_abs_mm": 0.07911235103380815,
+          "mae_mm": 0.02801663579661408
+        },
+        "robust": {
+          "n_attempted": 1400,
+          "n_valid": 1227,
+          "failure_rate": 0.12357142857142855,
+          "bias_mm": 0.03424253529780844,
+          "rmse_mm": 0.48891367870100677,
+          "p95_abs_mm": 1.0214081254807983,
+          "mae_mm": 0.39113284020794636
+        }
+      },
+      "stratified": {
+        "baseline": {
+          "overall": {
+            "n_attempted": 8400,
+            "n_valid": 2530,
+            "failure_rate": 0.6988095238095238,
+            "bias_mm": 9.36070759753699,
+            "rmse_mm": 23.905507561698695,
+            "p95_abs_mm": 44.723453981172455,
+            "mae_mm": 19.36346116012024
+          },
+          "by_condition": [
+            {
+              "condition": "strong",
+              "n_attempted": 4200,
+              "n_valid": 693,
+              "failure_rate": 0.835,
+              "bias_mm": 9.236989541597795,
+              "rmse_mm": 24.005707338197798,
+              "p95_abs_mm": 42.536260183957,
+              "mae_mm": 19.882118740146225
+            },
+            {
+              "condition": "weak",
+              "n_attempted": 4200,
+              "n_valid": 1837,
+              "failure_rate": 0.5626190476190476,
+              "bias_mm": 9.40737967852004,
+              "rmse_mm": 23.867598368894132,
+              "p95_abs_mm": 45.14858348781277,
+              "mae_mm": 19.167799917355953
+            }
+          ],
+          "by_estimator": [
+            {
+              "estimator": "centroid",
+              "n_attempted": 2800,
+              "n_valid": 1042,
+              "failure_rate": 0.6278571428571429,
+              "bias_mm": 8.02415392484833,
+              "rmse_mm": 23.230012083497385,
+              "p95_abs_mm": 44.012413440043005,
+              "mae_mm": 18.861611956669513
+            },
+            {
+              "estimator": "gaussian_2d",
+              "n_attempted": 2800,
+              "n_valid": 475,
+              "failure_rate": 0.8303571428571428,
+              "bias_mm": 15.541474257601573,
+              "rmse_mm": 26.96184718211309,
+              "p95_abs_mm": 47.231271413742384,
+              "mae_mm": 21.717871540354636
+            },
+            {
+              "estimator": "gaussian_2d_integrated",
+              "n_attempted": 2800,
+              "n_valid": 1013,
+              "failure_rate": 0.6382142857142857,
+              "bias_mm": 7.837336189255553,
+              "rmse_mm": 23.050489451440384,
+              "p95_abs_mm": 43.561188910174245,
+              "mae_mm": 18.775684199986312
+            }
+          ]
+        },
+        "nominal": {
+          "overall": {
+            "n_attempted": 8400,
+            "n_valid": 2847,
+            "failure_rate": 0.6610714285714285,
+            "bias_mm": -113.55968913034508,
+            "rmse_mm": 115.28715917296749,
+            "p95_abs_mm": 139.82483465028727,
+            "mae_mm": 113.6067831068569
+          },
+          "by_condition": [
+            {
+              "condition": "strong",
+              "n_attempted": 4200,
+              "n_valid": 900,
+              "failure_rate": 0.7857142857142857,
+              "bias_mm": -116.08636605017229,
+              "rmse_mm": 117.66680640819082,
+              "p95_abs_mm": 139.97208540858352,
+              "mae_mm": 116.08636605017229
+            },
+            {
+              "condition": "weak",
+              "n_attempted": 4200,
+              "n_valid": 1947,
+              "failure_rate": 0.5364285714285715,
+              "bias_mm": -112.39173369745113,
+              "rmse_mm": 114.17040685075823,
+              "p95_abs_mm": 139.58527059078776,
+              "mae_mm": 112.46059684646458
+            }
+          ],
+          "by_estimator": [
+            {
+              "estimator": "centroid",
+              "n_attempted": 2800,
+              "n_valid": 1102,
+              "failure_rate": 0.6064285714285714,
+              "bias_mm": -113.2070755451511,
+              "rmse_mm": 114.95466638331413,
+              "p95_abs_mm": 139.79983341824223,
+              "mae_mm": 113.2669105563611
+            },
+            {
+              "estimator": "gaussian_2d",
+              "n_attempted": 2800,
+              "n_valid": 665,
+              "failure_rate": 0.7625,
+              "bias_mm": -114.59781030664381,
+              "rmse_mm": 116.23001772305585,
+              "p95_abs_mm": 139.8462335716642,
+              "mae_mm": 114.59781030664381
+            },
+            {
+              "estimator": "gaussian_2d_integrated",
+              "n_attempted": 2800,
+              "n_valid": 1080,
+              "failure_rate": 0.6142857142857143,
+              "bias_mm": -113.28027208279426,
+              "rmse_mm": 115.04274623531697,
+              "p95_abs_mm": 139.77110188748674,
+              "mae_mm": 113.343363164994
+            }
+          ]
+        },
+        "robust": {
+          "overall": {
+            "n_attempted": 8400,
+            "n_valid": 4729,
+            "failure_rate": 0.4370238095238095,
+            "bias_mm": -0.38898634756340705,
+            "rmse_mm": 3.8632863444266374,
+            "p95_abs_mm": 3.974113653544394,
+            "mae_mm": 1.6185655911046988
+          },
+          "by_condition": [
+            {
+              "condition": "strong",
+              "n_attempted": 4200,
+              "n_valid": 1501,
+              "failure_rate": 0.6426190476190476,
+              "bias_mm": -1.1383441117174955,
+              "rmse_mm": 2.1457037998984236,
+              "p95_abs_mm": 4.183667571760594,
+              "mae_mm": 1.7738227240786468
+            },
+            {
+              "condition": "weak",
+              "n_attempted": 4200,
+              "n_valid": 3228,
+              "failure_rate": 0.23142857142857143,
+              "bias_mm": -0.040539630092748156,
+              "rmse_mm": 4.44118823552917,
+              "p95_abs_mm": 3.8527872788159003,
+              "mae_mm": 1.546371986211918
+            }
+          ],
+          "by_estimator": [
+            {
+              "estimator": "centroid",
+              "n_attempted": 2800,
+              "n_valid": 1946,
+              "failure_rate": 0.30500000000000005,
+              "bias_mm": -0.2892602718576684,
+              "rmse_mm": 4.123145205658389,
+              "p95_abs_mm": 3.8825918104545707,
+              "mae_mm": 1.5661944240367474
+            },
+            {
+              "estimator": "gaussian_2d",
+              "n_attempted": 2800,
+              "n_valid": 882,
+              "failure_rate": 0.685,
+              "bias_mm": -0.7081506583850954,
+              "rmse_mm": 2.075217987257624,
+              "p95_abs_mm": 3.951863789338345,
+              "mae_mm": 1.7213041247108296
+            },
+            {
+              "estimator": "gaussian_2d_integrated",
+              "n_attempted": 2800,
+              "n_valid": 1901,
+              "failure_rate": 0.32107142857142856,
+              "bias_mm": -0.342991619093464,
+              "rmse_mm": 4.210357872548601,
+              "p95_abs_mm": 4.063220233584275,
+              "mae_mm": 1.6245092546889313
+            }
+          ]
+        }
+      },
+      "ci": {
+        "baseline_vs_nominal|centroid": {
+          "n_pairs": 14000,
+          "n_both_valid": 13066,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 13066,
+            "n_frames_b": 13066,
+            "value_a": 3.022114022009781,
+            "value_b": 2.876213311354882,
+            "delta": -0.14590071065489907,
+            "ci_low": -0.24428490467781935,
+            "ci_high": -0.049162237655241574,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 13066,
+            "n_frames_b": 13066,
+            "value_a": 6.373985239764053,
+            "value_b": 6.241809975851787,
+            "delta": -0.13217526391226642,
+            "ci_low": -0.371293446254599,
+            "ci_high": 0.1075650737536899,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": false,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 13066,
+            "n_frames_b": 13066,
+            "value_a": -0.1117894780610476,
+            "value_b": 0.06466917070374177,
+            "delta": 0.17645864876478937,
+            "ci_low": 0.08674117573693908,
+            "ci_high": 0.27484776586948123,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.06635714285714285,
+            "value_b": 0.0005714285714285715,
+            "delta": -0.06578571428571428,
+            "ci_low": -0.07078571428571429,
+            "ci_high": -0.060855357142857155,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "baseline_vs_robust|centroid": {
+          "n_pairs": 14000,
+          "n_both_valid": 12414,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 12414,
+            "n_frames_b": 12414,
+            "value_a": 2.9945835408700123,
+            "value_b": 1.8185995934299348,
+            "delta": -1.1759839474400775,
+            "ci_low": -1.2180316450538617,
+            "ci_high": -1.1322057864741708,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 12414,
+            "n_frames_b": 12414,
+            "value_a": 6.312506924757458,
+            "value_b": 3.6893078438426845,
+            "delta": -2.6231990809147736,
+            "ci_low": -2.712254492061381,
+            "ci_high": -2.506340049590845,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 12414,
+            "n_frames_b": 12414,
+            "value_a": -0.22998148679814004,
+            "value_b": -0.10770055570106203,
+            "delta": 0.12228093109707801,
+            "ci_low": 0.0761661033542513,
+            "ci_high": 0.16761459773412385,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.06635714285714285,
+            "value_b": 0.09185714285714286,
+            "delta": 0.02550000000000001,
+            "ci_low": 0.020355357142857137,
+            "ci_high": 0.03064285714285714,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "nominal_vs_robust|centroid": {
+          "n_pairs": 14000,
+          "n_both_valid": 12708,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 12708,
+            "n_frames_b": 12708,
+            "value_a": 2.861930844558429,
+            "value_b": 1.8369104657050992,
+            "delta": -1.0250203788533299,
+            "ci_low": -1.11182592887327,
+            "ci_high": -0.9449322631114488,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 12708,
+            "n_frames_b": 12708,
+            "value_a": 6.205334634550374,
+            "value_b": 3.750700517397887,
+            "delta": -2.454634117152487,
+            "ci_low": -2.6889039218373534,
+            "ci_high": -2.2694381493387614,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 12708,
+            "n_frames_b": 12708,
+            "value_a": 0.06136034660640862,
+            "value_b": -0.06743531618428275,
+            "delta": -0.12879566279069138,
+            "ci_low": -0.21080580209763167,
+            "ci_high": -0.04681303932396982,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.0005714285714285715,
+            "value_b": 0.09185714285714286,
+            "delta": 0.09128571428571429,
+            "ci_low": 0.0837125,
+            "ci_high": 0.09893035714285714,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "baseline_vs_nominal|gaussian_2d": {
+          "n_pairs": 14000,
+          "n_both_valid": 4556,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 1749,
+            "n_frames_a": 4556,
+            "n_frames_b": 4556,
+            "value_a": 4.078886198308477,
+            "value_b": 3.857232995371081,
+            "delta": -0.2216532029373961,
+            "ci_low": -0.3515357612081038,
+            "ci_high": -0.09998621367881681,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 1749,
+            "n_frames_a": 4556,
+            "n_frames_b": 4556,
+            "value_a": 8.199044198712755,
+            "value_b": 7.927554986272966,
+            "delta": -0.2714892124397892,
+            "ci_low": -0.6058630090247729,
+            "ci_high": 0.01981550675308849,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": false,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 1749,
+            "n_frames_a": 4556,
+            "n_frames_b": 4556,
+            "value_a": 1.4786921546236043,
+            "value_b": 0.16181087343933523,
+            "delta": -1.316881281184269,
+            "ci_low": -1.4516798273044274,
+            "ci_high": -1.1890175871451305,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.49328571428571427,
+            "value_b": 0.47435714285714287,
+            "delta": -0.018928571428571406,
+            "ci_low": -0.02671428571428569,
+            "ci_high": -0.011212499999999972,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "baseline_vs_robust|gaussian_2d": {
+          "n_pairs": 14000,
+          "n_both_valid": 5307,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 1522,
+            "n_frames_a": 5307,
+            "n_frames_b": 5307,
+            "value_a": 3.666562637681516,
+            "value_b": 2.109638772162965,
+            "delta": -1.5569238655185509,
+            "ci_low": -1.6682924245645485,
+            "ci_high": -1.4506357827162828,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 1522,
+            "n_frames_a": 5307,
+            "n_frames_b": 5307,
+            "value_a": 7.567755900395284,
+            "value_b": 4.087124343176537,
+            "delta": -3.4806315572187465,
+            "ci_low": -3.816893905778655,
+            "ci_high": -3.2594288584966375,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 1522,
+            "n_frames_a": 5307,
+            "n_frames_b": 5307,
+            "value_a": 1.126209823755907,
+            "value_b": -0.7493040070825087,
+            "delta": -1.8755138308384156,
+            "ci_low": -1.9543742632530707,
+            "ci_high": -1.79880288810114,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.49328571428571427,
+            "value_b": 0.5379285714285714,
+            "delta": 0.04464285714285715,
+            "ci_low": 0.03750000000000009,
+            "ci_high": 0.0516428571428571,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "nominal_vs_robust|gaussian_2d": {
+          "n_pairs": 14000,
+          "n_both_valid": 4414,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 1486,
+            "n_frames_a": 4414,
+            "n_frames_b": 4414,
+            "value_a": 3.792872788467254,
+            "value_b": 2.125053541707107,
+            "delta": -1.6678192467601471,
+            "ci_low": -1.789695628043456,
+            "ci_high": -1.5510496952779986,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 1486,
+            "n_frames_a": 4414,
+            "n_frames_b": 4414,
+            "value_a": 7.8808495141012145,
+            "value_b": 4.200904503287119,
+            "delta": -3.6799450108140954,
+            "ci_low": -3.9671166043381163,
+            "ci_high": -3.356590316801261,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 1486,
+            "n_frames_a": 4414,
+            "n_frames_b": 4414,
+            "value_a": 0.20436013420405433,
+            "value_b": -0.6335395486746913,
+            "delta": -0.8378996828787456,
+            "ci_low": -0.9669163604518741,
+            "ci_high": -0.7161200347353734,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.47435714285714287,
+            "value_b": 0.5379285714285714,
+            "delta": 0.06357142857142856,
+            "ci_low": 0.05371428571428577,
+            "ci_high": 0.0729285714285714,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "baseline_vs_nominal|gaussian_2d_integrated": {
+          "n_pairs": 14000,
+          "n_both_valid": 12515,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 12515,
+            "n_frames_b": 12515,
+            "value_a": 2.991267960224304,
+            "value_b": 2.8844426729698593,
+            "delta": -0.10682528725444485,
+            "ci_low": -0.20370347328338032,
+            "ci_high": -0.007268877548728878,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 12515,
+            "n_frames_b": 12515,
+            "value_a": 6.335663472707169,
+            "value_b": 6.258772213306718,
+            "delta": -0.07689125940045116,
+            "ci_low": -0.3041313982382503,
+            "ci_high": 0.18678231541622484,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": false,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 12515,
+            "n_frames_b": 12515,
+            "value_a": -0.2291261621544007,
+            "value_b": 0.06482313648781479,
+            "delta": 0.29394929864221553,
+            "ci_low": 0.20431774524689741,
+            "ci_high": 0.3883032042519864,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.10514285714285715,
+            "value_b": 0.001,
+            "delta": -0.10414285714285715,
+            "ci_low": -0.11021607142857143,
+            "ci_high": -0.09835535714285715,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "baseline_vs_robust|gaussian_2d_integrated": {
+          "n_pairs": 14000,
+          "n_both_valid": 11612,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 11612,
+            "n_frames_b": 11612,
+            "value_a": 2.996655484633057,
+            "value_b": 1.8709583054650243,
+            "delta": -1.1256971791680326,
+            "ci_low": -1.171530354000303,
+            "ci_high": -1.0781814390248556,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 11612,
+            "n_frames_b": 11612,
+            "value_a": 6.325984682114717,
+            "value_b": 3.766797098090924,
+            "delta": -2.559187584023793,
+            "ci_low": -2.6891195536461803,
+            "ci_high": -2.40442163684816,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 11612,
+            "n_frames_b": 11612,
+            "value_a": -0.34662563495876153,
+            "value_b": -0.1438328924948186,
+            "delta": 0.20279274246394294,
+            "ci_low": 0.15701127918438637,
+            "ci_high": 0.25069991937727903,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.10514285714285715,
+            "value_b": 0.12928571428571428,
+            "delta": 0.024142857142857133,
+            "ci_low": 0.017641071428571426,
+            "ci_high": 0.03057142857142857,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        },
+        "nominal_vs_robust|gaussian_2d_integrated": {
+          "n_pairs": 14000,
+          "n_both_valid": 12179,
+          "rmse": {
+            "metric": "rmse",
+            "n_assemblies": 2000,
+            "n_frames_a": 12179,
+            "n_frames_b": 12179,
+            "value_a": 2.8637292275338373,
+            "value_b": 1.8768828972744078,
+            "delta": -0.9868463302594295,
+            "ci_low": -1.0728293358322964,
+            "ci_high": -0.9064094615902246,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "p95_abs": {
+            "metric": "p95_abs",
+            "n_assemblies": 2000,
+            "n_frames_a": 12179,
+            "n_frames_b": 12179,
+            "value_a": 6.234924547083066,
+            "value_b": 3.8068662164461564,
+            "delta": -2.42805833063691,
+            "ci_low": -2.664461369100759,
+            "ci_high": -2.2235701477785734,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "bias": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 12179,
+            "n_frames_b": 12179,
+            "value_a": 0.0667201359590254,
+            "value_b": -0.10584769886283628,
+            "delta": -0.17256783482186167,
+            "ci_low": -0.2541461962802905,
+            "ci_high": -0.09108476996311496,
+            "n_boot": 2000,
+            "unit": "mm",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          },
+          "failure_rate": {
+            "metric": "bias",
+            "n_assemblies": 2000,
+            "n_frames_a": 14000,
+            "n_frames_b": 14000,
+            "value_a": 0.001,
+            "value_b": 0.12928571428571428,
+            "delta": 0.12828571428571428,
+            "ci_low": 0.118925,
+            "ci_high": 0.13764464285714284,
+            "n_boot": 2000,
+            "unit": "fraction",
+            "excludes_zero": true,
+            "direction": "lower_is_better"
+          }
+        }
+      },
+      "wall_s": 4196.244007800007
+    },
+    "gate_checks": {
+      "PRE05_tests_bound": {
+        "value": {
+          "totals": {
+            "passed": 252,
+            "failed": 0,
+            "skipped": 0,
+            "total": 252
+          },
+          "consistent": true,
+          "junit_sha256": "babad1c7ba8da16926cc5d89b4d0200c15c533b902f1737a22ffa5a9f91e0d3c",
+          "code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+          "exit_code": 0
+        },
+        "threshold": "totals bound to code hash, JUnit hash, command and exit code",
+        "pass": true,
+        "what": "test evidence cannot be a hand-written JSON"
+      },
+      "A4_paraxial_small_field": {
+        "value": 0.0006968179184148645,
+        "threshold": 0.01,
+        "pass": true,
+        "what": "traced chief ray vs independent paraxial matrix at 0.5 mm object height"
+      },
+      "A5_pinhole_limit": {
+        "value": 0.2240390293801305,
+        "threshold": 0.3,
+        "pass": true,
+        "what": "EPD=0.15 mm geometric RMS radius in pixels (must collapse to a point)"
+      },
+      "A6_aperture_monotone_spot": {
+        "value": [
+          0.5750642275642631,
+          1.3382460718176568,
+          2.4923426122565737,
+          4.254641911048221,
+          6.852392474889991
+        ],
+        "threshold": "strictly increasing with aperture",
+        "pass": true,
+        "what": "RMS spot radius vs entrance aperture diameter"
+      },
+      "A7_focus_defocus": {
+        "value": {
+          "offset_mm": [
+            -0.4,
+            -0.2,
+            -0.1,
+            -0.05,
+            0.0,
+            0.05,
+            0.1,
+            0.2,
+            0.4
+          ],
+          "rms_radius_um": [
+            16.3234756883409,
+            6.343780068758576,
+            1.9141364956082498,
+            2.122672223751348,
+            4.254641911048221,
+            6.667281289184276,
+            9.140991377474519,
+            14.143237084885056,
+            24.208078773517602
+          ],
+          "minimum_um": 1.9141364956082498,
+          "far_mean_um": 20.265777230929253,
+          "sign_changes": 1
+        },
+        "threshold": "unimodal U-shape and far-offset blur >= 3x the minimum",
+        "pass": true,
+        "what": "detector defocus sweep at Z=200 mm"
+      },
+      "A8_blocked_rays_counted": {
+        "value": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "threshold": "< 1.0 blocked and reported",
+        "pass": true,
+        "what": "every launched ray accounted for, blocked rays kept in the denominator"
+      },
+      "A1_backend_importable": {
+        "value": {
+          "backend": "optiland",
+          "importable": true,
+          "version": "0.6.3",
+          "version_supported": true,
+          "error": null,
+          "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+        },
+        "threshold": "importable and version 0.6.3",
+        "pass": true,
+        "what": "Optiland import + version"
+      },
+      "A2_real_refracting_surfaces": {
+        "value": {
+          "radius_1_mm": 7.721498904389647,
+          "radius_2_mm": -7.721498904389647,
+          "thickness_mm": 3.0,
+          "material": "N-BK7"
+        },
+        "threshold": "two non-flat surfaces with a real thickness",
+        "pass": true,
+        "what": "declared refracting geometry"
+      },
+      "A3_trace_executed": {
+        "value": 970,
+        "threshold": "> 0 exported ray rows",
+        "pass": true,
+        "what": "real ray trace output written to raytrace_reference.csv"
+      },
+      "B1_energy_conservation": {
+        "value": 2.220446049250313e-16,
+        "threshold": 0.005,
+        "pass": true,
+        "what": "sum(expected_signal_e) vs transmitted x capture"
+      },
+      "B2_kernel_nonnegative_normalised": {
+        "value": {
+          "non_negative": true,
+          "all_capture_le_1": true
+        },
+        "threshold": "non-negative and capture <= 1",
+        "pass": true,
+        "what": "kernel sanity"
+      },
+      "B4_l0_limit": {
+        "value": 0.0,
+        "threshold": 0.01,
+        "pass": true,
+        "what": "L0 contract reproduced by the shared camera geometry"
+      },
+      "B5_physics_coupling": {
+        "value": {
+          "focus_kernel_peaks": [
+            0.030292249985856716,
+            0.1631068730338939,
+            0.2793559988402538
+          ],
+          "aperture_kernel_peaks": [
+            0.13436566734727923,
+            0.1989709308884594,
+            0.1631068730338939
+          ]
+        },
+        "threshold": "kernel peak changes > 1% across the sweep",
+        "pass": true,
+        "what": "z_focus and D_entrance change the produced kernel, not just a label"
+      },
+      "B7_deterministic_kernel": {
+        "value": true,
+        "threshold": "bitwise identical",
+        "pass": true,
+        "what": "same configuration, cache cleared, same kernel"
+      },
+      "B6_degenerate_statuses": {
+        "value": {
+          "all_rays_blocked_status": "ALL_RAYS_BLOCKED",
+          "n_valid": 0
+        },
+        "threshold": "blocked geometry returns a named non-OK status",
+        "pass": true,
+        "what": "far off-axis point is refused instead of returning a fake distance"
+      },
+      "V4_A_OVERALL": {
+        "value": "PASS",
+        "threshold": "all A1-A9 checks pass",
+        "pass": true,
+        "what": "real optical backend validation"
+      },
+      "V4_B_OVERALL": {
+        "value": "PASS",
+        "threshold": "all B1-B7 checks pass",
+        "pass": true,
+        "what": "L1 to CMOS transfer validation"
+      },
+      "S5_oat_complete": {
+        "value": {
+          "n_rows": 35,
+          "levels": 7
+        },
+        "threshold": "5 variables x 7 levels with 0 perturbation present",
+        "pass": true,
+        "what": "one-at-a-time sweep coverage"
+      },
+      "S1_zero_perturbation_matches_nominal": {
+        "value": {
+          "zero_level_present": true,
+          "estimable": true
+        },
+        "threshold": "the 0-sigma row of every variable reproduces the nominal result",
+        "pass": true,
+        "what": "zero perturbation -> nominal configuration"
+      },
+      "S2_lhs_marginals_normal": {
+        "value": {
+          "d_baseline_mm": 1.0,
+          "d_theta_rad": 1.0,
+          "d_focal_relative": 1.0,
+          "d_cx_px": 1.0,
+          "d_focus_mm": 1.0
+        },
+        "threshold": "KS p > 0.01 for every marginal",
+        "pass": true,
+        "what": "LHS + inverse-normal transform reproduces N(0, sigma)"
+      },
+      "S6_precheck_draws": {
+        "value": 200,
+        "threshold": ">= 200 (or 40 in quick mode)",
+        "pass": true,
+        "what": "exploratory assembly draws"
+      },
+      "S7_failures_enter_denominator": {
+        "value": {
+          "rows": 3000,
+          "optical_failure_rows": 0,
+          "expected_rows": 3000,
+          "estimators_per_scene": 3
+        },
+        "threshold": "every attempt recorded with a status; no NaN deletion",
+        "pass": true,
+        "what": "no NaN deletion; every scene x estimator has a row"
+      },
+      "O1_objective_frozen": {
+        "value": {
+          "weights": {
+            "mean_rmse": 0.5,
+            "p95": 0.35,
+            "failure": 0.15
+          },
+          "scales": {
+            "rmse_mm": 0.05,
+            "p95_mm": 0.1,
+            "failure_rate": 0.05
+          }
+        },
+        "threshold": "weights and reference scales declared before the search",
+        "pass": true,
+        "what": "frozen objective definition from the pre-registration"
+      },
+      "O3_all_designs_recorded": {
+        "value": {
+          "nominal_history": 147,
+          "robust_history": 138
+        },
+        "threshold": "every attempted design has a row",
+        "pass": true,
+        "what": "search history completeness"
+      },
+      "O6_search_uses_validation_only": {
+        "value": {
+          "search_distances": [
+            110.0,
+            140.0,
+            170.0,
+            200.0,
+            230.0,
+            260.0,
+            290.0
+          ],
+          "test_distances": [
+            105.0,
+            135.0,
+            165.0,
+            195.0,
+            225.0,
+            255.0,
+            285.0
+          ]
+        },
+        "threshold": "no test distance in the search panel",
+        "pass": true,
+        "what": "final-test leakage guard at search time"
+      },
+      "O5_candidates_frozen": {
+        "value": {
+          "sha256": "e21c2d6d4760c6274cfea1c80ffd9568386b48ebcc62fe704eba512ca3bfcabf",
+          "designs": {
+            "baseline": {
+              "baseline_mm": 20.0,
+              "focal_length_mm": 8.0,
+              "theta_deg": 0.0
+            },
+            "nominal": {
+              "baseline_mm": 15.0,
+              "focal_length_mm": 11.1,
+              "theta_deg": 4.0
+            },
+            "robust": {
+              "baseline_mm": 34.4,
+              "focal_length_mm": 7.272384615618831,
+              "theta_deg": 4.0
+            }
+          }
+        },
+        "threshold": "registry frozen before the final test",
+        "pass": true,
+        "what": "candidate freeze"
+      },
+      "H1_assembly_draws": {
+        "value": 2000,
+        "threshold": ">= 2000 unless a declared downgrade applies",
+        "pass": true,
+        "what": "independent assembly draws in the final evaluation"
+      },
+      "H2_shared_assemblies": {
+        "value": true,
+        "threshold": "all candidates use the same assembly ids",
+        "pass": true,
+        "what": "paired design"
+      },
+      "H5_failure_denominator": {
+        "value": {
+          "baseline": {
+            "n_attempted": 42000,
+            "n_valid": 32693,
+            "failure_rate": 0.22159523809523807,
+            "bias_mm": 0.14105733726746253,
+            "rmse_mm": 3.14812689267054,
+            "p95_abs_mm": 6.643043208436627,
+            "mae_mm": 2.3200327815547364
+          },
+          "nominal": {
+            "n_attempted": 42000,
+            "n_valid": 35337,
+            "failure_rate": 0.1586428571428572,
+            "bias_mm": 0.06377380272149234,
+            "rmse_mm": 3.017621563364543,
+            "p95_abs_mm": 6.566347551557143,
+            "mae_mm": 2.145345163787468
+          },
+          "robust": {
+            "n_attempted": 42000,
+            "n_valid": 31373,
+            "failure_rate": 0.25302380952380954,
+            "bias_mm": -0.17174673883069203,
+            "rmse_mm": 1.903109443210548,
+            "p95_abs_mm": 3.8348805475271317,
+            "mae_mm": 1.4764414433797097
+          }
+        },
+        "threshold": "failure rate over all attempts",
+        "pass": true,
+        "what": "all-attempt denominator"
+      }
+    },
+    "aggregation": {
+      "status": "PASS",
+      "numeric_checks_pass": true,
+      "boundary_cases_pass": true,
+      "tests_ingested": true,
+      "tests": {
+        "totals": {
+          "passed": 252,
+          "failed": 0,
+          "skipped": 0,
+          "total": 252
+        }
+      },
+      "required_min_tests": 0,
+      "failures": [],
+      "notes": [],
+      "rule": "PASS requires all numeric checks, all boundary cases, ingested tests, failed==0, skipped==0 and passed>=required_min_tests"
+    },
+    "scientific": {
+      "status": "GAIN_SUPPORTED_WITHIN_ASSUMED_L1_MODEL",
+      "reason": "robust has a paired RMSE advantage whose CI excludes zero",
+      "delta_rmse_mm": -1.1256971791680326,
+      "ci": [
+        -1.171530354000303,
+        -1.0781814390248556
+      ]
+    }
+  },
+  "limitations": [
+    "single ASSUMED singlet; no vendor part number, no measured lens",
+    "geometric footprint convolved with a scalar Airy limit, not a wavefront PSF",
+    "tolerance sigmas are ASSUMED examples, not a manufacturing study",
+    "synthetic data only; no measured camera"
+  ],
+  "compute": {
+    "workers": 4,
+    "benchmark": {
+      "cases": [],
+      "best_workers": 4,
+      "best_speedup_vs_1": 1.0,
+      "decision": "workers_4",
+      "note": "override or quick mode"
+    },
+    "wall_time_s": 5625.210937099997,
+    "stage_seconds": {
+      "stage_a_s": 0.7899833000265062,
+      "stage_b_s": 0.4091443999786861,
+      "stage_c_s": 149.07231570000295,
+      "stage_d_s": 1272.3384191000368,
+      "stage_e_s": 4196.244007800007
+    }
+  }
+}

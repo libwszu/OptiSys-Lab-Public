@@ -1,0 +1,53 @@
+{
+  "schema": "g4.run_status/1",
+  "run_id": "20261021_044354_G4_36e42f82_63f8",
+  "gate": "G4",
+  "case_id": "pump976_g4",
+  "schema_version": "4.0",
+  "status": "PARTIAL",
+  "scientific_claim_status": "QUALIFIED",
+  "model_level_emitted": "P1_QUALIFIED",
+  "frozen": true,
+  "evidence_level": "SIMULATED",
+  "G4_ENGINEERING_EXECUTION_STATUS": "PARTIAL",
+  "G4_OPTICAL_MODEL_VERIFICATION": "QUALIFIED",
+  "G4_TOLERANCE_EVALUATION_STATUS": "PARTIAL",
+  "G4_EMPIRICAL_VALIDATION_STATUS": "NOT_AVAILABLE",
+  "G4_PORTFOLIO_DELIVERY_STATUS": "PARTIAL",
+  "G4_AUDIT_STATUS": "NOT_RUN",
+  "G4_SCIENTIFIC_CLAIM": "QUALIFIED",
+  "INHERITED_G2_SCIENCE_STATUS": "QUALIFIED_ONLY",
+  "started_at_utc": "2026-10-21T08:43:55+00:00",
+  "input_hashes": {
+    "configs/pump976_g4_l0.yaml": "329a7a74b68808befc23ea79bf8c8558c63fa04784419cb201d93b7ead9c5af8",
+    "configs/pump976_g4_l1.yaml": "4fbee8d43aa4fd0fa2ac17c476915a85e71312c98d5c15873277a88b5605fbf7",
+    "configs/pump976_g4_tolerance.yaml": "9a8bdb21dadfaed888c1f1fae278d1666d68b709b52249e5d8b4acd250f1e52e",
+    "run_parameters": "51dca3d4229175b3bc115ccfb291638035d6cc149e05d302c6ee8594abd6d987",
+    "docs/g4/G4_FREEZE_HASHES.json": "de1a77448ea6879d8a60fdba1f276f904b83f2ceeedf17ac52127600f4eb18b3"
+  },
+  "finished_at_utc": "2026-10-21T08:44:03+00:00",
+  "open_issues": [
+    "G4-01: no vendor part numbers / measured source power / empirical pump spot; all are ASSUMED or UNKNOWN",
+    "G4-02: P0 ideal thin-lens full-NA result differs materially from assumed P1 singlet trace; no full-NA physical validation",
+    "G4-03: P1 adapter covers centered singlets only; tolerance/misalignment sweep is P0",
+    "G4-04: no experiment; empirical validation NOT_AVAILABLE"
+  ],
+  "stage_wall_s": {
+    "source_convergence": 0.4463,
+    "nominal_traces": 0.6841,
+    "oat": 0.0341,
+    "tolerance": 0.03,
+    "comparison": 0.0173
+  },
+  "ray_count_convergence_status": "PASS",
+  "expected_tolerance_rows": 8,
+  "actual_tolerance_rows": 8,
+  "reduced_sample_deviation": true,
+  "registered_sample_scale": false,
+  "quality_gate_validation": {
+    "valid": true,
+    "errors": [],
+    "checked_at_utc": "2026-10-21T08:44:03+00:00",
+    "measured_data_used": false
+  }
+}

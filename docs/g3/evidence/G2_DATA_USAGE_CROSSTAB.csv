@@ -1,0 +1,37 @@
+stage_a,stage_b,n_shared,shared_distances_mm,shares_final_test_member
+CONSTRAINT_PROBE,FINAL-TEST(main),0,,NO
+CONSTRAINT_PROBE,FINAL-TEST(strategy B),0,,NO
+CONSTRAINT_PROBE,OAT,0,,NO
+CONSTRAINT_PROBE,PRECHECK,0,,NO
+CONSTRAINT_PROBE,SEARCH_CALIBRATION,2,100;300,NO
+CONSTRAINT_PROBE,TRAIN(search objective nominal),1,200,NO
+CONSTRAINT_PROBE,TRAIN(search objective robust),0,,NO
+CONSTRAINT_PROBE,VALIDATION(distances declared),0,,NO
+FINAL-TEST(main),FINAL-TEST(strategy B),7,105;135;165;195;225;255;285,YES
+FINAL-TEST(main),OAT,2,105;285,YES
+FINAL-TEST(main),PRECHECK,2,105;285,YES
+FINAL-TEST(main),SEARCH_CALIBRATION,0,,NO
+FINAL-TEST(main),TRAIN(search objective nominal),0,,NO
+FINAL-TEST(main),TRAIN(search objective robust),0,,NO
+FINAL-TEST(main),VALIDATION(distances declared),0,,NO
+FINAL-TEST(strategy B),OAT,2,105;285,YES
+FINAL-TEST(strategy B),PRECHECK,2,105;285,YES
+FINAL-TEST(strategy B),SEARCH_CALIBRATION,0,,NO
+FINAL-TEST(strategy B),TRAIN(search objective nominal),0,,NO
+FINAL-TEST(strategy B),TRAIN(search objective robust),0,,NO
+FINAL-TEST(strategy B),VALIDATION(distances declared),0,,NO
+OAT,PRECHECK,5,105;130;180;230;285,YES
+OAT,SEARCH_CALIBRATION,1,180,NO
+OAT,TRAIN(search objective nominal),1,230,NO
+OAT,TRAIN(search objective robust),1,230,NO
+OAT,VALIDATION(distances declared),2,130;230,NO
+PRECHECK,SEARCH_CALIBRATION,1,180,NO
+PRECHECK,TRAIN(search objective nominal),1,230,NO
+PRECHECK,TRAIN(search objective robust),1,230,NO
+PRECHECK,VALIDATION(distances declared),2,130;230,NO
+SEARCH_CALIBRATION,TRAIN(search objective nominal),0,,NO
+SEARCH_CALIBRATION,TRAIN(search objective robust),0,,NO
+SEARCH_CALIBRATION,VALIDATION(distances declared),0,,NO
+TRAIN(search objective nominal),TRAIN(search objective robust),4,110;170;230;290,NO
+TRAIN(search objective nominal),VALIDATION(distances declared),4,110;170;230;290,NO
+TRAIN(search objective robust),VALIDATION(distances declared),4,110;170;230;290,NO

@@ -1,0 +1,10 @@
+{
+  "totals": {
+    "passed": 252,
+    "failed": 0,
+    "skipped": 0,
+    "total": 252
+  },
+  "not_run": [],
+  "source": "artifacts/g2_pre/pytest_g2pre.xml"
+}

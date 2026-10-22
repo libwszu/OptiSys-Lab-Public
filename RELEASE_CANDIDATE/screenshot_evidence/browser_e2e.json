@@ -1,0 +1,54 @@
+{
+  "schema": "optisys.s5.browser_e2e/1",
+  "run_id": "20261020_210201_S5_HNA",
+  "status": "PASS",
+  "browser": "Microsoft Edge via Playwright",
+  "browser_version": "144.0.3719.82",
+  "url": "http://127.0.0.1:59930/",
+  "pages": [
+    {
+      "page": "A · 项目总览与证据状态",
+      "heading": "项目总览与证据状态",
+      "visible_content_checks": [
+        "QUALIFIED_ONLY",
+        "G2_PREREG_FEASIBILITY_NOT_ESTABLISHED"
+      ],
+      "path": "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/A_overview_final.png",
+      "bytes": 174313,
+      "sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a",
+      "viewport": "1365x900",
+      "full_page": true
+    },
+    {
+      "page": "C · 优化对照",
+      "heading": "优化、公差与校准策略对照",
+      "visible_content_checks": [
+        "优化、公差与校准策略对照",
+        "G2_FINAL_PANEL_DEVIATION"
+      ],
+      "path": "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/C_optimization_final.png",
+      "bytes": 181607,
+      "sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7",
+      "viewport": "1365x900",
+      "full_page": true
+    },
+    {
+      "page": "F · 976 nm 泵浦光路",
+      "heading": "976 nm 多模光纤泵浦光路",
+      "visible_content_checks": [
+        "976 nm 多模光纤泵浦光路",
+        "SIMULATED",
+        "NOT_AVAILABLE"
+      ],
+      "path": "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/F_pump976_final.png",
+      "bytes": 175281,
+      "sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab",
+      "viewport": "1365x900",
+      "full_page": true
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "elapsed_s": 8.97186089999741,
+  "evidence": "REAL_BROWSER_SCREENSHOTS_AFTER_STREAMLIT_IDLE"
+}

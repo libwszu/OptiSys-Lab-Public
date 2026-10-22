@@ -1,0 +1,741 @@
+{
+  "amendment_03_source_hash_checks": [
+    {
+      "actual_sha256": "a9102a17d29733a10a106ed4fdc03c34d6c9d7d73dff52ae39f60ab352da7f52",
+      "bytes": 2765,
+      "expected_sha256": "a9102a17d29733a10a106ed4fdc03c34d6c9d7d73dff52ae39f60ab352da7f52",
+      "path": "docs/s6/S6_AMENDMENT_03.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "b3d92cbb549459e472002cf4783092ad829617597cf7b74197a4296127fcad31",
+      "bytes": 8878,
+      "expected_sha256": "b3d92cbb549459e472002cf4783092ad829617597cf7b74197a4296127fcad31",
+      "path": "runs/20261021_024715_S6_P1/S6_C_HOLDOUT_FREEZE_02.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446",
+      "bytes": 5236,
+      "expected_sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446",
+      "path": "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE_02.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5",
+      "bytes": 1474,
+      "expected_sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5",
+      "path": "runs/20261021_024715_S6_P1/compute_measured_preholdout.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e",
+      "bytes": 11334,
+      "expected_sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics_programmatic.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94",
+      "bytes": 11626,
+      "expected_sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "f8130e1dddfa74a28382849c67448f97d5a9ceb5e814d3875afd05d2cf938c28",
+      "bytes": 705,
+      "expected_sha256": "f8130e1dddfa74a28382849c67448f97d5a9ceb5e814d3875afd05d2cf938c28",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/run_status_programmatic.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd",
+      "bytes": 952,
+      "expected_sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/run_status.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "06e485a992f2d2fed3c9cd5d26c1f98700c7eba4e66ee9b8a26986e3ced8d233",
+      "bytes": 2531,
+      "expected_sha256": "06e485a992f2d2fed3c9cd5d26c1f98700c7eba4e66ee9b8a26986e3ced8d233",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/S6_C_FINAL_ADJUDICATION.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "62276b9555f9c93a7974fcae0b7eaf263accfef8174791205a05e9cc9964bd71",
+      "bytes": 4397,
+      "expected_sha256": "62276b9555f9c93a7974fcae0b7eaf263accfef8174791205a05e9cc9964bd71",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/S6_ASSEMBLY_SCIENTIFIC_AUDIT_FINAL.md",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "dfd2de2939cd34827203ae98222c646143b65666680204cb77ef5407ee32376f",
+      "bytes": 937024,
+      "expected_sha256": "dfd2de2939cd34827203ae98222c646143b65666680204cb77ef5407ee32376f",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_manifest.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "d8e7ceb6787e7abce715207e9589a2217552980dc397fcd694ac8f33d4df4d7f",
+      "bytes": 1636310,
+      "expected_sha256": "d8e7ceb6787e7abce715207e9589a2217552980dc397fcd694ac8f33d4df4d7f",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286",
+      "bytes": 300027,
+      "expected_sha256": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/paired_assembly_comparison.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a",
+      "bytes": 917175,
+      "expected_sha256": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_bootstrap_replicates.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311",
+      "bytes": 3620,
+      "expected_sha256": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/failure_breakdown.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "a39ce5bac643e7444d060d5a5e337cf80e39dfcd79352e8f862e1572e50eb71f",
+      "bytes": 50387,
+      "expected_sha256": "a39ce5bac643e7444d060d5a5e337cf80e39dfcd79352e8f862e1572e50eb71f",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/zero_tolerance_controls.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418",
+      "bytes": 1989,
+      "expected_sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_robustness_plot_data.csv",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "7f7ff58ffae389f8aa529ecf647625b11162ed1e6460d0a6e4afe1809e2908d9",
+      "bytes": 111935,
+      "expected_sha256": "7f7ff58ffae389f8aa529ecf647625b11162ed1e6460d0a6e4afe1809e2908d9",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/s6_assembly_robustness.png",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "e654442ac69046d1cdbc327f39ba32ddb628f9e038e1a6360ef258c830e0fff4",
+      "bytes": 712,
+      "expected_sha256": "e654442ac69046d1cdbc327f39ba32ddb628f9e038e1a6360ef258c830e0fff4",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_figure_metadata.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "bf3636a932f20b8a2b930d70c69209467df4321dec1cf48f42443ccee6635d13",
+      "bytes": 1504,
+      "expected_sha256": "bf3636a932f20b8a2b930d70c69209467df4321dec1cf48f42443ccee6635d13",
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/compute_measured_001.json",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "15a9c9088309bcdb5066e21dfe2d3b5e1ad84aa5cc6e1b17ea560d7f0266500c",
+      "bytes": 12149,
+      "expected_sha256": "15a9c9088309bcdb5066e21dfe2d3b5e1ad84aa5cc6e1b17ea560d7f0266500c",
+      "path": "scripts/s6_finalize_claim.py",
+      "status": "PASS"
+    },
+    {
+      "actual_sha256": "995b17f65f2f2947f9a63b9084a1c026e84ef74693c0e1d91431dd03f6ff6edd",
+      "bytes": 5960,
+      "expected_sha256": "995b17f65f2f2947f9a63b9084a1c026e84ef74693c0e1d91431dd03f6ff6edd",
+      "path": "scripts/s6_assembly_figures.py",
+      "status": "PASS"
+    }
+  ],
+  "amendment_03_traceability": {
+    "acceptance_criteria_actual_sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c",
+    "acceptance_criteria_expected_sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c",
+    "amendment_03_hash_freeze_at_utc": "2026-10-21T07:34:50+00:00",
+    "amendment_declares_formal_holdout_complete": true,
+    "amendment_declares_metrics_changed": false,
+    "amendment_declares_samples_changed": false,
+    "amendment_declares_thresholds_changed": false,
+    "available_frozen_rule_sources": [
+      "docs/s6/S6_ACCEPTANCE_CRITERIA.md",
+      "runs/20261021_024715_S6_P1/S6_C_HOLDOUT_FREEZE_02.json"
+    ],
+    "freeze_claim_rule": "For finite support, mean paired assembly-cluster bootstrap CI95 lower >0; paired P05 difference and its bootstrap CI are non-negative; invalid assembly and other failure weights do not increase; all-plane r90 P95 does not worsen. Otherwise report TRADEOFF_OR_NO_SUPPORTED_GAIN; incomplete run is PARTIAL.",
+    "holdout_finished_at_utc": "2026-10-21T07:28:54+00:00",
+    "holdout_freeze_at_utc": "2026-10-21T07:25:40+00:00",
+    "notes": [
+      "The standalone S6_PRE_REGISTRATION.md is absent. The holdout freeze and pre-result acceptance criteria carry the registered rule; Amendment 03 is post-result and narrows the aggregate interpretation without changing numbers, thresholds, or samples."
+    ],
+    "standalone_preregistration_file": "MISSING_SOURCE",
+    "status": "PASS"
+  },
+  "bootstrap": {
+    "interval_quantiles": [
+      0.025,
+      0.975
+    ],
+    "percentile_method": "numpy.quantile method=linear",
+    "random_generator": "numpy.default_rng / PCG64",
+    "replicates_per_scenario": 2000,
+    "resampling_unit": "assembly_id",
+    "seed": 8064001,
+    "successful_replicates_per_scenario": [
+      {
+        "replicates_expected": 2000,
+        "replicates_matched": 2000,
+        "replicates_replayed": 2000,
+        "scenario": "zero",
+        "status": "PASS"
+      },
+      {
+        "replicates_expected": 2000,
+        "replicates_matched": 2000,
+        "replicates_replayed": 2000,
+        "scenario": "tight_0p5x",
+        "status": "PASS"
+      },
+      {
+        "replicates_expected": 2000,
+        "replicates_matched": 2000,
+        "replicates_replayed": 2000,
+        "scenario": "nominal_1x",
+        "status": "PASS"
+      },
+      {
+        "replicates_expected": 2000,
+        "replicates_matched": 2000,
+        "replicates_replayed": 2000,
+        "scenario": "stress_2x",
+        "status": "PASS"
+      }
+    ]
+  },
+  "cross_scenario_verdict": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "environment": {
+    "numpy": "2.4.6",
+    "python": "3.11.9"
+  },
+  "errors": [],
+  "failure_breakdown_reconciliation": "PASS",
+  "final_amended_claim": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "historical_automatic_nominal_claim_preserved": "SUPPORTED_WITHIN_ASSUMED_P1_AND_TOLERANCES",
+  "nominal_estimand_status": "VERIFIED_CONDITIONAL_GAIN",
+  "notes": [
+    "P05 paired delta is quantile_5(candidate_capture[i] - baseline_capture[i]) and is distinct from candidate marginal P05 minus baseline marginal P05.",
+    "For the zero-tolerance layer, mechanical perturbations are all zero; between-assembly spread reflects distinct source-ray Monte Carlo seeds rather than physical assembly variation.",
+    "Capture fractions are source-weight fractions, not optical power, manufacturing yield, or empirical hardware performance.",
+    "The full stress-tier P05 uses the lower tail of 200 assemblies and remains sensitive to tail sampling and the assumed model/distribution; the bootstrap interval is not a manufacturing-yield certification."
+  ],
+  "p05_estimand_diagnostics": [
+    {
+      "base_marginal_P05": 0.638671875,
+      "candidate_marginal_P05": 0.844677734375,
+      "candidate_minus_base_marginal_P05": 0.20600585937500004,
+      "paired_P05_bootstrap_CI95": [
+        0.1689453125,
+        0.178662109375
+      ],
+      "paired_P05_of_candidate_minus_baseline": 0.173779296875,
+      "scenario": "zero"
+    },
+    {
+      "base_marginal_P05": 0.587890625,
+      "candidate_marginal_P05": 0.779150390625,
+      "candidate_minus_base_marginal_P05": 0.19125976562500002,
+      "paired_P05_bootstrap_CI95": [
+        0.166015625,
+        0.17568359375
+      ],
+      "paired_P05_of_candidate_minus_baseline": 0.1708984375,
+      "scenario": "tight_0p5x"
+    },
+    {
+      "base_marginal_P05": 0.516357421875,
+      "candidate_marginal_P05": 0.6990234375,
+      "candidate_minus_base_marginal_P05": 0.18266601562499996,
+      "paired_P05_bootstrap_CI95": [
+        0.1259765625,
+        0.14931640625
+      ],
+      "paired_P05_of_candidate_minus_baseline": 0.136669921875,
+      "scenario": "nominal_1x"
+    },
+    {
+      "base_marginal_P05": 0.275146484375,
+      "candidate_marginal_P05": 0.32910156250000006,
+      "candidate_minus_base_marginal_P05": 0.053955078125000056,
+      "paired_P05_bootstrap_CI95": [
+        -0.0927734375,
+        -0.008984374999999975
+      ],
+      "paired_P05_of_candidate_minus_baseline": -0.05693359375,
+      "scenario": "stress_2x"
+    }
+  ],
+  "plot_data_reconciliation": "PASS",
+  "recomputed_automatic_nominal_claim": "SUPPORTED_WITHIN_ASSUMED_P1_AND_TOLERANCES",
+  "rows": {
+    "assembly_manifest_rows": 800,
+    "bootstrap_rows": 8000,
+    "design_assembly_rows": 1600,
+    "failure_breakdown_rows": 72,
+    "paired_rows": 800,
+    "unique_assembly_scenarios": 800
+  },
+  "run_id": "20261021_024715_S6_P1",
+  "sampling_and_pairing": {
+    "latent_draw_reused_across_scenarios": true,
+    "paired_source_reuse_verified": true,
+    "scenario_assemblies": {
+      "nominal_1x": 200,
+      "stress_2x": 200,
+      "tight_0p5x": 200,
+      "zero": 200
+    },
+    "scenario_design_rows": {
+      "nominal_1x": 400,
+      "stress_2x": 400,
+      "tight_0p5x": 400,
+      "zero": 400
+    },
+    "source_seed_base": 80630000,
+    "source_seed_rule_verified": true,
+    "zero_scenario_geometry_all_zero": true,
+    "zero_scenario_unique_source_seeds": 200
+  },
+  "scenarios": {
+    "nominal_1x": {
+      "all_plane_r90_median_mm_baseline125": 1.6826427096483876,
+      "all_plane_r90_median_mm_candidate135": 1.164741575910194,
+      "all_plane_r90_p95_mm_baseline125": 2.088516707386984,
+      "all_plane_r90_p95_mm_candidate135": 1.5896809539623655,
+      "bootstrap_interval_quantiles": [
+        0.025,
+        0.975
+      ],
+      "bootstrap_seed": 8064001,
+      "bootstrap_successful_replicates": 2000,
+      "bootstrap_unit": "assembly_id",
+      "failure_ray_counts_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        }
+      },
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.656884765625,
+      "mean_capture_candidate135": 0.8373779296875,
+      "mean_delta_capture_candidate_minus_baseline": 0.1804931640625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.516357421875,
+      "p05_capture_candidate135": 0.6990234375,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.1259765625,
+        0.14931640625
+      ],
+      "p05_paired_delta_capture": 0.136669921875,
+      "p50_capture_baseline125": 0.64306640625,
+      "p50_capture_candidate135": 0.8349609375,
+      "p95_capture_baseline125": 0.8379882812499999,
+      "p95_capture_candidate135": 0.986328125,
+      "paired_mean_delta_capture_ci95": [
+        0.1773875732421875,
+        0.18341357421875
+      ],
+      "percentile_method": "numpy.quantile method=linear",
+      "scenario": "nominal_1x",
+      "source_weight_ledger_max_abs_residual": 0.0
+    },
+    "stress_2x": {
+      "all_plane_r90_median_mm_baseline125": 1.830793232456033,
+      "all_plane_r90_median_mm_candidate135": 1.3744621365883523,
+      "all_plane_r90_p95_mm_baseline125": 2.6976345603970464,
+      "all_plane_r90_p95_mm_candidate135": 2.2288911089005556,
+      "bootstrap_interval_quantiles": [
+        0.025,
+        0.975
+      ],
+      "bootstrap_seed": 8064001,
+      "bootstrap_successful_replicates": 2000,
+      "bootstrap_unit": "assembly_id",
+      "failure_ray_counts_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 88,
+          "L2_APERTURE_BLOCK": 1,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 88,
+          "L2_APERTURE_BLOCK": 2,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        }
+      },
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0004296875,
+          "L2_APERTURE_BLOCK": 4.8828125e-06,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0004296875,
+          "L2_APERTURE_BLOCK": 9.765625e-06,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 4.8828125e-06,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.59685546875,
+      "mean_capture_candidate135": 0.7243212890625,
+      "mean_delta_capture_candidate_minus_baseline": 0.1274658203125,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.275146484375,
+      "p05_capture_candidate135": 0.32910156250000006,
+      "p05_paired_delta_bootstrap_ci95": [
+        -0.0927734375,
+        -0.008984374999999975
+      ],
+      "p05_paired_delta_capture": -0.05693359375,
+      "p50_capture_baseline125": 0.59765625,
+      "p50_capture_candidate135": 0.75146484375,
+      "p95_capture_baseline125": 0.9398437499999999,
+      "p95_capture_candidate135": 0.9845703124999999,
+      "paired_mean_delta_capture_ci95": [
+        0.11650500488281251,
+        0.13853015136718747
+      ],
+      "percentile_method": "numpy.quantile method=linear",
+      "scenario": "stress_2x",
+      "source_weight_ledger_max_abs_residual": 0.0
+    },
+    "tight_0p5x": {
+      "all_plane_r90_median_mm_baseline125": 1.649527430522078,
+      "all_plane_r90_median_mm_candidate135": 1.1294833839925222,
+      "all_plane_r90_p95_mm_baseline125": 1.8403491897800017,
+      "all_plane_r90_p95_mm_candidate135": 1.3241334630159112,
+      "bootstrap_interval_quantiles": [
+        0.025,
+        0.975
+      ],
+      "bootstrap_seed": 8064001,
+      "bootstrap_successful_replicates": 2000,
+      "bootstrap_unit": "assembly_id",
+      "failure_ray_counts_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        }
+      },
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.664296875,
+      "mean_capture_candidate135": 0.855703125,
+      "mean_delta_capture_candidate_minus_baseline": 0.19140625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.587890625,
+      "p05_capture_candidate135": 0.779150390625,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.166015625,
+        0.17568359375
+      ],
+      "p05_paired_delta_capture": 0.1708984375,
+      "p50_capture_baseline125": 0.65869140625,
+      "p50_capture_candidate135": 0.85009765625,
+      "p95_capture_baseline125": 0.75419921875,
+      "p95_capture_candidate135": 0.943408203125,
+      "paired_mean_delta_capture_ci95": [
+        0.1896630859375,
+        0.1932763671875
+      ],
+      "percentile_method": "numpy.quantile method=linear",
+      "scenario": "tight_0p5x",
+      "source_weight_ledger_max_abs_residual": 0.0
+    },
+    "zero": {
+      "all_plane_r90_median_mm_baseline125": 1.6269478015562475,
+      "all_plane_r90_median_mm_candidate135": 1.105738868087184,
+      "all_plane_r90_p95_mm_baseline125": 1.6668185280167929,
+      "all_plane_r90_p95_mm_candidate135": 1.1436269601098206,
+      "bootstrap_interval_quantiles": [
+        0.025,
+        0.975
+      ],
+      "bootstrap_seed": 8064001,
+      "bootstrap_successful_replicates": 2000,
+      "bootstrap_unit": "assembly_id",
+      "failure_ray_counts_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0,
+          "INVALID_SOURCE": 0,
+          "L1_APERTURE_BLOCK": 0,
+          "L2_APERTURE_BLOCK": 0,
+          "NO_INTERSECTION": 0,
+          "TIR": 0,
+          "TRACE_FAIL": 0
+        }
+      },
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.6652880859375,
+      "mean_capture_candidate135": 0.8591943359375,
+      "mean_delta_capture_candidate_minus_baseline": 0.19390625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.638671875,
+      "p05_capture_candidate135": 0.844677734375,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.1689453125,
+        0.178662109375
+      ],
+      "p05_paired_delta_capture": 0.173779296875,
+      "p50_capture_baseline125": 0.66552734375,
+      "p50_capture_candidate135": 0.85888671875,
+      "p95_capture_baseline125": 0.69140625,
+      "p95_capture_candidate135": 0.8759765625,
+      "paired_mean_delta_capture_ci95": [
+        0.1921824951171875,
+        0.195644775390625
+      ],
+      "percentile_method": "numpy.quantile method=linear",
+      "scenario": "zero",
+      "source_weight_ledger_max_abs_residual": 0.0
+    }
+  },
+  "schema": "optisys.s6r.science_recomputation/1",
+  "source_files": {
+    "S6_C_FINAL_ADJUDICATION.json": {
+      "bytes": 2531,
+      "sha256": "06e485a992f2d2fed3c9cd5d26c1f98700c7eba4e66ee9b8a26986e3ced8d233"
+    },
+    "assembly_bootstrap_replicates.csv": {
+      "bytes": 917175,
+      "sha256": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a"
+    },
+    "assembly_manifest.csv": {
+      "bytes": 937024,
+      "sha256": "dfd2de2939cd34827203ae98222c646143b65666680204cb77ef5407ee32376f"
+    },
+    "assembly_parameter_registry.json": {
+      "bytes": 1803,
+      "sha256": "41504a9037681ab1ffc2c090f33de9e46a9b8e340b245d034aa71e085802065d"
+    },
+    "assembly_robustness_plot_data.csv": {
+      "bytes": 1989,
+      "sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418"
+    },
+    "assembly_statistics.json": {
+      "bytes": 11626,
+      "sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94"
+    },
+    "assembly_statistics_programmatic.json": {
+      "bytes": 11334,
+      "sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e"
+    },
+    "failure_breakdown.csv": {
+      "bytes": 3620,
+      "sha256": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311"
+    },
+    "p1_assembly_samples.csv": {
+      "bytes": 1636310,
+      "sha256": "d8e7ceb6787e7abce715207e9589a2217552980dc397fcd694ac8f33d4df4d7f"
+    },
+    "paired_assembly_comparison.csv": {
+      "bytes": 300027,
+      "sha256": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286"
+    },
+    "run_contract.json": {
+      "bytes": 3036,
+      "sha256": "082de7989fdadea960d5c0b874262c3919acf76e7d818d7419f48f89744e9181"
+    },
+    "run_status.json": {
+      "bytes": 952,
+      "sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd"
+    },
+    "zero_tolerance_controls.csv": {
+      "bytes": 50387,
+      "sha256": "a39ce5bac643e7444d060d5a5e337cf80e39dfcd79352e8f862e1572e50eb71f"
+    }
+  },
+  "source_mode": "immutable_per_assembly_csv_recomputation",
+  "status": "PASS",
+  "total_registered_assembly_design_ray_traces": 1638400,
+  "verified_trace_scope": "S6-C summary/assembly metrics only; the 1,638,400 original traces were not rerun",
+  "weight_ledger": {
+    "all_invalid_assemblies_retained": true,
+    "all_source_weights_close_to_one": true,
+    "max_abs_residual": 0.0,
+    "tolerance": 1e-12,
+    "unknown_terminal_categories": []
+  }
+}

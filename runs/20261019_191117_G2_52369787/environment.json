@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "collected_at_utc": "2026-10-19T19:11:22+00:00",
+  "project_root": "<PROJECT_ROOT>",
+  "platform": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "AMD64",
+    "windows_build": "10.0.26100"
+  },
+  "python": {
+    "version": "3.14.3",
+    "implementation": "CPython",
+    "executable": "python.exe",
+    "in_venv": true
+  },
+  "cpu": {
+    "model": "AMD Ryzen 5 4600G with Radeon Graphics",
+    "physical_cores": 6,
+    "logical_cores": 12,
+    "max_frequency_mhz": 3701.0,
+    "current_frequency_mhz": 3701.0,
+    "utilization_percent_snapshot": 6.3
+  },
+  "memory": {
+    "total_gb": 31.41,
+    "available_gb": 19.77,
+    "used_percent_snapshot": 37.1
+  },
+  "gpu": {
+    "available": true,
+    "reason": null,
+    "devices": [
+      {
+        "name": "NVIDIA GeForce GTX 1660 SUPER",
+        "memory_total_mb": 6144.0,
+        "memory_used_mb": 1191.0,
+        "driver_version": "566.07",
+        "compute_capability": "7.5"
+      }
+    ]
+  },
+  "cuda": {
+    "torch": {
+      "installed": false,
+      "cuda_available": "NOT_INSTALLED",
+      "version": null
+    },
+    "numpy_version": "2.5.4",
+    "note": "GPU model alone is not evidence of usable CUDA; see torch.cuda_available"
+  },
+  "disk": {
+    "root": "<PROJECT_ROOT>",
+    "free_gb": 216.49,
+    "total_gb": 465.51
+  },
+  "git": {
+    "commit": "PRIVATE_SOURCE_REVISION",
+    "dirty": true
+  },
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "yaml": "6.0.3",
+    "pytest": "9.1.1",
+    "optiland": "UNKNOWN"
+  },
+  "optiland": {
+    "installed": true,
+    "version": "0.6.3",
+    "api_import": "optiland.optic:Optic",
+    "lens_case_executed": false
+  },
+  "environment_variables": {
+    "OMP_NUM_THREADS": "UNSET",
+    "OPENBLAS_NUM_THREADS": "UNSET",
+    "MKL_NUM_THREADS": "UNSET",
+    "NUMEXPR_NUM_THREADS": "UNSET"
+  }
+}

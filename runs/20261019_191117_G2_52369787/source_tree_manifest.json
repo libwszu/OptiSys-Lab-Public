@@ -1,0 +1,8 @@
+{
+  "source_tree_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+  "scope": "src/**/*.py (sorted relative path + sha256)",
+  "config_sha256": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c",
+  "git_commit": "PRIVATE_SOURCE_REVISION",
+  "git_status_clean": false,
+  "package_version": "0.1.0.dev0"
+}

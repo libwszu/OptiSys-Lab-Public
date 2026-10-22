@@ -1,0 +1,121 @@
+candidate,design,scope,distance_mm,threshold,kernel_support,ray_success_fraction,peak_e,feasible,first_failure_reason,frozen_decision,n_rows,support_min,support_mean,share_rows_below_threshold,all_rows_pass
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,100.0,0.95,0.97871871,1.0,3105.6464,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,100.0,0.975,0.97871871,1.0,3105.6464,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,100.0,0.99,0.97871871,1.0,3105.6464,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,100.0,0.999,0.97871871,1.0,3105.6464,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,200.0,0.95,0.980418976,1.0,6494.5618,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,200.0,0.975,0.980418976,1.0,6494.5618,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,200.0,0.99,0.980418976,1.0,6494.5618,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,200.0,0.999,0.980418976,1.0,6494.5618,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,300.0,0.95,0.982012271,1.0,2063.313,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,300.0,0.975,0.982012271,1.0,2063.313,YES,,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,300.0,0.99,0.982012271,1.0,2063.313,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,B=20.0 f=8.0 theta=0.0,constraint_probe,300.0,0.999,0.982012271,1.0,2063.313,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,100.0,0.95,0.983560563,1.0,189.2709,YES,,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,100.0,0.975,0.983560563,1.0,189.2709,YES,,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,100.0,0.99,0.983560563,1.0,189.2709,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,100.0,0.999,0.983560563,1.0,189.2709,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,200.0,0.95,0.973693232,1.0,9152.922,YES,,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,200.0,0.975,0.973693232,1.0,9152.922,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,200.0,0.99,0.973693232,1.0,9152.922,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,200.0,0.999,0.973693232,1.0,9152.922,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,300.0,0.95,0.978336303,1.0,1525.4027,YES,,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,300.0,0.975,0.978336303,1.0,1525.4027,YES,,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,300.0,0.99,0.978336303,1.0,1525.4027,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+nominal,B=15.0 f=11.1 theta=4.0,constraint_probe,300.0,0.999,0.978336303,1.0,1525.4027,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,100.0,0.95,0.987094844,0.953608247,2041.9326,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,100.0,0.975,0.987094844,0.953608247,2041.9326,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,100.0,0.99,0.987094844,0.953608247,2041.9326,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,100.0,0.999,0.987094844,0.953608247,2041.9326,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,200.0,0.95,0.98135943,1.0,5830.594,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,200.0,0.975,0.98135943,1.0,5830.594,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,200.0,0.99,0.98135943,1.0,5830.594,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,200.0,0.999,0.98135943,1.0,5830.594,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,300.0,0.95,0.98135943,1.0,2878.1785,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,300.0,0.975,0.98135943,1.0,2878.1785,YES,,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,300.0,0.99,0.98135943,1.0,2878.1785,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+robust,B=34.4 f=7.272384615618831 theta=4.0,constraint_probe,300.0,0.999,0.98135943,1.0,2878.1785,NO,INSUFFICIENT_PSF_SUPPORT,FEASIBLE,,,,,
+baseline,,observed_final_panel,105.0,0.95,,,,YES,,,6000,0.978316462,0.981048897,0.0,YES
+baseline,,observed_final_panel,105.0,0.975,,,,YES,,,6000,0.978316462,0.981048897,0.0,YES
+baseline,,observed_final_panel,105.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.978316462,0.981048897,1.0,NO
+baseline,,observed_final_panel,105.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.978316462,0.981048897,1.0,NO
+baseline,,observed_final_panel,135.0,0.95,,,,YES,,,6000,0.976628692,0.98007911,0.0,YES
+baseline,,observed_final_panel,135.0,0.975,,,,YES,,,6000,0.976628692,0.98007911,0.0,YES
+baseline,,observed_final_panel,135.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.976628692,0.98007911,1.0,NO
+baseline,,observed_final_panel,135.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.976628692,0.98007911,1.0,NO
+baseline,,observed_final_panel,165.0,0.95,,,,YES,,,6000,0.976807581,0.979908864,0.0,YES
+baseline,,observed_final_panel,165.0,0.975,,,,YES,,,6000,0.976807581,0.979908864,0.0,YES
+baseline,,observed_final_panel,165.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.976807581,0.979908864,1.0,NO
+baseline,,observed_final_panel,165.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.976807581,0.979908864,1.0,NO
+baseline,,observed_final_panel,195.0,0.95,,,,YES,,,6000,0.975154747,0.980113792,0.0,YES
+baseline,,observed_final_panel,195.0,0.975,,,,YES,,,6000,0.975154747,0.980113792,0.0,YES
+baseline,,observed_final_panel,195.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975154747,0.980113792,1.0,NO
+baseline,,observed_final_panel,195.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975154747,0.980113792,1.0,NO
+baseline,,observed_final_panel,225.0,0.95,,,,YES,,,6000,0.975049415,0.98042081,0.0,YES
+baseline,,observed_final_panel,225.0,0.975,,,,YES,,,6000,0.975049415,0.98042081,0.0,YES
+baseline,,observed_final_panel,225.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975049415,0.98042081,1.0,NO
+baseline,,observed_final_panel,225.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975049415,0.98042081,1.0,NO
+baseline,,observed_final_panel,255.0,0.95,,,,YES,,,6000,0.975092245,0.980750014,0.0,YES
+baseline,,observed_final_panel,255.0,0.975,,,,YES,,,6000,0.975092245,0.980750014,0.0,YES
+baseline,,observed_final_panel,255.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975092245,0.980750014,1.0,NO
+baseline,,observed_final_panel,255.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975092245,0.980750014,1.0,NO
+baseline,,observed_final_panel,285.0,0.95,,,,YES,,,6000,0.975165339,0.98109467,0.0,YES
+baseline,,observed_final_panel,285.0,0.975,,,,YES,,,6000,0.975165339,0.98109467,0.0,YES
+baseline,,observed_final_panel,285.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975165339,0.98109467,1.0,NO
+baseline,,observed_final_panel,285.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975165339,0.98109467,1.0,NO
+nominal,,observed_final_panel,105.0,0.95,,,,YES,,,6000,0.979442011,0.983353679,0.0,YES
+nominal,,observed_final_panel,105.0,0.975,,,,YES,,,6000,0.979442011,0.983353679,0.0,YES
+nominal,,observed_final_panel,105.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.979442011,0.983353679,1.0,NO
+nominal,,observed_final_panel,105.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.979442011,0.983353679,1.0,NO
+nominal,,observed_final_panel,135.0,0.95,,,,YES,,,6000,0.975342648,0.980138272,0.0,YES
+nominal,,observed_final_panel,135.0,0.975,,,,YES,,,6000,0.975342648,0.980138272,0.0,YES
+nominal,,observed_final_panel,135.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975342648,0.980138272,1.0,NO
+nominal,,observed_final_panel,135.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975342648,0.980138272,1.0,NO
+nominal,,observed_final_panel,165.0,0.95,,,,YES,,,6000,0.972802433,0.977384916,0.0,YES
+nominal,,observed_final_panel,165.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.972802433,0.977384916,0.0315,NO
+nominal,,observed_final_panel,165.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.972802433,0.977384916,1.0,NO
+nominal,,observed_final_panel,165.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.972802433,0.977384916,1.0,NO
+nominal,,observed_final_panel,195.0,0.95,,,,YES,,,6000,0.973132295,0.975847989,0.0,YES
+nominal,,observed_final_panel,195.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973132295,0.975847989,0.1825,NO
+nominal,,observed_final_panel,195.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973132295,0.975847989,1.0,NO
+nominal,,observed_final_panel,195.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973132295,0.975847989,1.0,NO
+nominal,,observed_final_panel,225.0,0.95,,,,YES,,,6000,0.973591451,0.976123972,0.0,YES
+nominal,,observed_final_panel,225.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973591451,0.976123972,0.198,NO
+nominal,,observed_final_panel,225.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973591451,0.976123972,1.0,NO
+nominal,,observed_final_panel,225.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973591451,0.976123972,1.0,NO
+nominal,,observed_final_panel,255.0,0.95,,,,YES,,,6000,0.973931251,0.977126425,0.0,YES
+nominal,,observed_final_panel,255.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973931251,0.977126425,0.128,NO
+nominal,,observed_final_panel,255.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973931251,0.977126425,1.0,NO
+nominal,,observed_final_panel,255.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.973931251,0.977126425,1.0,NO
+nominal,,observed_final_panel,285.0,0.95,,,,YES,,,6000,0.974152184,0.978120866,0.0,YES
+nominal,,observed_final_panel,285.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974152184,0.978120866,0.0595,NO
+nominal,,observed_final_panel,285.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974152184,0.978120866,1.0,NO
+nominal,,observed_final_panel,285.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974152184,0.978120866,1.0,NO
+robust,,observed_final_panel,105.0,0.95,,,,YES,,,6000,0.981898003,0.986575333,0.0,YES
+robust,,observed_final_panel,105.0,0.975,,,,YES,,,6000,0.981898003,0.986575333,0.0,YES
+robust,,observed_final_panel,105.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.981898003,0.986575333,0.9985,NO
+robust,,observed_final_panel,105.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.981898003,0.986575333,1.0,NO
+robust,,observed_final_panel,135.0,0.95,,,,YES,,,6000,0.977795338,0.983368103,0.0,YES
+robust,,observed_final_panel,135.0,0.975,,,,YES,,,6000,0.977795338,0.983368103,0.0,YES
+robust,,observed_final_panel,135.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.977795338,0.983368103,1.0,NO
+robust,,observed_final_panel,135.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.977795338,0.983368103,1.0,NO
+robust,,observed_final_panel,165.0,0.95,,,,YES,,,6000,0.9775995,0.981859423,0.0,YES
+robust,,observed_final_panel,165.0,0.975,,,,YES,,,6000,0.9775995,0.981859423,0.0,YES
+robust,,observed_final_panel,165.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.9775995,0.981859423,1.0,NO
+robust,,observed_final_panel,165.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.9775995,0.981859423,1.0,NO
+robust,,observed_final_panel,195.0,0.95,,,,YES,,,6000,0.977455153,0.981251789,0.0,YES
+robust,,observed_final_panel,195.0,0.975,,,,YES,,,6000,0.977455153,0.981251789,0.0,YES
+robust,,observed_final_panel,195.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.977455153,0.981251789,1.0,NO
+robust,,observed_final_panel,195.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.977455153,0.981251789,1.0,NO
+robust,,observed_final_panel,225.0,0.95,,,,YES,,,6000,0.975044692,0.981088032,0.0,YES
+robust,,observed_final_panel,225.0,0.975,,,,YES,,,6000,0.975044692,0.981088032,0.0,YES
+robust,,observed_final_panel,225.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975044692,0.981088032,1.0,NO
+robust,,observed_final_panel,225.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975044692,0.981088032,1.0,NO
+robust,,observed_final_panel,255.0,0.95,,,,YES,,,6000,0.974988717,0.981121514,0.0,YES
+robust,,observed_final_panel,255.0,0.975,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974988717,0.981121514,0.0005,NO
+robust,,observed_final_panel,255.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974988717,0.981121514,1.0,NO
+robust,,observed_final_panel,255.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.974988717,0.981121514,1.0,NO
+robust,,observed_final_panel,285.0,0.95,,,,YES,,,6000,0.975043275,0.981269258,0.0,YES
+robust,,observed_final_panel,285.0,0.975,,,,YES,,,6000,0.975043275,0.981269258,0.0,YES
+robust,,observed_final_panel,285.0,0.99,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975043275,0.981269258,1.0,NO
+robust,,observed_final_panel,285.0,0.999,,,,NO,INSUFFICIENT_PSF_SUPPORT,,6000,0.975043275,0.981269258,1.0,NO

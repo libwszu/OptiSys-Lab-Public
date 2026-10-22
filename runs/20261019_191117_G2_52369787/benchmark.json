@@ -1,0 +1,7 @@
+{
+  "cases": [],
+  "best_workers": 4,
+  "best_speedup_vs_1": 1.0,
+  "decision": "workers_4",
+  "note": "override or quick mode"
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "optisys.s6r.input_map/1",
+  "captured_at_utc": "2026-10-21T08:16:45.223517+00:00",
+  "run_id": "20261021_024715_S6_P1",
+  "source_map": {
+    "historical_design_pdf": "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf",
+    "s6_documents": "docs/s6/",
+    "s6_run_root": "runs/20261021_024715_S6_P1/",
+    "s6_c_original_evidence": "runs/20261021_024715_S6_P1/s6_c_assemblies/",
+    "s6_a_b_release_copy": "RELEASE_CANDIDATE_V2/evidence/s6/",
+    "release_draft": "RELEASE_CANDIDATE_V2/",
+    "historical_g4_audit_zip": "_AUDIT/20261020_133555_G4_ec3e2813_0e48/OptiSysLab_G4_20261020_133555_G4_ec3e2813_0e48_GPT_AUDIT.zip",
+    "historical_s5_audit_zip": "_AUDIT/20261020_210201_S5_HNA/OptiSysLab_S5_20261020_210201_S5_HNA_GPT_AUDIT.zip"
+  },
+  "required_present": [
+    {
+      "path": "docs/s6/S6_ACCEPTANCE_CRITERIA.md",
+      "description": "Frozen S6 acceptance criteria",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv",
+      "description": "Original full S6-C sample table",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/paired_assembly_comparison.csv",
+      "description": "Original paired assembly comparison",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_bootstrap_replicates.csv",
+      "description": "Original bootstrap replicates",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/failure_breakdown.csv",
+      "description": "Original failure breakdown",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_manifest.csv",
+      "description": "Original assembly manifest",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_robustness_plot_data.csv",
+      "description": "Original plot data",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics_programmatic.json",
+      "description": "Original programmatic stats",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_statistics.json",
+      "description": "Original rendered stats",
+      "status": "PRESENT"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_assemblies/S6_ASSEMBLY_SCIENTIFIC_AUDIT_FINAL.md",
+      "description": "Original final S6-C report",
+      "status": "PRESENT"
+    },
+    {
+      "path": "RELEASE_CANDIDATE_V2/README.md",
+      "description": "Original V2 draft README",
+      "status": "PRESENT"
+    },
+    {
+      "path": "RELEASE_CANDIDATE_V2/DEMO_CAPTURE_CHECKLIST.md",
+      "description": "Original V2 capture checklist",
+      "status": "PRESENT"
+    },
+    {
+      "path": "RELEASE_CANDIDATE_V2/screenshot_evidence/browser_e2e.json",
+      "description": "Existing browser evidence record",
+      "status": "PRESENT"
+    }
+  ],
+  "missing_sources": [
+    {
+      "path": "docs/s6/S6_PRE_REGISTRATION.md",
+      "description": "Requested standalone S6 preregistration text",
+      "status": "MISSING_SOURCE"
+    },
+    {
+      "path": "RELEASE_CANDIDATE_V2/evidence/s6/released_demo",
+      "description": "Claimed S6 release demonstration evidence directory",
+      "status": "MISSING_SOURCE"
+    }
+  ],
+  "existing_s6_audit_zip": []
+}

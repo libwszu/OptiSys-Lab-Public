@@ -1,0 +1,56 @@
+{
+  "schema": "g4.repro_inputs/1",
+  "run_id": "20261020_133555_G4_ec3e2813_0e48",
+  "units": {
+    "position": "mm",
+    "angle": "rad",
+    "weight": "dimensionless"
+  },
+  "source": {
+    "core_diameter_mm": 0.105,
+    "core_radius_mm": 0.0525,
+    "numerical_aperture": 0.22,
+    "output_index": 1.0,
+    "theta_max_rad": 0.22181447049679442,
+    "ray_count": 4096,
+    "seed": 976051,
+    "distribution": "uniform_solid_angle"
+  },
+  "designs": {
+    "baseline": {
+      "l1": {
+        "focal_length_mm": 25.0,
+        "z_mm": 25.0,
+        "aperture_diameter_mm": 12.0
+      },
+      "l2": {
+        "focal_length_mm": 100.0,
+        "z_mm": 125.0,
+        "aperture_diameter_mm": 12.0
+      },
+      "target_z_mm": 225.0,
+      "target_radius_mm": 1.0
+    },
+    "engineering_candidate": {
+      "l1": {
+        "focal_length_mm": 35.0,
+        "z_mm": 35.0,
+        "aperture_diameter_mm": 16.0
+      },
+      "l2": {
+        "focal_length_mm": 100.0,
+        "z_mm": 135.0,
+        "aperture_diameter_mm": 17.0
+      },
+      "target_z_mm": 235.0,
+      "target_radius_mm": 1.0
+    }
+  },
+  "p0_equations": [
+    "x_hit = x + ((z_lens-z)/dz)*dx; y_hit analogous",
+    "u_x=dx/dz-(x_hit-cx)/f; u_y=dy/dz-(y_hit-cy)/f",
+    "direction_out=(u_x,u_y,1)/sqrt(1+u_x^2+u_y^2)",
+    "geometric transmission = transmitted source weight / total source weight"
+  ],
+  "p1_scope": "Optiland 0.6.3 assumed centered equiconvex N-BK7 singlets; P0/P1 comparison is condition-specific"
+}

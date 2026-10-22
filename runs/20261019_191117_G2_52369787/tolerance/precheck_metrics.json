@@ -1,0 +1,15 @@
+{
+  "n_assemblies": 200,
+  "n_rows": 3000,
+  "n_distances": 5,
+  "estimator_status_counts": {
+    "OK": 2936,
+    "FIT_NOT_CONVERGED": 64
+  },
+  "optical_failure_rows": 0,
+  "mean_ray_success": 1.0,
+  "mean_capture": 1.0,
+  "mean_kernel_support": 0.9805483876283794,
+  "max_peak_e": 15916.835598958894,
+  "saturation_rows": 195
+}

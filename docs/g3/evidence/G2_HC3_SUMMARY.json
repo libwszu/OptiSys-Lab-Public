@@ -1,0 +1,87 @@
+{
+  "gate": "PRE-G3-01",
+  "issue": "kernel-support hard constraint conflicts with the pre-registration",
+  "prereg_threshold": 0.999,
+  "asrun_threshold": 0.95,
+  "conflict": true,
+  "definition": "kernel_support = geom_frac * airy_frac, where geom_frac is the fraction of traced ray weight that lands inside the finite PSF window (half-width = ceil(max|du|,|dv|) + airy_radius_margin*airy_radius + 1, capped at max_half_px=40) and airy_frac is the Airy encircled-energy fraction inside that same window. It is evaluated on the nominal unit at the constraint-probe distances 100/200/300 mm, medium condition.",
+  "evaluated_where": [
+    "src/optisys/optimization/constraints.py:97-98 (feasibility gate)",
+    "src/optisys/optics/psf_or_footprint.py:178-180 (definition)",
+    "src/optisys/optics/optical_image_contract.py:233-237 (warning only)"
+  ],
+  "per_candidate": {
+    "baseline": {
+      "design": {
+        "baseline_mm": 20.0,
+        "focal_length_mm": 8.0,
+        "theta_deg": 0.0
+      },
+      "probe_support": {
+        "100": 0.9787187098274008,
+        "200": 0.9804189759599601,
+        "300": 0.9820122712487256
+      },
+      "probe_feasible_under_0.999": false,
+      "observed_rows": 42000,
+      "observed_min": 0.9750494146600659,
+      "observed_max": 0.9873778943418366,
+      "observed_share_below_0.999": 1.0,
+      "observed_share_below_0.990": 1.0,
+      "observed_share_below_0.975": 0.0,
+      "observed_share_below_0.950": 0.0
+    },
+    "nominal": {
+      "design": {
+        "baseline_mm": 15.0,
+        "focal_length_mm": 11.1,
+        "theta_deg": 4.0
+      },
+      "probe_support": {
+        "100": 0.98356056316341,
+        "200": 0.973693232152819,
+        "300": 0.9783363033377039
+      },
+      "probe_feasible_under_0.999": false,
+      "observed_rows": 42000,
+      "observed_min": 0.9728024332451687,
+      "observed_max": 0.9862122866299982,
+      "observed_share_below_0.999": 1.0,
+      "observed_share_below_0.990": 1.0,
+      "observed_share_below_0.975": 0.08564285714285715,
+      "observed_share_below_0.950": 0.0
+    },
+    "robust": {
+      "design": {
+        "baseline_mm": 34.4,
+        "focal_length_mm": 7.272384615618831,
+        "theta_deg": 4.0
+      },
+      "probe_support": {
+        "100": 0.9870948438657553,
+        "200": 0.9813594304534992,
+        "300": 0.9813594304534994
+      },
+      "probe_feasible_under_0.999": false,
+      "observed_rows": 42000,
+      "observed_min": 0.97498871735404,
+      "observed_max": 0.9905124068840988,
+      "observed_share_below_0.999": 1.0,
+      "observed_share_below_0.990": 0.9997857142857143,
+      "observed_share_below_0.975": 7.142857142857143e-05,
+      "observed_share_below_0.950": 0.0
+    }
+  },
+  "conclusion": "G2_PREREG_FEASIBILITY_NOT_ESTABLISHED",
+  "reason": "under HC3 as registered (>= 0.999) none of the three frozen designs is feasible: 100% of the 42000 recorded rows per candidate sit below 0.999, and the constraint probe at 100/200/300 mm gives 0.973-0.987. The executed optimisation used 0.950, which every candidate passes. The gap is therefore a real deviation from the pre-registration, not a rounding difference.",
+  "scientific_reading": "The 0.999 value is a *truncation* requirement on a finite PSF window. With max_half_px=40 and the Airy margin rule, the window is sized from the geometric footprint, and any residual Airy encircled-energy outside the window counts as lost. For this singlet at f/6.7-f/10 the Airy radius is ~1.4 px while the geometric footprint is 3-9 um, so the window is tight and 0.97-0.99 is the structural ceiling. 0.999 is unreachable for this optical model, which makes HC3 an ill-posed constraint rather than a strict one. That reading is *evidence for an amendment*, not a retroactive justification: the registered text is still what it is.",
+  "required_disclosure": [
+    "every G3 surface shows 0.950 (as-run) next to 0.999 (pre-registered)",
+    "the phrase 'pre-registration fully complied with' is forbidden",
+    "status G2_PREREG_FEASIBILITY_NOT_ESTABLISHED must travel with the numbers"
+  ],
+  "artifacts": [
+    "docs/g3/evidence/G2_PREREG_VS_ASRUN.csv",
+    "docs/g3/evidence/G2_HC3_THRESHOLD_SCAN.csv"
+  ]
+}

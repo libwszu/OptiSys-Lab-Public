@@ -1,0 +1,9 @@
+design_id,backend,angular_case,transmitted_weight,outside_target_weight,l1_blocked_weight,l2_blocked_weight,no_intersection_weight,trace_failed_weight,source_weight_total,aperture_blocked_weight,lost_or_invalid_weight,balance_residual,geometric_transmission_fraction,balance_pass,backend_status,evidence
+baseline,P0,NA_0.22,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED
+baseline,P1_OPTILAND_0.6.3,NA_0.22,0.638671875,0.361328125,0.0,0.0,0.0,0.0,1.0,0.0,0.361328125,0.0,0.638671875,True,OK,SIMULATED
+baseline,P0,NA_0.05,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED
+baseline,P1_OPTILAND_0.6.3,NA_0.05,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED
+engineering_candidate,P0,NA_0.22,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED
+engineering_candidate,P1_OPTILAND_0.6.3,NA_0.22,0.62890625,0.37109375,0.0,0.0,0.0,0.0,1.0,0.0,0.37109375,0.0,0.62890625,True,OK,SIMULATED
+engineering_candidate,P0,NA_0.05,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED
+engineering_candidate,P1_OPTILAND_0.6.3,NA_0.05,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,1.0,True,OK,SIMULATED

@@ -1,0 +1,21 @@
+{
+  "schema": "optisys.s6.pilot_validation/1",
+  "run_id": "20261021_024715_S6_P1",
+  "status": "PASS",
+  "checks": {
+    "pilot_status_pass": true,
+    "manifest_count_matches_plan": true,
+    "sample_row_count": true,
+    "unique_assembly_count": true,
+    "unique_source_seed_count": true,
+    "S5_holdout_seed_excluded": true,
+    "all_checkpoints_present": true,
+    "pilot_not_used_to_change_plan": true
+  },
+  "assembly_count": 32,
+  "design_rows": 64,
+  "source_seed_count": 32,
+  "failure_count": 0,
+  "failures": [],
+  "note": "This structural validation intentionally does not calculate or publish pilot candidate performance."
+}

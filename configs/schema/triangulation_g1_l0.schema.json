@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://optisys.local/schemas/triangulation_g1_l0.schema.json",
+  "title": "OptiSys-Lab configuration schema 2.0 (G1, L0)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "case_id", "model_level", "units", "source", "geometry", "camera", "imaging", "sensor", "dataset", "run"],
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "case_id": { "type": "string", "minLength": 1 },
+    "model_level": { "const": "L0" },
+    "units": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["distance", "angle", "pixel_size"],
+      "properties": {
+        "distance": { "enum": ["mm"] },
+        "angle": { "enum": ["deg", "rad"] },
+        "pixel_size": { "enum": ["um", "mm"] }
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["wavelength_nm", "theta"],
+      "properties": {
+        "wavelength_nm": { "type": "number", "exclusiveMinimum": 0 },
+        "theta": { "type": "number" }
+      }
+    },
+    "geometry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baseline", "distance"],
+      "properties": {
+        "baseline": { "type": "number", "exclusiveMinimum": 0 },
+        "distance": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "number", "exclusiveMinimum": 0 }
+        },
+        "working_range_enforced": { "type": "boolean" },
+        "min_baseline_mm": { "type": "number", "exclusiveMinimum": 0 },
+        "singular_denominator_px": { "type": "number", "exclusiveMinimum": 0 },
+        "sensor_margin_px": { "type": "number", "minimum": 0 },
+        "range_epsilon_mm": { "type": "number", "minimum": 0 }
+      }
+    },
+    "camera": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["focal_length", "pixel_size", "resolution_px", "principal_point_px"],
+      "properties": {
+        "focal_length": { "type": "number", "exclusiveMinimum": 0 },
+        "pixel_size": { "type": "number", "exclusiveMinimum": 0 },
+        "resolution_px": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "integer", "minimum": 8 }
+        },
+        "principal_point_px": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "number", "minimum": 0 }
+        }
+      }
+    },
+    "imaging": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sigma_px", "signal", "background_e_per_px"],
+      "properties": {
+        "sigma_px": { "type": "number", "exclusiveMinimum": 0 },
+        "signal": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["mode", "total_electrons"],
+          "properties": {
+            "mode": { "const": "total_electrons" },
+            "total_electrons": { "type": "number", "exclusiveMinimum": 0 }
+          }
+        },
+        "background_e_per_px": { "type": "number", "minimum": 0 }
+      }
+    },
+    "sensor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["read_noise_e", "dark_rate_e_per_s", "exposure_ms", "full_well_e", "bit_depth", "e_per_adu", "black_level_adu", "adc_max_adu"],
+      "properties": {
+        "read_noise_e": { "type": "number", "minimum": 0 },
+        "dark_rate_e_per_s": { "type": "number", "minimum": 0 },
+        "exposure_ms": { "type": "number", "exclusiveMinimum": 0 },
+        "full_well_e": { "type": "number", "exclusiveMinimum": 0 },
+        "bit_depth": { "type": "integer", "minimum": 8, "maximum": 16 },
+        "e_per_adu": { "type": "number", "exclusiveMinimum": 0 },
+        "black_level_adu": { "type": "integer", "minimum": 0 },
+        "adc_max_adu": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["conditions", "repeats", "split"],
+      "properties": {
+        "conditions": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "total_electrons", "background_e_per_px", "read_noise_e", "reflectance_proxy"],
+            "properties": {
+              "name": { "type": "string", "minLength": 1 },
+              "total_electrons": { "type": "number", "exclusiveMinimum": 0 },
+              "background_e_per_px": { "type": "number", "minimum": 0 },
+              "read_noise_e": { "type": "number", "minimum": 0 },
+              "reflectance_proxy": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+            }
+          }
+        },
+        "repeats": { "type": "integer", "minimum": 1, "maximum": 1000 },
+        "split": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["validation_distances", "test_distances"],
+          "properties": {
+            "validation_distances": { "type": "array", "items": { "type": "number" }, "uniqueItems": true },
+            "test_distances": { "type": "array", "items": { "type": "number" }, "uniqueItems": true }
+          }
+        },
+        "representative_frames": { "type": "integer", "minimum": 0, "maximum": 200 }
+      }
+    },
+    "run": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["seed"],
+      "properties": {
+        "seed": { "type": "integer", "minimum": 0, "maximum": 4294967295 }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "optisys.s6.freeze_hashes/1",
+  "run_id": "20261021_024715_S6_P1",
+  "freeze_stage": "PRE_RESULT",
+  "frozen_at_utc": "2026-10-21T06:49:39+00:00",
+  "git_head": "PRIVATE_SOURCE_REVISION",
+  "hashes": {
+    "docs/s6/S6_BASELINE_VERIFICATION.md": {
+      "bytes": 2224,
+      "sha256": "2da606f4003d8c11182784e1128514f5909dbc2cceca8c57bb9401d7cac5ca09"
+    },
+    "docs/s6/S6_INHERITED_SCIENCE_SCOPE.md": {
+      "bytes": 1346,
+      "sha256": "0efee1d8d4f0f88f4b6d92cfa2709485338c137b8ee977bc1f02723a36da6b68"
+    },
+    "docs/s6/S6_PRE_DISCREPANCIES.md": {
+      "bytes": 2130,
+      "sha256": "ea9d5b6a18a575709cdb7a2a84b1fd0635387f486007bb9d1e35a1a0e8148781"
+    },
+    "docs/s6/S6_SCIENCE_SCOPE.md": {
+      "bytes": 2306,
+      "sha256": "dd79f116461fabe35b57b0edbca427ff911c72553a43494e29f364c169bc4cbd"
+    },
+    "docs/s6/S6_ACCEPTANCE_CRITERIA.md": {
+      "bytes": 4168,
+      "sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c"
+    },
+    "docs/s6/S6_EXECUTION_PLAN.md": {
+      "bytes": 2882,
+      "sha256": "e8523432e316deb47e06f7704acebe2219a16fd875216a8f4263de29c87246c2"
+    },
+    "docs/s6/S6_COMPUTE_BUDGET.md": {
+      "bytes": 2403,
+      "sha256": "12ef09cc77a0e8186d545ac76cca16b7d109aefd16a63f7c45693b1f96cd56e3"
+    },
+    "runs/20261021_024715_S6_P1/config_snapshot.yaml": {
+      "bytes": 2124,
+      "sha256": "81e31c4b50bb85f78dda5176b1d9d7db458fae1239ef1a4872f3425a82eae223"
+    },
+    "Optisys_Lab_Job_Oriented_Development_Plan_2026.pdf": {
+      "bytes": 582816,
+      "sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d"
+    },
+    "1md/OptiSysLab_S6_P1_Assembly_Robustness_Boundary_Release_Audit_Prompt.md": {
+      "bytes": 42708,
+      "sha256": "7d0489af259e15cd62f02042bfe75d1b2eac9374ef22b0a329561b5fa574d351"
+    },
+    "_AUDIT/20261020_210201_S5_HNA/OptiSysLab_S5_20261020_210201_S5_HNA_GPT_AUDIT.zip": {
+      "bytes": 15773717,
+      "sha256": "18d946e3c3d9cecadab558a05c262c8b1c286fa062ae11050037b6ed3df13ec5"
+    },
+    "docs/s5/S5_FINAL_VERDICT.json": {
+      "bytes": 9067,
+      "sha256": "dc405d37189ef1f72dd67ecabb1f4d1441d157acb9e3a6e5ead1f2e80997cad5"
+    },
+    "docs/s5/S5_ACCEPTANCE_CRITERIA.md": {
+      "bytes": 6909,
+      "sha256": "412de8477140492d44b7ff9d77218504950856c5848c66471668b58d819ea0b8"
+    },
+    "docs/s5/S5_OPEN_ISSUES.md": {
+      "bytes": 2930,
+      "sha256": "f2db27e7b0535b8c614b809b2a44182aa43d3ef719ae0982e1fbe5203aed4264"
+    },
+    "docs/s5/S5_HIGH_NA_DIAGNOSIS.md": {
+      "bytes": 6391,
+      "sha256": "74f47c5cc1a224619a087c669b7b087c42ee133ed6d01107c671112c1dbabbeb"
+    },
+    "docs/s5/S5_COMPUTE_MEASURED.md": {
+      "bytes": 2392,
+      "sha256": "f6471f0ea2d8d58f9aeafb401d6f538bb396e768b73972b7a8cc4b48dceaaba1"
+    },
+    "runs/20261020_210201_S5_HNA/design_configs.json": {
+      "bytes": 1971,
+      "sha256": "0c7b7839fefe51fd48f1729843aefdef7333a409e57c8b4befa96b6c2e93e756"
+    },
+    "runs/20261020_210201_S5_HNA/design_holdout_source_samples.csv": {
+      "bytes": 774672,
+      "sha256": "ff84f251a05b1c692e6fe31ba36f17baa7555adb356abe46c6cf42c8237ee6e7"
+    },
+    "runs/20261020_210201_S5_HNA/design_holdout_ray_results.csv": {
+      "bytes": 1569851,
+      "sha256": "c68bb1940ad5bf4487240a7e13d644210e72605d8bb59f6f1439dcc12f5a78c2"
+    },
+    "runs/20261020_210201_S5_HNA/paired_samples.csv": {
+      "bytes": 383328,
+      "sha256": "e12d50ae441ac801c051f0ba6cef9658d908ad605032a6514b4a9cbebc6a3e2d"
+    },
+    "runs/20261020_133555_G4_ec3e2813_0e48/optics_model.json": {
+      "bytes": 3819,
+      "sha256": "88fd4a3ac0fe1ab6286ce44e6611fa52a815ebc79163158a6d19111a0fe39218"
+    }
+  },
+  "policy": "No S6 scientific outcomes had been executed when this freeze was created. Later changes require a dated amendment; the original record stays unchanged."
+}

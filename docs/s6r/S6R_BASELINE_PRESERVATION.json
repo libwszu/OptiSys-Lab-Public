@@ -1,0 +1,40 @@
+{
+  "schema": "optisys.s6r.baseline_preservation/1",
+  "intake_head": "PRIVATE_SOURCE_REVISION",
+  "protected_science_trees": [
+    {
+      "path": "runs/20261021_024715_S6_P1",
+      "status": "PASS",
+      "expected_file_count": 1005,
+      "actual_file_count": 1005,
+      "expected_bytes": 39157936,
+      "actual_bytes": 39157936,
+      "expected_tree_sha256": "975a26c79c59f93f2f1f8827fb72966add4b38e50b51a5bafbaf60273091b8a2",
+      "actual_tree_sha256": "975a26c79c59f93f2f1f8827fb72966add4b38e50b51a5bafbaf60273091b8a2",
+      "changed": [],
+      "missing": [],
+      "added": []
+    },
+    {
+      "path": "docs/s6",
+      "status": "PASS",
+      "expected_file_count": 14,
+      "actual_file_count": 14,
+      "expected_bytes": 46493,
+      "actual_bytes": 46493,
+      "expected_tree_sha256": "45f86fc726c76d3ebbf68966af632efbc5aa5177a9a688776331c6279be50d2c",
+      "actual_tree_sha256": "45f86fc726c76d3ebbf68966af632efbc5aa5177a9a688776331c6279be50d2c",
+      "changed": [],
+      "missing": [],
+      "added": []
+    }
+  ],
+  "S6_ORIGINAL_SCIENCE_TREE_UNCHANGED": "YES",
+  "release_draft_tree_at_intake": {
+    "status": "FAIL",
+    "initial_tree_sha256": "cc45bff33647d1a6a2a60cbec276eed75747bc2627327611b08ea2ffb779c6a0",
+    "current_tree_sha256": "a56913ca0a90ef4ce0c40bd99329ea0eb02a24e5e751cad0aca0ce348710d7b0",
+    "change_reason": "R0 documented corrections to README, checklist, S6 evidence index, and release manifest; original intake hashes remain above."
+  },
+  "status": "PASS"
+}

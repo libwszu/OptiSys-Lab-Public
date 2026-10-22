@@ -1,0 +1,195 @@
+{
+  "schema": "optisys.s5.final_verdict/1",
+  "run_id": "20261020_210201_S5_HNA",
+  "historical_baselines_preserved": true,
+  "G2_SCIENCE_INHERITED": "QUALIFIED_ONLY",
+  "G4_OPTICAL_SCIENCE_INHERITED": "QUALIFIED",
+  "S5_ENGINEERING_EXECUTION_STATUS": "PASS",
+  "S5_A_REFERENCE_VERIFICATION": "PASS",
+  "S5_B_HIGH_NA_CAUSE_STATUS": "EXPLAINED_WITH_SCOPE",
+  "S5_C_DESIGN_STATUS": "P1_SUPPORTED_TRADEOFF",
+  "S5_PORTFOLIO_STATUS": "PARTIAL",
+  "S5_EMPIRICAL_STATUS": "NOT_AVAILABLE",
+  "S5_AUDIT_STATUS": "PASS",
+  "source_power_w": null,
+  "model_level": "P0_AND_ASSUMED_P1_WITH_SCOPE",
+  "scientific_limitations": [
+    "N-BK7 singlets and source probability distribution are assumptions, not measured device data.",
+    "P1 reference verifies agreement between implementations only for the registered centered spherical geometry.",
+    "High-NA longitudinal-focus proxy is geometric, not a wavefront Seidel coefficient or measured PSF.",
+    "S5-C paired interval is ray-resampling uncertainty, not assembly-level tolerance.",
+    "Target sizes are assumed receiving regions; no Er:YAP dimensions, pump power, efficiency, W/mm^2 or thermal response are available.",
+    "G4 official scientific status and overall design claim remain unchanged."
+  ],
+  "untested_items": [
+    "REMOTE_CI_NOT_RUN",
+    "GPU_NOT_TESTED",
+    "VIDEO_NOT_DELIVERED",
+    "P1_ASSEMBLY_LEVEL_TOLERANCE_NOT_RUN",
+    "MEASURED_OPTICAL_VALIDATION_NOT_AVAILABLE"
+  ],
+  "git_commit": "PRIVATE_SOURCE_REVISION",
+  "git_worktree_dirty_at_stage5_start": true,
+  "preexisting_worktree_files_hashed": 169,
+  "freeze_hashes": {
+    "docs/s5/S5_ACCEPTANCE_CRITERIA.md": "412de8477140492d44b7ff9d77218504950856c5848c66471668b58d819ea0b8",
+    "docs/s5/S5_EXECUTION_PLAN.md": "09e8cdb574fef358e297c5281c58530d0ed576772488835753471fd5045e42d8",
+    "docs/s5/S5_COMPUTE_BUDGET.md": "618c0a51bf7b68e5ae91d5b9e97a072675ab28e3b781d4bbffa3b733956e4ee0",
+    "docs/s5/S5_SCIENCE_SCOPE.md": "79cb932cf6614b9db78413aa5838e08c7be6db6ae481c08186bd79e9382e5e45",
+    "runs/20261020_210201_S5_HNA/config_snapshot.yaml": "065849db17df97ab2ab20e88d9f867dfb75b57dffb9d2d0f4e19ada8509b20ba",
+    "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d",
+    "1md/OptiSysLab_Stage5_HighNA_Physics_Portfolio_Audit_Prompt.md": "a90a597244c240775d1211a282d38cf5e39cb4bffc980610f387d788ac370fc0",
+    "runs/20261020_133555_G4_ec3e2813_0e48/optics_model.json": "88fd4a3ac0fe1ab6286ce44e6611fa52a815ebc79163158a6d19111a0fe39218",
+    "runs/20261020_133555_G4_ec3e2813_0e48/source_samples.csv": "2fa97bac46c1b36f87bc4ebeef98386730941f551fe427ec6df3d2b6cef95e09",
+    "runs/20261020_133555_G4_ec3e2813_0e48/raytrace_reference.csv": "bf44b939583b7cff16488c37be17dd7f94eae099ee62a6be700e3897486e4887"
+  },
+  "files_index": {
+    "runs/20261020_210201_S5_HNA/provenance.json": {
+      "bytes": 7609,
+      "sha256": "bc2b76089dedb3a7d3497789ee1af35fd0318c4f10e077d29b75397cd5bee958"
+    },
+    "runs/20261020_210201_S5_HNA/environment.json": {
+      "bytes": 1102,
+      "sha256": "b83ca155a0a52d6c3a517e2d2818ce22a2ef496f772af1fe0adbc8d901f02677"
+    },
+    "runs/20261020_210201_S5_HNA/design_configs.json": {
+      "bytes": 1971,
+      "sha256": "0c7b7839fefe51fd48f1729843aefdef7333a409e57c8b4befa96b6c2e93e756"
+    },
+    "runs/20261020_210201_S5_HNA/full_na_surface_reference.csv": {
+      "bytes": 22195567,
+      "sha256": "7e0d0a55dcc027728572054f69ebfc4631ed675f65fb39a2e1900e2f0a272d23"
+    },
+    "runs/20261020_210201_S5_HNA/full_na_ray_reference.csv": {
+      "bytes": 3283368,
+      "sha256": "2d55f5611ee648af34763b8a8af4c51e7b42dc48c1e951644a7b8f87315437f7"
+    },
+    "runs/20261020_210201_S5_HNA/full_na_verdict.json": {
+      "bytes": 43592,
+      "sha256": "dae9a879ff0ab147cb728b020c17a7500c4d53a99eb73f39fe43085c7329bb00"
+    },
+    "runs/20261020_210201_S5_HNA/angle_resolved_p0_p1_capture.csv": {
+      "bytes": 3167,
+      "sha256": "7981be44b6b23e02839759ae98faa4312ad2ac9a9d7e09e41e3c88dbda6d2984"
+    },
+    "runs/20261020_210201_S5_HNA/surface_level_ray_deltas.csv": {
+      "bytes": 12004,
+      "sha256": "cf8d44ef01b85c97a25cbcb37b49030a9d2eb47f740bbc3f41b2f64b6acf1754"
+    },
+    "runs/20261020_210201_S5_HNA/focus_sweep.csv": {
+      "bytes": 3436,
+      "sha256": "33845bc172f181583fb8b3016d1d8d8cc82b67525bf27a0638f173970bb5108f"
+    },
+    "runs/20261020_210201_S5_HNA/focus_sweep_ray_deltas.csv": {
+      "bytes": 8457548,
+      "sha256": "695597194f857132630213ff8f7dba5d9aacb4e1f3b2a91a1abe469b517e6a7b"
+    },
+    "runs/20261020_210201_S5_HNA/encircled_weight.csv": {
+      "bytes": 12939,
+      "sha256": "b7c078b517a50d26a9a124f8e6502903f44bfaad921b5d9def2136cfc0d73e96"
+    },
+    "runs/20261020_210201_S5_HNA/target_geometry_sensitivity.csv": {
+      "bytes": 2694,
+      "sha256": "721144f1c7dc929ea300b5ee1410098c91563cb1748d7cc714388c775268a7cc"
+    },
+    "runs/20261020_210201_S5_HNA/lens_geometry_feasibility.csv": {
+      "bytes": 1681,
+      "sha256": "313214163a7254a8b777e0982b714503509da2e4a44832a24ae1eb8fa717209f"
+    },
+    "runs/20261020_210201_S5_HNA/source_assumption_sensitivity.csv": {
+      "bytes": 878,
+      "sha256": "08196ae245a2c60533f6ac65738f78aeafe03dd57bc7427296ae9ce06d440b97"
+    },
+    "runs/20261020_210201_S5_HNA/design_search.csv": {
+      "bytes": 1663,
+      "sha256": "83d25dcf1de27e623f899e048d25fd2a7ba7a88c978405e2446c3bd145c18a1a"
+    },
+    "runs/20261020_210201_S5_HNA/design_comparison.csv": {
+      "bytes": 1084,
+      "sha256": "6ff8aa0512d940a9319b7ea24e78cb8fba6f78dacf326b1078f845451ba5a643"
+    },
+    "runs/20261020_210201_S5_HNA/design_search_source_samples.csv": {
+      "bytes": 88229,
+      "sha256": "110cb06ba9a52012665e587659a3b1e7810d06bddcb111966335795204600829"
+    },
+    "runs/20261020_210201_S5_HNA/design_holdout_source_samples.csv": {
+      "bytes": 774672,
+      "sha256": "ff84f251a05b1c692e6fe31ba36f17baa7555adb356abe46c6cf42c8237ee6e7"
+    },
+    "runs/20261020_210201_S5_HNA/design_holdout_ray_results.csv": {
+      "bytes": 1569851,
+      "sha256": "c68bb1940ad5bf4487240a7e13d644210e72605d8bb59f6f1439dcc12f5a78c2"
+    },
+    "runs/20261020_210201_S5_HNA/paired_samples.csv": {
+      "bytes": 383328,
+      "sha256": "e12d50ae441ac801c051f0ba6cef9658d908ad605032a6514b4a9cbebc6a3e2d"
+    },
+    "runs/20261020_210201_S5_HNA/bootstrap_summary.json": {
+      "bytes": 1491,
+      "sha256": "5674a145384f2ce96ba5b136c1695ffa8164ba0f431394c08f873e486da6a1a8"
+    },
+    "runs/20261020_210201_S5_HNA/report.md": {
+      "bytes": 2196,
+      "sha256": "9ca22a8ca1faa756c557bdaf7de3bb8c8932d48b5abc13cbd1803efd8ed50e22"
+    },
+    "runs/20261020_210201_S5_HNA/report.html": {
+      "bytes": 3511,
+      "sha256": "18894fd81444412cf689562bd6cacc3ff682d5a314d2d04f8d5863cd797112cc"
+    },
+    "runs/20261020_210201_S5_HNA/test_evidence/s5_full_junit.xml": {
+      "bytes": 55052,
+      "sha256": "e224efc7e2f735faf8b2acf82f632c12d7b8d9c64f590017b5d3184fd6a7a0df"
+    },
+    "runs/20261020_210201_S5_HNA/test_evidence/s5_full_stdout.txt": {
+      "bytes": 600,
+      "sha256": "12aeddf4de87a3c7ea3f104a8ef2a8032f2ca1ec7b03cd239eb93c504e8509cd"
+    },
+    "runs/20261020_210201_S5_HNA/portfolio/browser_e2e_final.json": {
+      "bytes": 1904,
+      "sha256": "e418021fbdde60117a5253777d118a07f81eff28b2df77cd5aae74ec09a6dfcb"
+    },
+    "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/A_overview_final.png": {
+      "bytes": 174313,
+      "sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a"
+    },
+    "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/C_optimization_final.png": {
+      "bytes": 181607,
+      "sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7"
+    },
+    "runs/20261020_210201_S5_HNA/portfolio/screenshot_evidence/F_pump976_final.png": {
+      "bytes": 175281,
+      "sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab"
+    }
+  },
+  "verification_summary": {
+    "pytest": {
+      "tests": 461,
+      "passed": 461,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "junit_time_s": 144.875,
+      "outer_wall_s": 147.61184910003794
+    },
+    "streamlit_real_serve": "PASS",
+    "browser_e2e": "PASS",
+    "browser_screenshots": 3
+  },
+  "external_audit_archive": {
+    "path": "_AUDIT/20261020_210201_S5_HNA/OptiSysLab_S5_20261020_210201_S5_HNA_GPT_AUDIT.zip",
+    "bytes": 15773717,
+    "sha256": "18d946e3c3d9cecadab558a05c262c8b1c286fa062ae11050037b6ed3df13ec5",
+    "members": 164,
+    "manifest_covered": 162,
+    "compression": "ZIP_DEFLATED",
+    "content_integrity": "PASS",
+    "extracted_repro": "PASS",
+    "tamper_rejected": "PASS",
+    "deletion_rejected": "PASS",
+    "verified_with": [
+      "CPython 3.14.3",
+      "CPython 3.11.9"
+    ]
+  },
+  "finalized_at_utc": "2026-10-21T02:56:25+00:00"
+}

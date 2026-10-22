@@ -1,0 +1,124 @@
+# OptiSys-Lab G2 configuration (schema 3.0, L1-approximate).
+#
+# Every optical and radiometric number here is an ASSUMED design value, not a
+# datasheet value and not a measurement.  See docs/g2/G2_SCIENTIFIC_ASSUMPTIONS.md.
+schema_version: "3.0"
+case_id: triangulation_g2_l1
+model_level: L1-approximate
+
+units:
+  distance: mm
+  angle: deg
+  pixel_size: um
+
+source:
+  wavelength_nm: 650.0
+  theta: 0.0
+
+geometry:
+  baseline: 20.0
+  distance: [100.0, 300.0]
+  working_range_enforced: true
+  min_baseline_mm: 1.0
+  singular_denominator_px: 1.0e-6
+  sensor_margin_px: 0.0
+  range_epsilon_mm: 1.0e-6
+
+camera:
+  focal_length: 8.0
+  pixel_size: 3.45
+  resolution_px: [1280, 1024]
+  principal_point_px: [640.0, 512.0]
+
+optics:
+  backend: optiland
+  element: singlet_equiconvex
+  material: N-BK7
+  design_index: 1.5168
+  aperture_diameter: 1.2
+  element_thickness: 3.0
+  rear_aperture_clearance: 0.35   # mm of barrel clearance beyond the stop radius
+  focus_distance: 200.0
+  pupil_side: 17
+  psf:
+    kind: geometric_footprint_x_airy
+    subpixel: 5
+    max_half_px: 40
+    airy_radius_margin: 6.0
+
+imaging:
+  signal:
+    mode: fixed_incident          # isolate geometry/PSF/estimator effects
+    reference_electrons: 40000.0
+    reference_distance: 200.0
+    reference_aperture: 1.2
+  background_e_per_px: 100.0
+
+sensor:
+  read_noise_e: 3.0
+  dark_rate_e_per_s: 1.0
+  exposure_ms: 2.0
+  full_well_e: 15000.0
+  bit_depth: 12
+  e_per_adu: 3.0
+  black_level_adu: 100
+  adc_max_adu: 4095
+
+dataset:
+  conditions:
+    - name: strong
+      total_electrons: 200000.0
+      background_e_per_px: 50.0
+      read_noise_e: 2.0
+      reflectance_proxy: 0.90
+    - name: medium
+      total_electrons: 40000.0
+      background_e_per_px: 100.0
+      read_noise_e: 3.0
+      reflectance_proxy: 0.35
+    - name: weak
+      total_electrons: 8000.0
+      background_e_per_px: 200.0
+      read_noise_e: 4.0
+      reflectance_proxy: 0.08
+  repeats: 1
+  split:
+    validation_distances: [110.0, 140.0, 170.0, 200.0, 230.0, 260.0, 290.0]
+    test_distances: [105.0, 135.0, 165.0, 195.0, 225.0, 255.0, 285.0]
+  final_assembly_draws: 2000
+  stratified_assembly_draws: 200
+  calibration_distances: [100.0, 115.0, 120.0, 125.0, 130.0, 145.0, 150.0, 155.0, 160.0, 175.0, 180.0, 185.0, 190.0, 205.0, 210.0, 215.0, 220.0, 235.0, 240.0, 245.0, 250.0, 265.0, 270.0, 275.0, 280.0, 295.0, 300.0]
+
+tolerance:
+  enabled: true
+  variables:
+    baseline_mm: {distribution: normal, sigma: 0.05, unit: mm}
+    theta_deg: {distribution: normal, sigma: 0.05, unit: deg}
+    focal_relative: {distribution: normal, sigma: 0.002, unit: dimensionless}
+    cx_px: {distribution: normal, sigma: 0.5, unit: px}
+    focus_mm: {distribution: normal, sigma: 0.10, unit: mm}
+  correlation:
+    enabled: false
+    rho_baseline_theta: 0.0
+
+objective:
+  weights: {mean_rmse: 0.50, p95: 0.35, failure: 0.15}
+  reference_scales: {rmse_mm: 0.050, p95_mm: 0.100, failure_rate: 0.050}
+  robust_assemblies: 12
+
+constraints:
+  sensor_margin_px: 24.0
+  min_ray_success: 0.90
+  min_kernel_support: 0.950
+  max_peak_fraction_of_full_well: 0.80
+
+calibration:
+  strategy_primary: A
+  model: M1
+  model_selection_min_improvement: 0.20
+
+run:
+  seed: 20261019
+  search_max_evaluations: 300
+  search_wall_cap_s: 3600
+  final_wall_cap_s: 7200

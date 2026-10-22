@@ -1,0 +1,25 @@
+schema_version: '3.0'
+source: ASSUMED (task-book examples, not a manufacturing study)
+correlation_enabled: false
+rho_baseline_theta: 0.0
+variables:
+- name: baseline_mm
+  distribution: normal
+  sigma: 0.05
+  unit: mm
+- name: theta_deg
+  distribution: normal
+  sigma: 0.05
+  unit: deg
+- name: focal_relative
+  distribution: normal
+  sigma: 0.002
+  unit: dimensionless
+- name: cx_px
+  distribution: normal
+  sigma: 0.5
+  unit: px
+- name: focus_mm
+  distribution: normal
+  sigma: 0.1
+  unit: mm

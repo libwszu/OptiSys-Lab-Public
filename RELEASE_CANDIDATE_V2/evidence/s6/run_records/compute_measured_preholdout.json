@@ -1,0 +1,44 @@
+{
+  "schema": "optisys.s6.science_budget_preholdout/1",
+  "run_id": "20261021_024715_S6_P1",
+  "measured_at_utc": "2026-10-21T07:18:08+00:00",
+  "science_wall_budget_total_s": 1500.0,
+  "measured_before_holdout_s": 63.255720699962694,
+  "holdout_hard_cap_s": 1200.0,
+  "remaining_total_budget_s": 1436.7442793000373,
+  "holdout_available_now_s": 1200.0,
+  "post_holdout_reserve_s": 236.7442793000373,
+  "entries": [
+    {
+      "evidence": "s6_a_execution/execution.json",
+      "exit_code": 1,
+      "outer_wall_s": 14.972077600017656
+    },
+    {
+      "evidence": "s6_a_execution_02/execution.json",
+      "exit_code": 0,
+      "outer_wall_s": 14.624933400016744
+    },
+    {
+      "evidence": "compute_profile_execution/execution.json",
+      "exit_code": 1,
+      "outer_wall_s": 8.685556000040378
+    },
+    {
+      "evidence": "compute_profile_execution_02/execution.json",
+      "exit_code": 0,
+      "outer_wall_s": 8.514662499947008
+    },
+    {
+      "evidence": "s6_b_execution/execution.json",
+      "exit_code": 0,
+      "outer_wall_s": 12.161838899948634
+    },
+    {
+      "evidence": "s6_c_pilot_execution/execution.json",
+      "exit_code": 0,
+      "outer_wall_s": 4.2966522999922745
+    }
+  ],
+  "note": "Includes both S6-A attempts and both profile attempts, including the one whose output serializer failed after measurements; excludes unit-test, plotting-only rerender, release and audit packaging wall."
+}

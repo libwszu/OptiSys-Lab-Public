@@ -1,0 +1,62 @@
+{
+  "schema": "optisys.s6r.audit_verification/1",
+  "verified_at_utc": "2026-10-21T09:36:56.691508+00:00",
+  "zip_path": "artifacts/s6r/audit_preflight/20261021_092952_S6R_PREFLIGHT/OptiSysLab_S6R_20261021_092952_S6R_PREFLIGHT_GPT_AUDIT.zip",
+  "zip_bytes": 12288952,
+  "zip_sha256": "268565ca40831829fcc13cd0bf4771ee8213f7454b38cd3413f7f48df6a53da6",
+  "zip_testzip": "PASS",
+  "duplicate_names": [],
+  "unsafe_paths": [],
+  "symlink_members": [],
+  "manifest_coverage": {
+    "status": "PASS",
+    "member_count": 442,
+    "managed_file_count": 440,
+    "unmanaged_members": [],
+    "missing_members": [],
+    "extra_members": [],
+    "content_hash_mismatches": [],
+    "checksum_file_count": 440,
+    "checksum_missing": [],
+    "checksum_extra": [],
+    "checksum_mismatches": [],
+    "unsafe_paths": [],
+    "unexpected_executables": [],
+    "personal_path_hits": [],
+    "secret_pattern_hits": []
+  },
+  "extracted_repro": {
+    "status": "PASS",
+    "exit_code": 0,
+    "result": "PASS",
+    "logs": "artifacts\\s6r\\verify\\s6r_extract_bnvqzyi8_repro"
+  },
+  "release_candidate_verification": {
+    "status": "PASS",
+    "exit_code": 0,
+    "broken_links": [],
+    "false_delivery_claims": [],
+    "release_manifest_hash_mismatches": []
+  },
+  "tamper_and_deletion_rejection": {
+    "tampered_csv_rejected": true,
+    "tamper_exit_code": 1,
+    "tampered_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv",
+    "required_file_deletion_rejected": true,
+    "deletion_exit_code": 1,
+    "deleted_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_parameter_registry.json"
+  },
+  "same_environment_byte_rebuild": "PASS",
+  "byte_rebuild_environment": {
+    "python": "3.11.9",
+    "zlib": "1.3.1"
+  },
+  "canonical_rebuild_sha256": "268565ca40831829fcc13cd0bf4771ee8213f7454b38cd3413f7f48df6a53da6",
+  "recommended_size_under_40_mib": true,
+  "temporary_validation_paths": {
+    "extracted": "artifacts/s6r/verify/s6r_extract_bnvqzyi8",
+    "tamper_copy": "artifacts/s6r/verify/s6r_tamper_13d5a8a03189",
+    "deletion_copy": "artifacts/s6r/verify/s6r_deletion_c6febf8e60fc"
+  },
+  "status": "PASS"
+}

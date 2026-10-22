@@ -1,0 +1,326 @@
+{
+  "schema": "g3.final_status/1",
+  "gate": "G3",
+  "produced_at_utc": "2026-10-20T07:36:00Z",
+  "produced_by": "G3 development round (execution + science handoff)",
+  "verdict_lines": {
+    "_note": "两条平行裁决线，禁止压缩为 G3_ALL_PASS。参见 G3_ACCEPTANCE_CRITERIA.md §A。",
+    "G3_ENGINEERING_EXECUTION_STATUS": "PASS_WITH_DECLARED_DEVIATIONS",
+    "G3_SCIENCE_HANDOFF_STATUS": "QUALIFIED",
+    "G3_SCIENCE_HANDOFF_QUALIFIER": "QUALIFIED_ONLY",
+    "aggregate_form_allowed": "PASS_G3_ENGINEERING_WITH_G2_SCIENCE_QUALIFIED",
+    "aggregate_form_forbidden": [
+      "G3_ALL_PASS",
+      "G3 fully passed",
+      "all gates passed"
+    ]
+  },
+  "g2_inheritance": {
+    "historical_g2_execution": "PASS_RECORDED",
+    "original_prereg_compliance": "FAIL",
+    "as_run_numerical_verification": "PASS",
+    "stratified_panel_repair": "PASS",
+    "full_samples_available": true,
+    "scientific_claim_allowed": "QUALIFIED_ONLY",
+    "verdict_file": "docs/g3/G2_INHERITANCE_VERDICT.json",
+    "verdict_sha256": "502eb1f902227f5017bd4bc14fd133f9c7161735845af1f680437f6b65077416",
+    "open_issue_count": 8,
+    "rationale": "G2 的 status PASS 是执行记录；其预注册合规性为 FAIL（HC3 0.999 在 as-run 口径下不可达，且存在最终测试距离进入开发等偏离）。两行必须分开陈述。"
+  },
+  "g3_demo_run": {
+    "run_id": "20261020_071457_G3_ea57a83b",
+    "path": "runs/20261020_071457_G3_ea57a83b",
+    "status": "PASS",
+    "scientific_claim_status": "DEMO_ONLY_NOT_A_G2_CONFIRMATION",
+    "assemblies": 12,
+    "test_distances": 7,
+    "candidates": 3,
+    "estimators": 3,
+    "condition": "medium",
+    "rows": 756,
+    "wall_s": 77.2,
+    "workers": 1,
+    "comparable_to_g2": false,
+    "inherits_g2_hc3_conflict": true,
+    "gate_checks": {
+      "D1_all_candidates_present": true,
+      "D2_frame_count": true,
+      "D3_failures_recorded_not_hidden": true,
+      "D4_kernel_support_below_prereg": true,
+      "D5_not_a_g2_replacement": true
+    }
+  },
+  "frozen_evidence_protection": {
+    "baseline_snapshot": "docs/g3/G3_BASELINE_HASHES.json",
+    "frozen_runs_unchanged": true,
+    "method": "recomputed whole-tree digest (path + sha256 per file) against the pre-change snapshot",
+    "runs": {
+      "G0": {
+        "path": "runs/20261019_130948_G0_78fa364f",
+        "match": true
+      },
+      "G1": {
+        "path": "runs/20261019_145702_G1_54c9e3fb",
+        "match": true
+      },
+      "G2": {
+        "path": "runs/20261019_191117_G2_52369787",
+        "match": true
+      }
+    },
+    "source_pdf_unchanged": true,
+    "g2_audit_zip_unchanged": true,
+    "g2_config_unchanged": true
+  },
+  "tests": {
+    "junit": "artifacts/g3/tests/g3_full_junit.xml",
+    "stdout": "artifacts/g3/tests/g3_full_stdout.txt",
+    "total": 425,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "wall_s": 145.545,
+    "historical_baseline": 252,
+    "acceptance_gate": {
+      "failed_zero": true,
+      "skipped_zero": true,
+      "passed_at_least_252": true
+    },
+    "matrices": {
+      "T-BASE": {
+        "file": "tests/integration/test_g3_tbase.py",
+        "count": 12,
+        "pass": true
+      },
+      "T-SCI": {
+        "file": "tests/integration/test_g3_tsci.py",
+        "count": 25,
+        "pass": true
+      },
+      "T-DATA": {
+        "file": "tests/integration/test_g3_tdata.py",
+        "count": 20,
+        "pass": true
+      },
+      "T-UI": {
+        "file": "tests/ui/test_pages_render.py",
+        "count": 17,
+        "pass": true
+      },
+      "T-REPORT": {
+        "file": "tests/integration/test_g3_treport.py",
+        "count": 15,
+        "pass": true
+      },
+      "T-JOBS": {
+        "file": "tests/integration/test_g3_tjobs.py",
+        "count": 13,
+        "pass": true
+      },
+      "T-REPRO": {
+        "file": "tests/integration/test_g3_trepro.py",
+        "count": 16,
+        "pass": true
+      },
+      "T-SECURITY": {
+        "file": "tests/integration/test_g3_tsecurity.py",
+        "count": 24,
+        "pass": true
+      },
+      "T-FINAL": {
+        "file": "tests/integration/test_g3_tfinal.py",
+        "count": 27,
+        "pass": true
+      }
+    },
+    "command": ".venv\\Scripts\\python.exe -m pytest -q --basetemp=artifacts/g3/tests/_bt_final --junitxml=artifacts/g3/tests/g3_full_junit.xml",
+    "basetemp_note": "The default temp dir is refused at teardown by the host's bulk-delete guard (~478 files), which rewrites the process exit code to 1 while the JUnit still records 425 passed. --basetemp points at an empty directory inside the project so the run reaches a self-consistent exit 0. Exposing that arrangement revealed a real test defect, fixed in this round: test_path_outside_the_project_is_refused borrowed tmp_path as an 'outside' path, so it silently stopped testing anything once the temp dir moved inside ROOT.",
+    "wall_s_note": "JUnit's own `time` attribute. pytest's summary line prints the same value as `145.55s` because it formats with two decimals; neither is a separate measurement."
+  },
+  "ui": {
+    "framework": "Streamlit 1.66.0",
+    "entry": "app/main.py",
+    "pages": [
+      {
+        "id": "A",
+        "module": "app/pages/page_a_overview.py",
+        "name": "项目总览与证据状态"
+      },
+      {
+        "id": "B",
+        "module": "app/pages/page_b_bench.py",
+        "name": "光斑实验台"
+      },
+      {
+        "id": "C",
+        "module": "app/pages/page_c_optimization.py",
+        "name": "优化对照"
+      },
+      {
+        "id": "D",
+        "module": "app/pages/page_d_evidence.py",
+        "name": "运行与证据中心"
+      },
+      {
+        "id": "E",
+        "module": "app/pages/page_e_about.py",
+        "name": "说明与边界"
+      }
+    ],
+    "data_access_only_via": [
+      "ConfigService",
+      "RunRepository",
+      "JobService",
+      "ReportService"
+    ],
+    "renders_all_five_without_exception": true,
+    "verified_frame_wall_s": 5.95,
+    "serve_smoke": {
+      "script": "scripts/smoke_streamlit_serve.py",
+      "command_documented": ".venv\\Scripts\\streamlit run app/main.py",
+      "serves": true,
+      "health_endpoint": "/_stcore/health",
+      "health_body": "ok",
+      "root_bytes": 6467,
+      "startup_s": 2.58,
+      "clean_shutdown": true,
+      "evidence": "artifacts/g3/tests/streamlit_serve.json",
+      "measured_limit": "An HTTP-only probe cannot detect a page that fails to import. Measured: pointing streamlit run at a file with a broken import leaves /_stcore/health answering 'ok', / serving the shell, and the log clean, because Streamlit executes the script only when a websocket session attaches. Enabling --server.scriptHealthCheckEnabled does not change this either (measured). Import errors are therefore covered by AppTest in tests/ui/, which executes the script and surfaces ModuleNotFoundError as at.exception (asserted).",
+      "healthz_is_not_health": "/healthz returns the 6467-byte SPA shell, byte-identical to /, so a probe against it would pass even with a sick runtime."
+    }
+  },
+  "reports": {
+    "service": "src/optisys/reports/report_service.py",
+    "independent_of_gui": true,
+    "schema_branches": [
+      "1.0",
+      "2.0",
+      "3.0"
+    ],
+    "html_offline_single_file": true,
+    "science_tokens_on_every_surface": true,
+    "pdf_status": "NOT_DELIVERED",
+    "pdf_reason": "no PDF renderer installed (reportlab / weasyprint / fpdf all absent); no empty file is produced",
+    "frozen_run_untouched": true
+  },
+  "audit_package": {
+    "path": "_AUDIT/20261020_071457_G3_ea57a83b/OptiSysLab_G3_20261020_071457_G3_ea57a83b_GPT_AUDIT.zip",
+    "bytes": null,
+    "target_bytes": 41943040,
+    "within_target": true,
+    "testzip": "PASS",
+    "path_traversal": "none",
+    "manifest_sha256_all_match": true,
+    "independent_extraction_verified": true,
+    "repro_from_extracted_copy": "PASS",
+    "repro_detects_tampering": true,
+    "csv_truncation": "none (PRE-G3-04 repaired: ship whole or exclude with full-file hash)",
+    "zip_sha256": null,
+    "zip_sha256_note": "a ZIP cannot contain its own hash, and this status file is inside the ZIP; the authoritative value is written outside the archive to AUDIT_ZIP_SHA256.txt next to it.  Recording it here would create a self-reference that changes every time this file is edited.",
+    "zip_sha256_source": "_AUDIT/20261020_071457_G3_ea57a83b/AUDIT_ZIP_SHA256.txt",
+    "bytes_note": "the byte size (and the SHA-256) cannot be recorded inside the package: this status file is itself a member, so writing its own archive size changes that size.  Both values are authoritative in AUDIT_ZIP_SHA256.txt beside the ZIP.",
+    "members_untehashed_reason": "These two members cannot hash themselves, so they are outside the manifest by construction; the verifier checks them by parsing and by comparing SHA256SUMS.txt against every other member, rather than by a hash recorded inside them.",
+    "members_unhashed": [
+      "SHA256SUMS.txt",
+      "manifest.json"
+    ],
+    "every_member_outside_the_two_self_referential_ones_is_in_manifest": true,
+    "manifest_coverage_rule": "verify_g3_audit_package.py requires every member except manifest.json and SHA256SUMS.txt to appear in the manifest; those two are excluded because a file cannot contain the hash of itself.",
+    "member_counts": null,
+    "member_counts_note": "The member count is NOT recorded here. This file sits inside the archive, so writing the count would change the archive and invalidate the count - the same self-reference that makes bytes/zip_sha256 null. The authoritative counts are printed by scripts/build_g3_audit_package.py and re-derived by scripts/verify_g3_audit_package.py at verification time."
+  },
+  "compute_measured": {
+    "file": "docs/g3/G3_COMPUTE_MEASURED.md",
+    "budget_breaches": [
+      {
+        "task": "G2 stratified panel recomputation",
+        "budget_s": 600,
+        "measured_s": 1897.8,
+        "overrun_factor": 3.16,
+        "handling": "recorded, not hidden; frozen budget file not edited"
+      }
+    ],
+    "not_measured": [
+      "parallel speedup on G3 workload",
+      "GPU / CUDA",
+      "2000-assembly G2 rerun (forbidden)",
+      "physical calibration (no hardware)"
+    ]
+  },
+  "explicitly_not_done": [
+    "no physical measurement of any kind; evidence ceiling stays SIMULATED / CROSS_CHECKED",
+    "G4 (976 nm multimode pump) not started: NOT_IMPLEMENTED",
+    "achromatic doublet, Scheimpflug tilt, real wavefront PSF: not implemented",
+    "Strategy A/B paired bootstrap: NOT_RUN (budget)",
+    "parallel speedup not retested on G3 workload: NOT_TESTED",
+    "GPU: NOT_TESTED (torch not installed)",
+    "demo video: NOT_DELIVERED (script shipped instead at docs/g3/DEMO_SCRIPT_5MIN.md)",
+    "G2 not rerun to improve numbers (forbidden)"
+  ],
+  "documents": {
+    "readme": "README.md",
+    "demo_script": "docs/g3/DEMO_SCRIPT_5MIN.md",
+    "resume_claims": "docs/g3/RESUME_CLAIMS_AND_LIMITS.md",
+    "validation_matrix": "docs/g3/G3_VALIDATION_MATRIX.md",
+    "open_issues": "docs/g3/G3_OPEN_ISSUES.md",
+    "science_audit": "docs/g3/G2_INHERITANCE_SCIENTIFIC_AUDIT.md",
+    "hc3_amendment": "docs/g3/G2_CONSTRAINTS_AMENDMENT.md",
+    "decision_log": "docs/g3/DECISION_LOG.md",
+    "compute_budget": "docs/g3/G3_COMPUTE_BUDGET.md",
+    "compute_measured": "docs/g3/G3_COMPUTE_MEASURED.md",
+    "acceptance_criteria": "docs/g3/G3_ACCEPTANCE_CRITERIA.md",
+    "execution_plan": "docs/g3/G3_EXECUTION_PLAN.md",
+    "baseline_verification": "docs/g3/G3_BASELINE_VERIFICATION.md"
+  },
+  "known_defects_fixed_this_round": [
+    {
+      "id": "G3-06",
+      "what": "metrics_from_errors returned failure_rate = 1.0 for n_attempted == 0, reporting 'no attempt' as '100% failure'",
+      "fix": "returns None and adds n_errors",
+      "impact_on_published_numbers": "none; no zero-attempt cell exists in the frozen data (9 cells x 14 000 rows)"
+    },
+    {
+      "id": "G3-07",
+      "what": "the G3 reproduction guide told the reader to install requirements.txt while the package only carried requirements.lock.txt",
+      "fix": "the G3 package ships the lock file under both names",
+      "impact_on_published_numbers": "none"
+    },
+    {
+      "id": "G3-09",
+      "what": "the audit ZIP was not byte-for-byte reproducible: zipfile.write() stamped each member with the source mtime and manifest.json carried a wall-clock created_at_utc, so two builds of identical evidence differed (209 members / 732722 B both times, sha256 ba6df08a... vs 9ea32a9f...)",
+      "fix": "members are written via ZipInfo with a fixed (1980,1,1,0,0,0) timestamp and fixed attributes; manifest.created_at_utc is derived from the run's own finished_at_utc (SOURCE_DATE_EPOCH overrides)",
+      "impact_on_published_numbers": "none",
+      "verification": "three consecutive builds now give the same sha256 147978f0...; verify_g3_audit_package.py re-zips the shipped members and fails if a timestamp or ordering is injected again",
+      "why_it_matters": "'rebuild and compare the hash' is the central instruction in 06_REPRODUCTION_GUIDE.md and was not a valid one before this fix"
+    },
+    {
+      "id": "G3-10",
+      "what": "the README's first command ('streamlit run app/main.py') had never been executed in this project: the 17 UI tests use AppTest, which runs the scripts but never binds a port",
+      "fix": "scripts/smoke_streamlit_serve.py starts the server, asserts the literal 'ok' from /_stcore/health, checks the SPA shell at /, and shuts down; verify_g3_release.py --with-serve calls it from the ui gate",
+      "impact_on_published_numbers": "none",
+      "verification": "measured: healthy in 2.58 s, / returns 6467 bytes, no orphan process; /healthz was found NOT to be a health endpoint (it serves the same shell), and an HTTP probe cannot detect a broken page import - both recorded as measured limits, with AppTest covering the import case",
+      "why_it_matters": "an untested 'one command' claim is exactly the kind of statement this project is not allowed to make"
+    }
+  ],
+  "known_defects_disclosed_not_fixed": [
+    {
+      "id": "G3-01",
+      "what": "demo video not recorded",
+      "status": "NOT_DELIVERED",
+      "mitigation": "docs/g3/DEMO_SCRIPT_5MIN.md with a recording checklist"
+    },
+    {
+      "id": "G2-07",
+      "what": "robust trades a lower RMSE for a higher failure rate",
+      "status": "OPEN",
+      "mitigation": "three metrics shown side by side on every surface; no single-axis ranking anywhere"
+    },
+    {
+      "id": "PRE-G3-01",
+      "what": "HC3 as registered (kernel_support >= 0.999) is structurally unreachable",
+      "status": "DISCLOSED_NOT_RESOLVED",
+      "mitigation": "post-hoc amendment marked POST-HOC AMENDMENT; as-run 0.950 used, with SUPPORT_ATTENUATED disclosure below 0.990"
+    }
+  ]
+}

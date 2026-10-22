@@ -1,0 +1,28 @@
+schema_version: "4.0"
+case_id: pump976_g4
+design_id: baseline
+model_level: P0_ANALYTIC
+evidence_status: SIMULATED
+units: {distance: mm, angle: rad, wavelength: nm, diameter: mm}
+source:
+  wavelength_nm: 976.0
+  core_diameter_mm: 0.105
+  numerical_aperture: 0.22
+  output_index: 1.0
+  position_distribution: uniform_area_disk
+  angular_distribution: uniform_solid_angle
+  seed: 976051
+  n_rays: 4096
+  absolute_power_w: null
+optics:
+  backend: thin_lens_p0
+  l1: {focal_length_mm: 25.0, principal_z_mm: 25.0, diameter_mm: 12.0, material: N-BK7, thickness_mm: 2.0}
+  l2: {focal_length_mm: 100.0, principal_z_mm: 125.0, diameter_mm: 12.0, material: N-BK7, thickness_mm: 2.0}
+  target: {z_mm: 225.0, active_radius_mm: 1.0}
+  include_fresnel_loss: false
+  include_coatings: false
+assumptions:
+  lens_geometry: ASSUMED_equiconvex_singlet
+  apertures: ASSUMED_no_vendor_part
+  target_size: ASSUMED_not_a_measured_crystal_dimension
+  optical_power: UNKNOWN

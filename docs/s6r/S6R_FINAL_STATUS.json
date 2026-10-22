@@ -1,0 +1,284 @@
+{
+  "schema": "optisys.s6r.final_status/1",
+  "generated_at_utc": "2026-10-21T10:04:15.799439+00:00",
+  "project_root": "<PROJECT_ROOT>",
+  "source_s6_run_id": "20261021_024715_S6_P1",
+  "S6R_RECOVERY_EXECUTION_STATUS": "PASS",
+  "S6R_BASELINE_PRESERVATION": "PASS",
+  "S6R_SCIENCE_RECOMPUTATION": "PASS",
+  "S6_A_HISTORICAL_STATUS": "PASS",
+  "S6_B_HISTORICAL_STATUS": "OPTIMUM_NOT_BRACKETED",
+  "S6_C_NOMINAL_1X_STATUS": "VERIFIED_CONDITIONAL_GAIN",
+  "S6_C_ALL_SCENARIOS_STATUS": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "S6_AMENDMENT_03_TRACEABILITY": "PASS",
+  "S6R_FULL_PYTEST": "PASS",
+  "S6R_APPTEST": "PASS",
+  "S6R_STREAMLIT_REAL_SERVE": "PASS",
+  "S6R_BROWSER_E2E": "NOT_RUN_POLICY_BLOCKED",
+  "S6R_SCREENSHOTS": "NOT_DELIVERED",
+  "S6R_VIDEO": "NOT_DELIVERED",
+  "S6R_RELEASE_STATUS": "PASS_WITH_DECLARED_DEVIATIONS",
+  "S6R_PORTFOLIO_STATUS": "PARTIAL",
+  "S6R_GPT_AUDIT_STATUS": "PASS",
+  "S6R_EMPIRICAL_STATUS": "NOT_AVAILABLE",
+  "S6R_REMOTE_CI": "NOT_RUN",
+  "S6R_GPU": "NOT_TESTED",
+  "G2_SCIENCE_INHERITED": "QUALIFIED_ONLY",
+  "G4_SCIENCE_INHERITED": "QUALIFIED",
+  "S6_ASSEMBLIES_CHECKED": 800,
+  "S6_DESIGN_ASSEMBLY_ROWS": 1600,
+  "S6_NOMINAL_PAIRED_MEAN_DELTA_PP_CI95": {
+    "mean_pp": 18.04931640625,
+    "ci95_pp": [
+      17.738757324218753,
+      18.341357421875
+    ]
+  },
+  "S6_STRESS_PAIRED_P05_DELTA_PP_CI95": {
+    "p05_pp": -5.693359375,
+    "ci95_pp": [
+      -9.27734375,
+      -0.8984374999999976
+    ]
+  },
+  "S6_BOOTSTRAP_REPLAY": [
+    {
+      "replicates_expected": 2000,
+      "replicates_matched": 2000,
+      "replicates_replayed": 2000,
+      "scenario": "zero",
+      "status": "PASS"
+    },
+    {
+      "replicates_expected": 2000,
+      "replicates_matched": 2000,
+      "replicates_replayed": 2000,
+      "scenario": "tight_0p5x",
+      "status": "PASS"
+    },
+    {
+      "replicates_expected": 2000,
+      "replicates_matched": 2000,
+      "replicates_replayed": 2000,
+      "scenario": "nominal_1x",
+      "status": "PASS"
+    },
+    {
+      "replicates_expected": 2000,
+      "replicates_matched": 2000,
+      "replicates_replayed": 2000,
+      "scenario": "stress_2x",
+      "status": "PASS"
+    }
+  ],
+  "HISTORICAL_G0_G1_G2_G3_G4_S5_HASHES": "PASS",
+  "CLEAN_INSTALL": {
+    "status": "PASS",
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "wall_s": 218.18800000002375,
+    "pip_freeze": "artifacts/s6r/environment/pip_freeze.txt"
+  },
+  "CLI_DEMOS_AND_REPORT": {
+    "status": "PASS_WITH_DECLARED_SCOPE",
+    "650nm": {
+      "schema": "optisys.s6r.command_run/1",
+      "name": "demo_650",
+      "command": [
+        "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+        "-m",
+        "optisys",
+        "g3-demo",
+        "--config",
+        "configs/g3_demo.yaml",
+        "--assemblies",
+        "1",
+        "--workers",
+        "1",
+        "--runs-dir",
+        "runs/_derived/s6r_20261021_0842/g3_demo"
+      ],
+      "started_at_utc": "2026-10-21T08:42:51.298466+00:00",
+      "finished_at_utc": "2026-10-21T08:43:21.012499+00:00",
+      "timeout_s": 180.0,
+      "wall_clock_s": 29.70299999997951,
+      "timed_out": false,
+      "exit_code": 0,
+      "run_dir": "runs/_derived/s6r_20261021_0842/g3_demo/20261021_084255_G3_ea57a83b",
+      "stdout": "artifacts/s6r/cli/demo_650_stdout.txt",
+      "stderr": "artifacts/s6r/cli/demo_650_stderr.txt",
+      "status": "PASS",
+      "reported_domain_status": "PASS",
+      "source_run_status_json": "runs/_derived/s6r_20261021_0842/g3_demo/20261021_084255_G3_ea57a83b/run_status.json"
+    },
+    "976nm": {
+      "schema": "optisys.s6r.command_run/1",
+      "name": "demo_976",
+      "command": [
+        "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+        "-m",
+        "optisys",
+        "pump976",
+        "--config",
+        "configs/pump976_g4_l0.yaml",
+        "--candidate",
+        "configs/pump976_g4_l1.yaml",
+        "--tolerance",
+        "configs/pump976_g4_tolerance.yaml",
+        "--rays",
+        "512",
+        "--assemblies",
+        "2",
+        "--timeout",
+        "180",
+        "--runs-dir",
+        "runs/_derived/s6r_20261021_0842/pump976"
+      ],
+      "started_at_utc": "2026-10-21T08:43:51.113627+00:00",
+      "finished_at_utc": "2026-10-21T08:44:04.884799+00:00",
+      "timeout_s": 180.0,
+      "wall_clock_s": 13.76500000001397,
+      "timed_out": false,
+      "exit_code": 0,
+      "run_dir": "runs/_derived/s6r_20261021_0842/pump976/20261021_044354_G4_36e42f82_63f8",
+      "stdout": "artifacts/s6r/cli/demo_976_stdout.txt",
+      "stderr": "artifacts/s6r/cli/demo_976_stderr.txt",
+      "status": "PASS",
+      "reported_domain_status": "PARTIAL",
+      "source_run_status_json": "runs/_derived/s6r_20261021_0842/pump976/20261021_044354_G4_36e42f82_63f8/run_status.json"
+    }
+  },
+  "STREAMLIT_APPTEST": {
+    "schema": "optisys.s6r.apptest/1",
+    "command": [
+      "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+      "-m",
+      "pytest",
+      "-q",
+      "tests/ui/test_pages_render.py",
+      "--basetemp=<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_8a308d299424439fa699485669b1d6b9",
+      "--junitxml=<PROJECT_ROOT>\\artifacts\\s6r\\ui\\apptest_six_pages.xml"
+    ],
+    "basetemp": "<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_8a308d299424439fa699485669b1d6b9",
+    "started_at_utc": "2026-10-21T08:46:26.910925+00:00",
+    "finished_at_utc": "2026-10-21T08:46:52.207580+00:00",
+    "wall_clock_s": 25.29699999996228,
+    "timeout_s": 120,
+    "timed_out": false,
+    "exit_code": 0,
+    "junit": "artifacts/s6r/ui/apptest_six_pages.xml",
+    "stdout": "artifacts/s6r/ui/apptest_six_pages_stdout.txt",
+    "stderr": "artifacts/s6r/ui/apptest_six_pages_stderr.txt",
+    "totals": {
+      "tests": 18,
+      "passed": 18,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "six_page_checks": {
+      "A": {
+        "label": "A · 项目总览与证据状态",
+        "testcase": "test_each_page_renders_without_exception[A]",
+        "status": "PASS"
+      },
+      "B": {
+        "label": "B · 光斑实验台",
+        "testcase": "test_each_page_renders_without_exception[B]",
+        "status": "PASS"
+      },
+      "C": {
+        "label": "C · 优化对照",
+        "testcase": "test_each_page_renders_without_exception[C]",
+        "status": "PASS"
+      },
+      "D": {
+        "label": "D · 运行与证据中心",
+        "testcase": "test_each_page_renders_without_exception[D]",
+        "status": "PASS"
+      },
+      "E": {
+        "label": "E · 说明与边界",
+        "testcase": "test_each_page_renders_without_exception[E]",
+        "status": "PASS"
+      },
+      "F": {
+        "label": "F · 976 nm 泵浦光路",
+        "testcase": "test_each_page_renders_without_exception[F]",
+        "status": "PASS"
+      }
+    },
+    "junit_parse_error": null,
+    "status": "PASS"
+  },
+  "STREAMLIT_SERVE_SMOKE": {
+    "ok": true,
+    "failures": [],
+    "streamlit_version": "1.66.0",
+    "entry": "app/main.py",
+    "port": 20274,
+    "command": "-m streamlit run app/main.py --server.port 20274 --server.address 127.0.0.1 --server.headless true",
+    "health": {
+      "path": "/_stcore/health",
+      "ok": true,
+      "detail": "HTTP 200 (2 bytes)"
+    },
+    "root": {
+      "ok": true,
+      "detail": "HTTP 200 (6467 bytes)",
+      "bytes": 6467
+    },
+    "startup_s": 2.78,
+    "alive_after_shutdown": false,
+    "log": "artifacts/s6r/ui/streamlit_serve.log",
+    "log_errors": []
+  },
+  "BROWSER_E2E_EVIDENCE": "docs/s6r/S6R_BROWSER_E2E.json",
+  "SCREENSHOT_MANIFEST": "docs/s6r/S6R_SCREENSHOT_MANIFEST.json",
+  "RELEASE_DIR": "RELEASE_CANDIDATE_V2",
+  "AUDIT_ZIP": "_AUDIT/PUBLIC_REDACTED_R2/OptiSysLab_S6R_PUBLIC_REDACTED_R2.zip",
+  "AUDIT_ZIP_EXTERNAL_SHA256_FILE": "_AUDIT/20261021_100205_S6R/AUDIT_ZIP_SHA256.txt",
+  "AUDIT_MANIFEST_COVERAGE": {
+    "status": "PASS",
+    "member_count": 445,
+    "managed_file_count": 443,
+    "unmanaged_members": [],
+    "missing_members": [],
+    "extra_members": [],
+    "content_hash_mismatches": [],
+    "checksum_file_count": 443,
+    "checksum_missing": [],
+    "checksum_extra": [],
+    "checksum_mismatches": [],
+    "unsafe_paths": [],
+    "unexpected_executables": [],
+    "personal_path_hits": [],
+    "secret_pattern_hits": []
+  },
+  "AUDIT_EXTRACTED_REPRO": {
+    "status": "PASS",
+    "exit_code": 0,
+    "result": "PASS",
+    "logs": "artifacts\\s6r\\verify\\s6r_extract_t8d4abm__repro"
+  },
+  "AUDIT_TAMPER_AND_DELETION_REJECTION": {
+    "tampered_csv_rejected": true,
+    "tamper_exit_code": 1,
+    "tampered_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv",
+    "required_file_deletion_rejected": true,
+    "deletion_exit_code": 1,
+    "deleted_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_parameter_registry.json"
+  },
+  "AUDIT_SAME_ENVIRONMENT_BYTE_REBUILD": "PASS",
+  "OPEN_ISSUES": "docs/s6r/OPEN_ISSUES.md",
+  "NEXT_ACTION": "Select an exact GitHub repository URL and visibility before upload; no remote is configured and accessible account repositories are unrelated.",
+  "evidence": {
+    "science": "docs/s6r/S6R_SCIENCE_RECOMPUTATION.json",
+    "baseline": "docs/s6r/S6R_BASELINE_PRESERVATION.json",
+    "release": "docs/s6r/S6R_RELEASE_VERIFICATION.json",
+    "full_pytest": "artifacts/s6r/tests/full_run.json",
+    "apptest": "artifacts/s6r/ui/apptest_six_pages.json",
+    "streamlit_serve": "artifacts/s6r/ui/streamlit_serve.json",
+    "install": "artifacts/s6r/environment/install_status.json",
+    "historical": "docs/s6r/HISTORICAL_PRESERVATION.json"
+  }
+}

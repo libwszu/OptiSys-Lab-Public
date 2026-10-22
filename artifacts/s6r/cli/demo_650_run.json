@@ -1,0 +1,30 @@
+{
+  "schema": "optisys.s6r.command_run/1",
+  "name": "demo_650",
+  "command": [
+    "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+    "-m",
+    "optisys",
+    "g3-demo",
+    "--config",
+    "configs/g3_demo.yaml",
+    "--assemblies",
+    "1",
+    "--workers",
+    "1",
+    "--runs-dir",
+    "runs/_derived/s6r_20261021_0842/g3_demo"
+  ],
+  "started_at_utc": "2026-10-21T08:42:51.298466+00:00",
+  "finished_at_utc": "2026-10-21T08:43:21.012499+00:00",
+  "timeout_s": 180.0,
+  "wall_clock_s": 29.70299999997951,
+  "timed_out": false,
+  "exit_code": 0,
+  "run_dir": "runs/_derived/s6r_20261021_0842/g3_demo/20261021_084255_G3_ea57a83b",
+  "stdout": "artifacts/s6r/cli/demo_650_stdout.txt",
+  "stderr": "artifacts/s6r/cli/demo_650_stderr.txt",
+  "status": "PASS",
+  "reported_domain_status": "PASS",
+  "source_run_status_json": "runs/_derived/s6r_20261021_0842/g3_demo/20261021_084255_G3_ea57a83b/run_status.json"
+}

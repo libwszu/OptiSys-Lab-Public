@@ -1,0 +1,312 @@
+{
+  "S6_A_RIGID_BODY_REFERENCE": "PASS",
+  "S6_C_ASSEMBLY_CLAIM": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "bootstrap_replicates": 2000,
+  "bootstrap_unit": "assembly_id",
+  "caution": "A supported result applies only to assumed P1 geometry and simulated tolerance distributions; no manufacturing or empirical claim.",
+  "claim_rule": "mean paired assembly-cluster bootstrap CI95 lower > 0; paired P05 delta and its bootstrap CI are non-negative; invalid-assembly and other failure weights do not increase; all-plane r90 P95 does not worsen. Any observed tail/failure/r90 cost is reported as TRADEOFF_OR_NO_SUPPORTED_GAIN.",
+  "completed_assemblies": 800,
+  "compute_measured": {
+    "attempted_or_checkpointed": 800,
+    "cancelled": 0,
+    "chunk_assemblies_max": 32,
+    "chunks": 25,
+    "complete": 800,
+    "failed": 0,
+    "invocation_budget_s": 1200.0,
+    "invocation_wall_s": 139.13335650000954,
+    "max_chunk_wall_s": 6.845695499971043,
+    "mp_start_method": "spawn",
+    "not_started": 0,
+    "over_budget": false,
+    "peak_process_tree_rss_mb": 383.29296875,
+    "preholdout_science_wall_s": 63.255720699962694,
+    "prior_holdout_wall_s": 0.0,
+    "science_wall_budget_s": 1169.9969396000379,
+    "stop_reason": "",
+    "task_hard_timeout_s": 120,
+    "timed_out": 0,
+    "wall_s": 136.34300739999162,
+    "worker_task_budget_s": 1169.9969396000379,
+    "workers": 4
+  },
+  "empirical_status": "NOT_AVAILABLE",
+  "failed_assemblies": 0,
+  "finished_at_utc": "2026-10-21T07:28:54+00:00",
+  "not_started_assemblies": 0,
+  "planned_assemblies": 800,
+  "ray_design_trace_count_planned": 1638400,
+  "rays_per_design_per_assembly": 1024,
+  "run_id": "20261021_024715_S6_P1",
+  "scenarios": {
+    "nominal_1x": {
+      "all_plane_r90_median_mm_baseline125": 1.6826427096483876,
+      "all_plane_r90_median_mm_candidate135": 1.164741575910194,
+      "all_plane_r90_p95_mm_baseline125": 2.088516707386984,
+      "all_plane_r90_p95_mm_candidate135": 1.5896809539623655,
+      "bootstrap_replicates": 2000,
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.656884765625,
+      "mean_capture_candidate135": 0.8373779296875,
+      "mean_delta_capture_candidate_minus_baseline": 0.1804931640625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.516357421875,
+      "p05_capture_candidate135": 0.6990234375,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.1259765625,
+        0.14931640625
+      ],
+      "p05_paired_delta_capture": 0.136669921875,
+      "p50_capture_baseline125": 0.64306640625,
+      "p50_capture_candidate135": 0.8349609375,
+      "p95_capture_baseline125": 0.8379882812499999,
+      "p95_capture_candidate135": 0.986328125,
+      "paired_mean_delta_capture_ci95": [
+        0.1773875732421875,
+        0.18341357421875
+      ],
+      "resampling_unit": "assembly_id",
+      "scenario": "nominal_1x",
+      "status": "COMPLETE"
+    },
+    "stress_2x": {
+      "all_plane_r90_median_mm_baseline125": 1.830793232456033,
+      "all_plane_r90_median_mm_candidate135": 1.3744621365883523,
+      "all_plane_r90_p95_mm_baseline125": 2.6976345603970464,
+      "all_plane_r90_p95_mm_candidate135": 2.2288911089005556,
+      "bootstrap_replicates": 2000,
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0004296875,
+          "L2_APERTURE_BLOCK": 4.8828125e-06,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0004296875,
+          "L2_APERTURE_BLOCK": 9.765625e-06,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 4.8828125e-06,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.59685546875,
+      "mean_capture_candidate135": 0.7243212890625,
+      "mean_delta_capture_candidate_minus_baseline": 0.1274658203125,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.275146484375,
+      "p05_capture_candidate135": 0.32910156250000006,
+      "p05_paired_delta_bootstrap_ci95": [
+        -0.0927734375,
+        -0.008984374999999975
+      ],
+      "p05_paired_delta_capture": -0.05693359375,
+      "p50_capture_baseline125": 0.59765625,
+      "p50_capture_candidate135": 0.75146484375,
+      "p95_capture_baseline125": 0.9398437499999999,
+      "p95_capture_candidate135": 0.9845703124999999,
+      "paired_mean_delta_capture_ci95": [
+        0.11650500488281251,
+        0.13853015136718747
+      ],
+      "resampling_unit": "assembly_id",
+      "scenario": "stress_2x",
+      "status": "COMPLETE"
+    },
+    "tight_0p5x": {
+      "all_plane_r90_median_mm_baseline125": 1.649527430522078,
+      "all_plane_r90_median_mm_candidate135": 1.1294833839925222,
+      "all_plane_r90_p95_mm_baseline125": 1.8403491897800017,
+      "all_plane_r90_p95_mm_candidate135": 1.3241334630159112,
+      "bootstrap_replicates": 2000,
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.664296875,
+      "mean_capture_candidate135": 0.855703125,
+      "mean_delta_capture_candidate_minus_baseline": 0.19140625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.587890625,
+      "p05_capture_candidate135": 0.779150390625,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.166015625,
+        0.17568359375
+      ],
+      "p05_paired_delta_capture": 0.1708984375,
+      "p50_capture_baseline125": 0.65869140625,
+      "p50_capture_candidate135": 0.85009765625,
+      "p95_capture_baseline125": 0.75419921875,
+      "p95_capture_candidate135": 0.943408203125,
+      "paired_mean_delta_capture_ci95": [
+        0.1896630859375,
+        0.1932763671875
+      ],
+      "resampling_unit": "assembly_id",
+      "scenario": "tight_0p5x",
+      "status": "COMPLETE"
+    },
+    "zero": {
+      "all_plane_r90_median_mm_baseline125": 1.6269478015562475,
+      "all_plane_r90_median_mm_candidate135": 1.105738868087184,
+      "all_plane_r90_p95_mm_baseline125": 1.6668185280167929,
+      "all_plane_r90_p95_mm_candidate135": 1.1436269601098206,
+      "bootstrap_replicates": 2000,
+      "failure_weight_mean_by_design": {
+        "baseline125": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        },
+        "s5_position135": {
+          "INVALID_ASSEMBLY": 0.0,
+          "INVALID_SOURCE": 0.0,
+          "L1_APERTURE_BLOCK": 0.0,
+          "L2_APERTURE_BLOCK": 0.0,
+          "NO_INTERSECTION": 0.0,
+          "TIR": 0.0,
+          "TRACE_FAIL": 0.0
+        }
+      },
+      "failure_weight_mean_delta_candidate_minus_baseline": {
+        "INVALID_ASSEMBLY": 0.0,
+        "INVALID_SOURCE": 0.0,
+        "L1_APERTURE_BLOCK": 0.0,
+        "L2_APERTURE_BLOCK": 0.0,
+        "NO_INTERSECTION": 0.0,
+        "TIR": 0.0,
+        "TRACE_FAIL": 0.0
+      },
+      "invalid_assembly_rate_baseline125": 0.0,
+      "invalid_assembly_rate_candidate135": 0.0,
+      "mean_capture_baseline125": 0.6652880859375,
+      "mean_capture_candidate135": 0.8591943359375,
+      "mean_delta_capture_candidate_minus_baseline": 0.19390625,
+      "n_both_valid": 200,
+      "n_complete_pairs": 200,
+      "n_only_baseline_valid": 0,
+      "n_only_candidate_valid": 0,
+      "n_planned_assemblies": 200,
+      "p05_capture_baseline125": 0.638671875,
+      "p05_capture_candidate135": 0.844677734375,
+      "p05_paired_delta_bootstrap_ci95": [
+        0.1689453125,
+        0.178662109375
+      ],
+      "p05_paired_delta_capture": 0.173779296875,
+      "p50_capture_baseline125": 0.66552734375,
+      "p50_capture_candidate135": 0.85888671875,
+      "p95_capture_baseline125": 0.69140625,
+      "p95_capture_candidate135": 0.8759765625,
+      "paired_mean_delta_capture_ci95": [
+        0.1921824951171875,
+        0.195644775390625
+      ],
+      "resampling_unit": "assembly_id",
+      "scenario": "zero",
+      "status": "COMPLETE"
+    }
+  },
+  "schema": "optisys.s6.assembly_statistics/1",
+  "status": "COMPLETE",
+  "timed_out_assemblies": 0,
+  "tradeoff_flags": {
+    "all_plane_r90_p95_worse": false,
+    "failure_weight_increase_categories": [],
+    "invalid_assembly_rate_increase": false,
+    "negative_or_unresolved_paired_p05_tail": false
+  },
+  "automatic_nominal_only_claim": "SUPPORTED_WITHIN_ASSUMED_P1_AND_TOLERANCES",
+  "aggregate_scope": "aggregate across the four registered zero/tight/nominal/stress tolerance scenarios",
+  "final_adjudication": "S6_C_FINAL_ADJUDICATION.json",
+  "adjudication_amendment": "docs/s6/S6_AMENDMENT_03.md"
+}

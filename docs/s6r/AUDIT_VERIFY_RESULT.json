@@ -1,0 +1,62 @@
+{
+  "schema": "optisys.s6r.audit_verification/1",
+  "verified_at_utc": "2026-10-21T10:05:24.606687+00:00",
+  "zip_path": "_AUDIT/PUBLIC_REDACTED_R2/OptiSysLab_S6R_PUBLIC_REDACTED_R2.zip",
+  "zip_bytes": 12295466,
+  "zip_sha256": "2fe48fa07fa6001bc056309e4787765d1a576af0c9b99a9dedd15cf3c5abae39",
+  "zip_testzip": "PASS",
+  "duplicate_names": [],
+  "unsafe_paths": [],
+  "symlink_members": [],
+  "manifest_coverage": {
+    "status": "PASS",
+    "member_count": 445,
+    "managed_file_count": 443,
+    "unmanaged_members": [],
+    "missing_members": [],
+    "extra_members": [],
+    "content_hash_mismatches": [],
+    "checksum_file_count": 443,
+    "checksum_missing": [],
+    "checksum_extra": [],
+    "checksum_mismatches": [],
+    "unsafe_paths": [],
+    "unexpected_executables": [],
+    "personal_path_hits": [],
+    "secret_pattern_hits": []
+  },
+  "extracted_repro": {
+    "status": "PASS",
+    "exit_code": 0,
+    "result": "PASS",
+    "logs": "artifacts\\s6r\\verify\\s6r_extract_8mena1jd_repro"
+  },
+  "release_candidate_verification": {
+    "status": "PASS",
+    "exit_code": 0,
+    "broken_links": [],
+    "false_delivery_claims": [],
+    "release_manifest_hash_mismatches": []
+  },
+  "tamper_and_deletion_rejection": {
+    "tampered_csv_rejected": true,
+    "tamper_exit_code": 1,
+    "tampered_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/p1_assembly_samples.csv",
+    "required_file_deletion_rejected": true,
+    "deletion_exit_code": 1,
+    "deleted_file": "runs/20261021_024715_S6_P1/s6_c_assemblies/assembly_parameter_registry.json"
+  },
+  "same_environment_byte_rebuild": "PASS",
+  "byte_rebuild_environment": {
+    "python": "3.11.9",
+    "zlib": "1.3.1"
+  },
+  "canonical_rebuild_sha256": "2fe48fa07fa6001bc056309e4787765d1a576af0c9b99a9dedd15cf3c5abae39",
+  "recommended_size_under_40_mib": true,
+  "temporary_validation_paths": {
+    "extracted": "artifacts/s6r/verify/s6r_extract_8mena1jd",
+    "tamper_copy": "artifacts/s6r/verify/s6r_tamper_e9221f84e3ef",
+    "deletion_copy": "artifacts/s6r/verify/s6r_deletion_ab20a7043db8"
+  },
+  "status": "PASS"
+}

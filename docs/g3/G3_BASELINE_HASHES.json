@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0",
+  "gate": "G3",
+  "snapshot_kind": "pre_change_baseline",
+  "generated_at_utc": "2026-10-20T05:57:16+00:00",
+  "project_root": "<PROJECT_ROOT>",
+  "git_head": "PRIVATE_SOURCE_REVISION",
+  "git_working_tree_dirty": true,
+  "git_status_line_count": 35,
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "source_pdf": {
+    "path": "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf",
+    "sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d",
+    "expected": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d"
+  },
+  "g2_audit_zip": {
+    "path": "_AUDIT\\20261019_191117_G2_52369787\\OptiSysLab_G2_20261019_191117_G2_52369787_GPT_AUDIT.zip",
+    "sha256": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af",
+    "bytes": 1881613,
+    "expected": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af"
+  },
+  "g2_config": {
+    "path": "configs/triangulation_g2_l1.yaml",
+    "sha256": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c",
+    "expected": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c"
+  },
+  "frozen_runs": {
+    "G0": {
+      "path": "runs\\20261019_130948_G0_78fa364f",
+      "run_status_sha256": "5cda5010f9ee0b25b0bfdd6cce94511f46b3b31ce5286358c82df75b66113e11",
+      "status": "PASS",
+      "gate": "G0",
+      "frozen": null,
+      "finished_at_utc": "2026-10-19T13:10:05+00:00",
+      "tree_digest": "6ce3654095f44d6c060385e7efc5eac255246770feb606a22d5060772c53b857",
+      "file_count": 22,
+      "total_bytes": 430269
+    },
+    "G1": {
+      "path": "runs\\20261019_145702_G1_54c9e3fb",
+      "run_status_sha256": "d98e6eecd0440bf0291949dcd72e91b8ca80a8572878c53649cc1df3a9624687",
+      "status": "PASS",
+      "gate": "G1",
+      "frozen": true,
+      "finished_at_utc": "2026-10-19T15:02:23+00:00",
+      "tree_digest": "53c01fa5882d25bf45afacaaf24054599f5763c8a77a31e0b7858bcdcfcb5c1a",
+      "file_count": 39,
+      "total_bytes": 12402198
+    },
+    "G2": {
+      "path": "runs\\20261019_191117_G2_52369787",
+      "run_status_sha256": "85ea00e3da14a2502e05ecbc5d5d9c36035231f2c2cdc305461a0b7b71a771b5",
+      "status": "PASS",
+      "gate": "G2",
+      "frozen": true,
+      "finished_at_utc": "2026-10-19T20:45:02+00:00",
+      "tree_digest": "05c510246b15d80ac762df3b637da19e09ce8ac19b2ce8ccca10896c74ca65ed",
+      "file_count": 60,
+      "total_bytes": 27769979
+    }
+  },
+  "key_sources": {
+    "src/optisys/cli.py": "8da5cc112a5ddec8586d6de7acd888b4e774f4eb2f7f29c0ce65c54c0e042518",
+    "src/optisys/config.py": "138789b956c131f942a719aaffe931f9216997afc829af80a2528bfd317dd8a9",
+    "src/optisys/config_g2.py": "7ffe0bb4c6a33e102a22a76eb0ada8edc170cfcc5d743acc709ece6921dbf12b",
+    "src/optisys/gates/g2.py": "249d1ca98b3c3152bf066bcd0aeaf19b6a50146f6abf611e7b55c06c179dd396",
+    "src/optisys/gates/g1.py": "1fa4683e964d6371ee36257f3c78aef4cdc7c87da09c8ccc3aa0fd9d9d24fb46",
+    "src/optisys/optics/psf_or_footprint.py": "e86666f4c29df8e8407217aabb19a40df73379903bfbd3ef8693ce633cd5c2b4",
+    "src/optisys/optics/optical_image_contract.py": "2f8c3aa5707a70496572c82c34af6e4e40054a78e3434f1f27bac62940a1a75d",
+    "src/optisys/optimization/constraints.py": "7c707007fe2122ddf781f47f7c8ede90e2b0a5e0b4d8cfc7c7c36afb6d04c3e6",
+    "src/optisys/calibration/assembly_strategies.py": "dd0cde05ba923b83a27fbf0b497a8b1af4bbd86ece5bf3d2ce5a2c0fdd1161fd",
+    "src/optisys/evaluation/paired_comparison.py": "2f5be355fc04072df140383e89797e78beb375c2b9d681dde6a769e7d161d99c",
+    "src/optisys/reports/report_g2.py": "eff0757d1f71864e7b5d2413fa87ce55fb683e16d33ac86fad1ccc94b9dd7e97",
+    "configs/triangulation_g2_l1.yaml": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c",
+    "docs/g2/G2_PRE_REGISTRATION.md": "c7f9417a7709d24846ec8be1f0c3ced21c6ce81b38146221aed9889d220e921a",
+    "pyproject.toml": "5ecfc2eef247ba6b2285ceb731972360634a42dbd36a883bd8d3ae54d2432f41",
+    "requirements.lock.txt": "59e63f3e217b0fcdab8f089dfa22b5c3756a6e5a30eae3d3ed80633e081cc332"
+  },
+  "trees": {
+    "src": {
+      "digest": "914173e9c3e1574fd7162e18a3da7ea9f4dc24577f3201c1b6c5e8c4735c41b0",
+      "file_count": 70,
+      "total_bytes": 556871
+    },
+    "tests": {
+      "digest": "1ed9fe3a1d524713caecc3721372616477e6306258c35187ddf733f9acba423e",
+      "file_count": 21,
+      "total_bytes": 90437
+    },
+    "app": {
+      "digest": "975005f9e3f1b483e46313924c0cd6e5fb337c4a06b59db733705317c2050e5c",
+      "file_count": 1,
+      "total_bytes": 203
+    },
+    "scripts": {
+      "digest": "72715eea05c4b53b14e1d5bd2e336de05fbec01a66dea0f5ff5818154cd47d89",
+      "file_count": 10,
+      "total_bytes": 88426
+    }
+  },
+  "g2_complete_samples": {
+    "path": "runs\\20261019_191117_G2_52369787\\independent_validation\\sampled_results.csv",
+    "sha256": "58e4a4c8216ec1769aeb43e3be77f4e7437c0fd6c6fccccb4b639fe2243a3080",
+    "bytes": 25928093,
+    "data_rows": 126000
+  },
+  "verdicts": {
+    "source_pdf_matches_task_book": true,
+    "g2_zip_matches_task_book": true,
+    "g2_config_matches_task_book": true
+  }
+}

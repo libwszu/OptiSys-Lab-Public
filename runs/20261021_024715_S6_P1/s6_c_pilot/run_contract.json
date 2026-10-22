@@ -1,0 +1,39 @@
+{
+  "backend_hash": "b927d9801ef303203e6d6ed2ded71da29be32ac638820b1304850c95e183e546",
+  "backend_hashes": {
+    "assembly_runner_sha256": "6b27df10c97951fed32872aa709a969644f08f60250b9219caa60c569f78353c",
+    "fiber_sampler_sha256": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f",
+    "g4_baseline_config_sha256": "329a7a74b68808befc23ea79bf8c8558c63fa04784419cb201d93b7ead9c5af8",
+    "g4_optics_model_sha256": "88fd4a3ac0fe1ab6286ce44e6611fa52a815ebc79163158a6d19111a0fe39218",
+    "s5_prescription_sha256": "45d4d9fbecb6103e38e6afeb07eeb7e869b510ce26599e1473b29a79b7865706",
+    "s6_a_reference_summary_sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571",
+    "s6_assumed_config_snapshot_sha256": "81e31c4b50bb85f78dda5176b1d9d7db458fae1239ef1a4872f3425a82eae223",
+    "s6_compute_plan_sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220",
+    "s6_prereg_freeze_sha256": "ecafe5553232d02716bcab7ee962effa9942dad0adf2ea444a3f036d7c4adb0b",
+    "s6_profile_amendment_hashes_sha256": "941f71ca707d92d6573c75af73793d6710d5b356e150604764574003e74ec3cf",
+    "s6_reference_backend_sha256": "1a0e8ac5f40fd305bcc0dc7b8fc2939a7ac2e61dd6ce94e405a00401b0526b75",
+    "tolerance_sampler_sha256": "ddeb2a62d970a967aa362cbd8a51c4b56fc33f443c350702c771909550b17caa"
+  },
+  "chunk_assemblies": 32,
+  "config_hash": "f5f314c0a576b74484afade1638d5effd184ebfe1e996e773a0c61eddb3e18e0",
+  "created_at_utc": "2026-10-21T07:15:07+00:00",
+  "mode": "pilot",
+  "mp_start_method": "spawn",
+  "planned_assemblies_per_scenario": 32,
+  "rays_per_design": 256,
+  "run_id": "20261021_024715_S6_P1",
+  "scenarios": [
+    {
+      "scale": 1.0,
+      "scenario": "pilot_nominal",
+      "tolerance_key": "nominal_1x"
+    }
+  ],
+  "schema": "optisys.s6.assembly_run_contract/1",
+  "seed_info": {
+    "assembly_seed": 8062001,
+    "source_seed_base": 80622000
+  },
+  "task_timeout_s": 120,
+  "workers": 4
+}

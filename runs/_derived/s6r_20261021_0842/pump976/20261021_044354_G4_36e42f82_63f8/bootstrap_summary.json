@@ -1,0 +1,19 @@
+{
+  "status": "OK",
+  "bootstrap_unit": "paired assembly",
+  "bootstrap_seed": 202610203,
+  "replicates": 5000,
+  "n_attempted_pairs": 2,
+  "n_valid_r90_pairs": 2,
+  "delta_transmission_candidate_minus_baseline_mean": 0.00048828125,
+  "delta_transmission_95_ci": [
+    0.0,
+    0.0009765625
+  ],
+  "delta_r90_mm_candidate_minus_baseline_valid_pairs_mean": -0.05652558169017291,
+  "delta_r90_mm_95_ci_valid_pairs": [
+    -0.057080359531572034,
+    -0.05597080384877379
+  ],
+  "r90_ci_scope": "conditional on both designs reaching the active target; full failures remain in tolerance_samples.csv"
+}

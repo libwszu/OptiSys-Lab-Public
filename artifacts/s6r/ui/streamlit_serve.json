@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "failures": [],
+  "streamlit_version": "1.66.0",
+  "entry": "app/main.py",
+  "port": 20274,
+  "command": "-m streamlit run app/main.py --server.port 20274 --server.address 127.0.0.1 --server.headless true",
+  "health": {
+    "path": "/_stcore/health",
+    "ok": true,
+    "detail": "HTTP 200 (2 bytes)"
+  },
+  "root": {
+    "ok": true,
+    "detail": "HTTP 200 (6467 bytes)",
+    "bytes": 6467
+  },
+  "startup_s": 2.78,
+  "alive_after_shutdown": false,
+  "log": "artifacts/s6r/ui/streamlit_serve.log",
+  "log_errors": []
+}

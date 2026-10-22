@@ -1,0 +1,25 @@
+{
+  "registered_budget_version": "1.0",
+  "run_timeout_s": 180.0,
+  "stage_timeout_s": 180.0,
+  "workers": 1,
+  "ray_counts": {
+    "nominal": 512,
+    "source_convergence": [
+      2000,
+      8000,
+      32000
+    ],
+    "tolerance": 2048
+  },
+  "assemblies": {
+    "precheck": 2,
+    "holdout": 2
+  },
+  "profile_evidence": "artifacts/g4/pre/compute_profile.json",
+  "timeout_enforced_by": [
+    "G4 stage deadline checks",
+    "JobService parent process timeout"
+  ],
+  "checkpoint_chunk_assemblies": 10
+}

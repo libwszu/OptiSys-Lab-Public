@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "gate": "G0",
+  "note": "Requirement status uses the master-prompt vocabulary (TODO/IN_PROGRESS/PASS/FAIL/BLOCKED/NOT_APPLICABLE). Validation uses PASS/NOT_RUN per the manifest example.",
+  "requirements": {
+    "R01": "PASS",
+    "R02": "PASS",
+    "R03": "TODO",
+    "R04": "TODO",
+    "R05": "TODO",
+    "R06": "TODO",
+    "R07": "TODO",
+    "R08": "TODO",
+    "R09": "IN_PROGRESS",
+    "R10": "IN_PROGRESS",
+    "R11": "TODO"
+  },
+  "validation": {
+    "V0": "PASS",
+    "V1": "NOT_RUN",
+    "V2": "NOT_RUN",
+    "V3": "NOT_RUN",
+    "V4": "NOT_RUN",
+    "V5": "NOT_RUN",
+    "V6": "PARTIAL",
+    "V7": "NOT_RUN"
+  }
+}

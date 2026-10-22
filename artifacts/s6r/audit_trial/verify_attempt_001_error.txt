@@ -1,0 +1,12 @@
+Verification attempt 001 did not complete because the verifier had a missing import. The package build itself had already passed ZIP CRC and path checks.
+
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>\\scripts\\s6r_verify_audit.py", line 246, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "<PROJECT_ROOT>\\scripts\\s6r_verify_audit.py", line 214, in main
+    "verified_at_utc": datetime.now(timezone.utc).isoformat(),
+                       ^^^^^^^^
+NameError: name 'datetime' is not defined
+
+Corrective change: import `datetime` and `timezone`; verification is rerun in `verify_result.json`.

@@ -1,0 +1,7 @@
+candidate,strategy,n_assemblies,n_estimators,estimators,n_distances,conditions,n_attempted,n_valid,failure_rate,rmse_mm,p95_abs_mm,bias_mm,calibration_frames_per_unit,calibration_scope
+baseline,A,2000,3,centroid;gaussian_2d;gaussian_2d_integrated,7,medium,42000,32693,0.22159523809523807,3.14812689267054,6.643043208436627,0.14105733726746253,0,"one factory fit on the nominal unit, reused"
+baseline,B,200,1,gaussian_2d_integrated,7,medium,1400,1270,0.09285714285714286,0.22940373340371786,0.4737116542993872,0.018948523292656724,9,per-unit fit on each assembly's own optics
+nominal,A,2000,3,centroid;gaussian_2d;gaussian_2d_integrated,7,medium,42000,35337,0.1586428571428572,3.017621563364543,6.566347551557143,0.06377380272149234,0,"one factory fit on the nominal unit, reused"
+nominal,B,200,1,gaussian_2d_integrated,7,medium,1400,1399,0.0007142857142856673,0.038523470276889044,0.07911235103380815,0.0025015113607843283,9,per-unit fit on each assembly's own optics
+robust,A,2000,3,centroid;gaussian_2d;gaussian_2d_integrated,7,medium,42000,31373,0.25302380952380954,1.903109443210548,3.8348805475271317,-0.17174673883069203,0,"one factory fit on the nominal unit, reused"
+robust,B,200,1,gaussian_2d_integrated,7,medium,1400,1227,0.12357142857142855,0.48891367870100677,1.0214081254807983,0.03424253529780844,9,per-unit fit on each assembly's own optics

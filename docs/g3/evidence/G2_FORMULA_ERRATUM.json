@@ -1,0 +1,94 @@
+{
+  "gate": "PRE-G3-06",
+  "item": "L1 image-height formula in 03_SCIENTIFIC_AUDIT.md section 4",
+  "quoted_text": "u_lens - cx = fx * (image distance / Z) * B / Z + distortion",
+  "verdict": "ERRATUM_REQUIRED",
+  "error_class": "algebraic power of Z (an extra 1/Z), not a sign error",
+  "expected_form": "u_lens - cx = -fx * m(Z) * (B - Z tan(theta)) / p with m(Z) = f/(Z - z_H) where z_H is the object-side principal plane offset, i.e. the M2 calibration form u = a/(Z - c) + b with c = z_H.  Note c is NOT the focal length: see model_comparison for the measured value.",
+  "numbers": {
+    "fx_px": 2318.840579710145,
+    "sensor_distance_from_rear_vertex_mm": 7.272485696015577,
+    "audit_sentence_at_z200_px": 648.4318674736412,
+    "audit_sentence_error_at_z200_px": -231.5140709163262,
+    "traced_offset_at_z200_px": 239.9459383899674
+  },
+  "per_distance": [
+    {
+      "Z_mm": 100.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 1117.2627330766209,
+      "u_pinhole_L0_px": 1103.768115942029,
+      "pinhole_minus_traced_px": -13.494617134591863,
+      "u_audit_sentence_px": 673.727469894565,
+      "audit_sentence_error_px": -443.5352631820558,
+      "audit_sentence_error_fraction_of_offset": -0.9293314404056972
+    },
+    {
+      "Z_mm": 150.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 959.4710070500503,
+      "u_pinhole_L0_px": 949.1787439613527,
+      "pinhole_minus_traced_px": -10.29226308869761,
+      "u_audit_sentence_px": 654.9899866198067,
+      "audit_sentence_error_px": -304.4810204302436,
+      "audit_sentence_error_fraction_of_offset": -0.9530787261159562
+    },
+    {
+      "Z_mm": 200.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 879.9459383899674,
+      "u_pinhole_L0_px": 871.8840579710145,
+      "pinhole_minus_traced_px": -8.06188041895291,
+      "u_audit_sentence_px": 648.4318674736412,
+      "audit_sentence_error_px": -231.5140709163262,
+      "audit_sentence_error_fraction_of_offset": -0.9648593031821298
+    },
+    {
+      "Z_mm": 250.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 832.0839981081729,
+      "u_pinhole_L0_px": 825.5072463768116,
+      "pinhole_minus_traced_px": -6.576751731361242,
+      "u_audit_sentence_px": 645.3963951831304,
+      "audit_sentence_error_px": -186.68760292504248,
+      "audit_sentence_error_fraction_of_offset": -0.9719060659072112
+    },
+    {
+      "Z_mm": 300.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 800.1276792012443,
+      "u_pinhole_L0_px": 794.5893719806763,
+      "pinhole_minus_traced_px": -5.538307220567958,
+      "u_audit_sentence_px": 643.7474966549516,
+      "audit_sentence_error_px": -156.38018254629264,
+      "audit_sentence_error_fraction_of_offset": -0.9765968215261405
+    }
+  ],
+  "model_comparison": {
+    "M1_paraxial_1_over_Z": {
+      "a": 47563.476337221335,
+      "b": 641.9101084093276,
+      "rms_px": 0.30422911609581477,
+      "max_abs_px": 0.4710563925804081
+    },
+    "M2_thin_lens_offset": {
+      "a": 48496.88518958915,
+      "b": 639.2300473829683,
+      "c_mm": -1.4499999999999957,
+      "rms_px": 0.01848204819011589,
+      "max_abs_px": 0.02382404747709188,
+      "seed_c_mm": 8.0
+    },
+    "improvement_M2_over_M1": 16.46079011191601,
+    "M2_c_mm": -1.4499999999999957,
+    "M2_c_is_principal_plane_offset_not_focal_length": true,
+    "reading": "M2 collapses onto M1 when c -> 0.  The fitted c = -1.45 mm is the object-side principal-plane offset of the thick singlet (the audit snapshot reports rear_principal_offset_mm = -1.059 mm and a 3 mm element), so it is NOT the 8 mm focal length: a thin-lens reading of the formula would be wrong twice over.  The 16.5x residual reduction from M1 to M2 is the quantitative content of the 'distortion' the audit sentence gestured at.",
+    "falsifiable_prediction": "if the sentence's 'image distance / Z' factor were the right mechanism, c should land near the focal length 8 mm; it lands at -1.45 mm, so the mechanism is the principal-plane shift, not a simple 1/Z rescale"
+  },
+  "consequences": [
+    "the 13.49 px figure quoted in section 4 is the L0-vs-traced difference and remains valid; only the displayed formula is wrong",
+    "no frozen number changes; this is a documentation erratum",
+    "the old audit file is NOT edited - this file is the erratum of record"
+  ],
+  "note_on_sign_convention": "L0 uses a virtual image plane in front of the pinhole (no flip); the real singlet forms an inverted image, which is why the traced offset and the pinhole offset differ in sign convention inside L1OpticalModel.  The two must not be mixed when comparing formulas."
+}

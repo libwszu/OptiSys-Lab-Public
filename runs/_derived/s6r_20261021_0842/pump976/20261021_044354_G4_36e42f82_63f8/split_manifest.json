@@ -1,0 +1,23 @@
+{
+  "design_selection": "predeclared engineering candidate; no random search",
+  "precheck": {
+    "seed": 202610201,
+    "assemblies": 2,
+    "rays_per_assembly": 2048
+  },
+  "holdout": {
+    "seed": 202610202,
+    "assemblies": 2,
+    "rays_per_assembly": 2048,
+    "independent_from_precheck": true
+  },
+  "oat_seed": 202610200,
+  "source_convergence_seeds": [
+    976051,
+    976052,
+    976053
+  ],
+  "common_random_numbers": "same perturbation vector and source seed per assembly across designs",
+  "bootstrap_seed": 202610203,
+  "holdout_opened_after_design_freeze": true
+}

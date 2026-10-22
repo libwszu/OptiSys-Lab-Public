@@ -1,0 +1,22 @@
+name: Feature request
+description: Suggest an improvement with a concrete use case
+title: "[Feature]: "
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case and current difficulty
+      description: Describe the user and the optical-engineering task
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement and acceptance criteria
+      description: Include model assumptions or validation needs if relevant
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives and scope (optional)

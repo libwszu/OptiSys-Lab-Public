@@ -1,0 +1,82 @@
+{
+  "schema_version": "1.0",
+  "run_id": "20261021_084255_G3_ea57a83b",
+  "gate": "G3",
+  "status": "PASS",
+  "scientific_claim_status": "DEMO_ONLY_NOT_A_G2_CONFIRMATION",
+  "finished_at_utc": "2026-10-21T08:43:20+00:00",
+  "gate_checks": {
+    "D1_all_candidates_present": {
+      "value": [
+        "baseline",
+        "nominal",
+        "robust"
+      ],
+      "threshold": "baseline, nominal, robust",
+      "pass": true,
+      "what": "every frozen design was executed, none silently dropped"
+    },
+    "D2_frame_count": {
+      "value": 63,
+      "threshold": 63,
+      "pass": true,
+      "what": "rows = assemblies x distances x candidates x estimators"
+    },
+    "D3_failures_recorded_not_hidden": {
+      "value": {
+        "baseline": 0.47619047619047616,
+        "nominal": 0.4285714285714286,
+        "robust": 0.6666666666666667
+      },
+      "threshold": "failure_rate present for every candidate",
+      "pass": true,
+      "what": "a demo that only reports successes is not evidence"
+    },
+    "D4_kernel_support_below_prereg": {
+      "value": {
+        "min": 0.975068254616337,
+        "max": 0.9857764043626498,
+        "prereg_threshold": 0.999
+      },
+      "threshold": "recorded, not gated: HC3 as registered is known unreachable",
+      "pass": true,
+      "what": "confirms the demo inherits the G2 HC3 conflict rather than hiding it"
+    },
+    "D5_not_a_g2_replacement": {
+      "value": {
+        "demo_assemblies": 1,
+        "g2_assemblies": 2000
+      },
+      "threshold": "demo N < G2 N, therefore not comparable",
+      "pass": true,
+      "what": "demo numbers may never be quoted as G2 numbers"
+    }
+  },
+  "outputs": [
+    "config_snapshot.yaml",
+    "figures/01_optical_layout.png",
+    "figures/02_error_vs_distance.png",
+    "figures/03_candidate_comparison.png",
+    "figures/04_kernel_support.png",
+    "independent_validation/sampled_results.csv",
+    "independent_validation/summary.json",
+    "metrics.json",
+    "provenance.json"
+  ],
+  "extra": {
+    "demo": true,
+    "figures": [
+      "01_optical_layout.png",
+      "02_error_vs_distance.png",
+      "03_candidate_comparison.png",
+      "04_kernel_support.png"
+    ],
+    "wall_s": 24.12160449998919,
+    "assemblies": 1,
+    "not_evidence_of": [
+      "G2 pre-registration compliance",
+      "physical measurement",
+      "any G4 claim"
+    ]
+  }
+}

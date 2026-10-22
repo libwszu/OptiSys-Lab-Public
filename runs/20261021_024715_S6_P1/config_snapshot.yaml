@@ -1,0 +1,64 @@
+schema: optisys.s6.assumed_p1/1
+stage: S6_PRE
+model_level: ASSUMED_MODEL
+wavelength_nm: 976.0
+source:
+  core_diameter_um: 105.0
+  numerical_aperture: 0.22
+  output_index: 1.0
+  near_field: uniform_area_disk_assumed
+  far_field: uniform_solid_angle_assumed
+  source_power: UNKNOWN
+receiving_plane:
+  z_mm: 225.0
+  active_radius_mm: 1.0
+  world_pose_policy: FIXED
+material:
+  id: N-BK7
+  center_thickness_mm: 2.0
+  refractive_index_source: registered_sellmeier_assumption
+  vendor_part_number: NOT_VERIFIED
+optical_design:
+  L1_f_mm: 25.0
+  L1_clear_aperture_mm: 12.0
+  L1_nominal_z_mm: 25.0
+  L2_f_mm: 100.0
+  L2_clear_aperture_mm: 12.0
+  baseline125_L2_z_mm: 125.0
+  s5_position135_L2_z_mm: 135.0
+  L2_search_exploratory_only_mm: [125.0, 130.0, 135.0, 140.0, 145.0]
+rigid_body:
+  coordinate_convention: active_Rz_Ry_Rx_about_front_vertex_pivot
+  transform: p_world = R @ p_local + t; d_world = R @ d_local
+  pose_components: [dx_mm, dy_mm, dz_mm, tilt_x_deg, tilt_y_deg, roll_z_deg]
+  target_moves_with_lenses: false
+s6_seeds:
+  A_adversarial_source: 8065001
+  B_boundary_development_source: 8061001
+  C_pilot_assembly: 8062001
+  C_holdout_assembly: 8062101
+  C_per_assembly_source_base: 80630000
+  C_bootstrap: 8064001
+  independent_negative_control: 8067001
+assumed_tolerance_nominal:
+  distribution: independent_zero_mean_truncated_normal_plus_minus_3_sigma
+  decenter_sigma_mm: 0.05
+  tilt_sigma_deg: 0.10
+  axial_sigma_mm: 0.30
+  correlations: independent_across_axes_and_lenses
+  evidence: SIMULATED_ASSUMED_TOLERANCE_UNVERIFIED
+p1_surface_model:
+  evidence: ASSUMED_MODEL_FROM_FROZEN_S5_G4_GEOMETRY
+  refractive_index_at_976_nm: 1.5078427267710073
+  L1:
+    radius_front_mm: 25.050745567277897
+    radius_rear_mm: -25.050745567277897
+    front_vertex_z_at_L2_125_mm: 24.32776280278125
+    rear_vertex_z_at_L2_125_mm: 26.32776280278125
+  L2:
+    radius_front_mm: 101.23062019544408
+    radius_rear_mm: -101.23062019544408
+    front_vertex_z_at_125_mm: 124.33458698738092
+    rear_vertex_z_at_125_mm: 126.33458698738092
+    front_vertex_z_at_135_mm: 134.33458698738093
+    rear_vertex_z_at_135_mm: 136.33458698738093

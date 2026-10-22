@@ -1,0 +1,86 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: portable verification (${{ matrix.os }}, py${{ matrix.python }})
+    timeout-minutes: 25
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, ubuntu-latest]
+        python: ["3.11"]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - name: Create project-local Python environment
+        shell: python
+        run: |
+          import os
+          import venv
+          from pathlib import Path
+          environment = Path.cwd() / ".venv"
+          venv.EnvBuilder(with_pip=True, symlinks=False).create(environment)
+          binary_dir = environment / ("Scripts" if os.name == "nt" else "bin")
+          with open(os.environ["GITHUB_PATH"], "a", encoding="utf-8") as output:
+              output.write(str(binary_dir) + "\n")
+      - name: Verify frozen G4 input bytes
+        run: python scripts/verify_published_frozen_inputs.py --output artifacts/ci/frozen-g4-inputs.json
+      - name: Verify release-candidate file hashes and links
+        run: python scripts/s6r_verify_release.py --root . --output artifacts/ci/release-manifest.json
+      - name: Verify public-redacted audit edition
+        run: python scripts/verify_public_audit.py _AUDIT/PUBLIC_REDACTED_R2/OptiSysLab_S6R_PUBLIC_REDACTED_R2.zip --expected-sha256 f1d7e04121659e9b632e79a5cbdd73ff5425e6e1feaa89ac0d719d860f29ed5c --output artifacts/ci/public-audit.json
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev,ui,optics]"
+      - name: Validate reference configuration
+        run: python -m optisys validate --config configs/triangulation_v0.yaml
+      # Archive-dependent G3 tests remain in tests/ for full workspaces.
+      # The snapshot omits complete original historical trees and ZIP archives.
+      - name: Run portable code and UI tests
+        run: >-
+          python -m pytest -q --basetemp=artifacts/pytest-temp-${{ github.run_id }}-${{ github.run_attempt }} --junitxml=artifacts/ci/pytest.xml
+          tests/unit tests/reference tests/ui
+          tests/integration/test_cli.py
+          tests/integration/test_g1_pipeline.py
+          tests/integration/test_g2_optics.py
+          tests/integration/test_g3_pre_g3_03.py
+          tests/integration/test_g3_tjobs.py
+          tests/integration/test_g3_treport.py
+          tests/integration/test_g3_tsci.py
+          tests/integration/test_g3_tsecurity.py
+          tests/integration/test_g4_audit.py
+          tests/integration/test_g4_jobs.py
+          tests/integration/test_g4_run.py
+          tests/integration/test_report_g3_cli.py
+      - name: Independently replay S6 assembly statistics
+        run: python repro/verify_s6r.py --root . --output artifacts/ci/s6-science.json
+      - name: Retain portable test report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portable-verification-${{ matrix.os }}
+          path: artifacts/ci/
+          if-no-files-found: ignore
+      - name: Reproduce G0 evidence
+        run: python repro/verify_g0.py
+      - name: Reproduce G1 evidence
+        run: python repro/verify_g1.py
+      - name: Validate G2 configuration
+        run: python -m optisys validate --config configs/triangulation_g2_l1.yaml
+      - name: Reproduce G2 optics evidence
+        run: python repro/verify_g2.py

@@ -1,0 +1,41 @@
+{
+  "p0_scalar_reference": {
+    "status": "PASS",
+    "method": "independent per-ray scalar ABCD/slope propagation vs vectorized P0",
+    "n_rays": 8192,
+    "max_position_delta_mm": 0.0,
+    "max_direction_delta": 0.0,
+    "criteria_position_mm": 1e-10,
+    "criteria_direction": 1e-12
+  },
+  "p1_low_na_reference": [
+    {
+      "design_id": "baseline",
+      "backend_version": "0.6.3",
+      "n_rays": 4096,
+      "common_valid_rays": 4096,
+      "p0_r80_mm": 0.18692993175019434,
+      "p1_r80_mm": 0.1872915471670371,
+      "relative_r80_delta": 0.0019344971319307635,
+      "p80_absolute_position_delta_mm": 0.006684481159975668,
+      "criteria_position_mm": 0.05,
+      "criteria_r80_relative": 0.1,
+      "pass": true
+    },
+    {
+      "design_id": "engineering_candidate",
+      "backend_version": "0.6.3",
+      "n_rays": 4096,
+      "common_valid_rays": 4096,
+      "p0_r80_mm": 0.1335213798215672,
+      "p1_r80_mm": 0.13387583947445397,
+      "relative_r80_delta": 0.0026547033393487995,
+      "p80_absolute_position_delta_mm": 0.0042786269008948455,
+      "criteria_position_mm": 0.05,
+      "criteria_r80_relative": 0.1,
+      "pass": true
+    }
+  ],
+  "p1_low_na_status": "PASS",
+  "p1_high_na_interpretation": "P0/P1 difference is retained as model discrepancy; P0 ideal thin lens is not used as full-NA physical validation."
+}

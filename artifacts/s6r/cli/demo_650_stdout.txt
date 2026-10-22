@@ -1,0 +1,22 @@
+[2026-10-21T08:42:55+00:00] run 20261021_084255_G3_ea57a83b created at 2026-10-21T08:42:55+00:00
+[2026-10-21T08:42:55+00:00] G3 demo: assemblies=1 workers=1 condition=medium model=M1
+[2026-10-21T08:42:55+00:00] test distances: [105.0, 135.0, 165.0, 195.0, 225.0, 255.0, 285.0]; calibration distances: 9 points
+[2026-10-21T08:43:00+00:00]   candidate 1/3 done (21 rows)
+[2026-10-21T08:43:02+00:00]   candidate 2/3 done (21 rows)
+[2026-10-21T08:43:04+00:00]   candidate 3/3 done (21 rows)
+[2026-10-21T08:43:19+00:00]   figure layout: ['01_optical_layout.png']
+[2026-10-21T08:43:19+00:00]   figure error_vs_distance: ['02_error_vs_distance.png']
+[2026-10-21T08:43:19+00:00]   figure candidates: ['03_candidate_comparison.png']
+[2026-10-21T08:43:20+00:00]   figure support: ['04_kernel_support.png']
+G3 demo run: runs\_derived\s6r_20261021_0842\g3_demo\20261021_084255_G3_ea57a83b
+status=PASS wall=24.1s rows=63
+{
+  "run_id": "20261021_084255_G3_ea57a83b",
+  "run_dir": "runs\\_derived\\s6r_20261021_0842\\g3_demo\\20261021_084255_G3_ea57a83b",
+  "status": "PASS",
+  "wall_s": 24.1,
+  "assemblies": 1,
+  "rows": 63,
+  "condition": "medium",
+  "comparable_to_g2": false
+}

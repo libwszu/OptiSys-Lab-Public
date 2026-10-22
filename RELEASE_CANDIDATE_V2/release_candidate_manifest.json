@@ -1,0 +1,496 @@
+{
+  "schema": "optisys.s6r.release_candidate.public_redacted/2",
+  "source_s6_run_id": "20261021_024715_S6_P1",
+  "created_at_utc": "2026-10-21T08:20:43Z",
+  "status": "PASS_WITH_DECLARED_DEVIATIONS",
+  "updated_at_utc": "2026-10-21T10:03:49.399706+00:00",
+  "engineering_status": "PASS_WITH_DECLARED_DEVIATIONS",
+  "science_recomputation_status": "PASS",
+  "nominal_1x_estimand": "VERIFIED_CONDITIONAL_GAIN",
+  "all_scenarios_verdict": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "science_recomputation_report": "../docs/s6r/S6R_SCIENCE_RECOMPUTATION.json",
+  "portfolio_media_status": "PARTIAL",
+  "browser_e2e": "NOT_RUN_POLICY_BLOCKED",
+  "screenshots": "NOT_DELIVERED",
+  "video": "NOT_DELIVERED",
+  "gpt_audit": "PASS",
+  "remote_ci": "NOT_RUN",
+  "gpu": "NOT_TESTED",
+  "empirical_validation": "NOT_AVAILABLE",
+  "historical_evidence": {
+    "s5_run_id": "20261020_210201_S5_HNA",
+    "s5_browser_record": "screenshot_evidence/browser_e2e.json",
+    "s5_browser_status": "PASS_HISTORICAL_ONLY",
+    "s5_screenshots": [
+      "screenshot_evidence/A_overview.png",
+      "screenshot_evidence/C_optimization.png",
+      "screenshot_evidence/F_pump976.png"
+    ]
+  },
+  "correction_provenance": "docs/s6r/BASELINE_HASHES.json records the V2 draft hashes before these status corrections; see docs/s6r/ISSUES_BEFORE_FIX.md.",
+  "not_included": [
+    ".venv and local Python environments",
+    "browser profiles",
+    "personal agent memory files",
+    "absolute local machine paths",
+    "G0-G5 historical audit ZIPs"
+  ],
+  "browser_e2e_evidence": "../docs/s6r/S6R_BROWSER_E2E.json",
+  "new_s6_screenshots": "NOT_DELIVERED",
+  "full_pytest": {
+    "status": "PASS",
+    "passed": 482,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "exit_code": 0,
+    "wall_clock_s": 191.266
+  },
+  "clean_install": {
+    "status": "PASS",
+    "python": "3.11.9",
+    "environment": ".venv_s6r_release",
+    "log": "../artifacts/s6r/environment/install_stdout.txt",
+    "pip_freeze": "../artifacts/s6r/environment/pip_freeze.txt"
+  },
+  "cli_demos": {
+    "status": "PASS_WITH_DECLARED_SCOPE",
+    "650nm": {
+      "exit_code": 0,
+      "run_status": "PASS",
+      "assemblies": 1
+    },
+    "976nm": {
+      "exit_code": 0,
+      "run_status": "PARTIAL",
+      "rays": 512,
+      "assemblies": 2
+    }
+  },
+  "apptest": {
+    "status": "PASS",
+    "tests": 18,
+    "passed": 18,
+    "failed": 0,
+    "skipped": 0,
+    "pages": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F"
+    ]
+  },
+  "streamlit_serve_smoke": {
+    "status": "PASS",
+    "port": 20274,
+    "health_body": "ok",
+    "root_http_status": 200,
+    "shutdown": "PASS"
+  },
+  "g2_inherited": "QUALIFIED_ONLY",
+  "g4_inherited": "QUALIFIED",
+  "files": [
+    {
+      "path": "DEMO_CAPTURE_CHECKLIST.md",
+      "bytes": 2488,
+      "sha256": "a6da39d33f3b8ed5ae248ab0c626c205fa0523c4fce6aba1da1d55e12cffd41c"
+    },
+    {
+      "path": "DEMO_SCRIPT_5MIN.md",
+      "bytes": 1960,
+      "sha256": "210d62a1f5e4c0bda1c11eaa07df50d3ca1f92759a87fabd346c3dc4677b723f"
+    },
+    {
+      "path": "DEPENDENCIES_AND_CONTRIBUTIONS.md",
+      "bytes": 1632,
+      "sha256": "7e991f32052ad7a368e04ccfd4d37ea4e7c75d1da756527160379367754a41b2"
+    },
+    {
+      "path": "KNOWN_LIMITATIONS.md",
+      "bytes": 1436,
+      "sha256": "065f3d646642e5bf9043d8379762e9a9dab3f0c4c7a01a7c9a085c3cc0296843"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6735,
+      "sha256": "a3170e7a35e45fa3b53c50e639a675d0b7b6e5faa54007805b4d1438db40684c"
+    },
+    {
+      "path": "README_excerpt.md",
+      "bytes": 393,
+      "sha256": "48a51c8ab696dd05dfe5778478169470bfff2618e185eda6f32318cb675008cb"
+    },
+    {
+      "path": "TECH_INTERVIEW_SUMMARY.md",
+      "bytes": 1025,
+      "sha256": "41493d61d76880eeacdc68515b836c16feb9918296e2f350b4756b8f7a4feb2a"
+    },
+    {
+      "path": "data/angle_resolved_p0_p1_capture.csv",
+      "bytes": 3167,
+      "sha256": "7981be44b6b23e02839759ae98faa4312ad2ac9a9d7e09e41e3c88dbda6d2984"
+    },
+    {
+      "path": "data/bootstrap_summary.json",
+      "bytes": 1491,
+      "sha256": "5674a145384f2ce96ba5b136c1695ffa8164ba0f431394c08f873e486da6a1a8"
+    },
+    {
+      "path": "data/design_comparison.csv",
+      "bytes": 1084,
+      "sha256": "6ff8aa0512d940a9319b7ea24e78cb8fba6f78dacf326b1078f845451ba5a643"
+    },
+    {
+      "path": "data/design_holdout_ray_results.csv",
+      "bytes": 1569851,
+      "sha256": "c68bb1940ad5bf4487240a7e13d644210e72605d8bb59f6f1439dcc12f5a78c2"
+    },
+    {
+      "path": "data/design_holdout_source_samples.csv",
+      "bytes": 774672,
+      "sha256": "ff84f251a05b1c692e6fe31ba36f17baa7555adb356abe46c6cf42c8237ee6e7"
+    },
+    {
+      "path": "data/design_search.csv",
+      "bytes": 1663,
+      "sha256": "83d25dcf1de27e623f899e048d25fd2a7ba7a88c978405e2446c3bd145c18a1a"
+    },
+    {
+      "path": "data/design_search_source_samples.csv",
+      "bytes": 88229,
+      "sha256": "110cb06ba9a52012665e587659a3b1e7810d06bddcb111966335795204600829"
+    },
+    {
+      "path": "data/encircled_weight.csv",
+      "bytes": 12939,
+      "sha256": "b7c078b517a50d26a9a124f8e6502903f44bfaad921b5d9def2136cfc0d73e96"
+    },
+    {
+      "path": "data/focus_sweep.csv",
+      "bytes": 3436,
+      "sha256": "33845bc172f181583fb8b3016d1d8d8cc82b67525bf27a0638f173970bb5108f"
+    },
+    {
+      "path": "data/full_na_verdict.json",
+      "bytes": 43592,
+      "sha256": "dae9a879ff0ab147cb728b020c17a7500c4d53a99eb73f39fe43085c7329bb00"
+    },
+    {
+      "path": "data/lens_geometry_feasibility.csv",
+      "bytes": 1681,
+      "sha256": "313214163a7254a8b777e0982b714503509da2e4a44832a24ae1eb8fa717209f"
+    },
+    {
+      "path": "data/longitudinal_focus_proxy.csv",
+      "bytes": 1724,
+      "sha256": "3cd3344e888d216d603a96efe766760f9b2419c173fb116dd75fe396ec8592f2"
+    },
+    {
+      "path": "data/nominal_conditional_unconditional_metrics.csv",
+      "bytes": 1214,
+      "sha256": "e49a1d7eca3d9001b54809cadb6193ec87f938e05227009f699e7f58a76dad6c"
+    },
+    {
+      "path": "data/paired_samples.csv",
+      "bytes": 383328,
+      "sha256": "e12d50ae441ac801c051f0ba6cef9658d908ad605032a6514b4a9cbebc6a3e2d"
+    },
+    {
+      "path": "data/source_assumption_sensitivity.csv",
+      "bytes": 878,
+      "sha256": "08196ae245a2c60533f6ac65738f78aeafe03dd57bc7427296ae9ce06d440b97"
+    },
+    {
+      "path": "data/surface_level_ray_deltas.csv",
+      "bytes": 12004,
+      "sha256": "cf8d44ef01b85c97a25cbcb37b49030a9d2eb47f740bbc3f41b2f64b6acf1754"
+    },
+    {
+      "path": "data/target_geometry_sensitivity.csv",
+      "bytes": 2694,
+      "sha256": "721144f1c7dc929ea300b5ee1410098c91563cb1748d7cc714388c775268a7cc"
+    },
+    {
+      "path": "evidence/s6/README.md",
+      "bytes": 1925,
+      "sha256": "1a081378e96f80cc68573e8e2a08847b9764101690aefb68af0d5519f630b75e"
+    },
+    {
+      "path": "evidence/s6/raw_data/adversarial_controls.csv",
+      "bytes": 1233,
+      "sha256": "6d0e22da5e083c579798fcff9b0a6eb4f209f0019a27c51d463408d7fba9d932"
+    },
+    {
+      "path": "evidence/s6/raw_data/assembly_bootstrap_replicates.csv",
+      "bytes": 917175,
+      "sha256": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a"
+    },
+    {
+      "path": "evidence/s6/raw_data/assembly_manifest.csv",
+      "bytes": 937024,
+      "sha256": "dfd2de2939cd34827203ae98222c646143b65666680204cb77ef5407ee32376f"
+    },
+    {
+      "path": "evidence/s6/raw_data/assembly_robustness_plot_data.csv",
+      "bytes": 1989,
+      "sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418"
+    },
+    {
+      "path": "evidence/s6/raw_data/boundary_ray_endpoints.csv",
+      "bytes": 12503873,
+      "sha256": "f415729dc3aa400a0a4cbd9d632cb88868c31fa22b1b355362f08483c5081776"
+    },
+    {
+      "path": "evidence/s6/raw_data/failure_breakdown.csv",
+      "bytes": 3620,
+      "sha256": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311"
+    },
+    {
+      "path": "evidence/s6/raw_data/focus_plane_extended.csv",
+      "bytes": 5906,
+      "sha256": "611ea50eba022ffe65d753f206dfaa105105ffb16406fb99f5f54676bcf76302"
+    },
+    {
+      "path": "evidence/s6/raw_data/l2_position_extended.csv",
+      "bytes": 2190,
+      "sha256": "dabe9c46770230d5b1a227dfeb6b081663fc29d1e76a44950fef5e9713aaa4a2"
+    },
+    {
+      "path": "evidence/s6/raw_data/noncoaxial_matrix_rays.csv",
+      "bytes": 4008256,
+      "sha256": "055afc8c99166a77f50b9e9f4edcde87deb00de883226fddbe38ac32298073d1"
+    },
+    {
+      "path": "evidence/s6/raw_data/noncoaxial_reference_matrix.csv",
+      "bytes": 19954,
+      "sha256": "1bf3779a461600e644950023b02baf76366420eed7ed416c1fd3fa09c868f640"
+    },
+    {
+      "path": "evidence/s6/raw_data/p1_assembly_samples.csv",
+      "bytes": 1636310,
+      "sha256": "d8e7ceb6787e7abce715207e9589a2217552980dc397fcd694ac8f33d4df4d7f"
+    },
+    {
+      "path": "evidence/s6/raw_data/paired_assembly_comparison.csv",
+      "bytes": 300027,
+      "sha256": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286"
+    },
+    {
+      "path": "evidence/s6/raw_data/representative_surface_traces.csv",
+      "bytes": 1432176,
+      "sha256": "1dca095d2313bc77b7f52bb6f37492070128fe7ed4277278d5839e1075ff2419"
+    },
+    {
+      "path": "evidence/s6/raw_data/s5_paired_reference_976053.csv",
+      "bytes": 383328,
+      "sha256": "e12d50ae441ac801c051f0ba6cef9658d908ad605032a6514b4a9cbebc6a3e2d"
+    },
+    {
+      "path": "evidence/s6/raw_data/s5_ray_reference_976053.csv",
+      "bytes": 1569851,
+      "sha256": "c68bb1940ad5bf4487240a7e13d644210e72605d8bb59f6f1439dcc12f5a78c2"
+    },
+    {
+      "path": "evidence/s6/raw_data/s5_zero_and_axial_reconciliation.csv",
+      "bytes": 693959,
+      "sha256": "32943f1e5675a75bd17a5db9033b2d81f194e998f8d415e8188191f9844f42f2"
+    },
+    {
+      "path": "evidence/s6/raw_data/source_samples_976053.csv",
+      "bytes": 774672,
+      "sha256": "ff84f251a05b1c692e6fe31ba36f17baa7555adb356abe46c6cf42c8237ee6e7"
+    },
+    {
+      "path": "evidence/s6/raw_data/zero_tolerance_controls.csv",
+      "bytes": 50387,
+      "sha256": "a39ce5bac643e7444d060d5a5e337cf80e39dfcd79352e8f862e1572e50eb71f"
+    },
+    {
+      "path": "evidence/s6/run_records/S6_C_CODE_FREEZE_02.json",
+      "bytes": 5236,
+      "sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446"
+    },
+    {
+      "path": "evidence/s6/run_records/S6_C_FINAL_ADJUDICATION.json",
+      "bytes": 2531,
+      "sha256": "06e485a992f2d2fed3c9cd5d26c1f98700c7eba4e66ee9b8a26986e3ced8d233"
+    },
+    {
+      "path": "evidence/s6/run_records/S6_C_HOLDOUT_FREEZE_02.json",
+      "bytes": 8878,
+      "sha256": "b3d92cbb549459e472002cf4783092ad829617597cf7b74197a4296127fcad31"
+    },
+    {
+      "path": "evidence/s6/run_records/assembly_statistics.json",
+      "bytes": 11626,
+      "sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94"
+    },
+    {
+      "path": "evidence/s6/run_records/assembly_statistics_programmatic.json",
+      "bytes": 11334,
+      "sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e"
+    },
+    {
+      "path": "evidence/s6/run_records/boundary_analysis.json",
+      "bytes": 2498,
+      "sha256": "256c8ccdb9869ef8fb7f4c52c542230107db13bbb99a953eaa3530e8e355f60a"
+    },
+    {
+      "path": "evidence/s6/run_records/compute_measured_preholdout.json",
+      "bytes": 1474,
+      "sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5"
+    },
+    {
+      "path": "evidence/s6/run_records/compute_plan.json",
+      "bytes": 2648,
+      "sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220"
+    },
+    {
+      "path": "evidence/s6/run_records/compute_profile.json",
+      "bytes": 11719,
+      "sha256": "432ae849051d030be44fc90254b4992235a2fdae05ed8bde8a781c2021485c8c"
+    },
+    {
+      "path": "evidence/s6/run_records/ray_denominator_contract.md",
+      "bytes": 897,
+      "sha256": "d5ec3573767aa4ff602e7784d0218fc4dbc151bb7bc37a77b7a6d6679eaea053"
+    },
+    {
+      "path": "evidence/s6/run_records/s6_a_reference_summary.json",
+      "bytes": 2807,
+      "sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571"
+    },
+    {
+      "path": "evidence/s6/run_records/s6_c_run_status.json",
+      "bytes": 952,
+      "sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd"
+    },
+    {
+      "path": "figures/main_case_design_tradeoff.png",
+      "bytes": 35782,
+      "sha256": "304247d9632925757241856e3171ddcb3b8b2c06d7bbb047a618570bc3406094"
+    },
+    {
+      "path": "figures/s5_angle_resolved_capture.png",
+      "bytes": 64099,
+      "sha256": "92a89417b6e694ad6c898230323ef00692250535ef13408c8dc6c1ee99588662"
+    },
+    {
+      "path": "figures/s5_assumed_lens_geometry.png",
+      "bytes": 211769,
+      "sha256": "a171d0e8ec203f438e14469fdd80f210e81137bb947b06f80fb65cb70dc4e337"
+    },
+    {
+      "path": "figures/s5_focus_and_encircled_weight.png",
+      "bytes": 137822,
+      "sha256": "3824b6300165b971ec414356d361019dce800d58120cfe3530a54b37c9c0be18"
+    },
+    {
+      "path": "figures/s5_surface_crosscheck.png",
+      "bytes": 107281,
+      "sha256": "6ebc62343d28da0d0b856bdef7609243be880467482de2a26890c4e596436923"
+    },
+    {
+      "path": "figures/s5_target_sensitivity.png",
+      "bytes": 63180,
+      "sha256": "b70e6612626ebf51f1a2318aa8d58a38bb9ad3994ab5f7d014bd524b216cb623"
+    },
+    {
+      "path": "figures/s6/s6_assembly_robustness.png",
+      "bytes": 111935,
+      "sha256": "7f7ff58ffae389f8aa529ecf647625b11162ed1e6460d0a6e4afe1809e2908d9"
+    },
+    {
+      "path": "figures/s6/s6_focus_boundary.png",
+      "bytes": 166359,
+      "sha256": "811cefe51fa83e55ed85893276ba5582a3a2719768ec9e79cbb2612b5459216e"
+    },
+    {
+      "path": "figures/s6/s6_l2_position_boundary.png",
+      "bytes": 123247,
+      "sha256": "77f193f209aca94b5879158101fd077811d21dc213a086dfdfd12a698fc83245"
+    },
+    {
+      "path": "reports/S5_COMPUTE_MEASURED.md",
+      "bytes": 2392,
+      "sha256": "f6471f0ea2d8d58f9aeafb401d6f538bb396e768b73972b7a8cc4b48dceaaba1"
+    },
+    {
+      "path": "reports/S5_FINAL_VERDICT.json",
+      "bytes": 8545,
+      "sha256": "bd3495a6f4b084f505c4695e404ba21ebfb05867d99a87f6c2152f42b51056f3"
+    },
+    {
+      "path": "reports/S5_FREEZE_HASHES.json",
+      "bytes": 2194,
+      "sha256": "0715277b475287e6f6de8062743dc9c8beb3022d2b00fd6d36bdd4ed4acecc21"
+    },
+    {
+      "path": "reports/S5_HIGH_NA_DIAGNOSIS.md",
+      "bytes": 6391,
+      "sha256": "74f47c5cc1a224619a087c669b7b087c42ee133ed6d01107c671112c1dbabbeb"
+    },
+    {
+      "path": "reports/S5_OPEN_ISSUES.md",
+      "bytes": 2930,
+      "sha256": "f2db27e7b0535b8c614b809b2a44182aa43d3ef719ae0982e1fbe5203aed4264"
+    },
+    {
+      "path": "reports/S5_RUN_REPORT.html",
+      "bytes": 3511,
+      "sha256": "18894fd81444412cf689562bd6cacc3ff682d5a314d2d04f8d5863cd797112cc"
+    },
+    {
+      "path": "reports/S5_RUN_REPORT.md",
+      "bytes": 2196,
+      "sha256": "9ca22a8ca1faa756c557bdaf7de3bb8c8932d48b5abc13cbd1803efd8ed50e22"
+    },
+    {
+      "path": "reports/S5_VALIDATION_MATRIX.md",
+      "bytes": 2716,
+      "sha256": "8757183490c6c64446c11f67e24105695983ac9d5847296cb1b81df7ff6ed1fb"
+    },
+    {
+      "path": "reports/s6/S6_AMENDMENT_03.md",
+      "bytes": 2765,
+      "sha256": "a9102a17d29733a10a106ed4fdc03c34d6c9d7d73dff52ae39f60ab352da7f52"
+    },
+    {
+      "path": "reports/s6/S6_ASSEMBLY_SCIENTIFIC_AUDIT_FINAL.md",
+      "bytes": 4397,
+      "sha256": "62276b9555f9c93a7974fcae0b7eaf263accfef8174791205a05e9cc9964bd71"
+    },
+    {
+      "path": "screenshot_evidence/A_overview.png",
+      "bytes": 174313,
+      "sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a"
+    },
+    {
+      "path": "screenshot_evidence/C_optimization.png",
+      "bytes": 181607,
+      "sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7"
+    },
+    {
+      "path": "screenshot_evidence/F_pump976.png",
+      "bytes": 175281,
+      "sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab"
+    },
+    {
+      "path": "screenshot_evidence/browser_e2e.json",
+      "bytes": 1904,
+      "sha256": "e418021fbdde60117a5253777d118a07f81eff28b2df77cd5aae74ec09a6dfcb"
+    }
+  ],
+  "file_count_excluding_manifest": 78,
+  "total_bytes_excluding_manifest": 29818387,
+  "gpt_audit_verification": "manifest coverage, clean extraction/replay, tamper rejection, missing-file rejection, same-environment byte rebuild",
+  "audit_bundle_location": "Local attachment in _AUDIT; ZIP SHA-256 is stored in the sibling AUDIT_ZIP_SHA256.txt. The ZIP is separate from this repository release directory.",
+  "audit_verification_evidence": "../docs/s6r/S6R_FINAL_STATUS.json",
+  "partial_browser_interaction_status": "PASS",
+  "public_edition": {
+    "id": "OptiSysLab_S6R_PUBLIC_REDACTED_R2",
+    "scope": "public redacted copy; historical scientific judgments and validation records retained as historical"
+  }
+}

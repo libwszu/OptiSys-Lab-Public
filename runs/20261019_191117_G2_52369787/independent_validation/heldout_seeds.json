@@ -1,0 +1,14 @@
+{
+  "namespace": "G2F",
+  "master_seed": 20261019,
+  "seed_rule": "blake2b(master|namespace|assembly|distance|condition|repeat)",
+  "n_assemblies": 2000,
+  "n_subset_for_stratification": 200,
+  "search_namespaces": [
+    "G2S",
+    "G2P",
+    "G2C",
+    "G2CAL"
+  ],
+  "disjoint_assembly_ids": true
+}

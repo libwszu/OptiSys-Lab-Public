@@ -1,0 +1,61 @@
+{
+  "schema_version": "1.0",
+  "verified_at_utc": "2026-10-19T16:00:00Z",
+  "verified_on_machine": "<PROJECT_ROOT> (Windows 11, CPython 3.14.3)",
+  "source_pdf": {
+    "path": "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf",
+    "sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d",
+    "bytes": 582816,
+    "matches_task_book": true
+  },
+  "g0": {
+    "run_id": "20261019_130948_G0_78fa364f",
+    "audit_zip_sha256": "3967d064cbc4349c6d484ec4378cdfe228115545089923b0d2629baab2d34c44",
+    "audit_zip_bytes": 993189,
+    "matches_task_book": true,
+    "repro_status": "PASS",
+    "max_abs_u_error_px": 2.274e-13
+  },
+  "g1": {
+    "run_id": "20261019_145702_G1_54c9e3fb",
+    "audit_zip_sha256": "a81641f792b110e08a19d638ef0ec0c7faf1f7565abb487b2772be71e9a584c5",
+    "audit_zip_bytes": 7507224,
+    "matches_task_book": true,
+    "source_tree_sha256": "1c80c3e1f4d8adf28cdec25b19a010dc41f49bc05d27ff2fdaa086c30ad704d5",
+    "source_tree_matches_task_book": true,
+    "config_sha256": "54c9e3fb3a261a86b20ed6a51fb68a8d8c6e425fa17144c38e96feeb664350b6",
+    "config_matches_task_book": true,
+    "reported_git_commit": "PRIVATE_SOURCE_REVISION",
+    "working_git_commit_at_g2_start": "e9040d1",
+    "commits_since_g1": [
+      "e9040d1 memory: record G1 final run, audit hash and conventions",
+      "fbc0fbb G1 docs: point evidence at final run 20261019_145702 and refresh benchmark numbers"
+    ],
+    "commits_since_g1_touch_src": false,
+    "note": "the two later commits change documentation and memory files only; src/**/*.py is byte-identical, hence the source-tree digest still matches"
+  },
+  "regression": {
+    "pytest_command": "python -m pytest -q -p no:cacheprovider --basetemp=artifacts/g2_pre/pytest_tmp --junitxml=artifacts/g2_pre/pytest_g2pre.xml",
+    "pytest_totals": {
+      "passed": 252,
+      "failed": 0,
+      "skipped": 0,
+      "total": 252
+    },
+    "pytest_exit_code": 0,
+    "pytest_duration_s": 128.58,
+    "junit_path": "artifacts/g2_pre/pytest_g2pre.xml",
+    "repro_verify_g0": "PASS",
+    "repro_verify_g1": "PASS",
+    "environment": {
+      "python": "3.14.3",
+      "optiland": "0.6.3",
+      "numpy": "2.5.4",
+      "scipy": "1.18.1",
+      "cpu": "AMD Ryzen 5 4600G (6C/12T)",
+      "ram_total_gb": 31.41,
+      "gpu": "NVIDIA GeForce GTX 1660 SUPER 6144 MB (CUDA not usable: torch not installed)"
+    }
+  },
+  "g2_config_sha256": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c"
+}

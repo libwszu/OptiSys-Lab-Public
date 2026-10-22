@@ -1,0 +1,4 @@
+lens_design,numerical_aperture,angular_distribution,seed,n_rays,source_weight_denominator,p0_capture_fraction_input,p1_capture_fraction_input,p1_blocked_l1_fraction,p1_blocked_l2_fraction,p1_outside_target_fraction,p1_trace_failure_fraction,p1_outcome_counts,interpretation,evidence
+baseline,0.05,uniform_solid_angle,976061,4096,1.0,1.0,1.0,0.0,0.0,0.0,0.0,{'CAPTURED': 4096},source-distribution sensitivity; not a lens-design gain,ASSUMED_SIMULATED
+baseline,0.22,uniform_solid_angle,976061,4096,1.0,1.0,0.65966796875,0.0,0.0,0.34033203125,0.0,"{'CAPTURED': 2702, 'OUTSIDE_TARGET': 1394}",source-distribution sensitivity; not a lens-design gain,ASSUMED_SIMULATED
+baseline,0.22,edge_biased_sin_theta,976061,4096,1.0,1.0,0.544921875,0.0,0.0,0.455078125,0.0,"{'CAPTURED': 2232, 'OUTSIDE_TARGET': 1864}",source-distribution sensitivity; not a lens-design gain,ASSUMED_SIMULATED

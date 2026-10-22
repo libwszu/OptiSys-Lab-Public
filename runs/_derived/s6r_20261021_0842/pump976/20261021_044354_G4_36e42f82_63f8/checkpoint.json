@@ -1,0 +1,42 @@
+{
+  "schema": "g4.checkpoint/1",
+  "fingerprints": {
+    "input_hashes": {
+      "configs/pump976_g4_l0.yaml": "329a7a74b68808befc23ea79bf8c8558c63fa04784419cb201d93b7ead9c5af8",
+      "configs/pump976_g4_l1.yaml": "4fbee8d43aa4fd0fa2ac17c476915a85e71312c98d5c15873277a88b5605fbf7",
+      "configs/pump976_g4_tolerance.yaml": "9a8bdb21dadfaed888c1f1fae278d1666d68b709b52249e5d8b4acd250f1e52e",
+      "run_parameters": "51dca3d4229175b3bc115ccfb291638035d6cc149e05d302c6ee8594abd6d987",
+      "docs/g4/G4_FREEZE_HASHES.json": "de1a77448ea6879d8a60fdba1f276f904b83f2ceeedf17ac52127600f4eb18b3"
+    },
+    "code_hashes": {
+      "src/optisys/config_g4.py": "0f61cba37ba105e3fde446c34ac1ceee8a3a0ce54425e2b27abda411474bc19c",
+      "src/optisys/sources/multimode_fiber.py": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f",
+      "src/optisys/optics/pump_beamline.py": "6dc9711d9383562313996b8439a718b08583381b776753c285c05dcd11f55c6b",
+      "src/optisys/optics/pump_optiland.py": "b3fefaa122669944bb142674495fbac8afa6bd09b0adf5fc6738c1cb479c546b",
+      "src/optisys/evaluation/pump_metrics.py": "50468e83c1051668707770534092336089d3b1231fd8c3d411f6b306536ed0af",
+      "src/optisys/gates/g4.py": "bd61566d2708687d6eee5f07c155e73076981467bcf1aeed42656ae0a565db4f",
+      "src/optisys/reports/report_g4.py": "e1e7421e46bfcba706ecddc5ca61b1285deb0d35233638dd982f768123928519",
+      "src/optisys/reports/report_service.py": "1a7c278495f8d61d26aa8a52b21328a4c94a04a429baecafabe0e349111e33fe",
+      "src/optisys/cli.py": "edbcb7941f4cc3db5219767499616a1a413abb932ed7495828cc37af93a57156",
+      "src/optisys/jobs/service.py": "a127ef73349d519db5d56c021dec7ff8599e19cdbad7f1c6bb0db82fea9bfca4",
+      "app/main.py": "25111c823715aab80cb432d8448cbebc00448f43edd9d7c09f4c509ad4ca52b4",
+      "app/pages/page_f_pump976.py": "41c0ec38069d2be9f8cd7a978e58bef21cd14055d09a6c87466dde32e3bcc999"
+    },
+    "source_tree_sha256": "041c7d1cd9ee385e12d0ca4e5d09ac95bbb91556bab63214cde5844b1b01fe9f"
+  },
+  "completed_assemblies": {
+    "precheck": [
+      0,
+      1
+    ],
+    "holdout": [
+      0,
+      1
+    ]
+  },
+  "updated_at_utc": "2026-10-21T08:44:01+00:00",
+  "last_checkpoint": {
+    "phase": "holdout",
+    "assembly_id": 1
+  }
+}

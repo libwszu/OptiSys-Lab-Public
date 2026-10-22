@@ -1,0 +1,12 @@
+........................................................................ [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 85%]
+....................................                                     [100%]
+============================= slowest 5 durations =============================
+18.49s call     tests/integration/test_cli.py::test_runs_never_overwrite_each_other
+14.20s call     tests/integration/test_g1_pipeline.py::test_limited_g1_run_is_partial_but_complete_in_layout
+10.07s call     tests/integration/test_g1_pipeline.py::test_frozen_g1_report_goes_to_derived
+9.52s call     tests/integration/test_cli.py::test_simulate_writes_complete_run
+9.03s call     tests/integration/test_cli.py::test_report_command_regenerates_html
+252 passed in 104.22s (0:01:44)
+EXIT_CODE=0

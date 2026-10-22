@@ -1,0 +1,226 @@
+{
+  "schema": "optisys.s5.release_candidate/1",
+  "run_id": "20261020_210201_S5_HNA",
+  "status": "PARTIAL",
+  "created_at_utc": "2026-10-21T02:54:32+00:00",
+  "install_command": "python -m pip install -e \".[dev,ui,optics]\"",
+  "screenshot_status": "DELIVERED_REAL_BROWSER_EDGE_144.0.3719.82",
+  "browser_e2e": "PASS",
+  "video_status": "NOT_DELIVERED",
+  "remote_ci": "NOT_RUN",
+  "audit_status": "PASS",
+  "files": [
+    {
+      "path": "data/angle_resolved_p0_p1_capture.csv",
+      "bytes": 3167,
+      "sha256": "7981be44b6b23e02839759ae98faa4312ad2ac9a9d7e09e41e3c88dbda6d2984"
+    },
+    {
+      "path": "data/bootstrap_summary.json",
+      "bytes": 1491,
+      "sha256": "5674a145384f2ce96ba5b136c1695ffa8164ba0f431394c08f873e486da6a1a8"
+    },
+    {
+      "path": "data/design_comparison.csv",
+      "bytes": 1084,
+      "sha256": "6ff8aa0512d940a9319b7ea24e78cb8fba6f78dacf326b1078f845451ba5a643"
+    },
+    {
+      "path": "data/design_holdout_ray_results.csv",
+      "bytes": 1569851,
+      "sha256": "c68bb1940ad5bf4487240a7e13d644210e72605d8bb59f6f1439dcc12f5a78c2"
+    },
+    {
+      "path": "data/design_holdout_source_samples.csv",
+      "bytes": 774672,
+      "sha256": "ff84f251a05b1c692e6fe31ba36f17baa7555adb356abe46c6cf42c8237ee6e7"
+    },
+    {
+      "path": "data/design_search.csv",
+      "bytes": 1663,
+      "sha256": "83d25dcf1de27e623f899e048d25fd2a7ba7a88c978405e2446c3bd145c18a1a"
+    },
+    {
+      "path": "data/design_search_source_samples.csv",
+      "bytes": 88229,
+      "sha256": "110cb06ba9a52012665e587659a3b1e7810d06bddcb111966335795204600829"
+    },
+    {
+      "path": "data/encircled_weight.csv",
+      "bytes": 12939,
+      "sha256": "b7c078b517a50d26a9a124f8e6502903f44bfaad921b5d9def2136cfc0d73e96"
+    },
+    {
+      "path": "data/focus_sweep.csv",
+      "bytes": 3436,
+      "sha256": "33845bc172f181583fb8b3016d1d8d8cc82b67525bf27a0638f173970bb5108f"
+    },
+    {
+      "path": "data/full_na_verdict.json",
+      "bytes": 43592,
+      "sha256": "dae9a879ff0ab147cb728b020c17a7500c4d53a99eb73f39fe43085c7329bb00"
+    },
+    {
+      "path": "data/lens_geometry_feasibility.csv",
+      "bytes": 1681,
+      "sha256": "313214163a7254a8b777e0982b714503509da2e4a44832a24ae1eb8fa717209f"
+    },
+    {
+      "path": "data/longitudinal_focus_proxy.csv",
+      "bytes": 1724,
+      "sha256": "3cd3344e888d216d603a96efe766760f9b2419c173fb116dd75fe396ec8592f2"
+    },
+    {
+      "path": "data/nominal_conditional_unconditional_metrics.csv",
+      "bytes": 1214,
+      "sha256": "e49a1d7eca3d9001b54809cadb6193ec87f938e05227009f699e7f58a76dad6c"
+    },
+    {
+      "path": "data/paired_samples.csv",
+      "bytes": 383328,
+      "sha256": "e12d50ae441ac801c051f0ba6cef9658d908ad605032a6514b4a9cbebc6a3e2d"
+    },
+    {
+      "path": "data/source_assumption_sensitivity.csv",
+      "bytes": 878,
+      "sha256": "08196ae245a2c60533f6ac65738f78aeafe03dd57bc7427296ae9ce06d440b97"
+    },
+    {
+      "path": "data/surface_level_ray_deltas.csv",
+      "bytes": 12004,
+      "sha256": "cf8d44ef01b85c97a25cbcb37b49030a9d2eb47f740bbc3f41b2f64b6acf1754"
+    },
+    {
+      "path": "data/target_geometry_sensitivity.csv",
+      "bytes": 2694,
+      "sha256": "721144f1c7dc929ea300b5ee1410098c91563cb1748d7cc714388c775268a7cc"
+    },
+    {
+      "path": "DEMO_CAPTURE_CHECKLIST.md",
+      "bytes": 795,
+      "sha256": "6a2c3e8428b7b6ff0c1939f9018fdc21ee4bf25e2ee278f50450c14d8b714443"
+    },
+    {
+      "path": "DEMO_SCRIPT_5MIN.md",
+      "bytes": 2077,
+      "sha256": "38a887af12496cc0352989e1462c95f792cd8b7d90e66fd22523cd5a23188c07"
+    },
+    {
+      "path": "figures/main_case_design_tradeoff.png",
+      "bytes": 35782,
+      "sha256": "304247d9632925757241856e3171ddcb3b8b2c06d7bbb047a618570bc3406094"
+    },
+    {
+      "path": "figures/s5_angle_resolved_capture.png",
+      "bytes": 64099,
+      "sha256": "92a89417b6e694ad6c898230323ef00692250535ef13408c8dc6c1ee99588662"
+    },
+    {
+      "path": "figures/s5_assumed_lens_geometry.png",
+      "bytes": 211769,
+      "sha256": "a171d0e8ec203f438e14469fdd80f210e81137bb947b06f80fb65cb70dc4e337"
+    },
+    {
+      "path": "figures/s5_focus_and_encircled_weight.png",
+      "bytes": 137822,
+      "sha256": "3824b6300165b971ec414356d361019dce800d58120cfe3530a54b37c9c0be18"
+    },
+    {
+      "path": "figures/s5_surface_crosscheck.png",
+      "bytes": 107281,
+      "sha256": "6ebc62343d28da0d0b856bdef7609243be880467482de2a26890c4e596436923"
+    },
+    {
+      "path": "figures/s5_target_sensitivity.png",
+      "bytes": 63180,
+      "sha256": "b70e6612626ebf51f1a2318aa8d58a38bb9ad3994ab5f7d014bd524b216cb623"
+    },
+    {
+      "path": "KNOWN_LIMITATIONS.md",
+      "bytes": 931,
+      "sha256": "46610ac59e17bdd752afd2412ad7c9a3e9b542c6b16f6f95c7c7269a873c987e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5229,
+      "sha256": "be39445727e802809c8c4a3c4124db6b337a1bf75b4fbb77098e37f8e8d064a2"
+    },
+    {
+      "path": "README_excerpt.md",
+      "bytes": 825,
+      "sha256": "ba4fd1b17efc0a01ba0f158bb04a6e4c114f8f595ba8fb7c66a903e0b37a37de"
+    },
+    {
+      "path": "reports/S5_COMPUTE_MEASURED.md",
+      "bytes": 2392,
+      "sha256": "f6471f0ea2d8d58f9aeafb401d6f538bb396e768b73972b7a8cc4b48dceaaba1"
+    },
+    {
+      "path": "reports/S5_FINAL_VERDICT.json",
+      "bytes": 8562,
+      "sha256": "4e2dde5c052a717a4a18863adf8719d1f09f97b6a1fa2bcfab596df249ac3934"
+    },
+    {
+      "path": "reports/S5_FREEZE_HASHES.json",
+      "bytes": 2194,
+      "sha256": "0715277b475287e6f6de8062743dc9c8beb3022d2b00fd6d36bdd4ed4acecc21"
+    },
+    {
+      "path": "reports/S5_HIGH_NA_DIAGNOSIS.md",
+      "bytes": 6391,
+      "sha256": "74f47c5cc1a224619a087c669b7b087c42ee133ed6d01107c671112c1dbabbeb"
+    },
+    {
+      "path": "reports/S5_OPEN_ISSUES.md",
+      "bytes": 2930,
+      "sha256": "f2db27e7b0535b8c614b809b2a44182aa43d3ef719ae0982e1fbe5203aed4264"
+    },
+    {
+      "path": "reports/S5_RUN_REPORT.html",
+      "bytes": 3511,
+      "sha256": "18894fd81444412cf689562bd6cacc3ff682d5a314d2d04f8d5863cd797112cc"
+    },
+    {
+      "path": "reports/S5_RUN_REPORT.md",
+      "bytes": 2196,
+      "sha256": "9ca22a8ca1faa756c557bdaf7de3bb8c8932d48b5abc13cbd1803efd8ed50e22"
+    },
+    {
+      "path": "reports/S5_VALIDATION_MATRIX.md",
+      "bytes": 2716,
+      "sha256": "8757183490c6c64446c11f67e24105695983ac9d5847296cb1b81df7ff6ed1fb"
+    },
+    {
+      "path": "screenshot_evidence/A_overview.png",
+      "bytes": 174313,
+      "sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a"
+    },
+    {
+      "path": "screenshot_evidence/browser_e2e.json",
+      "bytes": 1904,
+      "sha256": "e418021fbdde60117a5253777d118a07f81eff28b2df77cd5aae74ec09a6dfcb"
+    },
+    {
+      "path": "screenshot_evidence/C_optimization.png",
+      "bytes": 181607,
+      "sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7"
+    },
+    {
+      "path": "screenshot_evidence/F_pump976.png",
+      "bytes": 175281,
+      "sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab"
+    },
+    {
+      "path": "TECH_INTERVIEW_SUMMARY.md",
+      "bytes": 1038,
+      "sha256": "db8d94d51ca7d44b00c53bfea9960136b424f6559bba505f689744fd473825ee"
+    }
+  ],
+  "not_included": [
+    ".venv",
+    "browser profiles",
+    "absolute local paths",
+    "secrets",
+    "G4 historical audit ZIP"
+  ]
+}

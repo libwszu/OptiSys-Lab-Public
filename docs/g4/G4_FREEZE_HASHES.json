@@ -1,0 +1,42 @@
+{
+  "schema": "g4.preregistration_freeze/1",
+  "frozen_at_utc": "2026-10-20T16:20:33+00:00",
+  "status": "FROZEN_BEFORE_G4_RESULTS",
+  "acceptance_version": "1.0",
+  "preregistration_version": "1.0",
+  "compute_budget_version": "1.0",
+  "inputs": [
+    {
+      "path": "docs/g4/G4_PRE_REGISTRATION.md",
+      "bytes": 4280,
+      "sha256": "294bfca8f17c758bda03b398a8945b2880287b569c67e8e93ccf0d488fc69c59"
+    },
+    {
+      "path": "docs/g4/G4_ACCEPTANCE_CRITERIA.md",
+      "bytes": 4004,
+      "sha256": "ccb8a3e6485f3239a2972f3a8ffbac7f4c1a31eb28ead3b1e4b432031f2f8489"
+    },
+    {
+      "path": "docs/g4/G4_COMPUTE_BUDGET.md",
+      "bytes": 2549,
+      "sha256": "ae2c83c92fe8d85729ffd0b8b7e5d6699bc6a868ba4ed1a20591b392d1445691"
+    },
+    {
+      "path": "configs/pump976_g4_l0.yaml",
+      "bytes": 949,
+      "sha256": "329a7a74b68808befc23ea79bf8c8558c63fa04784419cb201d93b7ead9c5af8"
+    },
+    {
+      "path": "configs/pump976_g4_l1.yaml",
+      "bytes": 962,
+      "sha256": "4fbee8d43aa4fd0fa2ac17c476915a85e71312c98d5c15873277a88b5605fbf7"
+    },
+    {
+      "path": "configs/pump976_g4_tolerance.yaml",
+      "bytes": 1562,
+      "sha256": "9a8bdb21dadfaed888c1f1fae278d1666d68b709b52249e5d8b4acd250f1e52e"
+    }
+  ],
+  "yaml_configs_parsed": true,
+  "change_policy": "Any post-freeze change requires a new version, timestamp, reason, and impact statement; the original hashes remain in this record."
+}

@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.venv*/
+venv/
+
+# OptiSys-Lab generated artefacts
+runs/
+_AUDIT/
+artifacts/
+*.zip
+
+# Local spec extraction cache
+.tmp_spec/
+
+# Editors / OS
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
+
+# Local agent state and task prompts
+.workbuddy/
+1md/
+
+# Credentials and private publication work (does not remove tracked/history files)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+OptiSysLab_OSS_PRIVATE_AUDIT/
+dist/
+build/

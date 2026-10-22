@@ -1,0 +1,60 @@
+{
+  "bootstrap": {
+    "replicates": 2000,
+    "resampling_unit": "assembly_id",
+    "seed": 8064001
+  },
+  "correlation_assumption": "independent across axes and lenses; same latent draw scaled across scenarios",
+  "evidence": "SIMULATED_ASSUMED_TOLERANCE_UNVERIFIED",
+  "invalid_assembly_policy": "attempted denominator retained; invalid design capture is zero and reason is recorded; no redraw",
+  "lens_geometry": {
+    "center_thickness_mm": 2.0,
+    "clear_aperture_mm": 12.0,
+    "material": "N-BK7 assumed",
+    "vendor_part": "NOT_VERIFIED"
+  },
+  "mode": "holdout",
+  "model_level": "ASSUMED_MODEL",
+  "nominal_distribution": "independent zero-mean truncated normal, inverse-CDF truncated at +/-3 sigma",
+  "nominal_sigma": {
+    "axial_z_mm": 0.3,
+    "decenter_x_mm": 0.05,
+    "decenter_y_mm": 0.05,
+    "tilt_x_deg": 0.1,
+    "tilt_y_deg": 0.1
+  },
+  "paired_policy": "apply identical relative pose vector and source rays to baseline125 and s5_position135",
+  "parameter_order": [
+    "L1_dx_mm",
+    "L1_dy_mm",
+    "L1_tilt_x_deg",
+    "L1_tilt_y_deg",
+    "L1_dz_mm",
+    "L2_dx_mm",
+    "L2_dy_mm",
+    "L2_tilt_x_deg",
+    "L2_tilt_y_deg",
+    "L2_dz_mm"
+  ],
+  "pivot": "each lens front vertex; active extrinsic Rz@Ry@Rx rotation",
+  "run_id": "20261021_024715_S6_P1",
+  "scenarios": {
+    "nominal_1x": 1.0,
+    "stress_2x": 2.0,
+    "tight_0p5x": 0.5,
+    "zero": 0.0
+  },
+  "schema": "optisys.s6.assembly_parameter_registry/1",
+  "source": {
+    "NA": 0.22,
+    "absolute_power": "UNKNOWN",
+    "core_diameter_mm": 0.105,
+    "far_field": "uniform_solid_angle_assumed",
+    "near_field": "uniform_area_disk_assumed"
+  },
+  "target": {
+    "active_radius_mm": 1.0,
+    "moves_with_lenses": false,
+    "z_mm": 225.0
+  }
+}

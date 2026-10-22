@@ -1,0 +1,96 @@
+{
+  "nominal": {
+    "best_design": {
+      "baseline_mm": 15.0,
+      "focal_length_mm": 11.1,
+      "theta_deg": 4.0
+    },
+    "best_metrics": {
+      "baseline_mm": 15.0,
+      "focal_length_mm": 11.1,
+      "theta_deg": 4.0,
+      "feasible": true,
+      "reason": "FEASIBLE",
+      "n_attempted": 7,
+      "n_valid": 7,
+      "failure_rate": 0.0,
+      "rmse_mm": 0.01776838853900407,
+      "p95_mm": 0.02884503334889245,
+      "bias_mm": -0.005321324227338664,
+      "mean_assembly_rmse_mm": 0.01776838853900407,
+      "j_value": 0.35536777078008136,
+      "frames": 13,
+      "wall_s": 2.2441613999544643
+    },
+    "n_evaluations": 147,
+    "wall_s": 250.12939620000543,
+    "stopped_by": "budget",
+    "n_infeasible": 47
+  },
+  "robust": {
+    "best_design": {
+      "baseline_mm": 34.4,
+      "focal_length_mm": 7.272384615618831,
+      "theta_deg": 4.0
+    },
+    "best_metrics": {
+      "baseline_mm": 34.4,
+      "focal_length_mm": 7.272384615618831,
+      "theta_deg": 4.0,
+      "feasible": true,
+      "reason": "FEASIBLE",
+      "n_attempted": 48,
+      "n_valid": 42,
+      "failure_rate": 0.125,
+      "rmse_mm": 1.300361611258542,
+      "p95_mm": 2.6073724968634027,
+      "bias_mm": 0.027960392297502374,
+      "mean_assembly_rmse_mm": 1.1733835741907,
+      "j_value": 21.234639480928905,
+      "frames": 54,
+      "wall_s": 11.0983367000008
+    },
+    "n_evaluations": 138,
+    "wall_s": 1019.4067489000154,
+    "stopped_by": "budget",
+    "n_infeasible": 42
+  },
+  "frames": {
+    "nominal": 13,
+    "robust": 54
+  },
+  "objective_weights": {
+    "mean_rmse": 0.5,
+    "p95": 0.35,
+    "failure": 0.15
+  },
+  "reference_scales": {
+    "rmse_mm": 0.05,
+    "p95_mm": 0.1,
+    "failure_rate": 0.05
+  },
+  "search_calibration_distances": [
+    100.0,
+    145.0,
+    180.0,
+    220.0,
+    265.0,
+    300.0
+  ],
+  "search_evaluation_distances": [
+    110.0,
+    140.0,
+    170.0,
+    200.0,
+    230.0,
+    260.0,
+    290.0
+  ],
+  "robust_assemblies": 12,
+  "robust_distances": [
+    110.0,
+    170.0,
+    230.0,
+    290.0
+  ]
+}

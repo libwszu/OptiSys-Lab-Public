@@ -1,0 +1,28 @@
+{
+  "started_at_utc": "2026-10-21T08:43:55+00:00",
+  "finished_at_utc": "2026-10-21T08:44:03+00:00",
+  "wall_s": 8.5794,
+  "peak_rss_mb": 375.52,
+  "workers": 1,
+  "stage_wall_s": {
+    "source_convergence": 0.4463,
+    "nominal_traces": 0.6841,
+    "oat": 0.0341,
+    "tolerance": 0.03,
+    "comparison": 0.0173
+  },
+  "profile_workers_tested": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "gpu_status": "NOT_TESTED",
+  "timeout_s": 180.0,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "UNSET",
+    "OPENBLAS_NUM_THREADS": "UNSET",
+    "MKL_NUM_THREADS": "UNSET",
+    "NUMEXPR_NUM_THREADS": "UNSET"
+  }
+}

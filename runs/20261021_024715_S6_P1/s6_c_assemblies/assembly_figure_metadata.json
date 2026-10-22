@@ -1,0 +1,18 @@
+{
+  "schema": "optisys.s6.assembly_figure/1",
+  "run_id": "20261021_024715_S6_P1",
+  "source_statistics_sha256": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e",
+  "plot_data": {
+    "path": "assembly_robustness_plot_data.csv",
+    "bytes": 1989,
+    "sha256": "60e01ef814f9698745e851cdb49d0e0e2052ba548e6cbaac649927d41e93e418"
+  },
+  "figure": {
+    "path": "s6_assembly_robustness.png",
+    "bytes": 111935,
+    "sha256": "7f7ff58ffae389f8aa529ecf647625b11162ed1e6460d0a6e4afe1809e2908d9"
+  },
+  "warning_count": 0,
+  "note": "Error bars resample assembly_id; paired P05 panel exposes the stress_2x lower-tail reversal.",
+  "rendered_at_utc": "2026-10-21T07:31:59+00:00"
+}

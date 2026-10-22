@@ -1,0 +1,30 @@
+{
+  "baseline": {
+    "core_diameter_mm": 0.105,
+    "core_radius_mm": 0.0525,
+    "numerical_aperture": 0.22,
+    "output_index": 1.0,
+    "theta_max_rad": 0.22181447049679442,
+    "theta_max_deg": 12.709032994395438,
+    "position_measure": "uniform area; r=R*sqrt(U), phi~Uniform(0,2pi)",
+    "angular_measure": "uniform solid angle; cos(theta) uniform on [cos(theta_max),1]",
+    "independence_assumption": "position and direction samples independent; not measured",
+    "weight_semantics": "dimensionless equal weights normalized to sum 1; absolute power UNKNOWN",
+    "evidence": "ASSUMED_SIMULATED"
+  },
+  "alternative": {
+    "core_diameter_mm": 0.105,
+    "core_radius_mm": 0.0525,
+    "numerical_aperture": 0.22,
+    "output_index": 1.0,
+    "theta_max_rad": 0.22181447049679442,
+    "theta_max_deg": 12.709032994395438,
+    "position_measure": "uniform area; r=R*sqrt(U), phi~Uniform(0,2pi)",
+    "angular_measure": "edge biased; q=sin(theta)/sin(theta_max), F(q)=q^3",
+    "independence_assumption": "position and direction samples independent; not measured",
+    "weight_semantics": "dimensionless equal weights normalized to sum 1; absolute power UNKNOWN",
+    "evidence": "ASSUMED_SIMULATED"
+  },
+  "source_summary_rows": 18,
+  "absolute_power_w": null
+}

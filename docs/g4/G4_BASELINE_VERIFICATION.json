@@ -1,0 +1,198 @@
+{
+  "schema": "g4.baseline_verification/1",
+  "checked_at_utc": "2026-10-20T17:41:30+00:00",
+  "result": "PASS",
+  "check_count": 21,
+  "failure_count": 0,
+  "checks": [
+    {
+      "path": "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d",
+      "actual_sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d",
+      "expected_bytes": 582816,
+      "actual_bytes": 582816
+    },
+    {
+      "path": "configs/triangulation_g2_l1.yaml",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c",
+      "actual_sha256": "52369787c0e7f1dab7363a19132135a012dbe0fd9aa732e96a000d5a2e46e30c",
+      "expected_bytes": 3264,
+      "actual_bytes": 3264
+    },
+    {
+      "path": "configs/g3_demo.yaml",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "ea57a83bd16b2953a995c2b1b948c8f50a203e452dcf88070315b33dafeafd3b",
+      "actual_sha256": "ea57a83bd16b2953a995c2b1b948c8f50a203e452dcf88070315b33dafeafd3b",
+      "expected_bytes": 3941,
+      "actual_bytes": 3941
+    },
+    {
+      "path": "docs/g2",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "5d339c9799392902bfcee22cb6536f0c3e5264b047cdc2d96b3a2925ed31545e",
+      "actual_tree_sha256": "5d339c9799392902bfcee22cb6536f0c3e5264b047cdc2d96b3a2925ed31545e",
+      "expected_file_count": 9,
+      "actual_file_count": 9
+    },
+    {
+      "path": "docs/g3",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "0cc2e13a52ab4dc21d7fc627b0ac94ae598e3bdd2d9c9497581491c4d93583b6",
+      "actual_tree_sha256": "0cc2e13a52ab4dc21d7fc627b0ac94ae598e3bdd2d9c9497581491c4d93583b6",
+      "expected_file_count": 24,
+      "actual_file_count": 24
+    },
+    {
+      "path": "runs/20261019_130948_G0_78fa364f",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "6ce3654095f44d6c060385e7efc5eac255246770feb606a22d5060772c53b857",
+      "actual_tree_sha256": "6ce3654095f44d6c060385e7efc5eac255246770feb606a22d5060772c53b857",
+      "expected_file_count": 22,
+      "actual_file_count": 22
+    },
+    {
+      "path": "runs/20261019_145702_G1_54c9e3fb",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "53c01fa5882d25bf45afacaaf24054599f5763c8a77a31e0b7858bcdcfcb5c1a",
+      "actual_tree_sha256": "53c01fa5882d25bf45afacaaf24054599f5763c8a77a31e0b7858bcdcfcb5c1a",
+      "expected_file_count": 39,
+      "actual_file_count": 39
+    },
+    {
+      "path": "runs/20261019_191117_G2_52369787",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "05c510246b15d80ac762df3b637da19e09ce8ac19b2ce8ccca10896c74ca65ed",
+      "actual_tree_sha256": "05c510246b15d80ac762df3b637da19e09ce8ac19b2ce8ccca10896c74ca65ed",
+      "expected_file_count": 60,
+      "actual_file_count": 60
+    },
+    {
+      "path": "runs/20261020_071457_G3_ea57a83b",
+      "pass": true,
+      "kind": "tree",
+      "expected_tree_sha256": "34d6533fde2ca82133e96458b71696bf3727add3d35c94c6986a4b7e5919ec40",
+      "actual_tree_sha256": "34d6533fde2ca82133e96458b71696bf3727add3d35c94c6986a4b7e5919ec40",
+      "expected_file_count": 11,
+      "actual_file_count": 11
+    },
+    {
+      "path": "artifacts/g3/tests/g3_full_junit.xml",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "db2a4c37e0a2d65527115e648abc3f7ba30246c6f15bde57c15ccf0bb58aab82",
+      "actual_sha256": "db2a4c37e0a2d65527115e648abc3f7ba30246c6f15bde57c15ccf0bb58aab82",
+      "expected_bytes": 50163,
+      "actual_bytes": 50163
+    },
+    {
+      "path": "artifacts/g3/tests/g3_full_stdout.txt",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "f36f5da34a3e810f4af1248a04d26aabc9d560bcb593ecb0ba3a083b777b38b1",
+      "actual_sha256": "f36f5da34a3e810f4af1248a04d26aabc9d560bcb593ecb0ba3a083b777b38b1",
+      "expected_bytes": 519,
+      "actual_bytes": 519
+    },
+    {
+      "path": "artifacts/g3/tests/g3_release_verify.json",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "629ac6913cd98b088813da9ea64f7a92c7d194dad44020cd29fd7c8268a00de2",
+      "actual_sha256": "629ac6913cd98b088813da9ea64f7a92c7d194dad44020cd29fd7c8268a00de2",
+      "expected_bytes": 796,
+      "actual_bytes": 796
+    },
+    {
+      "path": "artifacts/g3/tests/streamlit_serve.json",
+      "pass": true,
+      "kind": "file",
+      "expected_sha256": "478710902c6abd4d048d21dc0c73f44260156c0b33f356eb6c6d64924c2e3b80",
+      "actual_sha256": "478710902c6abd4d048d21dc0c73f44260156c0b33f356eb6c6d64924c2e3b80",
+      "expected_bytes": 1027,
+      "actual_bytes": 1027
+    },
+    {
+      "path": "_AUDIT/20261019_130948_G0_78fa364f/OptiSysLab_G0_20261019_130948_G0_78fa364f_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "3967d064cbc4349c6d484ec4378cdfe228115545089923b0d2629baab2d34c44",
+      "actual_sha256": "3967d064cbc4349c6d484ec4378cdfe228115545089923b0d2629baab2d34c44",
+      "expected_bytes": 993189,
+      "actual_bytes": 993189
+    },
+    {
+      "path": "_AUDIT/20261019_144627_G1_54c9e3fb/OptiSysLab_G1_20261019_144627_G1_54c9e3fb_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "bfe5cd1a1e636dbeb71e4f2556bc0f7919571154e6d25bbd9664d0732096a7db",
+      "actual_sha256": "bfe5cd1a1e636dbeb71e4f2556bc0f7919571154e6d25bbd9664d0732096a7db",
+      "expected_bytes": 7507619,
+      "actual_bytes": 7507619
+    },
+    {
+      "path": "_AUDIT/20261019_145702_G1_54c9e3fb/OptiSysLab_G1_20261019_145702_G1_54c9e3fb_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "a81641f792b110e08a19d638ef0ec0c7faf1f7565abb487b2772be71e9a584c5",
+      "actual_sha256": "a81641f792b110e08a19d638ef0ec0c7faf1f7565abb487b2772be71e9a584c5",
+      "expected_bytes": 7507224,
+      "actual_bytes": 7507224
+    },
+    {
+      "path": "_AUDIT/20261019_170944_G2_52369787/OptiSysLab_G2_20261019_170944_G2_52369787_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "5c00bd67e82cf36fbd19e53f31bde6328cfc9dd98216dd150018b655054846e0",
+      "actual_sha256": "5c00bd67e82cf36fbd19e53f31bde6328cfc9dd98216dd150018b655054846e0",
+      "expected_bytes": 1874467,
+      "actual_bytes": 1874467
+    },
+    {
+      "path": "_AUDIT/20261019_191117_G2_52369787/OptiSysLab_G2_20261019_191117_G2_52369787_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af",
+      "actual_sha256": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af",
+      "expected_bytes": 1881613,
+      "actual_bytes": 1881613
+    },
+    {
+      "path": "_AUDIT/20261020_071457_G3_ea57a83b/OptiSysLab_G3_20261020_071457_G3_ea57a83b_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "0e2cf640313950e381828f10d9da8efe9112af56b7d2598c24c7ec5ca545242a",
+      "actual_sha256": "0e2cf640313950e381828f10d9da8efe9112af56b7d2598c24c7ec5ca545242a",
+      "expected_bytes": 739379,
+      "actual_bytes": 739379
+    },
+    {
+      "path": "_AUDIT/_superseded/20261019_130035_G0_78fa364f/OptiSysLab_G0_20261019_130035_G0_78fa364f_GPT_AUDIT.zip",
+      "pass": true,
+      "kind": "audit_zip",
+      "expected_sha256": "722d7ae10822bb7707f04faabd9bbc3710bb37483fa2df0f7b50f9dd50fbb4ed",
+      "actual_sha256": "722d7ae10822bb7707f04faabd9bbc3710bb37483fa2df0f7b50f9dd50fbb4ed",
+      "expected_bytes": 992704,
+      "actual_bytes": 992704
+    },
+    {
+      "path": "git/HEAD",
+      "pass": true,
+      "kind": "git_commit",
+      "expected": "PRIVATE_SOURCE_REVISION",
+      "actual": "PRIVATE_SOURCE_REVISION"
+    }
+  ],
+  "failures": [],
+  "preexisting_git_status_line_count": 67
+}

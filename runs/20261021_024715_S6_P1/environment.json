@@ -1,0 +1,40 @@
+{
+  "schema": "optisys.s6.environment/1",
+  "run_id": "20261021_024715_S6_P1",
+  "captured_at_utc": "2026-10-21T07:26:14+00:00",
+  "python": "3.14.3 (main, Feb  3 2026, 22:53:56) [MSC v.1944 64 bit (AMD64)]",
+  "implementation": "CPython",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "cpu": "AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD",
+  "logical_processors": 12,
+  "memory_total_bytes": 33731555328,
+  "memory_available_bytes_at_capture": 17363279872,
+  "gpu": {
+    "command_exit_code": 0,
+    "device_list": "GPU 0: NVIDIA GeForce GTX 1660 SUPER (UUID: GPU-25730a52-12b1-2e55-9134-7c2da3b08da0)",
+    "status": "DETECTED_NOT_TESTED"
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3",
+    "psutil": "7.2.2",
+    "optiland": "0.6.3",
+    "streamlit": "1.66.0",
+    "pytest": "9.1.1"
+  },
+  "parallel": {
+    "mp_start_method": "spawn",
+    "selected_workers": 4,
+    "thread_vars": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    }
+  },
+  "git_head": "PRIVATE_SOURCE_REVISION",
+  "git_dirty_at_takeover_status_path": "preexisting_worktree.json",
+  "remote_ci": "NOT_RUN"
+}

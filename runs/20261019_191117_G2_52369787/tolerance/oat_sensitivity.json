@@ -1,0 +1,44 @@
+{
+  "summary": [
+    {
+      "variable": "d_baseline_mm",
+      "d_rmse_A_per_sigma_mm": -0.0960171807073954,
+      "rmse_A_max_over_sweep_mm": 1.229625564441923,
+      "d_rmse_B_per_sigma_mm": 0.15554193504005182,
+      "rmse_B_max_over_sweep_mm": 1.7833808174763361,
+      "saturation_any": false
+    },
+    {
+      "variable": "d_cx_px",
+      "d_rmse_A_per_sigma_mm": 0.012564689196185627,
+      "rmse_A_max_over_sweep_mm": 0.2501630987800898,
+      "d_rmse_B_per_sigma_mm": 0.23041708426571342,
+      "rmse_B_max_over_sweep_mm": 1.2528005723521989,
+      "saturation_any": false
+    },
+    {
+      "variable": "d_focal_relative",
+      "d_rmse_A_per_sigma_mm": -0.15572723376980396,
+      "rmse_A_max_over_sweep_mm": 1.134467170025035,
+      "d_rmse_B_per_sigma_mm": 0.09586450038902827,
+      "rmse_B_max_over_sweep_mm": 2.973081524911389,
+      "saturation_any": false
+    },
+    {
+      "variable": "d_focus_mm",
+      "d_rmse_A_per_sigma_mm": 0.23296992198335387,
+      "rmse_A_max_over_sweep_mm": 4.734227855471175,
+      "d_rmse_B_per_sigma_mm": -0.4440743538289872,
+      "rmse_B_max_over_sweep_mm": 2.0745293071793895,
+      "saturation_any": true
+    },
+    {
+      "variable": "d_theta_rad",
+      "d_rmse_A_per_sigma_mm": 0.36433633849227376,
+      "rmse_A_max_over_sweep_mm": 5.25543176947378,
+      "d_rmse_B_per_sigma_mm": -0.18750412598649108,
+      "rmse_B_max_over_sweep_mm": 2.0267189104676397,
+      "saturation_any": false
+    }
+  ]
+}

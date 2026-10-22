@@ -1,0 +1,11 @@
+stage,distances_mm,n_distances,source_of_evidence,overlaps_final_test,overlapping_distances_mm,leak_severity,note
+TRAIN(search objective nominal),110;140;170;200;230;260;290,7,"src/optisys/gates/g2.py:845 _evenly_spaced(validation, 7)",NO,,NONE,declared search-validation list; used as the nominal objective panel
+TRAIN(search objective robust),110;170;230;290,4,"src/optisys/gates/g2.py:846 _evenly_spaced(validation, 4)",NO,,NONE,4 of the 7 nominal distances
+SEARCH_CALIBRATION,100;145;180;220;265;300,6,"src/optisys/gates/g2.py:843 _evenly_spaced(calibration, 6)",NO,,NONE,factory calibration inside the search; not a test panel
+VALIDATION(distances declared),110;130;150;170;190;210;230;250;270;290,10,configs/triangulation_g2_l1.yaml dataset.split.validation_distances,NO,,NONE,the declared search-validation list; search_eval is a subset of it
+OAT,105;130;180;230;285,5,src/optisys/gates/g2.py:698 (literal in _tolerance_stage),YES,105;285,HIGH,"aggregated CSV has no distance column, so only the code shows this"
+PRECHECK,105;130;180;230;285,5,src/optisys/gates/g2.py:748 (literal in _tolerance_stage),YES,105;285,HIGH,directly observable in tolerance/sample_status.csv
+FINAL-TEST(main),105;135;165;195;225;255;285,7,configs/triangulation_g2_l1.yaml dataset.split.test_distances,YES,105;135;165;195;225;255;285,INFO,7 distances x medium only; 2000 assemblies
+FINAL-TEST(strategy B),105;135;165;195;225;255;285,7,src/optisys/gates/g2.py:1100 subset_perturbations,YES,105;135;165;195;225;255;285,INFO,"200 assemblies, single estimator"
+CONSTRAINT_PROBE,100;200;300,3,src/optisys/optimization/constraints.py:53 default distances,NO,,NONE,hard-constraint evaluation; 100 and 300 are train-range endpoints
+PRECHECK(observed),105;130;180;230;285,5,run/tolerance/sample_status.csv,YES,105;285,HIGH,artifact-confirmed leak; matches the code literal

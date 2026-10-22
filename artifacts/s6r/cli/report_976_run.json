@@ -1,0 +1,27 @@
+{
+  "schema": "optisys.s6r.command_run/1",
+  "name": "report_976",
+  "command": [
+    "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+    "-m",
+    "optisys",
+    "report",
+    "--run",
+    "runs/_derived/s6r_20261021_0842/pump976/20261021_044354_G4_36e42f82_63f8"
+  ],
+  "started_at_utc": "2026-10-21T08:45:16.709573+00:00",
+  "finished_at_utc": "2026-10-21T08:45:20.310831+00:00",
+  "timeout_s": 180.0,
+  "wall_clock_s": 3.5780000000377186,
+  "timed_out": false,
+  "exit_code": 0,
+  "run_dir": null,
+  "reported_domain_status": null,
+  "stdout": "artifacts/s6r/cli/report_976_stdout.txt",
+  "stderr": "artifacts/s6r/cli/report_976_stderr.txt",
+  "status": "PASS",
+  "report_outputs": [
+    "runs/_derived/s6r_20261021_0842/pump976/_derived/20261021_044354_G4_36e42f82_63f8/20261021T084519Z_report/report.html",
+    "runs/_derived/s6r_20261021_0842/pump976/_derived/20261021_044354_G4_36e42f82_63f8/20261021T084519Z_report/report.md"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "optisys.s6.c_final_adjudication/1",
+  "run_id": "20261021_024715_S6_P1",
+  "S6_C_ASSEMBLY_CLAIM": "TRADEOFF_OR_NO_SUPPORTED_GAIN",
+  "automatic_nominal_only_claim": "SUPPORTED_WITHIN_ASSUMED_P1_AND_TOLERANCES",
+  "computational_run_status": "COMPLETE",
+  "scope": "aggregate across the four registered zero/tight/nominal/stress tolerance scenarios",
+  "reason": "The preregistered lower-tail/failure-cost clause applies to the full declared sensitivity envelope. The nominal primary estimand is positive, but the registered 2x stress tier has a negative paired P05 delta with a bootstrap interval below zero and additional candidate L2 aperture blocking.",
+  "nominal_primary": {
+    "mean_delta_capture": 0.1804931640625,
+    "mean_delta_ci95": [
+      0.1773875732421875,
+      0.18341357421875
+    ],
+    "p05_paired_delta": 0.136669921875,
+    "p05_paired_delta_ci95": [
+      0.1259765625,
+      0.14931640625
+    ],
+    "n_complete_pairs": 200
+  },
+  "stress_2x": {
+    "mean_delta_capture": 0.1274658203125,
+    "mean_delta_ci95": [
+      0.11650500488281251,
+      0.13853015136718747
+    ],
+    "p05_paired_delta": -0.05693359375,
+    "p05_paired_delta_ci95": [
+      -0.0927734375,
+      -0.008984374999999975
+    ],
+    "L2_aperture_block_weight_delta_candidate_minus_baseline": 4.8828125e-06,
+    "baseline_L2_aperture_block_rays": 1,
+    "candidate_L2_aperture_block_rays": 2
+  },
+  "metrics_changed": false,
+  "thresholds_changed": false,
+  "samples_changed": false,
+  "interpretation_change": "Aggregate label narrowed from nominal-only automation to the preregistered cross-scenario tail/failure rule.",
+  "amendment": "docs/s6/S6_AMENDMENT_03.md",
+  "input_sha256": {
+    "assembly_statistics_programmatic.json": "af733c4e12609fdd52803607bf3c44c8b69e5c14e753f0f300e10c9d88eae09e",
+    "paired_assembly_comparison.csv": "836d9e3a3327b6175dddc6dfccf29aecea8e8a94f46980d60b291e6cfa70f286",
+    "failure_breakdown.csv": "c5ae6ad19acbf6c98080a3189404545755a5dfa833d9b615317195acf02e3311",
+    "assembly_bootstrap_replicates.csv": "ac4c4a7060811a320ce758bc26e300074bc427f12df1b1cf59e0fbcb7acb844a"
+  },
+  "adjudicated_at_utc": "2026-10-21T07:34:17+00:00",
+  "final_assembly_statistics_sha256": "c8d66c3e1c4b0423416c6acc6cd6c4bb12b8906ce5b0a8dc284b63ae791d3e94",
+  "final_run_status_sha256": "751bd02964d75780ace5d3c2ced62ba62ac64339a7b13417e5999a3f4ea501cd",
+  "final_report_sha256": "62276b9555f9c93a7974fcae0b7eaf263accfef8174791205a05e9cc9964bd71"
+}

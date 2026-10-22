@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "gate": "G1",
+  "note": "V1/V2/V3 are overwritten by the packaged run's gate checks; R04-R06 are downgraded if those checks fail.",
+  "requirements": {
+    "R01": "PASS",
+    "R02": "PASS",
+    "R03": "IN_PROGRESS",
+    "R04": "PASS",
+    "R05": "PASS",
+    "R06": "IN_PROGRESS",
+    "R07": "TODO",
+    "R08": "TODO",
+    "R09": "PASS",
+    "R10": "IN_PROGRESS",
+    "R11": "TODO"
+  },
+  "validation": {
+    "V0": "PASS",
+    "V1": "PASS",
+    "V2": "PASS",
+    "V3": "PASS",
+    "V4": "NOT_RUN",
+    "V5": "NOT_RUN",
+    "V6": "PARTIAL",
+    "V7": "NOT_RUN"
+  }
+}

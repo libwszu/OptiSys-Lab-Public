@@ -1,0 +1,36 @@
+{
+  "schema": "optisys.s6r.browser_server/1",
+  "command": [
+    "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+    "-m",
+    "streamlit",
+    "run",
+    "<PROJECT_ROOT>\\app\\main.py",
+    "--server.port",
+    "8508",
+    "--server.address",
+    "127.0.0.1",
+    "--server.headless",
+    "true",
+    "--browser.gatherUsageStats",
+    "false"
+  ],
+  "pid": 28792,
+  "port": 8508,
+  "url": "http://127.0.0.1:8508/",
+  "started_at_utc": "2026-10-21T08:51:56.509448+00:00",
+  "health": {
+    "status": 200,
+    "body": "ok"
+  },
+  "root": {
+    "status": 200,
+    "bytes": 6467,
+    "streamlit_shell": true
+  },
+  "log": "artifacts/s6r/ui/browser_streamlit.log",
+  "status": "PASS",
+  "shutdown": "PASS_PORT_RELEASED",
+  "shutdown_detail": null,
+  "stopped_at_utc": "2026-10-21T09:00:48.558128+00:00"
+}

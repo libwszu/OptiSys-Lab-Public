@@ -1,0 +1,26 @@
+schema_version: "4.0"
+case_id: pump976_g4_tolerance
+evidence_status: SIMULATED
+units: {distance: mm, angle: rad, wavelength: nm, diameter: mm}
+design_configs: [configs/pump976_g4_l0.yaml, configs/pump976_g4_l1.yaml]
+source:
+  rays_per_assembly: 2048
+  distribution: uniform_solid_angle
+  core_diameter_mm: 0.105
+  numerical_aperture: 0.22
+precheck: {assemblies: 100, seed: 202610201}
+holdout: {assemblies: 100, seed: 202610202}
+oat_seed: 202610200
+perturbations:
+  l1_axial_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l2_axial_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l1_decenter_x_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l1_decenter_y_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l2_decenter_x_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l2_decenter_y_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l1_tilt_rad: {distribution: uniform, lower: -0.001745329252, upper: 0.001745329252, evidence: ASSUMED}
+  l2_tilt_rad: {distribution: uniform, lower: -0.001745329252, upper: 0.001745329252, evidence: ASSUMED}
+  l1_diameter_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  l2_diameter_mm: {distribution: uniform, lower: -0.10, upper: 0.10, evidence: ASSUMED}
+  focal_relative: {distribution: uniform, lower: -0.01, upper: 0.01, evidence: ASSUMED}
+  fiber_radius_relative: {distribution: uniform, lower: -0.05, upper: 0.05, evidence: ASSUMED}

@@ -1,0 +1,351 @@
+{
+  "schema": "optisys.s6.compute_profile/1",
+  "run_id": "20261021_024715_S6_P1",
+  "status": "PASS",
+  "profile_input": "actual S6 local-frame P1 tracer; both lenses noncoaxial",
+  "python": "3.14.3 (main, Feb  3 2026, 22:53:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "cpu_name": "AMD64 Family 23 Model 96 Stepping 1, AuthenticAMD",
+  "logical_processors": 12,
+  "memory_total_mb": 32168.91796875,
+  "memory_available_at_start_mb": 16442.96875,
+  "rss_soft_cap_mb": 8192.0,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "task_timeout_s": 120,
+  "rays_per_size": [
+    256,
+    512,
+    2048
+  ],
+  "workers_tested": [
+    1,
+    2,
+    4
+  ],
+  "warm_repeats_per_size": 3,
+  "mp_start_method": "spawn",
+  "speedup_at_2048": {
+    "1": 1.0,
+    "2": 1.7491177100099171,
+    "4": 3.3926556611398917
+  },
+  "selected_workers_by_frozen_rule": 4,
+  "outputs_identical_across_workers_for_each_size": true,
+  "gpu": {
+    "command_exit_code": 0,
+    "device_list": "GPU 0: NVIDIA GeForce GTX 1660 SUPER (UUID: GPU-25730a52-12b1-2e55-9134-7c2da3b08da0)",
+    "status": "DETECTED_NOT_TESTED"
+  },
+  "profiles": [
+    {
+      "workers": 1,
+      "pool_start_and_first_batch_wall_s": 0.7334403999848291,
+      "cold_call": {
+        "n_rays": 256,
+        "workers": 1,
+        "scheduler_wall_s": 0.6475371000124142,
+        "throughput_rays_s": 395.3441432083075,
+        "worker_trace_wall_s": [
+          0.08221200003754348
+        ],
+        "worker_throughput_rays_s": [
+          3113.9006456854636
+        ],
+        "worker_rss_mb": [
+          43.0234375
+        ],
+        "peak_process_tree_rss_mb": 84.23046875,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "cold_first_batch_256"
+      },
+      "warmup": {
+        "n_rays": 256,
+        "workers": 1,
+        "scheduler_wall_s": 0.08347849996061996,
+        "throughput_rays_s": 3066.65788341627,
+        "worker_trace_wall_s": [
+          0.06913820002228022
+        ],
+        "worker_throughput_rays_s": [
+          3702.728736320911
+        ],
+        "worker_rss_mb": [
+          43.11328125
+        ],
+        "peak_process_tree_rss_mb": 85.3828125,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "warmup_256"
+      },
+      "warm_by_size": [
+        {
+          "n_rays": 256,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.08065120002720505,
+          "wall_p95_s": 0.08364091000403277,
+          "throughput_p50_rays_s": 3174.1623176548737,
+          "output_sha256": [
+            "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 43.11328125,
+          "process_tree_rss_peak_mb": 85.65625,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 512,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.15476379997562617,
+          "wall_p95_s": 0.15738847000175155,
+          "throughput_p50_rays_s": 3308.267179279878,
+          "output_sha256": [
+            "23a8c7ab100e747039e6943a62ad65e5dd8d7edb72a357800ae9666f84e8507c"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 46.90234375,
+          "process_tree_rss_peak_mb": 88.8515625,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 2048,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.6045061000040732,
+          "wall_p95_s": 0.621016779995989,
+          "throughput_p50_rays_s": 3387.889716888217,
+          "output_sha256": [
+            "cc046c2c81e2e0c0522afe6d7fcf971c86d064430ca3babc5496e3d3bc8299b9"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 70.5078125,
+          "process_tree_rss_peak_mb": 113.6640625,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        }
+      ],
+      "worker_pool_total_wall_s": 3.544631299970206,
+      "peak_process_tree_rss_mb": 112.6484375
+    },
+    {
+      "workers": 2,
+      "pool_start_and_first_batch_wall_s": 0.614744599966798,
+      "cold_call": {
+        "n_rays": 256,
+        "workers": 2,
+        "scheduler_wall_s": 0.5916851999936625,
+        "throughput_rays_s": 432.66250364677364,
+        "worker_trace_wall_s": [
+          0.05543889995897189,
+          0.04766159999417141
+        ],
+        "worker_throughput_rays_s": [
+          2308.848120989552,
+          2685.600148036433
+        ],
+        "worker_rss_mb": [
+          40.84375,
+          40.91015625
+        ],
+        "peak_process_tree_rss_mb": 125.98046875,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "cold_first_batch_256"
+      },
+      "warmup": {
+        "n_rays": 256,
+        "workers": 2,
+        "scheduler_wall_s": 0.05394969996996224,
+        "throughput_rays_s": 4745.160772766744,
+        "worker_trace_wall_s": [
+          0.03451699996367097,
+          0.03497009997954592
+        ],
+        "worker_throughput_rays_s": [
+          3708.3176444858937,
+          3660.2697754615356
+        ],
+        "worker_rss_mb": [
+          41.4140625,
+          41.484375
+        ],
+        "peak_process_tree_rss_mb": 127.046875,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "warmup_256"
+      },
+      "warm_by_size": [
+        {
+          "n_rays": 256,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.04580829996848479,
+          "wall_p95_s": 0.05096962003153749,
+          "throughput_p50_rays_s": 5588.506890151413,
+          "output_sha256": [
+            "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 41.61328125,
+          "process_tree_rss_peak_mb": 127.37890625,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 512,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.08426410000538453,
+          "wall_p95_s": 0.0862199800205417,
+          "throughput_p50_rays_s": 6076.134438833178,
+          "output_sha256": [
+            "23a8c7ab100e747039e6943a62ad65e5dd8d7edb72a357800ae9666f84e8507c"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 42.97265625,
+          "process_tree_rss_peak_mb": 129.98046875,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 2048,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.34560629999032244,
+          "wall_p95_s": 0.3629066399706062,
+          "throughput_p50_rays_s": 5925.817903369665,
+          "output_sha256": [
+            "cc046c2c81e2e0c0522afe6d7fcf971c86d064430ca3babc5496e3d3bc8299b9"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 54.875,
+          "process_tree_rss_peak_mb": 152.34375,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        }
+      ],
+      "worker_pool_total_wall_s": 2.346459899970796,
+      "peak_process_tree_rss_mb": 150.26953125
+    },
+    {
+      "workers": 4,
+      "pool_start_and_first_batch_wall_s": 0.7330306000076234,
+      "cold_call": {
+        "n_rays": 256,
+        "workers": 4,
+        "scheduler_wall_s": 0.6945123000186868,
+        "throughput_rays_s": 368.60398295769846,
+        "worker_trace_wall_s": [
+          0.03992889996152371,
+          0.033802199992351234,
+          0.018744100001640618,
+          0.03066460002446547
+        ],
+        "worker_throughput_rays_s": [
+          1602.8490657561736,
+          1893.367887725708,
+          3414.407733334663,
+          2087.0971722748113
+        ],
+        "worker_rss_mb": [
+          40.140625,
+          39.9609375,
+          40.1953125,
+          40.09765625
+        ],
+        "peak_process_tree_rss_mb": 201.37890625,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "cold_first_batch_256"
+      },
+      "warmup": {
+        "n_rays": 256,
+        "workers": 4,
+        "scheduler_wall_s": 0.03707279998343438,
+        "throughput_rays_s": 6905.33221430243,
+        "worker_trace_wall_s": [
+          0.019040500046685338,
+          0.01847140002064407,
+          0.01794350001728162,
+          0.032612400013022125
+        ],
+        "worker_throughput_rays_s": [
+          3361.2562612892843,
+          3464.8158736463993,
+          3566.7511878039822,
+          1962.4437322749877
+        ],
+        "worker_rss_mb": [
+          40.19921875,
+          40.01953125,
+          40.15625,
+          40.125
+        ],
+        "peak_process_tree_rss_mb": 205.04296875,
+        "source_weight_total": 1.0,
+        "all_ledgers_pass": true,
+        "output_sha256": "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21",
+        "phase": "warmup_256"
+      },
+      "warm_by_size": [
+        {
+          "n_rays": 256,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.025115299969911575,
+          "wall_p95_s": 0.03505714997299947,
+          "throughput_p50_rays_s": 10192.98994265213,
+          "output_sha256": [
+            "e446d70efab6f920d5324c74bfa3c4302b3376e1f93d4bfc1299e60721eaeb21"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 40.203125,
+          "process_tree_rss_peak_mb": 205.1875,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 512,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.04781780001940206,
+          "wall_p95_s": 0.06812504000263288,
+          "throughput_p50_rays_s": 10707.309825886095,
+          "output_sha256": [
+            "23a8c7ab100e747039e6943a62ad65e5dd8d7edb72a357800ae9666f84e8507c"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 41.6328125,
+          "process_tree_rss_peak_mb": 211.08203125,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        },
+        {
+          "n_rays": 2048,
+          "warm_repeats": 3,
+          "wall_p50_s": 0.1781808000523597,
+          "wall_p95_s": 0.19186340998858215,
+          "throughput_p50_rays_s": 11493.943227318436,
+          "output_sha256": [
+            "cc046c2c81e2e0c0522afe6d7fcf971c86d064430ca3babc5496e3d3bc8299b9"
+          ],
+          "output_hashes_identical": true,
+          "worker_rss_peak_mb": 46.97265625,
+          "process_tree_rss_peak_mb": 227.3046875,
+          "source_weight_total": 1.0,
+          "ledgers_pass": true
+        }
+      ],
+      "worker_pool_total_wall_s": 1.839653700008057,
+      "peak_process_tree_rss_mb": 230.2890625
+    }
+  ],
+  "outer_wall_s": 7.9655129999737255,
+  "measured_at_utc": "2026-10-21T07:00:03+00:00"
+}

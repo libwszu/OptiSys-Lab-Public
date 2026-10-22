@@ -1,0 +1,222 @@
+{
+  "schema": "optisys.s6.c_holdout_freeze/2",
+  "run_id": "20261021_024715_S6_P1",
+  "phase": "PRE_FORMAL_HOLDOUT",
+  "frozen_at_utc": "2026-10-21T07:25:40+00:00",
+  "formal_holdout_started": false,
+  "pilot_status": "PASS",
+  "pilot_candidate_gain_used_to_change_plan": false,
+  "pilot_validation_scope": "Structure, source pairing, weight ledgers, checkpoint identity, completion and code hashes only; no pilot gain was used to alter size or thresholds.",
+  "science_question": "Paired assembly capture difference for fixed baseline125 versus S5 position135 at fixed target z=225 mm, radius=1 mm.",
+  "designs": {
+    "baseline125": {
+      "L1_principal_z_mm": 25.0,
+      "L2_principal_z_mm": 125.0
+    },
+    "s5_position135": {
+      "L1_principal_z_mm": 25.0,
+      "L2_principal_z_mm": 135.0
+    },
+    "shared": {
+      "f_mm": [
+        25.0,
+        100.0
+      ],
+      "clear_aperture_mm": [
+        12.0,
+        12.0
+      ],
+      "center_thickness_mm": [
+        2.0,
+        2.0
+      ],
+      "material": "assumed N-BK7",
+      "target_z_mm": 225.0,
+      "target_radius_mm": 1.0
+    }
+  },
+  "holdout_plan": {
+    "assemblies_per_scenario": 200,
+    "rays_per_design_per_assembly": 1024,
+    "designs_per_assembly": 2,
+    "scenarios": [
+      "zero",
+      "tight_0p5x",
+      "nominal_1x",
+      "stress_2x"
+    ],
+    "total_assembly_design_ray_traces": 1638400,
+    "workers": 4,
+    "start_method": "spawn",
+    "chunk_assemblies": 32,
+    "hard_timeout_per_chunk_s": 120,
+    "assembly_seed": 8062101,
+    "source_seed_rule": "80630000 + latent_id; same source bundle reused across scenarios and both paired designs",
+    "bootstrap_seed": 8064001,
+    "bootstrap_replicates": 2000,
+    "bootstrap_unit": "assembly_id",
+    "forbidden_seed": 976053,
+    "same_latent_draw_scaled_across_scenarios": true,
+    "invalid_assembly_policy": "retain in attempted denominator with capture zero, no redraw"
+  },
+  "tolerance": {
+    "nominal_sigma": {
+      "decenter_xy_mm": 0.05,
+      "tilt_xy_deg": 0.1,
+      "axial_z_mm": 0.3
+    },
+    "distribution": "independent zero-mean truncated normal at +/-3 sigma",
+    "scenario_scales": {
+      "zero": 0.0,
+      "tight_0p5x": 0.5,
+      "nominal_1x": 1.0,
+      "stress_2x": 2.0
+    },
+    "manufacturer_data": "NOT_AVAILABLE"
+  },
+  "claim_rule": "For finite support, mean paired assembly-cluster bootstrap CI95 lower >0; paired P05 difference and its bootstrap CI are non-negative; invalid assembly and other failure weights do not increase; all-plane r90 P95 does not worsen. Otherwise report TRADEOFF_OR_NO_SUPPORTED_GAIN; incomplete run is PARTIAL.",
+  "budget": {
+    "total_science_budget_s": 1500.0,
+    "preholdout_science_wall_measured_s": 63.255720699962694,
+    "holdout_hard_cap_s": 1200.0,
+    "holdout_worker_task_budget_s": 1170.0,
+    "postprocess_reserve_s": 30.0,
+    "remaining_total_before_holdout_s": 1436.7442793000373,
+    "holdout_estimated_with_margin_s": 230.0
+  },
+  "profile_summary": {
+    "selected_workers": 4,
+    "speedup_4_vs_1_at_2048": 3.3926556611398917,
+    "profile_peak_rss_4workers_mb": 230.2890625
+  },
+  "pilot": {
+    "status": "PASS",
+    "config_hash": "f5f314c0a576b74484afade1638d5effd184ebfe1e996e773a0c61eddb3e18e0",
+    "validation": "PASS",
+    "completed_assemblies": 32,
+    "pilot_runner_sha256": "6b27df10c97951fed32872aa709a969644f08f60250b9219caa60c569f78353c"
+  },
+  "holdout_runner_sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b",
+  "pilot_runner_changed_for_budget_watchdog": true,
+  "science_trace_and_statistics_backends_unchanged": {
+    "src/optisys/optics/s6_rigid_body.py": true,
+    "src/optisys/tolerance/s6_assembly.py": true,
+    "src/optisys/optics/s5_reference.py": true,
+    "src/optisys/sources/multimode_fiber.py": true
+  },
+  "hashes": {
+    "docs/s6/S6_FREEZE_HASHES.json": {
+      "bytes": 3938,
+      "sha256": "ecafe5553232d02716bcab7ee962effa9942dad0adf2ea444a3f036d7c4adb0b"
+    },
+    "docs/s6/S6_ACCEPTANCE_CRITERIA.md": {
+      "bytes": 4168,
+      "sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c"
+    },
+    "docs/s6/S6_AMENDMENT_01_HASHES.json": {
+      "bytes": 2283,
+      "sha256": "941f71ca707d92d6573c75af73793d6710d5b356e150604764574003e74ec3cf"
+    },
+    "docs/s6/S6_AMENDMENT_02.md": {
+      "bytes": 1790,
+      "sha256": "f237672d2205533d6c7f0114fdb52050676e2895b3552d2afbb8921094a990f9"
+    },
+    "docs/s6/S6_AMENDMENT_02_HASHES.json": {
+      "bytes": 10596,
+      "sha256": "e16216c9003657439d8b481a8871b6373450e911c0dff757cd9ee3fb61d8b8ee"
+    },
+    "runs/20261021_024715_S6_P1/compute_plan.json": {
+      "bytes": 2648,
+      "sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220"
+    },
+    "runs/20261021_024715_S6_P1/compute_measured_preholdout.json": {
+      "bytes": 1474,
+      "sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE_02.json": {
+      "bytes": 5236,
+      "sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE.json": {
+      "bytes": 4178,
+      "sha256": "6a03650dbeb73630818345cc700913334f24dd0a0477505a398d43616aa0efd6"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_HOLDOUT_FREEZE.json": {
+      "bytes": 13413,
+      "sha256": "fc35551673225c2a37521f603ac22b42bd9b0ee0c7f49b22df42786b2fc9ee12"
+    },
+    "runs/20261021_024715_S6_P1/config_snapshot.yaml": {
+      "bytes": 2124,
+      "sha256": "81e31c4b50bb85f78dda5176b1d9d7db458fae1239ef1a4872f3425a82eae223"
+    },
+    "runs/20261021_024715_S6_P1/s6_a_reference/s6_a_reference_summary.json": {
+      "bytes": 2807,
+      "sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571"
+    },
+    "runs/20261021_024715_S6_P1/s6_b_boundaries/boundary_analysis.json": {
+      "bytes": 2498,
+      "sha256": "256c8ccdb9869ef8fb7f4c52c542230107db13bbb99a953eaa3530e8e355f60a"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/run_contract.json": {
+      "bytes": 1983,
+      "sha256": "e33666f3d9ec400a109f452bf6fb87cb17c07148cc94345854c92460fd4c5b60"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_run_status.json": {
+      "bytes": 968,
+      "sha256": "9de5032a78dbd32f6f362fef0b77163dd45b4fac2da198412b888252ee1148b6"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_validation.json": {
+      "bytes": 662,
+      "sha256": "0477103770708c51930e943de57419a3233cefceffc5c6410d3a8ba2158568b3"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/assembly_manifest.csv": {
+      "bytes": 40771,
+      "sha256": "835098f457b1c05a6e2f1170201bdc92d19e68fab6ed0c838c641c6d9b46e2e6"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/p1_assembly_samples.csv": {
+      "bytes": 68422,
+      "sha256": "4b9008d735e34dff7bab1731792a54777852795804eb6494093a401ddb9309b3"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/paired_assembly_comparison.csv": {
+      "bytes": 13712,
+      "sha256": "e081c0df1c9fbd292821306988bfdce4f857ff5258517298d560d29bbe6bb7ac"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/source_bundle_index.csv": {
+      "bytes": 3906,
+      "sha256": "9b50dc4883ac8f224dd89664b46e494c501008960762747906de62656633fd3a"
+    },
+    "scripts/s6_assembly.py": {
+      "bytes": 61818,
+      "sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b"
+    },
+    "scripts/s6_validate_pilot.py": {
+      "bytes": 4536,
+      "sha256": "5475caed067d3d47c6e038673ff24b8ba426d90fdb17662c629fe2e1a9272252"
+    },
+    "src/optisys/optics/s6_rigid_body.py": {
+      "bytes": 31188,
+      "sha256": "1a0e8ac5f40fd305bcc0dc7b8fc2939a7ac2e61dd6ce94e405a00401b0526b75"
+    },
+    "src/optisys/tolerance/s6_assembly.py": {
+      "bytes": 5297,
+      "sha256": "ddeb2a62d970a967aa362cbd8a51c4b56fc33f443c350702c771909550b17caa"
+    },
+    "src/optisys/sources/multimode_fiber.py": {
+      "bytes": 6172,
+      "sha256": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f"
+    },
+    "tests/unit/test_s6_rigid_body.py": {
+      "bytes": 7864,
+      "sha256": "26acf113f7cce97dcbc9d55c8ea5480f33ef01de8a85ce4c038ee4401895d733"
+    },
+    "tests/unit/test_s6_assembly_stats.py": {
+      "bytes": 2615,
+      "sha256": "1cea9a19325b2ceea978d3c08f292a8c14e6d2663dcd2732e80926be5d14bd20"
+    },
+    "runs/20261021_024715_S6_P1/test_evidence/s6_models_pytest_execution_04.json": {
+      "bytes": 392,
+      "sha256": "09ea5383d59939712459dc88d93f80d0748b359e1a4baee8cddf2a1f4c22fcc1"
+    }
+  },
+  "note": "This freeze precedes the first S6-C holdout outcome. It does not revise the S6 sample plan or acceptance criteria."
+}

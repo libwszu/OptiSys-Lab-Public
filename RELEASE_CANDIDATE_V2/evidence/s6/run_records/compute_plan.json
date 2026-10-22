@@ -1,0 +1,85 @@
+{
+  "schema": "optisys.s6.compute_plan/1",
+  "run_id": "20261021_024715_S6_P1",
+  "phase": "PRE_HOLDOUT_FROZEN",
+  "amendment": "S6_AMENDMENT_01",
+  "formal_holdout_started": false,
+  "S6_A_RIGID_BODY_REFERENCE": "PASS",
+  "workers": 4,
+  "mp_start_method": "spawn",
+  "blas_threads": 1,
+  "hard_science_budget_s": 1500,
+  "task_hard_timeout_s": 120,
+  "rss_soft_cap_mb": 8192.0,
+  "profile": {
+    "input": "actual noncoaxial P1 tracer",
+    "sizes": [
+      256,
+      512,
+      2048
+    ],
+    "workers_tested": [
+      1,
+      2,
+      4
+    ],
+    "warm_repeats": 3,
+    "speedup_at_2048": {
+      "1": 1.0,
+      "2": 1.7491177100099171,
+      "4": 3.3926556611398917
+    },
+    "measured_rays_per_s_2048_p50": 11493.943227318436,
+    "measured_rays_per_s_2048_p95": 10674.26040286617,
+    "process_tree_rss_peak_mb_4workers": 230.2890625,
+    "output_hash_consistent": true,
+    "profile_source_seed": 8068001
+  },
+  "pilot": {
+    "assemblies": 32,
+    "rays_per_design": 256,
+    "designs": 2,
+    "assembly_seed": 8062001,
+    "source_seed_base": 80622000,
+    "purpose": "correctness, parameter-effect, checkpoint and throughput only; no sample-size selection from candidate gain"
+  },
+  "holdout": {
+    "assemblies_per_scenario": 200,
+    "rays_per_assembly_per_design": 1024,
+    "designs": 2,
+    "scenarios": [
+      "zero",
+      "tight_0p5x",
+      "nominal_1x",
+      "stress_2x"
+    ],
+    "assembly_seed": 8062101,
+    "source_seed_base": 80630000,
+    "shared_latent_draws_across_scenarios": true,
+    "same_source_rays_across_paired_designs": true,
+    "S5_seed_976053_forbidden": true,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 8064001,
+    "bootstrap_unit": "assembly_id",
+    "chunk_assemblies": 32,
+    "total_ray_design_traces": 1638400
+  },
+  "nominal_tolerance": {
+    "distribution": "independent zero-mean truncated normal at +/-3 sigma",
+    "decenter_sigma_mm": 0.05,
+    "tilt_sigma_deg": 0.1,
+    "axial_sigma_mm": 0.3,
+    "correlations": "independent across axes and lenses; same latent standardized draw scaled by scenario",
+    "not_manufacturing_data": true
+  },
+  "timing_estimate": {
+    "formal_C_p95_normalized_s": 153.5,
+    "formal_C_with_50pct_overhead_s": 230.0,
+    "B_p95_estimate_s": 8.1,
+    "total_science_wall_estimate_s": 300.0,
+    "these_are_estimates": true
+  },
+  "sample_plan_hash": "ebb2e1aac842bb18cd8778c9d55419cb0c4923ad243cb8e4c2f965ea87d90bc7",
+  "frozen_at_utc": "2026-10-21T07:02:07+00:00",
+  "note": "This plan is frozen before any S6-C pilot or holdout capture comparison."
+}

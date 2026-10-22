@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "frozen_at": "2026-10-19",
+  "gate_requirements": {
+    "G0": {
+      "min_tests_passed": 117,
+      "max_tests_failed": 0,
+      "max_tests_skipped": 0
+    },
+    "G1": {
+      "min_tests_passed": 190,
+      "max_tests_failed": 0,
+      "max_tests_skipped": 0
+    }
+  },
+  "thresholds": {
+    "geometry_u_px": 1e-08,
+    "geometry_x_mm": 1e-09,
+    "geometry_z_rel": 1e-09,
+    "geometry_derivative_rel": 1e-05,
+    "energy_rel": 0.01,
+    "pixel_integral_rel": 1e-06,
+    "subpixel_2d_px": 0.01,
+    "subpixel_1d_px": 0.02,
+    "subpixel_centroid_px": 0.05,
+    "noise_ci_sigma": 2.576,
+    "noise_samples": 10000,
+    "noise_replicates": 3,
+    "dark_slope_rel": 0.05,
+    "calibration_a_rel": 0.01,
+    "calibration_b_px": 0.5
+  },
+  "dataset": {
+    "distances_mm": {"start": 100.0, "stop": 300.0, "step": 5.0, "count": 41},
+    "conditions": ["strong", "medium", "weak"],
+    "repeats": 40,
+    "frames": 4920,
+    "splits": {"calib": 27, "validation": 7, "test": 7}
+  }
+}

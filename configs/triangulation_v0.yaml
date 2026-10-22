@@ -1,0 +1,42 @@
+# OptiSys-Lab G0 configuration (design assumptions from PDF section 9.1).
+# Every numeric value here is an ASSUMPTION, not a measured hardware fact.
+schema_version: "1.0"
+case_id: triangulation_v0
+model_level: L0
+
+units:
+  distance: mm        # internal unit for lengths
+  angle: deg          # converted to rad at load time
+  pixel_size: um      # converted to mm at load time
+
+source:
+  wavelength_nm: 650.0   # initial assumption; not a purchased laser source
+  theta_deg: 0.0         # laser tilt toward -X, positive value per PDF convention
+
+geometry:
+  baseline_mm: 20.0      # B, camera-to-laser lateral offset
+  distance_mm: [100.0, 300.0]
+  working_range_enforced: true
+  min_baseline_mm: 1.0   # engineering validity floor: B -> 0 destroys triangulation
+  singular_denominator_px: 1.0e-6
+  sensor_margin_px: 0.0
+  range_epsilon_mm: 1.0e-6   # round-off guard at the range boundary (1 nm), not a physical extension
+
+camera:
+  focal_length_mm: 8.0
+  pixel_size_um: 3.45
+  resolution_px: [1280, 1024]
+  principal_point_px: [640.0, 512.0]
+
+# The image block is validated now but NOT used at G0 (imaging starts at G1).
+image:
+  spot_sigma_px: 2.5
+  peak_electrons: 4000
+  read_noise_e: 2.0
+  dark_rate_e_per_s: 1.0
+  exposure_ms: 2.0
+
+run:
+  seed: 20261019
+  distance_points: 41
+  repeats: 100   # unused at G0

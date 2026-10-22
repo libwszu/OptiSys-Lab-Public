@@ -1,0 +1,3 @@
+[2026-10-21T08:43:55+00:00] G4 START 20261021_044354_G4_36e42f82_63f8
+[inputs] {"configs/pump976_g4_l0.yaml": "329a7a74b68808befc23ea79bf8c8558c63fa04784419cb201d93b7ead9c5af8", "configs/pump976_g4_l1.yaml": "4fbee8d43aa4fd0fa2ac17c476915a85e71312c98d5c15873277a88b5605fbf7", "configs/pump976_g4_tolerance.yaml": "9a8bdb21dadfaed888c1f1fae278d1666d68b709b52249e5d8b4acd250f1e52e", "docs/g4/G4_FREEZE_HASHES.json": "de1a77448ea6879d8a60fdba1f276f904b83f2ceeedf17ac52127600f4eb18b3", "run_parameters": "51dca3d4229175b3bc115ccfb291638035d6cc149e05d302c6ee8594abd6d987"}
+[2026-10-21T08:44:03+00:00] G4 FINISHED status=PARTIAL tolerance=PARTIAL model=QUALIFIED

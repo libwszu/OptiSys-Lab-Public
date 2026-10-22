@@ -1,0 +1,315 @@
+{
+  "schema": "g3.g2_inheritance_verdict/1",
+  "gate": "G3",
+  "produced_at_utc": "2026-10-20T03:10:00Z",
+  "produced_by": "G3 development round (PRE-G3 repair line)",
+  "frozen_g2_run": "runs/20261019_191117_G2_52369787",
+  "frozen_g2_run_modified": false,
+
+  "historical_g2_execution": "PASS_RECORDED",
+  "historical_g2_execution_note": "run_status.json records status=PASS with 252/252 bound tests and 27 green gate checks. This field only restates what the frozen run recorded. It is NOT a G3 endorsement of the pre-registration.",
+
+  "original_prereg_compliance": "FAIL",
+  "original_prereg_compliance_reasons": [
+    {
+      "id": "PRE-G3-01",
+      "prereg": "docs/g2/G2_PRE_REGISTRATION.md:33 HC3 kernel support >= 0.999",
+      "as_run": "configs/triangulation_g2_l1.yaml:112 min_kernel_support: 0.950",
+      "measured": "constraint probe at 100/200/300 mm gives 0.9737-0.9871 for all three designs; 100% of the 126000 recorded rows sit below 0.999",
+      "verdict": "DEVIATION",
+      "status_token": "G2_PREREG_FEASIBILITY_NOT_ESTABLISHED"
+    },
+    {
+      "id": "PRE-G3-02",
+      "prereg": "docs/g2/G2_PRE_REGISTRATION.md:69 final-test distances never appear in any search, OAT, precheck or model selection",
+      "as_run": "OAT, PRECHECK and PRECHECK(observed) all evaluate 105.0 mm and 285.0 mm, which are final-test distances",
+      "measured": "n_leaks=3 stages, 2 distances; leak character is distance reuse only (namespaces G2P vs G2F are disjoint, no seed or assembly reuse)",
+      "verdict": "DEVIATION",
+      "status_token": "G2_FINAL_DISTANCE_LEAK_INTO_DEVELOPMENT"
+    },
+    {
+      "id": "PRE-G3-02b",
+      "prereg": "docs/g2/G2_PRE_REGISTRATION.md:66 validation distances are 'model-family selection only'",
+      "as_run": "_search_stage passes two validation subsets (7 and 4 values) as the search objective; the declared search-train list 100..300 step 20 is never used",
+      "measured": "no distance-level holdout exists behind the design search at all",
+      "verdict": "DEVIATION",
+      "status_token": "G2_SEARCH_USES_VALIDATION_DISTANCES"
+    },
+    {
+      "id": "PRE-G3-02c",
+      "prereg": "7 distances x {strong, medium, weak} = 21 frames per assembly",
+      "as_run": "7 distances x medium only = 7 frames per assembly on the main 2000 panel",
+      "measured": "the 42000 rows per candidate are (2000 assemblies x 7 distances x 3 estimators) records, not 42000 independent multi-condition images",
+      "verdict": "DEVIATION",
+      "status_token": "G2_FINAL_PANEL_DEVIATION"
+    },
+    {
+      "id": "PRE-G3-06.5",
+      "prereg": "docs/g2/G2_PRE_REGISTRATION.md:113-116 select M2 if validation RMSE is >= 20% lower than M1, and write calibration_model_choice.json before the final test",
+      "as_run": "config_snapshot.yaml sets calibration.model: M1 directly; select_model() is referenced only from tests/unit/test_tolerance_g2.py:194; calibration_model_choice.json does not exist anywhere in the frozen run",
+      "measured": "the selection procedure was never executed as registered; M1 was a configuration choice, not the output of the registered rule",
+      "verdict": "PROCEDURE_NOT_EXECUTED",
+      "status_token": "CALIBRATION_MODEL_SELECTION_NOT_EXECUTED_AS_REGISTERED",
+      "note": "PRE-G3-06.1 independently shows M2 is 16.46x better on rms (0.0185 px vs 0.3042 px), so the registered rule would very likely have chosen M2. The finding is that the rule was skipped, not that M1 was the wrong answer."
+    }
+  ],
+
+  "original_prereg_compliance_scope": "FAIL is asserted only over the six items enumerated above. Items not enumerated here were not re-adjudicated by G3 and carry no new status.",
+
+  "as_run_numerical_verification": "PASS",
+  "as_run_numerical_verification_detail": {
+    "method": "src/optisys/audit/g2_recompute.py re-derives every aggregate from the raw per-sample CSV without importing the G2 gate code",
+    "source": "runs/20261019_191117_G2_52369787/independent_validation/sampled_results.csv",
+    "source_sha256": "58e4a4c8216ec1769aeb43e3be77f4e7437c0fd6c6fccccb4b639fe2243a3080",
+    "source_bytes": 25928093,
+    "n_rows": 126000,
+    "expected_rows": 126000,
+    "truncated_marker_present": false,
+    "duplicate_keys": 0,
+    "candidate_statuses": {"baseline": "MATCH", "nominal": "MATCH", "robust": "MATCH"},
+    "per_candidate_recomputed": {
+      "baseline": {"n_valid": 32693, "rmse_mm": 3.14812689267054, "failure_rate": 0.22159523809523807, "p95_abs_mm": 6.643043208436627, "bias_mm": 0.14105733726746253},
+      "nominal": {"n_valid": 35337, "rmse_mm": 3.017621563364543, "failure_rate": 0.1586428571428572, "p95_abs_mm": 6.566347551557143, "bias_mm": 0.06377380272149234},
+      "robust": {"n_valid": 31373, "rmse_mm": 1.903109443210548, "failure_rate": 0.25302380952380954, "p95_abs_mm": 3.8348805475271317, "bias_mm": -0.17174673883069203}
+    },
+    "tolerance": "rtol 1e-9 for continuous metrics, atol 1e-12 for rates",
+    "max_relative_difference_observed": 0.0,
+    "paired_bootstraps_recomputed": 6,
+    "paired_bootstrap_note": "all six (3 pairs x {rmse, failure_rate}) reproduce the frozen CI sign and the excludes_zero verdict",
+    "wall_s": 25.0,
+    "what_this_proves": "the frozen CSV and the frozen summary are mutually consistent, so the recorded numbers are not a transcription or aggregation artifact",
+    "what_this_does_not_prove": [
+      "physical measurement",
+      "optical re-execution from scratch",
+      "original pre-registration compliance",
+      "correctness of the L1-approximate optical model"
+    ]
+  },
+
+  "stratified_panel_repair": "PASS",
+  "stratified_panel_repair_detail": {
+    "defect": "src/optisys/gates/g2.py _final_stage reused the loop variable `design` left over from the Strategy-B candidate loop, so every candidate's stratified strong/weak panel was rendered with the robust design geometry (B=34.4, f=7.272385, theta=4.0)",
+    "why_the_main_panel_was_unaffected": "the strategy-A main panel and the strategy-B subset each rebind their own design inside their own loop; only the third loop inherited a stale binding",
+    "main_panel_independence_check": {
+      "method": "for each candidate, re-invert Z_hat with its own calibration parameters and with the other candidates' parameters",
+      "own_parameter_residual_mm": 0.0,
+      "foreign_parameter_max_residual_mm": 8034.7,
+      "conclusion": "each main-panel row was produced by its own candidate's factory calibration, so the stale variable never reached the 126000-row main table"
+    },
+    "regression_tests": [
+      "tests/integration/test_g3_pre_g3_03.py::test_every_assembling_loop_binds_its_own_design",
+      "tests/integration/test_g3_pre_g3_03.py::test_stratified_plan_binds_design_per_candidate",
+      "tests/integration/test_g3_pre_g3_03.py::test_stratified_plan_independent_of_loop_order",
+      "tests/integration/test_g3_pre_g3_03.py::test_stratified_measurement_rebind_bug_would_be_caught"
+    ],
+    "tests_failed_before_fix": true,
+    "tests_pass_after_fix": true,
+    "fix": "new helper _stratified_panel_plan(registry, candidate_names, perturbations, config) builds an explicit per-candidate plan of (design, assemblies); _final_stage iterates the plan and writes stratified_<name>.csv",
+    "recomputation": {
+      "n_assemblies": 200,
+      "n_distances": 7,
+      "conditions": ["strong", "weak"],
+      "estimators": ["centroid", "gaussian_2d", "gaussian_2d_integrated"],
+      "namespace": "G2F_C",
+      "rows_per_candidate": 8400,
+      "wall_s": 1897.8,
+      "budget_s": 600,
+      "budget_exceeded": true,
+      "budget_handling": "recorded in docs/g3/G3_COMPUTE_MEASURED.md; the frozen budget file was not edited"
+    },
+    "deltas_old_to_new": [
+      {"candidate": "baseline", "condition": "strong", "old_rmse_mm": 24.005707338197798, "new_rmse_mm": 3.732181895718939, "old_failure_rate": 0.835, "new_failure_rate": 0.6971428571428571},
+      {"candidate": "baseline", "condition": "weak", "old_rmse_mm": 23.867598368894132, "new_rmse_mm": 3.078859105502789, "old_failure_rate": 0.5626190476190476, "new_failure_rate": 0.21333333333333337},
+      {"candidate": "nominal", "condition": "strong", "old_rmse_mm": 117.66680640819082, "new_rmse_mm": 2.9035241920733257, "old_failure_rate": 0.7857142857142857, "new_failure_rate": 0.5104761904761905},
+      {"candidate": "nominal", "condition": "weak", "old_rmse_mm": 114.17040685075823, "new_rmse_mm": 6.542872419119549, "old_failure_rate": 0.5364285714285715, "new_failure_rate": 0.24119047619047618},
+      {"candidate": "robust", "condition": "strong", "old_rmse_mm": 2.1457037998984236, "new_rmse_mm": 2.1457037998984236, "old_failure_rate": 0.6426190476190476, "new_failure_rate": 0.6426190476190476},
+      {"candidate": "robust", "condition": "weak", "old_rmse_mm": 4.44118823552917, "new_rmse_mm": 4.44118823552917, "old_failure_rate": 0.23142857142857143, "new_failure_rate": 0.23142857142857143}
+    ],
+    "robust_unchanged_reason": "robust's own design IS the robust geometry, so the stale binding happened to be correct for that one candidate; delta is exactly 0.0 for both conditions",
+    "scientific_consequence": "the old stratified strong/weak panel carried no candidate-specific information for baseline and nominal. Any statement of the form 'candidate X behaves badly under strong light' that was read off that panel is retracted. The repaired panel now separates the candidates, and the strong/weak ordering still does not rescue nominal: nominal weak RMSE rises to 6.54 mm while baseline weak is 3.08 mm."
+  },
+
+  "full_samples_available": true,
+  "full_samples_available_detail": {
+    "local_file": "runs/20261019_191117_G2_52369787/independent_validation/sampled_results.csv",
+    "rows": 126000,
+    "bytes": 25928093,
+    "truncated_marker_present": false,
+    "task_book_claim_was": "the G2 audit ZIP contains a sampled_results.csv truncated to 20000 rows with a '# TRUNCATED' marker",
+    "finding": "true of the ZIP, false of this machine's frozen run directory: the on-disk CSV is complete at 126000 rows",
+    "consequence": "PRE-G3-04 is an audit-packaging defect, not a data-loss defect; the G3 audit ZIP ships the complete file and a separate supplement records its SHA-256",
+    "g2_audit_zip_not_edited": true
+  },
+
+  "scientific_claim_allowed": "QUALIFIED_ONLY",
+  "scientific_claim_allowed_detail": {
+    "frozen_claim": "GAIN_SUPPORTED_WITHIN_ASSUMED_L1_MODEL",
+    "what_survives": [
+      "robust has a lower paired RMSE than baseline on common units: delta -1.1165 mm, 95% CI [-1.1647, -1.0716], excludes 0, 2000 assemblies clustered",
+      "robust has a lower paired RMSE than nominal on common units: delta -0.9933 mm, 95% CI [-1.0710, -0.9144], excludes 0",
+      "nominal has a lower paired RMSE than baseline: delta -0.1099 mm, 95% CI [-0.2119, -0.0185], excludes 0",
+      "all of the above hold within the L1-approximate single-singlet model and within the medium illumination condition"
+    ],
+    "what_must_be_attached_to_every_claim": [
+      "G2_PREREG_FEASIBILITY_NOT_ESTABLISHED (HC3 as registered is satisfied by none of the designs)",
+      "G2_FINAL_PANEL_DEVIATION (main panel is medium-condition only)",
+      "G2_FINAL_DISTANCE_LEAK_INTO_DEVELOPMENT (105/285 mm were seen during OAT/precheck)",
+      "CALIBRATION_MODEL_SELECTION_NOT_EXECUTED_AS_REGISTERED",
+      "the higher failure rate of robust (0.2530 vs baseline 0.2216) must be shown next to the lower RMSE; robust is not 'better' on a single axis"
+    ],
+    "forbidden_phrasings": [
+      "pre-registration fully complied with",
+      "G2 fully passed all scientific gates",
+      "recalibration is worth roughly 1.5 mm to 3 mm (withdrawn: mixed population sizes and estimator sets)",
+      "5 calibration frames per unit (corrected to 9 in the non-quick path)",
+      "robust is the best design"
+    ],
+    "not_escalated_to": "MEASURED or VALIDATED. No physical data exists. Ceiling remains SIMULATED / CROSS_CHECKED."
+  },
+
+  "extra_findings": [
+    {
+      "id": "PRE-G3-05",
+      "status_token": "G2_STRATEGY_AB_NOT_DIRECTLY_COMPARABLE",
+      "detail": "Strategy A is 2000 assemblies x 3 estimators, Strategy B is 200 x 1 estimator over a subset of the same final draw. Only the per-estimator comparison is admissible, and even that is unpaired. The paired A/B bootstrap on the 200 shared assemblies is NOT_RUN and the reason is budget, not impossibility.",
+      "evidence": "docs/g3/evidence/G2_STRATEGY_COMPARABILITY.json"
+    },
+    {
+      "id": "PRE-G3-05b",
+      "status_token": "CALIBRATION_FRAME_COUNT_CORRECTED_5_TO_9",
+      "detail": "the report claimed 5 calibration frames per unit; g2.py:1046 takes 9 in the non-quick path. The report text was wrong, the code was right, and the cost of strategy B was understated by 80%.",
+      "evidence": "docs/g3/evidence/G2_STRATEGY_COMPARABILITY.json"
+    },
+    {
+      "id": "PRE-G3-06.1",
+      "status_token": "G2_AUDIT_FORMULA_ERRATUM_REQUIRED",
+      "detail": "the L1 image-height formula printed in 03_SCIENTIFIC_AUDIT.md section 4 carries an extra 1/Z. At Z=200 mm it yields 648.43 px against a traced 879.95 px, an error of -231.51 px that is 96.5% of the very offset the formula is meant to explain. The error class is an algebraic power of Z, not a sign.",
+      "supporting_measurement": {
+        "M1_u_eq_a_over_Z_plus_b_rms_px": 0.30422911609581477,
+        "M2_u_eq_a_over_Z_minus_c_plus_b_rms_px": 0.01848204819011589,
+        "ratio": 16.46079011191601,
+        "fitted_c_mm": -1.4499999999999957,
+        "interpretation": "c is the object-side principal-plane offset, NOT the 8 mm focal length. A thin-lens reading would be wrong twice over. Falsifiable prediction: if the sentence's 'image distance / Z' mechanism were right, c would land near 8 mm; it lands at -1.45 mm.",
+        "frozen_numbers_changed": false
+      },
+      "evidence": "docs/g3/evidence/G2_FORMULA_ERRATUM.json"
+    },
+    {
+      "id": "PRE-G3-06.2",
+      "status_token": "CLI_REPORT_SCHEMA_3_0_BRANCH_ADDED",
+      "detail": "cmd_report previously dispatched schema 2.0 and fell through to schema 1.0 for everything else, so a G2 run failed with ConfigError. A three-way resolver _resolve_report_config now dispatches 1.0/2.0/3.0 from the config snapshot, and cmd_report calls render_g2_report for kind == G2.",
+      "frozen_run_untouched_verified": true,
+      "verification": "report written to runs/_derived/<run_id>/...; sha256sum -c over the frozen run passed afterwards"
+    },
+    {
+      "id": "PRE-G3-06.4",
+      "status_token": "G2_AUDIT_PACKAGE_INCOMPLETE",
+      "detail": "the G2 audit ZIP does not contain pyproject.toml, the CI workflow, or the README, so a recipient cannot reconstruct the environment from the package alone.",
+      "g3_handling": "the G3 audit package adds all three explicitly; the G2 ZIP is not repackaged"
+    },
+    {
+      "id": "G2-07",
+      "status_token": "ROBUST_TRADEOFF_OPEN",
+      "detail": "robust buys a 1.19 mm lower RMSE for a 3.14 pp higher failure rate. Any ranking that collapses this to a single score is rejected; the UI shows all three metrics side by side and does not auto-select a winner."
+    }
+  ],
+
+  "evidence_paths": [
+    "docs/g3/G2_INHERITANCE_SCIENTIFIC_AUDIT.md",
+    "docs/g3/G3_BASELINE_VERIFICATION.md",
+    "docs/g3/G3_BASELINE_HASHES.json",
+    "docs/g3/G2_CONSTRAINTS_AMENDMENT.md",
+    "docs/g3/G3_COMPUTE_MEASURED.md",
+    "docs/g3/evidence/G2_HC3_SUMMARY.json",
+    "docs/g3/evidence/G2_HC3_THRESHOLD_SCAN.csv",
+    "docs/g3/evidence/G2_PREREG_VS_ASRUN.csv",
+    "docs/g3/evidence/G2_DATA_USAGE_VERDICT.json",
+    "docs/g3/evidence/G2_DATA_USAGE_MAP.csv",
+    "docs/g3/evidence/G2_DATA_USAGE_CROSSTAB.csv",
+    "docs/g3/evidence/G2_FORMULA_ERRATUM.json",
+    "docs/g3/evidence/G2_STRATEGY_COMPARABILITY.json",
+    "docs/g3/evidence/G2_STRATEGY_COMPARABILITY.csv",
+    "artifacts/g3/pre/g2_recompute.json",
+    "artifacts/g3/pre/stratified_repair/stratified_repair.json",
+    "artifacts/g3/pre/stratified_repair/G2_STRATIFIED_RECOMPARISON.csv",
+    "artifacts/g3/pre/stratified_repair/stratified_baseline.csv",
+    "artifacts/g3/pre/stratified_repair/stratified_nominal.csv",
+    "artifacts/g3/pre/stratified_repair/stratified_robust.csv",
+    "tests/integration/test_g3_pre_g3_03.py",
+    "src/optisys/audit/g2_recompute.py",
+    "scripts/g3_pre_g3_01_hc3.py",
+    "scripts/g3_pre_g3_02_data_usage.py",
+    "scripts/g3_pre_g3_03_stratified_repair.py",
+    "scripts/g3_pre_g3_05_comparability.py",
+    "scripts/g3_pre_g3_06_formula.py"
+  ],
+
+  "open_issues": [
+    {
+      "id": "G2-01",
+      "severity": "P0",
+      "title": "HC3 as registered (>= 0.999) is structurally unreachable for this optical model",
+      "detail": "width of the PSF window is driven by the geometric footprint (3-9 um) while the Airy radius is ~1.4 px; the truncation loss is therefore baked into the window rule. The observed ceiling is 0.972-0.991.",
+      "proposed_resolution": "explicit post-hoc amendment documents/ G2_CONSTRAINTS_AMENDMENT.md restating HC3 at 0.950 with the derivation, marked as an amendment and never as the original text",
+      "status": "AMENDED_NOT_RESOLVED"
+    },
+    {
+      "id": "G2-02",
+      "severity": "P0",
+      "title": "final-test distances 105/285 mm entered OAT and precheck",
+      "detail": "the frozen designs were screened on two distances that later served as test distances, so those two test points are not a pristine holdout at the design level",
+      "proposed_resolution": "requires a fresh execution with disjoint probe distances; out of G3 scope (budget and frozen-evidence rules)",
+      "status": "OPEN_CARRIED"
+    },
+    {
+      "id": "G2-03",
+      "severity": "P0",
+      "title": "design search runs entirely on declared validation distances",
+      "detail": "no distance-level holdout exists behind the search",
+      "proposed_resolution": "same fresh execution as G2-02",
+      "status": "OPEN_CARRIED"
+    },
+    {
+      "id": "G2-04",
+      "severity": "P1",
+      "title": "main panel is medium-condition only",
+      "detail": "strong and weak exist only on the 200-assembly stratified subset; no cross-condition generalisation may be claimed from the 126000-row table",
+      "proposed_resolution": "display the deviation wherever main-panel numbers appear; done in G3 UI and report",
+      "status": "DISCLOSED_CARRIED"
+    },
+    {
+      "id": "G2-05",
+      "severity": "P1",
+      "title": "calibration model selection was not executed as registered",
+      "detail": "M1 was set by configuration; calibration_model_choice.json does not exist",
+      "proposed_resolution": "either execute the rule in a future round or keep the disclosure. G3 keeps the disclosure and does not retro-fit the choice.",
+      "status": "DISCLOSED_CARRIED"
+    },
+    {
+      "id": "G2-06",
+      "severity": "P1",
+      "title": "strategy A vs B has no paired comparison",
+      "detail": "B covers 200 of 2000 assemblies with a single estimator; the minimum honest comparison is a paired bootstrap on the 200 shared assemblies, which is NOT_RUN",
+      "proposed_resolution": "budget-bound; the UI shows the unpaired caveat instead of a gain figure",
+      "status": "DISCLOSED_CARRIED"
+    },
+    {
+      "id": "G2-07",
+      "severity": "P2",
+      "title": "robust trades a higher failure rate for a lower RMSE",
+      "detail": "0.2530 vs 0.2216 failure rate, 1.9031 mm vs 3.1481 mm RMSE",
+      "proposed_resolution": "no single-score ranking; three metrics shown together",
+      "status": "DISCLOSED_CARRIED"
+    },
+    {
+      "id": "G2-08",
+      "severity": "P2",
+      "title": "G2 audit ZIP is internally incomplete",
+      "detail": "truncated per-sample CSV, missing pyproject/CI/README",
+      "proposed_resolution": "the G3 package supersedes it for the numerical evidence; the G2 ZIP stays byte-identical for provenance",
+      "status": "SUPERSEDED_NOT_REPACKAGED"
+    }
+  ],
+
+  "verdict_rationale": "Two independent lines are recorded because they are independent. The engineering history did run to PASS and its numbers are internally consistent to 1e-9 over 126000 rows - that is as_run_numerical_verification PASS. The registered procedure was not followed in at least four material ways - that is original_prereg_compliance FAIL. Collapsing these into a single G2_ALL_PASS token would assert something neither line supports. The scientific claim is therefore QUALIFIED_ONLY: the paired RMSE ordering survives, but every published sentence must carry the four deviation tokens and the failure-rate tradeoff."
+}

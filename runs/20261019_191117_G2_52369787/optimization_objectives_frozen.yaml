@@ -1,0 +1,25 @@
+schema_version: '3.0'
+weights:
+  mean_rmse: 0.5
+  p95: 0.35
+  failure: 0.15
+reference_scales:
+  rmse_mm: 0.05
+  p95_mm: 0.1
+  failure_rate: 0.05
+design_space:
+  baseline_mm:
+  - 15.0
+  - 35.0
+  focal_length_mm:
+  - 6.0
+  - 12.0
+  theta_deg:
+  - -4.0
+  - 4.0
+hard_constraints:
+  sensor_margin_px: 24.0
+  min_ray_success: 0.9
+  min_kernel_support: 0.95
+  max_peak_fraction_of_full_well: 0.8
+frozen_at_utc: '2026-10-19T19:11:17+00:00'

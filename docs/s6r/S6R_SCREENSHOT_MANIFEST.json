@@ -1,0 +1,33 @@
+{
+  "schema": "optisys.s6r.screenshot_manifest/1",
+  "S6R_SCREENSHOTS": "NOT_DELIVERED",
+  "reason": "The in-app browser E2E tool did not expose a local PNG save path. Native Windows Chrome capture was stopped by the Computer Use active-URL safety check; no bypass was attempted.",
+  "browser_e2e_record": "docs/s6r/S6R_BROWSER_E2E.json",
+  "historical_s5_images": [
+    {
+      "path": "screenshot_evidence/A_overview.png",
+      "run_id": "20261020_210201_S5_HNA",
+      "status": "PASS_HISTORICAL_S5",
+      "bytes": 174313,
+      "sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a",
+      "expected_sha256": "0485106d5dcf094d51e6ea074562fb1ce5ce3a26296fbb234432c7327530486a"
+    },
+    {
+      "path": "screenshot_evidence/C_optimization.png",
+      "run_id": "20261020_210201_S5_HNA",
+      "status": "PASS_HISTORICAL_S5",
+      "bytes": 181607,
+      "sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7",
+      "expected_sha256": "ce79313ca7a6dc5f3adae8176d0fe7fc0efb178e769674c94bdc36b950d87ad7"
+    },
+    {
+      "path": "screenshot_evidence/F_pump976.png",
+      "run_id": "20261020_210201_S5_HNA",
+      "status": "PASS_HISTORICAL_S5",
+      "bytes": 175281,
+      "sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab",
+      "expected_sha256": "48db82a98b34feef627fff92521abdf57a85cc771ef4b3c07ff85b0e8f6700ab"
+    }
+  ],
+  "status": "PASS"
+}

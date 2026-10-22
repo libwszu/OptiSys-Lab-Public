@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "criterion": "median r80 relative change from 8k to 32k <= 5%",
+  "relative_change_8k_to_32k": {
+    "baseline": 0.0038931074270184616,
+    "engineering_candidate": 0.0038931074270178146
+  },
+  "confidence_interval_rows": [
+    {
+      "design_id": "baseline",
+      "n_rays": 2000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 2000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.18701307781407298,
+      "ci95_low": 0.18457201307672697,
+      "ci95_high": 0.18945414255141899,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 2000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.19840738143469414,
+      "ci95_low": 0.19620598565283762,
+      "ci95_high": 0.20060877721655065,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 8000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 8000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.18742743008710516,
+      "ci95_low": 0.18622418386411677,
+      "ci95_high": 0.18863067631009356,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 8000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.19884088389334167,
+      "ci95_low": 0.1980115821773192,
+      "ci95_high": 0.19967018560936414,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 32000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 32000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.1878886745975009,
+      "ci95_low": 0.1870781396290666,
+      "ci95_high": 0.18869920956593517,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "baseline",
+      "n_rays": 32000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.19923316301630453,
+      "ci95_low": 0.19879233040727104,
+      "ci95_high": 0.19967399562533802,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 2000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 2000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.13358076986719417,
+      "ci95_low": 0.13183715219766026,
+      "ci95_high": 0.13532438753672807,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 2000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.14171955816763787,
+      "ci95_low": 0.14014713260917047,
+      "ci95_high": 0.14329198372610527,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 8000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 8000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.13387673577650452,
+      "ci95_low": 0.13301727418865622,
+      "ci95_high": 0.13473619736435283,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 8000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.14202920278095824,
+      "ci95_low": 0.14143684441237084,
+      "ci95_high": 0.14262156114954563,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 32000,
+      "metric": "geometric_transmission_fraction",
+      "n_seeds": 3,
+      "mean": 1.0,
+      "ci95_low": 1.0,
+      "ci95_high": 1.0,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 32000,
+      "metric": "r80_mm",
+      "n_seeds": 3,
+      "mean": 0.13420619614107235,
+      "ci95_low": 0.13362724259219436,
+      "ci95_high": 0.13478514968995034,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    },
+    {
+      "design_id": "engineering_candidate",
+      "n_rays": 32000,
+      "metric": "r90_mm",
+      "n_seeds": 3,
+      "mean": 0.14230940215450394,
+      "ci95_low": 0.14199452171947993,
+      "ci95_high": 0.14262428258952795,
+      "ci_method": "t interval, df=2 for 3 independent seeds"
+    }
+  ],
+  "note": "Sampling convergence is numerical uncertainty only; it does not increase physical model accuracy."
+}

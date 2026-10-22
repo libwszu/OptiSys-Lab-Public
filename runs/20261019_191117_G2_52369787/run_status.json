@@ -1,0 +1,434 @@
+{
+  "schema_version": "3.0",
+  "run_id": "20261019_191117_G2_52369787",
+  "gate": "G2",
+  "status": "PASS",
+  "scientific_claim_status": "GAIN_SUPPORTED_WITHIN_ASSUMED_L1_MODEL",
+  "model_level_emitted": "L1-approximate",
+  "frozen": true,
+  "finished_at_utc": "2026-10-19T20:45:02+00:00",
+  "gate_checks": {
+    "PRE05_tests_bound": {
+      "value": {
+        "totals": {
+          "passed": 252,
+          "failed": 0,
+          "skipped": 0,
+          "total": 252
+        },
+        "consistent": true,
+        "junit_sha256": "babad1c7ba8da16926cc5d89b4d0200c15c533b902f1737a22ffa5a9f91e0d3c",
+        "code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+        "exit_code": 0
+      },
+      "threshold": "totals bound to code hash, JUnit hash, command and exit code",
+      "pass": true,
+      "what": "test evidence cannot be a hand-written JSON"
+    },
+    "A4_paraxial_small_field": {
+      "value": 0.0006968179184148645,
+      "threshold": 0.01,
+      "pass": true,
+      "what": "traced chief ray vs independent paraxial matrix at 0.5 mm object height"
+    },
+    "A5_pinhole_limit": {
+      "value": 0.2240390293801305,
+      "threshold": 0.3,
+      "pass": true,
+      "what": "EPD=0.15 mm geometric RMS radius in pixels (must collapse to a point)"
+    },
+    "A6_aperture_monotone_spot": {
+      "value": [
+        0.5750642275642631,
+        1.3382460718176568,
+        2.4923426122565737,
+        4.254641911048221,
+        6.852392474889991
+      ],
+      "threshold": "strictly increasing with aperture",
+      "pass": true,
+      "what": "RMS spot radius vs entrance aperture diameter"
+    },
+    "A7_focus_defocus": {
+      "value": {
+        "offset_mm": [
+          -0.4,
+          -0.2,
+          -0.1,
+          -0.05,
+          0.0,
+          0.05,
+          0.1,
+          0.2,
+          0.4
+        ],
+        "rms_radius_um": [
+          16.3234756883409,
+          6.343780068758576,
+          1.9141364956082498,
+          2.122672223751348,
+          4.254641911048221,
+          6.667281289184276,
+          9.140991377474519,
+          14.143237084885056,
+          24.208078773517602
+        ],
+        "minimum_um": 1.9141364956082498,
+        "far_mean_um": 20.265777230929253,
+        "sign_changes": 1
+      },
+      "threshold": "unimodal U-shape and far-offset blur >= 3x the minimum",
+      "pass": true,
+      "what": "detector defocus sweep at Z=200 mm"
+    },
+    "A8_blocked_rays_counted": {
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": "< 1.0 blocked and reported",
+      "pass": true,
+      "what": "every launched ray accounted for, blocked rays kept in the denominator"
+    },
+    "A1_backend_importable": {
+      "value": {
+        "backend": "optiland",
+        "importable": true,
+        "version": "0.6.3",
+        "version_supported": true,
+        "error": null,
+        "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+      },
+      "threshold": "importable and version 0.6.3",
+      "pass": true,
+      "what": "Optiland import + version"
+    },
+    "A2_real_refracting_surfaces": {
+      "value": {
+        "radius_1_mm": 7.721498904389647,
+        "radius_2_mm": -7.721498904389647,
+        "thickness_mm": 3.0,
+        "material": "N-BK7"
+      },
+      "threshold": "two non-flat surfaces with a real thickness",
+      "pass": true,
+      "what": "declared refracting geometry"
+    },
+    "A3_trace_executed": {
+      "value": 970,
+      "threshold": "> 0 exported ray rows",
+      "pass": true,
+      "what": "real ray trace output written to raytrace_reference.csv"
+    },
+    "B1_energy_conservation": {
+      "value": 2.220446049250313e-16,
+      "threshold": 0.005,
+      "pass": true,
+      "what": "sum(expected_signal_e) vs transmitted x capture"
+    },
+    "B2_kernel_nonnegative_normalised": {
+      "value": {
+        "non_negative": true,
+        "all_capture_le_1": true
+      },
+      "threshold": "non-negative and capture <= 1",
+      "pass": true,
+      "what": "kernel sanity"
+    },
+    "B4_l0_limit": {
+      "value": 0.0,
+      "threshold": 0.01,
+      "pass": true,
+      "what": "L0 contract reproduced by the shared camera geometry"
+    },
+    "B5_physics_coupling": {
+      "value": {
+        "focus_kernel_peaks": [
+          0.030292249985856716,
+          0.1631068730338939,
+          0.2793559988402538
+        ],
+        "aperture_kernel_peaks": [
+          0.13436566734727923,
+          0.1989709308884594,
+          0.1631068730338939
+        ]
+      },
+      "threshold": "kernel peak changes > 1% across the sweep",
+      "pass": true,
+      "what": "z_focus and D_entrance change the produced kernel, not just a label"
+    },
+    "B7_deterministic_kernel": {
+      "value": true,
+      "threshold": "bitwise identical",
+      "pass": true,
+      "what": "same configuration, cache cleared, same kernel"
+    },
+    "B6_degenerate_statuses": {
+      "value": {
+        "all_rays_blocked_status": "ALL_RAYS_BLOCKED",
+        "n_valid": 0
+      },
+      "threshold": "blocked geometry returns a named non-OK status",
+      "pass": true,
+      "what": "far off-axis point is refused instead of returning a fake distance"
+    },
+    "V4_A_OVERALL": {
+      "value": "PASS",
+      "threshold": "all A1-A9 checks pass",
+      "pass": true,
+      "what": "real optical backend validation"
+    },
+    "V4_B_OVERALL": {
+      "value": "PASS",
+      "threshold": "all B1-B7 checks pass",
+      "pass": true,
+      "what": "L1 to CMOS transfer validation"
+    },
+    "S5_oat_complete": {
+      "value": {
+        "n_rows": 35,
+        "levels": 7
+      },
+      "threshold": "5 variables x 7 levels with 0 perturbation present",
+      "pass": true,
+      "what": "one-at-a-time sweep coverage"
+    },
+    "S1_zero_perturbation_matches_nominal": {
+      "value": {
+        "zero_level_present": true,
+        "estimable": true
+      },
+      "threshold": "the 0-sigma row of every variable reproduces the nominal result",
+      "pass": true,
+      "what": "zero perturbation -> nominal configuration"
+    },
+    "S2_lhs_marginals_normal": {
+      "value": {
+        "d_baseline_mm": 1.0,
+        "d_theta_rad": 1.0,
+        "d_focal_relative": 1.0,
+        "d_cx_px": 1.0,
+        "d_focus_mm": 1.0
+      },
+      "threshold": "KS p > 0.01 for every marginal",
+      "pass": true,
+      "what": "LHS + inverse-normal transform reproduces N(0, sigma)"
+    },
+    "S6_precheck_draws": {
+      "value": 200,
+      "threshold": ">= 200 (or 40 in quick mode)",
+      "pass": true,
+      "what": "exploratory assembly draws"
+    },
+    "S7_failures_enter_denominator": {
+      "value": {
+        "rows": 3000,
+        "optical_failure_rows": 0,
+        "expected_rows": 3000,
+        "estimators_per_scene": 3
+      },
+      "threshold": "every attempt recorded with a status; no NaN deletion",
+      "pass": true,
+      "what": "no NaN deletion; every scene x estimator has a row"
+    },
+    "O1_objective_frozen": {
+      "value": {
+        "weights": {
+          "mean_rmse": 0.5,
+          "p95": 0.35,
+          "failure": 0.15
+        },
+        "scales": {
+          "rmse_mm": 0.05,
+          "p95_mm": 0.1,
+          "failure_rate": 0.05
+        }
+      },
+      "threshold": "weights and reference scales declared before the search",
+      "pass": true,
+      "what": "frozen objective definition from the pre-registration"
+    },
+    "O3_all_designs_recorded": {
+      "value": {
+        "nominal_history": 147,
+        "robust_history": 138
+      },
+      "threshold": "every attempted design has a row",
+      "pass": true,
+      "what": "search history completeness"
+    },
+    "O6_search_uses_validation_only": {
+      "value": {
+        "search_distances": [
+          110.0,
+          140.0,
+          170.0,
+          200.0,
+          230.0,
+          260.0,
+          290.0
+        ],
+        "test_distances": [
+          105.0,
+          135.0,
+          165.0,
+          195.0,
+          225.0,
+          255.0,
+          285.0
+        ]
+      },
+      "threshold": "no test distance in the search panel",
+      "pass": true,
+      "what": "final-test leakage guard at search time"
+    },
+    "O5_candidates_frozen": {
+      "value": {
+        "sha256": "e21c2d6d4760c6274cfea1c80ffd9568386b48ebcc62fe704eba512ca3bfcabf",
+        "designs": {
+          "baseline": {
+            "baseline_mm": 20.0,
+            "focal_length_mm": 8.0,
+            "theta_deg": 0.0
+          },
+          "nominal": {
+            "baseline_mm": 15.0,
+            "focal_length_mm": 11.1,
+            "theta_deg": 4.0
+          },
+          "robust": {
+            "baseline_mm": 34.4,
+            "focal_length_mm": 7.272384615618831,
+            "theta_deg": 4.0
+          }
+        }
+      },
+      "threshold": "registry frozen before the final test",
+      "pass": true,
+      "what": "candidate freeze"
+    },
+    "H1_assembly_draws": {
+      "value": 2000,
+      "threshold": ">= 2000 unless a declared downgrade applies",
+      "pass": true,
+      "what": "independent assembly draws in the final evaluation"
+    },
+    "H2_shared_assemblies": {
+      "value": true,
+      "threshold": "all candidates use the same assembly ids",
+      "pass": true,
+      "what": "paired design"
+    },
+    "H5_failure_denominator": {
+      "value": {
+        "baseline": {
+          "n_attempted": 42000,
+          "n_valid": 32693,
+          "failure_rate": 0.22159523809523807,
+          "bias_mm": 0.14105733726746253,
+          "rmse_mm": 3.14812689267054,
+          "p95_abs_mm": 6.643043208436627,
+          "mae_mm": 2.3200327815547364
+        },
+        "nominal": {
+          "n_attempted": 42000,
+          "n_valid": 35337,
+          "failure_rate": 0.1586428571428572,
+          "bias_mm": 0.06377380272149234,
+          "rmse_mm": 3.017621563364543,
+          "p95_abs_mm": 6.566347551557143,
+          "mae_mm": 2.145345163787468
+        },
+        "robust": {
+          "n_attempted": 42000,
+          "n_valid": 31373,
+          "failure_rate": 0.25302380952380954,
+          "bias_mm": -0.17174673883069203,
+          "rmse_mm": 1.903109443210548,
+          "p95_abs_mm": 3.8348805475271317,
+          "mae_mm": 1.4764414433797097
+        }
+      },
+      "threshold": "failure rate over all attempts",
+      "pass": true,
+      "what": "all-attempt denominator"
+    }
+  },
+  "gate_aggregation": {
+    "status": "PASS",
+    "numeric_checks_pass": true,
+    "boundary_cases_pass": true,
+    "tests_ingested": true,
+    "tests": {
+      "totals": {
+        "passed": 252,
+        "failed": 0,
+        "skipped": 0,
+        "total": 252
+      }
+    },
+    "required_min_tests": 0,
+    "failures": [],
+    "notes": [],
+    "rule": "PASS requires all numeric checks, all boundary cases, ingested tests, failed==0, skipped==0 and passed>=required_min_tests"
+  },
+  "tests": {
+    "passed": 252,
+    "failed": 0,
+    "skipped": 0,
+    "total": 252
+  },
+  "report_note": "report.html is written after this snapshot and is not in outputs[]",
+  "outputs": [
+    "benchmark.json",
+    "config_snapshot.yaml",
+    "environment.json",
+    "gate_checks.json",
+    "independent_validation/ci_results.json",
+    "independent_validation/failure_breakdown.csv",
+    "independent_validation/heldout_assemblies.csv",
+    "independent_validation/heldout_seeds.json",
+    "independent_validation/paired_metrics.csv",
+    "independent_validation/sampled_results.csv",
+    "independent_validation/strategy_b_baseline.csv",
+    "independent_validation/strategy_b_nominal.csv",
+    "independent_validation/strategy_b_robust.csv",
+    "independent_validation/summary.json",
+    "metrics.json",
+    "optical_model_snapshot.yaml",
+    "optics/aperture_vignetting_failure_table.csv",
+    "optics/energy_and_capture.csv",
+    "optics/field_distortion.csv",
+    "optics/focus_sweep.csv",
+    "optics/independent_thin_lens_comparison.csv",
+    "optics/kernel_sensitivity.csv",
+    "optics/l0_limit.csv",
+    "optics/optical_validation.json",
+    "optics/pinhole_limit.csv",
+    "optics/psf_or_footprint_examples.npz",
+    "optics/raytrace_reference.csv",
+    "optics/vignetting_failures.csv",
+    "optimization/budget_usage.json",
+    "optimization/candidates_frozen.json",
+    "optimization/infeasible_designs.csv",
+    "optimization/search_history.csv",
+    "optimization/search_history_nominal.csv",
+    "optimization/search_history_robust.csv",
+    "optimization_objectives_frozen.yaml",
+    "provenance.json",
+    "pytest_stdout.txt",
+    "source_tree_manifest.json",
+    "tests_binding.json",
+    "tests_junit.xml",
+    "tests_summary.json",
+    "tolerance/assembly_draws.csv",
+    "tolerance/oat_samples.csv",
+    "tolerance/oat_sensitivity.json",
+    "tolerance/precheck_metrics.json",
+    "tolerance/sample_status.csv",
+    "tolerance/sampler_ks_tests.csv",
+    "tolerance_distributions.yaml"
+  ]
+}

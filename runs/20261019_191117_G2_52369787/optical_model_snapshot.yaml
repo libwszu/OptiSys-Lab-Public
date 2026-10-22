@@ -1,0 +1,16 @@
+schema_version: '3.0'
+backend: optiland
+element: singlet_equiconvex
+material: N-BK7
+design_index: 1.5168
+aperture_diameter_mm: 1.2
+element_thickness_mm: 3.0
+rear_aperture_clearance_mm: 0.35
+focus_distance_mm: 200.0
+pupil_side: 17
+psf:
+  kind: geometric_footprint_x_airy
+  subpixel: 5
+  max_half_px: 40
+  airy_radius_margin: 6.0
+provenance: ASSUMED design, no vendor part number, no measured lens

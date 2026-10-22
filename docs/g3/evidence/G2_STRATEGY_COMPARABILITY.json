@@ -1,0 +1,101 @@
+{
+  "gate": "PRE-G3-05",
+  "issue": "strategy A and B are not on the same footing",
+  "comparability": "NOT_DIRECTLY_COMPARABLE",
+  "dimensions_that_differ": [
+    {
+      "dimension": "assembly count",
+      "A": 2000,
+      "B": 200
+    },
+    {
+      "dimension": "estimators",
+      "A": 3,
+      "B": 1
+    },
+    {
+      "dimension": "attempted rows",
+      "A": 42000,
+      "B": 1400
+    },
+    {
+      "dimension": "calibration frames per unit",
+      "A": 0,
+      "B": 9
+    },
+    {
+      "dimension": "calibration object",
+      "A": "factory nominal unit",
+      "B": "each assembly's own perturbed optics"
+    }
+  ],
+  "subset_relationship": {
+    "b_assemblies": 200,
+    "final_assemblies": 2000,
+    "b_subset_of_final": true,
+    "n_b_assemblies_in_final": 200,
+    "note": "B uses the first 200 of the same FIN#### draw, so the units overlap; the estimator set and the calibration regime do not"
+  },
+  "calibration_frame_count_correction": {
+    "report_claim": 5,
+    "code_path": "src/optisys/gates/g2.py:1046 _evenly_spaced(calibration_distances, 5 if quick else 9)",
+    "observed_n_points_strategy_A": {
+      "baseline": {
+        "centroid": 9,
+        "gaussian_2d": 8,
+        "gaussian_2d_integrated": 8
+      },
+      "nominal": {
+        "centroid": 9,
+        "gaussian_2d": 9,
+        "gaussian_2d_integrated": 9
+      },
+      "robust": {
+        "centroid": 9,
+        "gaussian_2d": 9,
+        "gaussian_2d_integrated": 9
+      }
+    },
+    "actual": 9,
+    "verdict": "REPORT_TEXT_WRONG_CODE_RIGHT",
+    "explanation": "the non-quick path takes 9 calibration distances; the '5' in the report is the quick-mode value, so the cost of strategy B was understated by 80%"
+  },
+  "invalid_gain_quote": {
+    "quoted": "recalibration is worth roughly 1.5 mm (baseline) to 3 mm (robust)",
+    "status": "WITHDRAWN",
+    "why": "subtracting a 200-assembly single-estimator number from a 2000-assembly three-estimator number mixes populations; the per-estimator A value for gaussian_2d_integrated is the only legitimate comparison point, and even then the assembly count and failure denominators still differ"
+  },
+  "legitimate_comparison_available": {
+    "per_estimator_A_vs_B": {
+      "baseline": {
+        "A_rmse_mm_gaussian_2d_integrated": 3.0033244674154482,
+        "B_rmse_mm": 0.22940373340371786,
+        "A_failure_rate_gaussian_2d_integrated": 0.1051428571428571,
+        "B_failure_rate": 0.09285714285714286
+      },
+      "nominal": {
+        "A_rmse_mm_gaussian_2d_integrated": 2.9251749509224747,
+        "B_rmse_mm": 0.038523470276889044,
+        "A_failure_rate_gaussian_2d_integrated": 0.0010000000000000009,
+        "B_failure_rate": 0.0007142857142856673
+      },
+      "robust": {
+        "A_rmse_mm_gaussian_2d_integrated": 1.885036014854384,
+        "B_rmse_mm": 0.48891367870100677,
+        "A_failure_rate_gaussian_2d_integrated": 0.12928571428571434,
+        "B_failure_rate": 0.12357142857142855
+      }
+    },
+    "caveat": "still not a paired test: B covers 200 of the 2000 assemblies. A paired A/B bootstrap on the 200 shared assemblies with the same estimator is the minimum honest comparison, and that re-run is budget-bound",
+    "paired_rerun": "NOT_RUN",
+    "paired_rerun_reason": "strategy B on 200 assemblies x 7 distances x 1 estimator took ~4 minutes per candidate during the original run; G3 does not re-execute it"
+  },
+  "required_disclosure": [
+    "any A/B table shows N=2000/3 estimators and N=200/1 estimator side by side",
+    "the 'recalibration is worth X mm' sentence is withdrawn",
+    "the 5-calibration-frame claim is corrected to 9"
+  ],
+  "artifacts": [
+    "docs/g3/evidence/G2_STRATEGY_COMPARABILITY.csv"
+  ]
+}

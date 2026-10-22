@@ -1,0 +1,180 @@
+{
+  "backend": {
+    "backend": "optiland",
+    "importable": true,
+    "version": "0.6.3",
+    "version_supported": true,
+    "error": null,
+    "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+  },
+  "backend_executed": true,
+  "trace_rows": 970,
+  "model": {
+    "model": "singlet_equiconvex",
+    "material": "N-BK7",
+    "design_index": 1.5168,
+    "wavelength_nm": 650.0,
+    "focal_length_mm": 8.0,
+    "radius_1_mm": 7.721498904389647,
+    "radius_2_mm": -7.721498904389647,
+    "element_thickness_mm": 3.0,
+    "aperture_stop_mm": 1.2,
+    "rear_clear_aperture_mm": 0.95,
+    "rear_aperture_clearance_mm": 0.35,
+    "focus_distance_mm": 200.0,
+    "sensor_distance_from_rear_vertex_mm": 7.272485696015577,
+    "sensor_offset_mm": 0.0,
+    "efl_mm_from_matrix": 8.0,
+    "bfl_mm_from_matrix": 6.9409808521471525,
+    "rear_principal_offset_mm": -1.0590191478528475,
+    "working_f_number": 6.060404746679648,
+    "pupil_side": 17,
+    "config_hash": "57f7e5e013abe5a2d168b7cbdfd2765bb44c000dd464ab36dc915f63f7b604eb",
+    "provenance": "ASSUMED design; no vendor part number, no measured data"
+  },
+  "distortion": [
+    {
+      "Z_mm": 100.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 1117.2627330766209,
+      "u_paraxial_px": 1120.4418027078605,
+      "distortion_px": -3.1790696312395994,
+      "distortion_fraction_of_offset": -0.0066169713237311245
+    },
+    {
+      "Z_mm": 150.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 959.4710070500503,
+      "u_paraxial_px": 960.2945351385736,
+      "distortion_px": -0.8235280885232896,
+      "distortion_fraction_of_offset": -0.002571158724787468
+    },
+    {
+      "Z_mm": 200.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 879.9459383899674,
+      "u_paraxial_px": 880.2209013539302,
+      "distortion_px": -0.27496296396282105,
+      "distortion_fraction_of_offset": -0.0011446254776877366
+    },
+    {
+      "Z_mm": 250.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 832.0839981081729,
+      "u_paraxial_px": 832.1767210831442,
+      "distortion_px": -0.09272297497136606,
+      "distortion_fraction_of_offset": -0.00048248806852756095
+    },
+    {
+      "Z_mm": 300.0,
+      "object_height_mm": 20.0,
+      "u_traced_px": 800.1276792012443,
+      "u_paraxial_px": 800.1472675692868,
+      "distortion_px": -0.01958836804249131,
+      "distortion_fraction_of_offset": -0.00012231471906953714
+    }
+  ],
+  "findings": {
+    "l0_vs_l1_chief_ray_max_px": 13.494617134591863,
+    "l0_vs_l1_chief_ray_max_rel_offset": 0.03582592483304898,
+    "note": "The G1 pinhole law and the finite-conjugate singlet differ by a systematic offset of a few percent; recalibration absorbs most of it but leaves a residual curvature. This is finding G2-01, not a bug."
+  },
+  "checks": {
+    "A4_paraxial_small_field": {
+      "value": 0.0006968179184148645,
+      "threshold": 0.01,
+      "pass": true,
+      "what": "traced chief ray vs independent paraxial matrix at 0.5 mm object height"
+    },
+    "A5_pinhole_limit": {
+      "value": 0.2240390293801305,
+      "threshold": 0.3,
+      "pass": true,
+      "what": "EPD=0.15 mm geometric RMS radius in pixels (must collapse to a point)"
+    },
+    "A6_aperture_monotone_spot": {
+      "value": [
+        0.5750642275642631,
+        1.3382460718176568,
+        2.4923426122565737,
+        4.254641911048221,
+        6.852392474889991
+      ],
+      "threshold": "strictly increasing with aperture",
+      "pass": true,
+      "what": "RMS spot radius vs entrance aperture diameter"
+    },
+    "A7_focus_defocus": {
+      "value": {
+        "offset_mm": [
+          -0.4,
+          -0.2,
+          -0.1,
+          -0.05,
+          0.0,
+          0.05,
+          0.1,
+          0.2,
+          0.4
+        ],
+        "rms_radius_um": [
+          16.3234756883409,
+          6.343780068758576,
+          1.9141364956082498,
+          2.122672223751348,
+          4.254641911048221,
+          6.667281289184276,
+          9.140991377474519,
+          14.143237084885056,
+          24.208078773517602
+        ],
+        "minimum_um": 1.9141364956082498,
+        "far_mean_um": 20.265777230929253,
+        "sign_changes": 1
+      },
+      "threshold": "unimodal U-shape and far-offset blur >= 3x the minimum",
+      "pass": true,
+      "what": "detector defocus sweep at Z=200 mm"
+    },
+    "A8_blocked_rays_counted": {
+      "value": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "threshold": "< 1.0 blocked and reported",
+      "pass": true,
+      "what": "every launched ray accounted for, blocked rays kept in the denominator"
+    },
+    "A1_backend_importable": {
+      "value": {
+        "backend": "optiland",
+        "importable": true,
+        "version": "0.6.3",
+        "version_supported": true,
+        "error": null,
+        "module_file": "<PROJECT_ROOT>\\.venv\\Lib\\site-packages\\optiland\\__init__.py"
+      },
+      "threshold": "importable and version 0.6.3",
+      "pass": true,
+      "what": "Optiland import + version"
+    },
+    "A2_real_refracting_surfaces": {
+      "value": {
+        "radius_1_mm": 7.721498904389647,
+        "radius_2_mm": -7.721498904389647,
+        "thickness_mm": 3.0,
+        "material": "N-BK7"
+      },
+      "threshold": "two non-flat surfaces with a real thickness",
+      "pass": true,
+      "what": "declared refracting geometry"
+    },
+    "A3_trace_executed": {
+      "value": 970,
+      "threshold": "> 0 exported ray rows",
+      "pass": true,
+      "what": "real ray trace output written to raytrace_reference.csv"
+    }
+  }
+}

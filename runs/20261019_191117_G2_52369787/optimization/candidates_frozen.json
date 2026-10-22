@@ -1,0 +1,223 @@
+{
+  "schema_version": "1.0",
+  "frozen_at_utc": "2026-10-19T19:35:05+00:00",
+  "registry_sha256": "e21c2d6d4760c6274cfea1c80ffd9568386b48ebcc62fe704eba512ca3bfcabf",
+  "candidates": [
+    {
+      "candidate_id": "9339aeecc91cda5d",
+      "name": "baseline",
+      "design": {
+        "baseline_mm": 20.0,
+        "focal_length_mm": 8.0,
+        "theta_deg": 0.0
+      },
+      "optical_config_sha256": "3b7e5c6fb65b6b0b1af4353920a8bfd7524af17aeb8ba3f018fcba6df04c9bbf",
+      "geometry_parameters_and_units": {
+        "baseline_mm": 20.0,
+        "focal_length_mm": 8.0,
+        "theta_deg": 0.0,
+        "theta_rad": 0.0
+      },
+      "calibration_strategy": "A",
+      "objective_pre_registered_version": "G2_PREREG_v1.0",
+      "search_budget_used": {
+        "note": "reference design"
+      },
+      "validation_metrics": {
+        "baseline_mm": 20.0,
+        "focal_length_mm": 8.0,
+        "theta_deg": 0.0,
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "n_attempted": 7,
+        "n_valid": 6,
+        "failure_rate": 0.1428571428571429,
+        "rmse_mm": 0.2210294879682323,
+        "p95_mm": 0.4169189643413844,
+        "bias_mm": 0.062274455991567855,
+        "mean_assembly_rmse_mm": 0.2210294879682323,
+        "j_value": 4.4205897593646455,
+        "frames": 13,
+        "wall_s": 2.7472215999732725
+      },
+      "constraint_feasibility": {
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "details": {
+          "per_distance": {
+            "100": {
+              "u_px": 1117.829589451877,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9787187098274008,
+              "peak_e": 3105.6464407918406,
+              "status": "OK"
+            },
+            "200": {
+              "u_px": 880.2588145275346,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9804189759599601,
+              "peak_e": 6494.561796237619,
+              "status": "OK"
+            },
+            "300": {
+              "u_px": 800.34331671259,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9820122712487256,
+              "peak_e": 2063.3129890552464,
+              "status": "OK"
+            }
+          },
+          "peak_e_max": 6494.561796237619,
+          "peak_limit_e": 12000.0
+        }
+      },
+      "source_code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+      "selected_at_utc": "2026-10-19T19:35:05+00:00",
+      "notes": []
+    },
+    {
+      "candidate_id": "7941df96739c607e",
+      "name": "nominal",
+      "design": {
+        "baseline_mm": 15.0,
+        "focal_length_mm": 11.1,
+        "theta_deg": 4.0
+      },
+      "optical_config_sha256": "51b27e1b130ec10eee4566a92843b4ad8c4fa14aaa94eebb51b9734e0ccc65e6",
+      "geometry_parameters_and_units": {
+        "baseline_mm": 15.0,
+        "focal_length_mm": 11.1,
+        "theta_deg": 4.0,
+        "theta_rad": 0.06981317007977318
+      },
+      "calibration_strategy": "A",
+      "objective_pre_registered_version": "G2_PREREG_v1.0",
+      "search_budget_used": {
+        "search_evaluations": 147
+      },
+      "validation_metrics": {
+        "baseline_mm": 15.0,
+        "focal_length_mm": 11.1,
+        "theta_deg": 4.0,
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "n_attempted": 7,
+        "n_valid": 7,
+        "failure_rate": 0.0,
+        "rmse_mm": 0.01776838853900407,
+        "p95_mm": 0.02884503334889245,
+        "bias_mm": -0.005321324227338664,
+        "mean_assembly_rmse_mm": 0.01776838853900407,
+        "j_value": 0.35536777078008136,
+        "frames": 13,
+        "wall_s": 2.2441613999544643
+      },
+      "constraint_feasibility": {
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "details": {
+          "per_distance": {
+            "100": {
+              "u_px": 911.3736893301863,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.98356056316341,
+              "peak_e": 189.27087397070844,
+              "status": "OK"
+            },
+            "200": {
+              "u_px": 657.2114467527126,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.973693232152819,
+              "peak_e": 9152.921993072587,
+              "status": "OK"
+            },
+            "300": {
+              "u_px": 572.3965954293399,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9783363033377039,
+              "peak_e": 1525.4027030789546,
+              "status": "OK"
+            }
+          },
+          "peak_e_max": 9152.921993072587,
+          "peak_limit_e": 12000.0
+        }
+      },
+      "source_code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+      "selected_at_utc": "2026-10-19T19:35:05+00:00",
+      "notes": []
+    },
+    {
+      "candidate_id": "e41b3e71dfe339d8",
+      "name": "robust",
+      "design": {
+        "baseline_mm": 34.4,
+        "focal_length_mm": 7.272384615618831,
+        "theta_deg": 4.0
+      },
+      "optical_config_sha256": "a2e5d910add491779f5f2ead5f6ccf0a9c3e3e8b88efd5de967c20344b7d51bf",
+      "geometry_parameters_and_units": {
+        "baseline_mm": 34.4,
+        "focal_length_mm": 7.272384615618831,
+        "theta_deg": 4.0,
+        "theta_rad": 0.06981317007977318
+      },
+      "calibration_strategy": "A",
+      "objective_pre_registered_version": "G2_PREREG_v1.0",
+      "search_budget_used": {
+        "search_evaluations": 138
+      },
+      "validation_metrics": {
+        "baseline_mm": 34.4,
+        "focal_length_mm": 7.272384615618831,
+        "theta_deg": 4.0,
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "n_attempted": 48,
+        "n_valid": 42,
+        "failure_rate": 0.125,
+        "rmse_mm": 1.300361611258542,
+        "p95_mm": 2.6073724968634027,
+        "bias_mm": 0.027960392297502374,
+        "mean_assembly_rmse_mm": 1.1733835741907,
+        "j_value": 21.234639480928905,
+        "frames": 54,
+        "wall_s": 11.0983367000008
+      },
+      "constraint_feasibility": {
+        "feasible": true,
+        "reason": "FEASIBLE",
+        "details": {
+          "per_distance": {
+            "100": {
+              "u_px": 1229.1101981715665,
+              "ray_success_fraction": 0.9536082474226805,
+              "kernel_support": 0.9870948438657553,
+              "peak_e": 2041.9326182739667,
+              "status": "OK"
+            },
+            "200": {
+              "u_px": 862.0728757125567,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9813594304534992,
+              "peak_e": 5830.593996225438,
+              "status": "OK"
+            },
+            "300": {
+              "u_px": 737.5017926451261,
+              "ray_success_fraction": 1.0,
+              "kernel_support": 0.9813594304534994,
+              "peak_e": 2878.178516275398,
+              "status": "OK"
+            }
+          },
+          "peak_e_max": 5830.593996225438,
+          "peak_limit_e": 12000.0
+        }
+      },
+      "source_code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+      "selected_at_utc": "2026-10-19T19:35:05+00:00",
+      "notes": []
+    }
+  ]
+}

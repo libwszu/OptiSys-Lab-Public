@@ -1,0 +1,10 @@
+{
+  "run_id": "20261021_044354_G4_36e42f82_63f8",
+  "run_dir": "<PROJECT_ROOT>\\runs\\_derived\\s6r_20261021_0842\\pump976\\20261021_044354_G4_36e42f82_63f8",
+  "status": "PARTIAL",
+  "model_level": "P1_QUALIFIED",
+  "optical_model_verification": "QUALIFIED",
+  "tolerance_status": "PARTIAL",
+  "empirical_validation": "NOT_AVAILABLE",
+  "claim": "QUALIFIED"
+}

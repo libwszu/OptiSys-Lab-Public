@@ -1,0 +1,50 @@
+{
+  "schema": "optisys.s5.bootstrap_summary/1",
+  "run_id": "20261020_210201_S5_HNA",
+  "status": "P1_SUPPORTED_TRADEOFF",
+  "estimand": "candidate minus baseline source-denominated capture at fixed 1mm circular target z=225mm",
+  "candidate_id": "s5_equal_aperture_candidate",
+  "selected_l2_principal_z_mm": 135.0,
+  "search_grid_mm": [
+    115.0,
+    120.0,
+    125.0,
+    130.0,
+    135.0
+  ],
+  "search_seed": 976052,
+  "search_rays": 512,
+  "holdout_seed": 976053,
+  "paired_holdout_rays": 4096,
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 976054,
+  "bootstrap_type": "paired ray-resampling; sampling uncertainty only, not assembly-level tolerance",
+  "baseline_capture_fraction": 0.660888671875,
+  "candidate_capture_fraction": 0.87060546875,
+  "paired_capture_difference": 0.209716796875,
+  "ci95": [
+    0.197265625,
+    0.221923828125
+  ],
+  "baseline_geometry": {
+    "l1_f_mm": 25,
+    "l1_clear_aperture_mm": 12,
+    "l1_t_mm": 2,
+    "l2_f_mm": 100,
+    "l2_clear_aperture_mm": 12,
+    "l2_t_mm": 2,
+    "l2_z_mm": 125
+  },
+  "candidate_geometry": {
+    "l1_f_mm": 25,
+    "l1_clear_aperture_mm": 12,
+    "l1_t_mm": 2,
+    "l2_f_mm": 100,
+    "l2_clear_aperture_mm": 12,
+    "l2_t_mm": 2,
+    "l2_z_mm": 135.0
+  },
+  "mechanical_cost_boundary": "same optics/apertures/target; L2 position moves within registered 90-110 mm spacing range",
+  "physical_tolerance_claim": "NOT_MADE",
+  "evidence": "SIMULATED_ASSUMED_P1"
+}

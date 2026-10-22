@@ -1,0 +1,74 @@
+{
+  "schema": "optisys.s6.a_reference_summary/1",
+  "run_id": "20261021_024715_S6_P1",
+  "status": "PASS",
+  "evidence_level": "MODEL_CROSS_CHECKED",
+  "reference_routes": {
+    "local": "local sphere roots + local normal + independent local Snell; transform output to world",
+    "world": "transformed sphere center/axis + world sphere roots + independent world Snell",
+    "shared": "prescription inputs, rigid-pose definition, terminal state names and weight ledger only"
+  },
+  "s5_holdout_reference_only": {
+    "source_rays": 4096,
+    "seed": 976053,
+    "use": "zero/axial equivalence only; excluded from B/C",
+    "baseline_local_s5_outcome_mismatches": 0,
+    "position135_local_s5_outcome_mismatches": 0,
+    "max_target_coordinate_delta_mm": 1.6431300764452317e-14,
+    "captured_baseline": 2707,
+    "captured_position135": 3566,
+    "fixed_target_z_mm": 225.0,
+    "baseline_capture_fraction": 0.660888671875,
+    "position135_capture_fraction": 0.87060546875,
+    "paired_capture_delta": 0.209716796875
+  },
+  "zero_reference_local_world": {
+    "surface_count": 16384,
+    "terminal_mismatch_count": 0,
+    "hit_mismatch_count": 0,
+    "max_incoming_point_delta_mm": 8.526512829121202e-14,
+    "max_incoming_direction_delta": 1.4224732503009818e-16,
+    "max_hit_delta_mm": 8.526512829121202e-14,
+    "max_normal_delta": 2.220446049250313e-16,
+    "max_direction_delta": 1.4224732503009818e-16,
+    "max_target_delta_mm": 1.4654943925052066e-14,
+    "status": "PASS"
+  },
+  "l2_plus_10_local_world": {
+    "surface_count": 16384,
+    "terminal_mismatch_count": 0,
+    "hit_mismatch_count": 0,
+    "max_incoming_point_delta_mm": 1.1368683772161603e-13,
+    "max_incoming_direction_delta": 1.4224732503009818e-16,
+    "max_hit_delta_mm": 1.1368683772161603e-13,
+    "max_normal_delta": 2.220446049250313e-16,
+    "max_direction_delta": 1.4224732503009818e-16,
+    "max_target_delta_mm": 1.3766765505351941e-14,
+    "status": "PASS"
+  },
+  "noncoaxial_matrix": {
+    "case_count": 25,
+    "rays_per_case": 512,
+    "all_statuses_pass": true,
+    "max_hit_delta_mm": 1.2789769243681803e-13,
+    "max_direction_delta": 3.8337388819087437e-16
+  },
+  "adversarial_controls": {
+    "count": 10,
+    "pass": 10,
+    "fail": 0
+  },
+  "outputs": [
+    "s5_zero_and_axial_reconciliation.csv",
+    "noncoaxial_reference_matrix.csv",
+    "noncoaxial_matrix_rays.csv",
+    "representative_surface_traces.csv",
+    "adversarial_controls.csv"
+  ],
+  "model_limits": [
+    "assumed N-BK7 geometry; not vendor lens qualification",
+    "clear-aperture envelope overlap is conservative, not mechanical collision proof",
+    "TIR control is an interface-level synthetic Snell probe"
+  ],
+  "finished_at_utc": "2026-10-21T06:58:17+00:00"
+}

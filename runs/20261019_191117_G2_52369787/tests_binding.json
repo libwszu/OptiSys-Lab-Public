@@ -1,0 +1,25 @@
+{
+  "summary_path": "artifacts\\g2_pre\\tests_summary.json",
+  "stdout_path": "artifacts\\g2_pre\\pytest_stdout.txt",
+  "junit_path": "artifacts\\g2_pre\\pytest_g2pre.xml",
+  "command": ".venv/Scripts/python.exe -m pytest -q -p no:cacheprovider --basetemp=artifacts/g2_pre/pytest_g3 --junitxml=artifacts/g2_pre/pytest_g2pre.xml",
+  "exit_code": 0,
+  "code_sha256": "d10befe8ac576cc08f8a353c266aef25c409b1ae55f5d1898f95c87a3f96b25e",
+  "python": "3.14.3",
+  "ingested_at_utc": "2026-10-19T19:11:22+00:00",
+  "junit_sha256": "babad1c7ba8da16926cc5d89b4d0200c15c533b902f1737a22ffa5a9f91e0d3c",
+  "totals": {
+    "passed": 252,
+    "failed": 0,
+    "skipped": 0,
+    "total": 252
+  },
+  "junit_totals": {
+    "tests": 252,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "consistent": true,
+  "inconsistencies": []
+}

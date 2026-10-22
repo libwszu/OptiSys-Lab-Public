@@ -1,0 +1,58 @@
+{
+  "schema": "optisys.s5.freeze_hashes/1",
+  "run_id": "20261020_210201_S5_HNA",
+  "frozen_at_utc": "2026-10-21T01:06:54+00:00",
+  "rule": "No registered threshold, grid, seed, scope or candidate search may be silently changed after this hash; corrections require a versioned addendum before affected results.",
+  "files": [
+    {
+      "path": "docs/s5/S5_ACCEPTANCE_CRITERIA.md",
+      "bytes": 6909,
+      "sha256": "412de8477140492d44b7ff9d77218504950856c5848c66471668b58d819ea0b8"
+    },
+    {
+      "path": "docs/s5/S5_EXECUTION_PLAN.md",
+      "bytes": 4704,
+      "sha256": "09e8cdb574fef358e297c5281c58530d0ed576772488835753471fd5045e42d8"
+    },
+    {
+      "path": "docs/s5/S5_COMPUTE_BUDGET.md",
+      "bytes": 2427,
+      "sha256": "618c0a51bf7b68e5ae91d5b9e97a072675ab28e3b781d4bbffa3b733956e4ee0"
+    },
+    {
+      "path": "docs/s5/S5_SCIENCE_SCOPE.md",
+      "bytes": 3380,
+      "sha256": "79cb932cf6614b9db78413aa5838e08c7be6db6ae481c08186bd79e9382e5e45"
+    },
+    {
+      "path": "runs/20261020_210201_S5_HNA/config_snapshot.yaml",
+      "bytes": 2596,
+      "sha256": "065849db17df97ab2ab20e88d9f867dfb75b57dffb9d2d0f4e19ada8509b20ba"
+    },
+    {
+      "path": "OptiSys_Lab_Job_Oriented_Development_Plan_2026.pdf",
+      "bytes": 582816,
+      "sha256": "25d0a727fbf047e8b399be8bd1ab670149b4a32377ff8edcef63e41ca4e6319d"
+    },
+    {
+      "path": "1md/OptiSysLab_Stage5_HighNA_Physics_Portfolio_Audit_Prompt.md",
+      "bytes": 42597,
+      "sha256": "a90a597244c240775d1211a282d38cf5e39cb4bffc980610f387d788ac370fc0"
+    },
+    {
+      "path": "runs/20261020_133555_G4_ec3e2813_0e48/optics_model.json",
+      "bytes": 3819,
+      "sha256": "88fd4a3ac0fe1ab6286ce44e6611fa52a815ebc79163158a6d19111a0fe39218"
+    },
+    {
+      "path": "runs/20261020_133555_G4_ec3e2813_0e48/source_samples.csv",
+      "bytes": 717294,
+      "sha256": "2fa97bac46c1b36f87bc4ebeef98386730941f551fe427ec6df3d2b6cef95e09"
+    },
+    {
+      "path": "runs/20261020_133555_G4_ec3e2813_0e48/raytrace_reference.csv",
+      "bytes": 4547161,
+      "sha256": "bf44b939583b7cff16488c37be17dd7f94eae099ee62a6be700e3897486e4887"
+    }
+  ]
+}

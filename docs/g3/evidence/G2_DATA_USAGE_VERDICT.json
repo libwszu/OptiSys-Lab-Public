@@ -1,0 +1,39 @@
+{
+  "gate": "PRE-G3-02",
+  "issue": "final-test distances entered OAT and precheck",
+  "prereg_rule": "final-test distances never appear in any search, OAT, precheck or model selection (docs/g2/G2_PRE_REGISTRATION.md:69)",
+  "leaking_stages": [
+    "OAT",
+    "PRECHECK",
+    "PRECHECK(observed)"
+  ],
+  "leaking_distances": [
+    105.0,
+    285.0
+  ],
+  "n_leaks": 3,
+  "existing_O6_check_covered": [
+    "TRAIN(search objective nominal) vs FINAL-TEST(main)"
+  ],
+  "existing_O6_check_missed": [
+    "OAT vs FINAL-TEST(main)",
+    "PRECHECK vs FINAL-TEST(main)"
+  ],
+  "leak_character": "distance reuse, NOT noise-seed reuse and NOT assembly reuse: OAT and precheck use namespace G2P with their own assembly ids (OAT rows are aggregated; precheck ids are PRE####), while the final test uses G2F and FIN####. The consequence is that the frozen designs were screened on three distances that later served as test distances, so those test points are not fully held out at the design level. No final-test noise seed or final-test assembly was ever seen during OAT/precheck.",
+  "severity_assessment": "MODERATE: the design variables are chosen by the search (which stays on validation distances), and OAT/precheck only produce a feasibility signal. But because OAT and precheck at 105/285 mm could have revealed an infeasible design and driven its removal, the final test is not a pristine holdout at those two distances. Claiming 'single evaluation after freeze' remains true; claiming 'never observed during development' does not.",
+  "search_validation_reuse": "config.dataset.validation_distances (10 values) is declared as 'model-family selection only', but _search_stage passes two subsets of it (7 values and 4 values) into the nominal and robust objective functions. The pre-registration therefore has no distance-level holdout for design search at all: search-train values 100..300 step 20 are never used, so the actual search objective runs entirely on the declared validation list.",
+  "final_panel_deviation": {
+    "prereg": "7 distances x {strong, medium, weak} = 21 frames per assembly",
+    "as_run": "7 distances x medium only = 7 frames per assembly on the main 2000 panel",
+    "as_run_note": "strong/weak exist only on the 200-assembly stratified subset, which itself used the wrong design before PRE-G3-03 is fixed",
+    "consequence": "the 42000 rows per candidate are estimator-level records (2000 x 7 x 3), not 42000 independent multi-condition images; every main-panel conclusion is medium-condition only"
+  },
+  "required_disclosure": [
+    "G2_FINAL_PANEL_DEVIATION must be shown wherever main-panel numbers appear",
+    "no cross-condition generalisation may be claimed from the main panel"
+  ],
+  "artifacts": [
+    "docs/g3/evidence/G2_DATA_USAGE_MAP.csv",
+    "docs/g3/evidence/G2_DATA_USAGE_CROSSTAB.csv"
+  ]
+}

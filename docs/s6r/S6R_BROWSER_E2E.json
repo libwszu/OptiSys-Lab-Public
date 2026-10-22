@@ -1,0 +1,46 @@
+{
+  "schema": "optisys.s6r.browser_e2e/1",
+  "run_id": "20261021_024715_S6_P1",
+  "status": "NOT_RUN_POLICY_BLOCKED",
+  "partial_in_app_interaction_status": "PASS",
+  "formal_e2e_complete": false,
+  "browser": "Codex ChatGPT in-app Chromium browser controlled through CUA Playwright API",
+  "browser_version": "NOT_EXPOSED_BY_BROWSER_TOOL",
+  "url": "http://127.0.0.1:8508/",
+  "url_verification": {
+    "tab_metadata_url": "http://127.0.0.1:8508/",
+    "streamlit_server_status": "PASS",
+    "health_path": "/_stcore/health",
+    "health_body": "ok",
+    "root_status": 200,
+    "server_pid": 28792,
+    "server_started_at_utc": "2026-10-21T08:51:56.509448+00:00",
+    "server_stopped_at_utc": "2026-10-21T09:00:48.558128+00:00"
+  },
+  "pages": [
+    {
+      "page": "A · 项目总览与证据状态",
+      "status": "PASS",
+      "visible_content_checks": ["QUALIFIED_ONLY", "G2_PREREG_FEASIBILITY_NOT_ESTABLISHED", "PASS_RECORDED", "无实测数据"]
+    },
+    {
+      "page": "C · 优化对照",
+      "status": "PASS",
+      "visible_content_checks": ["优化、公差与校准策略对照", "G2_FINAL_PANEL_DEVIATION", "不排名"],
+      "interaction": "Selected the Pareto 取舍 tab; its panel became selected and visible."
+    },
+    {
+      "page": "F · 976 nm 泵浦光路",
+      "status": "PASS",
+      "visible_content_checks": ["976 nm 多模光纤泵浦光路", "SIMULATED", "QUALIFIED_ONLY", "NOT_AVAILABLE"]
+    }
+  ],
+  "page_errors": "NOT_CAPTURED_AS_A_SEPARATE_STREAMLIT_CALLBACK_LOG",
+  "console_errors_during_verified_live_window": "NOT_CAPTURED",
+  "console_after_shutdown": "The browser reported expected health-endpoint disconnect errors after the server was stopped; these occurred after the verified interaction window.",
+  "screenshot_status": "NOT_DELIVERED",
+  "screenshot_reason": "The CUA browser tool displayed page state but did not provide a local PNG save path. The native Windows Chrome capture attempt was stopped because the Computer Use tool could not verify the active system browser URL; no attempt was made to bypass that guard.",
+  "blocked_requirement": "Could not save fresh S6 PNGs or reliably identify the active system Chrome URL/browser version. The separate IAB session verified the loopback URL and page interactions only.",
+  "video_status": "NOT_DELIVERED",
+  "remote_ci": "NOT_RUN"
+}

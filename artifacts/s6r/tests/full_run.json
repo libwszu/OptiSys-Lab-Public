@@ -1,0 +1,31 @@
+{
+  "schema": "optisys.s6r.full_pytest/1",
+  "command": [
+    "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--basetemp=<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_0ddca5163a7c426db2d5173bad892aad",
+    "--junitxml=<PROJECT_ROOT>\\artifacts\\s6r\\tests\\full_junit.xml"
+  ],
+  "python": "<PROJECT_ROOT>\\.venv_s6r_release\\Scripts\\python.exe",
+  "basetemp": "<PROJECT_ROOT>\\artifacts\\s6r\\tests\\basetemp\\run_0ddca5163a7c426db2d5173bad892aad",
+  "started_at_utc": "2026-10-21T08:38:40.508331+00:00",
+  "finished_at_utc": "2026-10-21T08:41:51.780853+00:00",
+  "wall_clock_s": 191.26600000000326,
+  "timeout_s": 300,
+  "timed_out": false,
+  "exit_code": 0,
+  "junit": "artifacts/s6r/tests/full_junit.xml",
+  "stdout": "artifacts/s6r/tests/full_stdout.txt",
+  "stderr": "artifacts/s6r/tests/full_stderr.txt",
+  "totals": {
+    "tests": 482,
+    "passed": 482,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "junit_parse_error": null
+  },
+  "status": "PASS"
+}

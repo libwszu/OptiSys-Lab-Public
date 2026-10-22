@@ -1,0 +1,39 @@
+# G4 preregistered byte-level inputs: preserve exact LF on every checkout.
+docs/g4/G4_PRE_REGISTRATION.md text eol=lf
+docs/g4/G4_ACCEPTANCE_CRITERIA.md text eol=lf
+docs/g4/G4_COMPUTE_BUDGET.md text eol=lf
+configs/pump976_g4_l0.yaml text eol=lf
+configs/pump976_g4_l1.yaml text eol=lf
+configs/pump976_g4_tolerance.yaml text eol=lf
+
+# S6 independent replay also verifies these exact frozen LF blobs.
+docs/s6/S6_AMENDMENT_03.md text eol=lf
+docs/s6/S6_ACCEPTANCE_CRITERIA.md text eol=lf
+scripts/s6_finalize_claim.py text eol=lf
+scripts/s6_assembly_figures.py text eol=lf
+
+# Release-manifest documents: preserve the archived LF bytes on Windows.
+RELEASE_CANDIDATE_V2/DEMO_CAPTURE_CHECKLIST.md text eol=lf
+RELEASE_CANDIDATE_V2/DEMO_SCRIPT_5MIN.md text eol=lf
+RELEASE_CANDIDATE_V2/DEPENDENCIES_AND_CONTRIBUTIONS.md text eol=lf
+RELEASE_CANDIDATE_V2/KNOWN_LIMITATIONS.md text eol=lf
+RELEASE_CANDIDATE_V2/README.md text eol=lf
+RELEASE_CANDIDATE_V2/README_excerpt.md text eol=lf
+RELEASE_CANDIDATE_V2/TECH_INTERVIEW_SUMMARY.md text eol=lf
+RELEASE_CANDIDATE_V2/evidence/s6/README.md text eol=lf
+RELEASE_CANDIDATE_V2/reports/S5_COMPUTE_MEASURED.md text eol=lf
+RELEASE_CANDIDATE_V2/reports/S5_HIGH_NA_DIAGNOSIS.md text eol=lf
+RELEASE_CANDIDATE_V2/reports/S5_OPEN_ISSUES.md text eol=lf
+RELEASE_CANDIDATE_V2/reports/S5_VALIDATION_MATRIX.md text eol=lf
+RELEASE_CANDIDATE_V2/reports/s6/S6_AMENDMENT_03.md text eol=lf
+
+# Public-copy manifests refer to raw bytes; never normalize archived evidence.
+RELEASE_CANDIDATE/** -text
+RELEASE_CANDIDATE_V2/** -text
+runs/** -text
+docs/g2/** -text
+docs/g3/** -text
+docs/g4/** -text
+docs/s5/** -text
+docs/s6/** -text
+docs/s6r/** -text

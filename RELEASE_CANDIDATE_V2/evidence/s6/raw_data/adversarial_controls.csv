@@ -1,0 +1,11 @@
+case_id,scope,expected,local_outcome,world_outcome,independent_paths_match,ill_conditioned_surfaces,weight_balance_local,result,local_k,world_k,geometry_reason
+outside_sphere_no_intersection,full ray trace,NO_INTERSECTION,NO_INTERSECTION,NO_INTERSECTION,PASS,0,0.0,PASS,,,
+edge_clear_aperture_block,full ray trace,L1_APERTURE_BLOCK,L1_APERTURE_BLOCK,L1_APERTURE_BLOCK,PASS,0,0.0,PASS,,,
+negative_z_source,full ray trace,INVALID_SOURCE,INVALID_SOURCE,INVALID_SOURCE,PASS,0,0.0,PASS,,,
+near_tangent_front_surface,synthetic geometry diagnostic outside the registered fiber launch distribution,ILL_CONDITIONED,L1_APERTURE_BLOCK,L1_APERTURE_BLOCK,PASS,1,0.0,PASS,,,
+fixed_target_outside,S5 source ray reused only as a terminal-classification control,OUTSIDE_TARGET,OUTSIDE_TARGET,OUTSIDE_TARGET,PASS,0,0.0,PASS,,,
+snell_glass_to_air_tir,interface-level synthetic Snell probe,TIR,TIR,TIR,,,,PASS,-0.33419719743858844,-0.33419719743858844,
+target_before_l2,invalid geometry gate,INVALID_GEOMETRY,,,,,,PASS,,,
+unverified_material,invalid model gate,REJECT,,,,,,PASS,,,
+l2_shift_through_l1,clear-aperture envelope gate,INVALID_ASSEMBLY,,,,,,PASS,,,SURFACE_SEQUENCE_OR_INTERSECTION
+nan_weight,invalid input gate,REJECT,,,,,,PASS,,,

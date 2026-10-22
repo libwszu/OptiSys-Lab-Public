@@ -1,0 +1,125 @@
+{
+  "schema": "optisys.s6.c_code_freeze/2",
+  "run_id": "20261021_024715_S6_P1",
+  "freeze_stage": "PRE_FORMAL_HOLDOUT",
+  "frozen_at_utc": "2026-10-21T07:25:21+00:00",
+  "formal_holdout_started": false,
+  "pilot_status": "PASS",
+  "pilot_candidate_gain_used_to_change_plan": false,
+  "S6_A_RIGID_BODY_REFERENCE": "PASS",
+  "S6_B_FOCUS_STATUS": "OPTIMUM_NOT_BRACKETED",
+  "S6_B_L2_POSITION_STATUS": "OPTIMUM_NOT_BRACKETED",
+  "holdout_size": {
+    "assemblies_per_scenario": 200,
+    "rays_per_design_per_assembly": 1024,
+    "scenarios": [
+      "zero",
+      "tight_0p5x",
+      "nominal_1x",
+      "stress_2x"
+    ],
+    "workers": 4,
+    "task_timeout_s": 120,
+    "total_budget_s": 1500,
+    "holdout_hard_cap_s": 1200,
+    "postprocess_reserve_s": 30
+  },
+  "runner_change_since_pilot": {
+    "pilot_runner_sha256": "6b27df10c97951fed32872aa709a969644f08f60250b9219caa60c569f78353c",
+    "holdout_runner_sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b",
+    "change_scope": "Adds runtime total-budget accounting, per-chunk global deadline, process-tree termination, and resumable wall ledger. P1 geometry, source sampler, tolerance draw, terminal weights and statistical functions are unchanged.",
+    "scientific_backend_hashes_unchanged": {
+      "src/optisys/optics/s6_rigid_body.py": true,
+      "src/optisys/tolerance/s6_assembly.py": true,
+      "src/optisys/optics/s5_reference.py": true,
+      "src/optisys/sources/multimode_fiber.py": true
+    }
+  },
+  "hashes": {
+    "docs/s6/S6_FREEZE_HASHES.json": {
+      "bytes": 3938,
+      "sha256": "ecafe5553232d02716bcab7ee962effa9942dad0adf2ea444a3f036d7c4adb0b"
+    },
+    "docs/s6/S6_ACCEPTANCE_CRITERIA.md": {
+      "bytes": 4168,
+      "sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c"
+    },
+    "docs/s6/S6_AMENDMENT_01_HASHES.json": {
+      "bytes": 2283,
+      "sha256": "941f71ca707d92d6573c75af73793d6710d5b356e150604764574003e74ec3cf"
+    },
+    "docs/s6/S6_AMENDMENT_02.md": {
+      "bytes": 1790,
+      "sha256": "f237672d2205533d6c7f0114fdb52050676e2895b3552d2afbb8921094a990f9"
+    },
+    "docs/s6/S6_AMENDMENT_02_HASHES.json": {
+      "bytes": 10596,
+      "sha256": "e16216c9003657439d8b481a8871b6373450e911c0dff757cd9ee3fb61d8b8ee"
+    },
+    "runs/20261021_024715_S6_P1/compute_plan.json": {
+      "bytes": 2648,
+      "sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220"
+    },
+    "runs/20261021_024715_S6_P1/compute_measured_preholdout.json": {
+      "bytes": 1474,
+      "sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5"
+    },
+    "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE.json": {
+      "bytes": 4178,
+      "sha256": "6a03650dbeb73630818345cc700913334f24dd0a0477505a398d43616aa0efd6"
+    },
+    "runs/20261021_024715_S6_P1/s6_a_reference/s6_a_reference_summary.json": {
+      "bytes": 2807,
+      "sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571"
+    },
+    "runs/20261021_024715_S6_P1/s6_b_boundaries/boundary_analysis.json": {
+      "bytes": 2498,
+      "sha256": "256c8ccdb9869ef8fb7f4c52c542230107db13bbb99a953eaa3530e8e355f60a"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_run_status.json": {
+      "bytes": 968,
+      "sha256": "9de5032a78dbd32f6f362fef0b77163dd45b4fac2da198412b888252ee1148b6"
+    },
+    "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_validation.json": {
+      "bytes": 662,
+      "sha256": "0477103770708c51930e943de57419a3233cefceffc5c6410d3a8ba2158568b3"
+    },
+    "scripts/s6_assembly.py": {
+      "bytes": 61818,
+      "sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b"
+    },
+    "scripts/s6_validate_pilot.py": {
+      "bytes": 4536,
+      "sha256": "5475caed067d3d47c6e038673ff24b8ba426d90fdb17662c629fe2e1a9272252"
+    },
+    "src/optisys/optics/s6_rigid_body.py": {
+      "bytes": 31188,
+      "sha256": "1a0e8ac5f40fd305bcc0dc7b8fc2939a7ac2e61dd6ce94e405a00401b0526b75"
+    },
+    "src/optisys/tolerance/s6_assembly.py": {
+      "bytes": 5297,
+      "sha256": "ddeb2a62d970a967aa362cbd8a51c4b56fc33f443c350702c771909550b17caa"
+    },
+    "src/optisys/optics/s5_reference.py": {
+      "bytes": 23594,
+      "sha256": "45d4d9fbecb6103e38e6afeb07eeb7e869b510ce26599e1473b29a79b7865706"
+    },
+    "src/optisys/sources/multimode_fiber.py": {
+      "bytes": 6172,
+      "sha256": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f"
+    },
+    "tests/unit/test_s6_rigid_body.py": {
+      "bytes": 7864,
+      "sha256": "26acf113f7cce97dcbc9d55c8ea5480f33ef01de8a85ce4c038ee4401895d733"
+    },
+    "tests/unit/test_s6_assembly_stats.py": {
+      "bytes": 2615,
+      "sha256": "1cea9a19325b2ceea978d3c08f292a8c14e6d2663dcd2732e80926be5d14bd20"
+    },
+    "runs/20261021_024715_S6_P1/test_evidence/s6_models_pytest_execution_04.json": {
+      "bytes": 392,
+      "sha256": "09ea5383d59939712459dc88d93f80d0748b359e1a4baee8cddf2a1f4c22fcc1"
+    }
+  },
+  "policy": "Formal held-out assembly outcomes have not been computed or reviewed; the next run uses these hashes and the existing preregistered sample plan."
+}

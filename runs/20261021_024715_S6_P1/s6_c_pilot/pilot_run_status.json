@@ -1,0 +1,30 @@
+{
+  "candidate_effect_used_to_change_plan": false,
+  "completed_assemblies": 32,
+  "config_hash": "f5f314c0a576b74484afade1638d5effd184ebfe1e996e773a0c61eddb3e18e0",
+  "finished_at_utc": "2026-10-21T07:15:10+00:00",
+  "measured": {
+    "attempted_or_checkpointed": 32,
+    "chunk_assemblies_max": 32,
+    "chunks": 1,
+    "complete": 32,
+    "failed": 0,
+    "max_chunk_wall_s": 2.7229155999957584,
+    "mp_start_method": "spawn",
+    "not_started": 0,
+    "over_budget": false,
+    "peak_process_tree_rss_mb": 331.890625,
+    "task_hard_timeout_s": 120,
+    "timed_out": 0,
+    "wall_s": 2.945929600042291,
+    "workers": 4
+  },
+  "mode": "pilot_nominal_only",
+  "planned_assemblies": 32,
+  "purpose": "correctness, parameter effect, checkpoint and throughput only; excluded from holdout claim",
+  "rays_per_design": 256,
+  "run_id": "20261021_024715_S6_P1",
+  "schema": "optisys.s6.pilot_status/1",
+  "status": "PASS",
+  "workers": 4
+}

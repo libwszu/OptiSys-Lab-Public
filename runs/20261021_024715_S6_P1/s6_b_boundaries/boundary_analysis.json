@@ -1,0 +1,98 @@
+{
+  "schema": "optisys.s6.boundary_analysis/1",
+  "run_id": "20261021_024715_S6_P1",
+  "S6_B_FOCUS_STATUS": "OPTIMUM_NOT_BRACKETED",
+  "S6_B_L2_POSITION_STATUS": "OPTIMUM_NOT_BRACKETED",
+  "focus_per_design": {
+    "baseline125": {
+      "max_capture": 1.0,
+      "max_target_z_mm": [
+        200.0
+      ],
+      "grid_points": [
+        165.0,
+        180.0,
+        190.0,
+        200.0,
+        210.0,
+        220.0,
+        225.0,
+        235.0
+      ],
+      "status": "OPTIMUM_NOT_BRACKETED"
+    },
+    "s5_position135": {
+      "max_capture": 1.0,
+      "max_target_z_mm": [
+        200.0,
+        210.0
+      ],
+      "grid_points": [
+        165.0,
+        180.0,
+        190.0,
+        200.0,
+        210.0,
+        220.0,
+        225.0,
+        235.0
+      ],
+      "status": "PLATEAU"
+    }
+  },
+  "l2_position": {
+    "max_capture": 0.996337890625,
+    "max_position_mm": [
+      145.0
+    ],
+    "search_grid_mm": [
+      125.0,
+      130.0,
+      135.0,
+      140.0,
+      145.0
+    ],
+    "status": "OPTIMUM_NOT_BRACKETED",
+    "note": "coarse fixed-target grid; no holdout selection or fine-grid claim"
+  },
+  "seed": 8061001,
+  "rays_per_scan": 4096,
+  "focus_offsets_mm": [
+    -60.0,
+    -45.0,
+    -35.0,
+    -25.0,
+    -15.0,
+    -5.0,
+    0.0,
+    10.0
+  ],
+  "l2_positions_mm": [
+    125.0,
+    130.0,
+    135.0,
+    140.0,
+    145.0
+  ],
+  "target": {
+    "z_mm": 225.0,
+    "active_radius_mm": 1.0,
+    "policy": "fixed world plane for L2 scan; scanned as a separate axis for focus scan"
+  },
+  "fixed_lens_policy_for_focus": "both lenses fixed at their registered 125/135 mm geometries",
+  "denominator": "all input ray source weights; blocked, outside, failed and no-intersection remain in denominator",
+  "radius_metrics": "r80/r90/RMS over every ray reaching the target plane, including outside the 1 mm circle; conditional r90 separately uses only captured rays",
+  "valid_geometry_points": 21,
+  "invalid_geometry_points": 0,
+  "all_ledgers_pass": true,
+  "outer_wall_s": 9.124000600015279,
+  "outputs": [
+    "focus_plane_extended.csv",
+    "l2_position_extended.csv",
+    "boundary_ray_endpoints.csv",
+    "s6_focus_boundary.png",
+    "s6_l2_position_boundary.png"
+  ],
+  "selection_limit": "No new candidate selected. 135 mm remains the S6-C fixed comparator; no boundary scan point is called globally optimal.",
+  "finished_at_utc": "2026-10-21T07:03:45+00:00"
+}

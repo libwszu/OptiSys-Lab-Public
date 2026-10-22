@@ -1,0 +1,76 @@
+{
+  "schema": "g4.final_status/1",
+  "run_id": "20261020_133555_G4_ec3e2813_0e48",
+  "run_path": "runs/20261020_133555_G4_ec3e2813_0e48",
+  "G4_ENGINEERING_EXECUTION_STATUS": "PASS_WITH_DECLARED_DEVIATIONS",
+  "G4_OPTICAL_MODEL_VERIFICATION": "QUALIFIED",
+  "G4_TOLERANCE_EVALUATION_STATUS": "PASS",
+  "G4_EMPIRICAL_VALIDATION_STATUS": "NOT_AVAILABLE",
+  "G4_PORTFOLIO_DELIVERY_STATUS": "PARTIAL",
+  "G4_AUDIT_STATUS": "PASS",
+  "G4_SCIENTIFIC_CLAIM": "QUALIFIED",
+  "INHERITED_G2_SCIENCE_STATUS": "QUALIFIED_ONLY",
+  "G4_MODEL_LEVEL": "P1_QUALIFIED",
+  "source": {
+    "core_diameter_mm": 0.105,
+    "numerical_aperture": 0.22,
+    "output_index": 1.0,
+    "theta_max_deg": 12.7099,
+    "position_distribution": "uniform_area_disk: r=R*sqrt(U)",
+    "angular_distribution": "uniform solid angle; edge-biased sensitivity alternative",
+    "source_power": "UNKNOWN"
+  },
+  "nominal": {
+    "source_rays": 4096,
+    "geometric_transmission_denominator": "all source weight",
+    "baseline_p0_transmission": 1.0,
+    "baseline_p0_r80_mm": 0.18692993175019468,
+    "baseline_p0_r90_mm": 0.19936733476767943,
+    "candidate_p0_transmission": 1.0,
+    "candidate_p0_r80_mm": 0.13352137982156662,
+    "candidate_p0_r90_mm": 0.1424052391197697,
+    "baseline_p1_na022_transmission": 0.681884765625,
+    "candidate_p1_na022_transmission": 0.675048828125,
+    "baseline_p1_na022_r90_mm_conditional": 0.8477250547865837,
+    "candidate_p1_na022_r90_mm_conditional": 0.8434065475842957
+  },
+  "independent_checks": {
+    "p0_scalar_reference": "PASS; 8192 rays, max position and direction deltas 0 at reported precision",
+    "p1_low_na_crosscheck": "PASS; 4096 rays/design; r80 relative deltas 0.193% and 0.265%",
+    "p1_high_na_scope": "QUALIFIED; P1 N-BK7 singlets put about 32% of weight outside the assumed 1 mm target while P0 puts 0% outside"
+  },
+  "tolerance": {
+    "precheck_assemblies_per_design": 100,
+    "holdout_assemblies_per_design": 100,
+    "rays_per_assembly": 2048,
+    "complete_rows": 400,
+    "holdout_paired_delta_r90_mm": -0.03884473740155766,
+    "holdout_delta_r90_ci95_mm": [-0.04146722927234307, -0.03616279035136833],
+    "holdout_delta_transmission": 0.002666015625,
+    "holdout_delta_transmission_ci95": [0.0015819091796875002, 0.0038916015625],
+    "overall_design_claim": "NO_SUPPORTED_IMPROVEMENT for the full optical system; P0 conditional result is not full-NA physical validation"
+  },
+  "compute": {
+    "workers": 1,
+    "internal_wall_s": 10.1323,
+    "cli_wall_s": 13.798,
+    "peak_rss_mb": 405.08,
+    "gpu": "NOT_TESTED"
+  },
+  "tests": {"passed": 449, "failed": 0, "errors": 0, "skipped": 0, "exit_code": 0, "junit_s": 134.52, "wall_s": 136.938},
+  "remote_ci": "NOT_RUN",
+  "video": "NOT_DELIVERED",
+  "screenshot": "NOT_DELIVERED",
+  "audit_zip": "_AUDIT/20261020_133555_G4_ec3e2813_0e48/OptiSysLab_G4_20261020_133555_G4_ec3e2813_0e48_GPT_AUDIT.zip",
+  "audit_zip_sha256_location": "_AUDIT/20261020_133555_G4_ec3e2813_0e48/AUDIT_ZIP_SHA256.txt",
+  "audit_members": {"total": 282, "manifest_covered": 280, "self_reference_exceptions": 2},
+  "audit_validation": {
+    "content_integrity": "PASS",
+    "extracted_reproduction": "PASS",
+    "tamper_rejected": "PASS",
+    "same_environment_byte_rebuild": "PASS",
+    "cross_environment_byte_rebuild": "PASS",
+    "compression": "ZIP_STORED",
+    "python_environments": ["3.14.3 / zlib-ng 1.3.1", "3.11.9"]
+  }
+}

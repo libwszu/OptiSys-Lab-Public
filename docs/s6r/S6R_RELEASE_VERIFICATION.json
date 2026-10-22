@@ -1,0 +1,39 @@
+{
+  "schema": "optisys.s6r.release_verification/1",
+  "release_dir": "RELEASE_CANDIDATE_V2",
+  "markdown_files_checked": 16,
+  "internal_links_checked": 7,
+  "broken_links": [],
+  "image_links": [
+    {
+      "document": "RELEASE_CANDIDATE_V2/README.md",
+      "target": "figures/s6/s6_assembly_robustness.png",
+      "exists": true
+    }
+  ],
+  "image_links_ok": true,
+  "commands_found": [
+    "py -3.11 -m venv .venv_s6r_release",
+    ".\\.venv_s6r_release\\Scripts\\python.exe -m pip install -e \".[dev,ui,optics]\"",
+    ".\\.venv_s6r_release\\Scripts\\python.exe -m streamlit run app/main.py",
+    ".\\.venv_s6r_release\\Scripts\\python.exe -m optisys g3-demo --config configs/g3_demo.yaml --assemblies 1 --workers 1 --runs-dir runs/_derived/s6r_20261021_0842/g3_demo",
+    ".\\.venv_s6r_release\\Scripts\\python.exe -m optisys pump976 --config configs/pump976_g4_l0.yaml --candidate configs/pump976_g4_l1.yaml --tolerance configs/pump976_g4_tolerance.yaml --rays 512 --assemblies 2 --timeout 180 --runs-dir runs/_derived/s6r_20261021_0842/pump976",
+    ".\\.venv_s6r_release\\Scripts\\python.exe -m optisys report --run $RunDir"
+  ],
+  "commands_match_tested_environment": true,
+  "claim_guards": {
+    "s6_browser_claim_has_real_record": true,
+    "new_s6_screenshots_not_claimed_delivered": true,
+    "video_not_claimed_delivered": true,
+    "audit_not_claimed_before_build": true,
+    "historical_s5_browser_record_separated": true,
+    "empirical_validation_not_claimed": true,
+    "release_science_scope_has_assumed_p1_limitation": true,
+    "release_manifest_files_present_and_hashed": true
+  },
+  "false_delivery_claims": [],
+  "release_manifest_file_count": 78,
+  "release_manifest_missing_files": [],
+  "release_manifest_hash_mismatches": [],
+  "status": "PASS"
+}

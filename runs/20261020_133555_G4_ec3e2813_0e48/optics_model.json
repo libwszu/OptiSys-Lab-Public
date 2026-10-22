@@ -1,0 +1,105 @@
+{
+  "P0": {
+    "model": "paraxial geometric rays + ideal thin lenses",
+    "aperture": "circular hard stop",
+    "fresnel": false,
+    "coatings": false,
+    "diffraction": false,
+    "coherence": false
+  },
+  "P1": {
+    "backend": "Optiland",
+    "version": "0.6.3",
+    "scope": "centered two equiconvex N-BK7 singlets with explicit radial apertures",
+    "limitations": [
+      "no measured lens part",
+      "no coating/Fresnel loss",
+      "no decenter/tilt coordinate breaks",
+      "no diffraction or mode interference"
+    ],
+    "lens_models": {
+      "P1_baseline": [
+        {
+          "name": "L1",
+          "focal_length_mm": 25.0,
+          "aperture_diameter_mm": 12.0,
+          "thickness_mm": 2.0,
+          "material": "N-BK7",
+          "index_sellmeier_976": 1.5078427267710073,
+          "radius_1_mm": 25.050745567277897,
+          "radius_2_mm": -25.050745567277897,
+          "front_vertex_z_mm": 24.32776280278125,
+          "rear_vertex_z_mm": 26.32776280278125,
+          "matrix_efl_mm": 25.000000000000004,
+          "matrix_bfl_mm": 24.327762802781255,
+          "front_principal_offset_mm": 0.6722371972187489,
+          "rear_principal_offset_mm": -0.6722371972187489,
+          "geometry_status": "ASSUMED_equiconvex_singlet_no_vendor_part"
+        },
+        {
+          "name": "L2",
+          "focal_length_mm": 100.0,
+          "aperture_diameter_mm": 12.0,
+          "thickness_mm": 2.0,
+          "material": "N-BK7",
+          "index_sellmeier_976": 1.5078427267710073,
+          "radius_1_mm": 101.23062019544408,
+          "radius_2_mm": -101.23062019544408,
+          "front_vertex_z_mm": 124.33458698738092,
+          "rear_vertex_z_mm": 126.33458698738092,
+          "matrix_efl_mm": 100.0,
+          "matrix_bfl_mm": 99.33458698738092,
+          "front_principal_offset_mm": 0.6654130126190836,
+          "rear_principal_offset_mm": -0.6654130126190836,
+          "geometry_status": "ASSUMED_equiconvex_singlet_no_vendor_part"
+        }
+      ],
+      "P1_candidate": [
+        {
+          "name": "L1",
+          "focal_length_mm": 35.0,
+          "aperture_diameter_mm": 16.0,
+          "thickness_mm": 2.0,
+          "material": "N-BK7",
+          "index_sellmeier_976": 1.5078427267710073,
+          "radius_1_mm": 35.20893713579457,
+          "radius_2_mm": -35.20893713579457,
+          "front_vertex_z_mm": 34.330395572782756,
+          "rear_vertex_z_mm": 36.330395572782756,
+          "matrix_efl_mm": 35.00000000000001,
+          "matrix_bfl_mm": 34.33039557278276,
+          "front_principal_offset_mm": 0.6696044272172443,
+          "rear_principal_offset_mm": -0.6696044272172443,
+          "geometry_status": "ASSUMED_equiconvex_singlet_no_vendor_part"
+        },
+        {
+          "name": "L2",
+          "focal_length_mm": 100.0,
+          "aperture_diameter_mm": 17.0,
+          "thickness_mm": 2.0,
+          "material": "N-BK7",
+          "index_sellmeier_976": 1.5078427267710073,
+          "radius_1_mm": 101.23062019544408,
+          "radius_2_mm": -101.23062019544408,
+          "front_vertex_z_mm": 134.33458698738093,
+          "rear_vertex_z_mm": 136.33458698738093,
+          "matrix_efl_mm": 100.0,
+          "matrix_bfl_mm": 99.33458698738092,
+          "front_principal_offset_mm": 0.6654130126190836,
+          "rear_principal_offset_mm": -0.6654130126190836,
+          "geometry_status": "ASSUMED_equiconvex_singlet_no_vendor_part"
+        }
+      ]
+    }
+  },
+  "source_assumptions": {
+    "wavelength_nm": 976.0,
+    "core_diameter_mm": 0.105,
+    "numerical_aperture": 0.22,
+    "output_index": 1.0,
+    "angular_distribution": "uniform_solid_angle",
+    "seed": 976051,
+    "n_rays": 4096,
+    "absolute_power_w": null
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "schema": "optisys.s6r.historical_preservation/1",
+  "repository_head_at_intake": "PRIVATE_SOURCE_REVISION",
+  "historical_freeze_manifests": [
+    {
+      "manifest": "docs/g2/G2_BASELINE_HASHES.json",
+      "status": "PASS",
+      "declared": 1,
+      "verified": 1,
+      "failures": []
+    },
+    {
+      "manifest": "docs/g3/G3_BASELINE_HASHES.json",
+      "status": "PARTIAL",
+      "declared": 16,
+      "verified": 14,
+      "failures": [
+        {
+          "path": "src/optisys/cli.py",
+          "sha256": "8da5cc112a5ddec8586d6de7acd888b4e774f4eb2f7f29c0ce65c54c0e042518",
+          "bytes": null,
+          "actual_bytes": 26409,
+          "actual_sha256": "edbcb7941f4cc3db5219767499616a1a413abb932ed7495828cc37af93a57156",
+          "reason": "HASH_OR_SIZE_MISMATCH"
+        },
+        {
+          "path": "src/optisys/gates/g2.py",
+          "sha256": "249d1ca98b3c3152bf066bcd0aeaf19b6a50146f6abf611e7b55c06c179dd396",
+          "bytes": null,
+          "actual_bytes": 90864,
+          "actual_sha256": "0fa0f11c72ca54d735545e7599ec5cd33cd505a9427fb1e2c23e8eea48411c7b",
+          "reason": "HASH_OR_SIZE_MISMATCH"
+        }
+      ]
+    },
+    {
+      "manifest": "docs/g4/G4_BASELINE_HASHES.json",
+      "status": "PASS",
+      "declared": 179,
+      "verified": 179,
+      "failures": []
+    },
+    {
+      "manifest": "docs/g4/G4_FREEZE_HASHES.json",
+      "status": "PASS",
+      "declared": 6,
+      "verified": 6,
+      "failures": []
+    },
+    {
+      "manifest": "docs/s5/S5_FREEZE_HASHES.json",
+      "status": "PASS",
+      "declared": 10,
+      "verified": 10,
+      "failures": []
+    },
+    {
+      "manifest": "docs/s6/S6_FREEZE_HASHES.json",
+      "status": "PASS",
+      "declared": 21,
+      "verified": 21,
+      "failures": []
+    },
+    {
+      "manifest": "docs/s6/S6_AMENDMENT_01_HASHES.json",
+      "status": "PASS",
+      "declared": 12,
+      "verified": 12,
+      "failures": []
+    },
+    {
+      "manifest": "docs/s6/S6_AMENDMENT_02_HASHES.json",
+      "status": "PASS",
+      "declared": 49,
+      "verified": 49,
+      "failures": []
+    },
+    {
+      "manifest": "docs/s6/S6_AMENDMENT_03_HASHES.json",
+      "status": "PASS",
+      "declared": 22,
+      "verified": 22,
+      "failures": []
+    }
+  ],
+  "historical_archive_hashes": [
+    {
+      "path": "_AUDIT/20261019_130948_G0_78fa364f/OptiSysLab_G0_20261019_130948_G0_78fa364f_GPT_AUDIT.zip",
+      "expected_sha256": "3967d064cbc4349c6d484ec4378cdfe228115545089923b0d2629baab2d34c44",
+      "actual_sha256": "3967d064cbc4349c6d484ec4378cdfe228115545089923b0d2629baab2d34c44",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261019_144627_G1_54c9e3fb/OptiSysLab_G1_20261019_144627_G1_54c9e3fb_GPT_AUDIT.zip",
+      "expected_sha256": "bfe5cd1a1e636dbeb71e4f2556bc0f7919571154e6d25bbd9664d0732096a7db",
+      "actual_sha256": "bfe5cd1a1e636dbeb71e4f2556bc0f7919571154e6d25bbd9664d0732096a7db",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261019_145702_G1_54c9e3fb/OptiSysLab_G1_20261019_145702_G1_54c9e3fb_GPT_AUDIT.zip",
+      "expected_sha256": "a81641f792b110e08a19d638ef0ec0c7faf1f7565abb487b2772be71e9a584c5",
+      "actual_sha256": "a81641f792b110e08a19d638ef0ec0c7faf1f7565abb487b2772be71e9a584c5",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261019_170944_G2_52369787/OptiSysLab_G2_20261019_170944_G2_52369787_GPT_AUDIT.zip",
+      "expected_sha256": "5c00bd67e82cf36fbd19e53f31bde6328cfc9dd98216dd150018b655054846e0",
+      "actual_sha256": "5c00bd67e82cf36fbd19e53f31bde6328cfc9dd98216dd150018b655054846e0",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261019_191117_G2_52369787/OptiSysLab_G2_20261019_191117_G2_52369787_GPT_AUDIT.zip",
+      "expected_sha256": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af",
+      "actual_sha256": "08a7b57e3e3ab62162ccef2d7d6c1a339a61c286dac2fef4446e38f4647ba6af",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261020_071457_G3_ea57a83b/OptiSysLab_G3_20261020_071457_G3_ea57a83b_GPT_AUDIT.zip",
+      "expected_sha256": "0e2cf640313950e381828f10d9da8efe9112af56b7d2598c24c7ec5ca545242a",
+      "actual_sha256": "0e2cf640313950e381828f10d9da8efe9112af56b7d2598c24c7ec5ca545242a",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261020_133555_G4_ec3e2813_0e48/OptiSysLab_G4_20261020_133555_G4_ec3e2813_0e48_GPT_AUDIT.zip",
+      "expected_sha256": "866d305aa87920c2068fb964ba4c3c7ff401964391ddf452bb022ed76ce9914d",
+      "actual_sha256": "866d305aa87920c2068fb964ba4c3c7ff401964391ddf452bb022ed76ce9914d",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/20261020_210201_S5_HNA/OptiSysLab_S5_20261020_210201_S5_HNA_GPT_AUDIT.zip",
+      "expected_sha256": "18d946e3c3d9cecadab558a05c262c8b1c286fa062ae11050037b6ed3df13ec5",
+      "actual_sha256": "18d946e3c3d9cecadab558a05c262c8b1c286fa062ae11050037b6ed3df13ec5",
+      "status": "PASS"
+    },
+    {
+      "path": "_AUDIT/_superseded/20261019_130035_G0_78fa364f/OptiSysLab_G0_20261019_130035_G0_78fa364f_GPT_AUDIT.zip",
+      "expected_sha256": "722d7ae10822bb7707f04faabd9bbc3710bb37483fa2df0f7b50f9dd50fbb4ed",
+      "actual_sha256": "722d7ae10822bb7707f04faabd9bbc3710bb37483fa2df0f7b50f9dd50fbb4ed",
+      "status": "PASS"
+    }
+  ],
+  "g3_pre_change_source_reconciliation": {
+    "snapshot_kind": "pre_change_baseline",
+    "sources": [
+      {
+        "path": "src/optisys/cli.py",
+        "g3_pre_change_sha256": "8da5cc112a5ddec8586d6de7acd888b4e774f4eb2f7f29c0ce65c54c0e042518",
+        "current_sha256": "edbcb7941f4cc3db5219767499616a1a413abb932ed7495828cc37af93a57156",
+        "later_archive": "_AUDIT/20261020_210201_S5_HNA/OptiSysLab_S5_20261020_210201_S5_HNA_GPT_AUDIT.zip",
+        "later_archive_member": "src/optisys/cli.py",
+        "later_archive_sha256": "edbcb7941f4cc3db5219767499616a1a413abb932ed7495828cc37af93a57156",
+        "status": "PASS_LATER_ARCHIVE_MATCHES_CURRENT"
+      },
+      {
+        "path": "src/optisys/gates/g2.py",
+        "g3_pre_change_sha256": "249d1ca98b3c3152bf066bcd0aeaf19b6a50146f6abf611e7b55c06c179dd396",
+        "current_sha256": "0fa0f11c72ca54d735545e7599ec5cd33cd505a9427fb1e2c23e8eea48411c7b",
+        "later_archive": "_AUDIT/20261020_133555_G4_ec3e2813_0e48/OptiSysLab_G4_20261020_133555_G4_ec3e2813_0e48_GPT_AUDIT.zip",
+        "later_archive_member": "src/optisys/gates/g2.py",
+        "later_archive_sha256": "0fa0f11c72ca54d735545e7599ec5cd33cd505a9427fb1e2c23e8eea48411c7b",
+        "status": "PASS_LATER_ARCHIVE_MATCHES_CURRENT"
+      }
+    ],
+    "status": "PASS_WITH_DOCUMENTED_EVOLUTION",
+    "note": "The two source hashes in the G3 pre-change baseline differ from the later checkout, but the exact current bytes are present in the subsequent immutable G4/S5 audit archives. This is documented source evolution; G3 run packages and archive hashes remain unchanged."
+  },
+  "s6_pre_holdout_freeze_files": [
+    {
+      "path": "docs/s6/S6_FREEZE_HASHES.json",
+      "expected_sha256": "ecafe5553232d02716bcab7ee962effa9942dad0adf2ea444a3f036d7c4adb0b",
+      "actual_sha256": "ecafe5553232d02716bcab7ee962effa9942dad0adf2ea444a3f036d7c4adb0b",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/s6/S6_ACCEPTANCE_CRITERIA.md",
+      "expected_sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c",
+      "actual_sha256": "4467b96647284487b4308e47a255c3a5c01c3fbcf0a5c5144b17e245ea45979c",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/s6/S6_AMENDMENT_01_HASHES.json",
+      "expected_sha256": "941f71ca707d92d6573c75af73793d6710d5b356e150604764574003e74ec3cf",
+      "actual_sha256": "941f71ca707d92d6573c75af73793d6710d5b356e150604764574003e74ec3cf",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/s6/S6_AMENDMENT_02.md",
+      "expected_sha256": "f237672d2205533d6c7f0114fdb52050676e2895b3552d2afbb8921094a990f9",
+      "actual_sha256": "f237672d2205533d6c7f0114fdb52050676e2895b3552d2afbb8921094a990f9",
+      "status": "PASS"
+    },
+    {
+      "path": "docs/s6/S6_AMENDMENT_02_HASHES.json",
+      "expected_sha256": "e16216c9003657439d8b481a8871b6373450e911c0dff757cd9ee3fb61d8b8ee",
+      "actual_sha256": "e16216c9003657439d8b481a8871b6373450e911c0dff757cd9ee3fb61d8b8ee",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/compute_plan.json",
+      "expected_sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220",
+      "actual_sha256": "a62f019d0fb60d8aae6f05442dc1fb1d82ba7ccde288da9d31b40d15b0ce9220",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/compute_measured_preholdout.json",
+      "expected_sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5",
+      "actual_sha256": "0290806a1be956295625367e1fef7e7aadbc2c12b0efe4cc3e1acfa8c2ccf0d5",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE_02.json",
+      "expected_sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446",
+      "actual_sha256": "c23e6a35905d141c8a4f0dbad52dacc77abfb90269e71960e6694cbba3bf6446",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/S6_C_CODE_FREEZE.json",
+      "expected_sha256": "6a03650dbeb73630818345cc700913334f24dd0a0477505a398d43616aa0efd6",
+      "actual_sha256": "6a03650dbeb73630818345cc700913334f24dd0a0477505a398d43616aa0efd6",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/S6_C_HOLDOUT_FREEZE.json",
+      "expected_sha256": "fc35551673225c2a37521f603ac22b42bd9b0ee0c7f49b22df42786b2fc9ee12",
+      "actual_sha256": "fc35551673225c2a37521f603ac22b42bd9b0ee0c7f49b22df42786b2fc9ee12",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/config_snapshot.yaml",
+      "expected_sha256": "81e31c4b50bb85f78dda5176b1d9d7db458fae1239ef1a4872f3425a82eae223",
+      "actual_sha256": "81e31c4b50bb85f78dda5176b1d9d7db458fae1239ef1a4872f3425a82eae223",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_a_reference/s6_a_reference_summary.json",
+      "expected_sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571",
+      "actual_sha256": "35f8df697f943be5238fc2dba853705916926d533980fe3abaee90a71252d571",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_b_boundaries/boundary_analysis.json",
+      "expected_sha256": "256c8ccdb9869ef8fb7f4c52c542230107db13bbb99a953eaa3530e8e355f60a",
+      "actual_sha256": "256c8ccdb9869ef8fb7f4c52c542230107db13bbb99a953eaa3530e8e355f60a",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/run_contract.json",
+      "expected_sha256": "e33666f3d9ec400a109f452bf6fb87cb17c07148cc94345854c92460fd4c5b60",
+      "actual_sha256": "e33666f3d9ec400a109f452bf6fb87cb17c07148cc94345854c92460fd4c5b60",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_run_status.json",
+      "expected_sha256": "9de5032a78dbd32f6f362fef0b77163dd45b4fac2da198412b888252ee1148b6",
+      "actual_sha256": "9de5032a78dbd32f6f362fef0b77163dd45b4fac2da198412b888252ee1148b6",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/pilot_validation.json",
+      "expected_sha256": "0477103770708c51930e943de57419a3233cefceffc5c6410d3a8ba2158568b3",
+      "actual_sha256": "0477103770708c51930e943de57419a3233cefceffc5c6410d3a8ba2158568b3",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/assembly_manifest.csv",
+      "expected_sha256": "835098f457b1c05a6e2f1170201bdc92d19e68fab6ed0c838c641c6d9b46e2e6",
+      "actual_sha256": "835098f457b1c05a6e2f1170201bdc92d19e68fab6ed0c838c641c6d9b46e2e6",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/p1_assembly_samples.csv",
+      "expected_sha256": "4b9008d735e34dff7bab1731792a54777852795804eb6494093a401ddb9309b3",
+      "actual_sha256": "4b9008d735e34dff7bab1731792a54777852795804eb6494093a401ddb9309b3",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/paired_assembly_comparison.csv",
+      "expected_sha256": "e081c0df1c9fbd292821306988bfdce4f857ff5258517298d560d29bbe6bb7ac",
+      "actual_sha256": "e081c0df1c9fbd292821306988bfdce4f857ff5258517298d560d29bbe6bb7ac",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/s6_c_pilot/source_bundle_index.csv",
+      "expected_sha256": "9b50dc4883ac8f224dd89664b46e494c501008960762747906de62656633fd3a",
+      "actual_sha256": "9b50dc4883ac8f224dd89664b46e494c501008960762747906de62656633fd3a",
+      "status": "PASS"
+    },
+    {
+      "path": "scripts/s6_assembly.py",
+      "expected_sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b",
+      "actual_sha256": "792b920a7218c2b823a39664dbee22894397382a114ed44b10ed9f937cc4db6b",
+      "status": "PASS"
+    },
+    {
+      "path": "scripts/s6_validate_pilot.py",
+      "expected_sha256": "5475caed067d3d47c6e038673ff24b8ba426d90fdb17662c629fe2e1a9272252",
+      "actual_sha256": "5475caed067d3d47c6e038673ff24b8ba426d90fdb17662c629fe2e1a9272252",
+      "status": "PASS"
+    },
+    {
+      "path": "src/optisys/optics/s6_rigid_body.py",
+      "expected_sha256": "1a0e8ac5f40fd305bcc0dc7b8fc2939a7ac2e61dd6ce94e405a00401b0526b75",
+      "actual_sha256": "1a0e8ac5f40fd305bcc0dc7b8fc2939a7ac2e61dd6ce94e405a00401b0526b75",
+      "status": "PASS"
+    },
+    {
+      "path": "src/optisys/tolerance/s6_assembly.py",
+      "expected_sha256": "ddeb2a62d970a967aa362cbd8a51c4b56fc33f443c350702c771909550b17caa",
+      "actual_sha256": "ddeb2a62d970a967aa362cbd8a51c4b56fc33f443c350702c771909550b17caa",
+      "status": "PASS"
+    },
+    {
+      "path": "src/optisys/sources/multimode_fiber.py",
+      "expected_sha256": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f",
+      "actual_sha256": "adaab639150ee1a0d0a6cfa0135b59720b0edf6f90ab256ed6406e4f3dc2699f",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/unit/test_s6_rigid_body.py",
+      "expected_sha256": "26acf113f7cce97dcbc9d55c8ea5480f33ef01de8a85ce4c038ee4401895d733",
+      "actual_sha256": "26acf113f7cce97dcbc9d55c8ea5480f33ef01de8a85ce4c038ee4401895d733",
+      "status": "PASS"
+    },
+    {
+      "path": "tests/unit/test_s6_assembly_stats.py",
+      "expected_sha256": "1cea9a19325b2ceea978d3c08f292a8c14e6d2663dcd2732e80926be5d14bd20",
+      "actual_sha256": "1cea9a19325b2ceea978d3c08f292a8c14e6d2663dcd2732e80926be5d14bd20",
+      "status": "PASS"
+    },
+    {
+      "path": "runs/20261021_024715_S6_P1/test_evidence/s6_models_pytest_execution_04.json",
+      "expected_sha256": "09ea5383d59939712459dc88d93f80d0748b359e1a4baee8cddf2a1f4c22fcc1",
+      "actual_sha256": "09ea5383d59939712459dc88d93f80d0748b359e1a4baee8cddf2a1f4c22fcc1",
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "qualification": "G3 baseline is explicitly a pre-change snapshot; two source entries are reconciled to later, hash-verified G4/S5 audit package members."
+}
