@@ -69,12 +69,19 @@ jobs:
           tests/integration/test_report_g3_cli.py
       - name: Independently replay S6 assembly statistics
         run: python repro/verify_s6r.py --root . --output artifacts/ci/s6-science.json
+      - name: Smoke the 976 nm P0/P1 case
+        run: python -m optisys pump976 --rays 512 --assemblies 2 --runs-dir artifacts/ci-pump-smoke
       - name: Retain portable test report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: portable-verification-${{ matrix.os }}
-          path: artifacts/ci/
+          path: |
+            artifacts/ci/frozen-g4-inputs.json
+            artifacts/ci/release-manifest.json
+            artifacts/ci/public-audit.json
+            artifacts/ci/pytest.xml
+            artifacts/ci/s6-science.json
           if-no-files-found: ignore
       - name: Reproduce G0 evidence
         run: python repro/verify_g0.py

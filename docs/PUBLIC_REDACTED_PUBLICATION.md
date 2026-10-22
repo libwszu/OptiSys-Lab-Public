@@ -1,6 +1,6 @@
 # 公开脱敏候选说明
 
-本目录是本地 PUBLIC_REDACTED R2 候选，尚未公开，未创建新的 GitHub 仓库或 Release。旧私有 Git 历史、Actions 日志/构件与原审计 ZIP 不随本候选分发。
+本目录源于 PUBLIC_REDACTED R2 工程快照；当前仓库入口和发布范围见 [公开副本范围](PUBLIC_RELEASE_SCOPE.md)，实际发布状态以 GitHub 记录为准。旧私有 Git 历史、Actions 日志/构件与原审计 ZIP 不随本候选分发。
 
 公开审计副本使用新 ID `OptiSysLab_S6R_PUBLIC_REDACTED_R2`、新 schema 和新 SHA；[副本校验值](../_AUDIT/PUBLIC_REDACTED_R2/OptiSysLab_S6R_PUBLIC_REDACTED_R2.sha256) 与 [副本 ZIP](../_AUDIT/PUBLIC_REDACTED_R2/OptiSysLab_S6R_PUBLIC_REDACTED_R2.zip) 对应。原件留在私有保全目录，不能以新包替代旧包哈希证明。私有提交与逐成员映射不在此候选内。
 

@@ -13,7 +13,7 @@
 | **976 nm 泵浦光路** | 多模光纤 → 双透镜几何传播 / Optiland 追迹 → 接收区几何捕获；分析高 NA、位置 trade-off 与装配扰动 |
 
 [安装与启动](#3-分钟安装与启动) · [完整技术说明](docs/PROJECT_TECHNICAL_DETAILS.md) ·
-[发布范围](docs/GITHUB_PUBLICATION.md) · [公开副本与本地核验](docs/PUBLIC_REDACTED_PUBLICATION.md)
+[发布范围](docs/GITHUB_PUBLICATION.md) · [公开副本范围](docs/PUBLIC_RELEASE_SCOPE.md) · [GitHub / CI](https://github.com/libwszu/OptiSys-Lab-Public/actions)
 
 ## 界面预览
 
@@ -34,17 +34,19 @@
 - **有边界的光学建模**：集成 Optiland 0.6.3；用独立傍轴、球面求交和矢量 Snell 参考核对模型。
 - **公差与统计**：装配级样本、配对比较、固定种子 bootstrap；区分名义收益、低尾代价与条件成立范围。
 - **工程化交付**：CLI、六页 Streamlit、受控子进程任务与 CPU 调度、取消/恢复状态、HTML 报告。
-- **可靠性与追溯**：pytest、Windows/Ubuntu CI、冻结输入字节校验、SHA-256 清单、独立解压复算。
+- **可靠性与追溯**：pytest、Windows/Ubuntu CI 配置、冻结输入字节校验、SHA-256 清单、独立解压复算。
 
 自研部分是系统链路、独立参考与验证/报告工具；Optiland 的追迹能力归属于第三方。
 依赖版本与贡献边界见 [依赖和贡献说明](RELEASE_CANDIDATE_V2/DEPENDENCIES_AND_CONTRIBUTIONS.md)。
 
 ## 3 分钟安装与启动
 
-需要 Python **3.11**。在取得源码后，进入源码根目录执行以下命令。当前为本地公开脱敏候选，正式仓库 URL 尚待选定。以下可直接用于 Windows PowerShell；
+需要 Python **3.11** 和 Git。仓库入口为 [libwszu/OptiSys-Lab-Public](https://github.com/libwszu/OptiSys-Lab-Public)。以下命令用于 Windows PowerShell；
 “3 分钟”指基础启动流程，首次下载依赖所需时间取决于网络。
 
 ```powershell
+git clone https://github.com/libwszu/OptiSys-Lab-Public.git
+cd OptiSys-Lab-Public
 py -3.11 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[dev,ui,optics]"
 .\.venv\Scripts\python.exe scripts/verify_published_frozen_inputs.py
@@ -54,6 +56,8 @@ py -3.11 -m venv .venv
 Ubuntu/macOS（Python 3.11）：
 
 ```bash
+git clone https://github.com/libwszu/OptiSys-Lab-Public.git
+cd OptiSys-Lab-Public
 python3.11 -m venv .venv
 .venv/bin/python -m pip install -e ".[dev,ui,optics]"
 .venv/bin/python scripts/verify_published_frozen_inputs.py
@@ -76,10 +80,11 @@ python3.11 -m venv .venv
 
 **976 nm：检查假设模型与装配统计**
 
-在界面 F 页浏览 P0/P1、接收区与公差结果；以下命令只做输入校验和独立统计复算。
+在界面 F 页浏览 P0/P1、接收区与公差结果；下面可运行一个 512-ray、每阶段 2 装配的低成本示例，并独立复算已提供的 S6 统计。示例输出为 `PARTIAL`，表示采样规模缩减，不替代正式 G4 评估。
 
 ```powershell
-.\.venv\Scripts\python.exe scripts/verify_published_frozen_inputs.py
+.\.venv\Scripts\python.exe -m optisys pump976-validate --config configs/pump976_g4_l0.yaml
+.\.venv\Scripts\python.exe -m optisys pump976 --rays 512 --assemblies 2 --runs-dir artifacts/quick/pump976
 .\.venv\Scripts\python.exe repro/verify_s6r.py --root . --output artifacts/quick/s6-science.json
 .\.venv\Scripts\python.exe -m pytest -q tests/unit tests/reference
 ```
@@ -90,14 +95,14 @@ python3.11 -m venv .venv
 ## 测试与贡献
 
 安装 dev/ui/optics 后，Windows 使用 `.\.venv\Scripts\python.exe -m pytest -q tests/unit tests/reference tests/ui`；Ubuntu/macOS 使用 `.venv/bin/python -m pytest -q tests/unit tests/reference tests/ui`。
-云端还运行 [工作流列出的 12 个集成模块](.github/workflows/ci.yml) 和独立复算；完整历史工作区回归与可分发快照的范围不同，见 [发布记录](docs/GITHUB_PUBLICATION.md)。
+[CI 工作流](https://github.com/libwszu/OptiSys-Lab-Public/actions) 配置了 Windows/Ubuntu Python 3.11，运行 [列出的 12 个集成模块](.github/workflows/ci.yml) 和独立复算；完整历史工作区回归与可分发快照的范围不同，见 [发布记录](docs/GITHUB_PUBLICATION.md)。
 
 欢迎通过 [贡献指南](CONTRIBUTING.md) 提交脱敏的最小复现、文档改进或可验证的功能。安全反馈状态见 [SECURITY.md](SECURITY.md)，依赖与素材许可见 [第三方归属](THIRD_PARTY_NOTICES.md)。
 
 ## 可靠性与科学边界
 
 G0–G4、S5、S6 和 S6-R 历史裁决保持冻结。CI 结果以
-[验证范围](docs/PUBLIC_REDACTED_PUBLICATION.md) 为准；
+[对应提交的实际 Actions](https://github.com/libwszu/OptiSys-Lab-Public/actions) 为准；
 历史 S6-R 本机 **482 passed** 记录不代表当前云端结果。
 发布快照省略部分完整历史树，相关测试范围见 [发布说明](docs/GITHUB_PUBLICATION.md)。
 
@@ -128,6 +133,6 @@ G0–G4、S5、S6 和 S6-R 历史裁决保持冻结。CI 结果以
 
 ## English overview and quick start
 
-OptiSys-Lab is a reproducible optical-engineering simulation project covering 650 nm laser triangulation and 976 nm multimode-fiber pump optics. It includes a CLI, six Streamlit pages, tolerance statistics and independent checks. Results are simulated; no hardware measurements or absolute optical-power calibration are provided. This local public-redacted candidate has not been published.
+OptiSys-Lab is a reproducible optical-engineering simulation project covering 650 nm laser triangulation and 976 nm multimode-fiber pump optics. It includes a CLI, six Streamlit pages, tolerance statistics and independent checks. Results are simulated; no hardware measurements or absolute optical-power calibration are provided. The distributed audit is explicitly identified as a public-redacted derivative; its scientific judgments and assumptions are retained.
 
-From the extracted or cloned source directory with Python 3.11, use `python -m venv .venv`, then `.venv/bin/python -m pip install -e ".[dev,ui,optics]"` and `.venv/bin/python -m streamlit run app/main.py`. On Windows replace `.venv/bin/python` with `.venv/Scripts/python.exe`. Existing examples can be browsed without rerunning large simulations. See [public-copy provenance](docs/PUBLIC_REDACTED_PUBLICATION.md) and [contribution guide](CONTRIBUTING.md).
+Clone [`libwszu/OptiSys-Lab-Public`](https://github.com/libwszu/OptiSys-Lab-Public) or obtain its source archive. From that source directory with Python 3.11, use `python -m venv .venv`, then `.venv/bin/python -m pip install -e ".[dev,ui,optics]"` and `.venv/bin/python -m streamlit run app/main.py`. On Windows replace `.venv/bin/python` with `.venv/Scripts/python.exe`. Existing examples can be browsed without rerunning large simulations. See [public-copy provenance](docs/PUBLIC_REDACTED_PUBLICATION.md) and [contribution guide](CONTRIBUTING.md).
